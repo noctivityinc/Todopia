@@ -23,6 +23,13 @@
   float: left;
 }
 
+/* line 29, ../../../app/stylesheets/partials/_base.sass */
+.icon {
+  width: 10px;
+  height: 10px;
+  margin: .05em;
+}
+
 /* line 16, ../../../app/stylesheets/partials/_boxes.sass */
 .dialog {
   border-radius: 4px;
@@ -256,18 +263,18 @@
 }
 /* line 315, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new fieldset, #user_session #new fieldset {
-  width: 100%;
+  width: 300px;
 }
 /* line 317, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new label, #user_session #new label {
   float: left;
-  width: 20%;
+  width: 100px;
   text-align: left;
   padding-left: 0;
 }
 /* line 323, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li ol, #user_session #new li ol {
-  padding: 0 10% 0 20%;
+  padding: 0 0px 0 100px;
 }
 /* line 326, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li fieldset legend, #user #new li fieldset legend .label, #user_session #new li fieldset legend, #user_session #new li fieldset legend .label {
@@ -275,18 +282,18 @@
 }
 /* line 328, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li fieldset legend, #user_session #new li fieldset legend {
-  width: 20%;
+  width: 100px;
   text-align: left;
   display: inline;
   float: left;
   clear: none;
   padding: 0;
-  width: 100%;
+  width: 300px;
 }
 /* line 331, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li fieldset .label, #user_session #new li fieldset .label {
   position: absolute;
-  width: 20%;
+  width: 100px;
   top: 0px;
   left: 0;
 }
@@ -309,11 +316,11 @@
 }
 /* line 350, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new .inline-hints, #user #new .inline-errors, #user #new .errors, #user_session #new .inline-hints, #user_session #new .inline-errors, #user_session #new .errors {
-  margin: 0 0 0 20%;
+  margin: 0 0 0 100px;
 }
 /* line 352, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new input, #user #new textarea, #user_session #new input, #user_session #new textarea {
-  width: 70%;
+  width: 200px;
 }
 /* line 354, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new select, #user_session #new select {
@@ -330,8 +337,8 @@
 }
 /* line 365, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new .buttons, #user_session #new .buttons {
-  padding-left: 20%;
-  width: 80%;
+  padding-left: 100px;
+  width: 200px;
 }
 /* line 368, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new .buttons input, #user_session #new .buttons input {
@@ -345,159 +352,162 @@
 }
 /* line 384, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new #errorExplanation, #user_session #new #errorExplanation {
-  margin-left: 20%;
-  width: 70%;
+  margin-left: 100px;
+  width: 200px;
 }
-/* line 5, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 13, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form, #user_session #new form {
-  margin: 1em;
+  margin: .1em;
   background: #eee;
-  padding: .50em 1em;
+  padding: .50em .1em;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin: .25em;
 }
-/* line 11, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 20, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form li, #user_session #new form li {
   padding: 10px 0px;
 }
-/* line 14, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 23, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form li li, #user_session #new form li li {
   padding: 0;
 }
-/* line 19, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 28, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form fieldset, #user_session #new form fieldset {
   margin-top: 20px;
   border: none;
 }
-/* line 23, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 33, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form li fieldset, #user_session #new form li fieldset {
   padding: 0;
 }
-/* line 28, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 38, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form legend, #user #new form label, #user_session #new form legend, #user_session #new form label {
   color: #333;
 }
-/* line 31, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 41, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form label, #user #new form .label, #user_session #new form label, #user_session #new form .label {
   padding-bottom: 5px;
 }
-/* line 34, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 44, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form label abbr, #user #new form .label abbr, #user_session #new form label abbr, #user_session #new form .label abbr {
   color: #f00;
 }
-/* line 36, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 46, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form label, #user_session #new form label {
   line-height: 1.4em;
   font-size: 13px;
 }
-/* line 40, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 50, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form legend span, #user_session #new form legend span {
   font-size: 1.4em;
   line-height: 1em;
 }
-/* line 44, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 54, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form legend span.label, #user_session #new form legend span.label {
   font-size: 1em;
 }
-/* line 49, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 59, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form select, #user_session #new form select {
   padding: 3px;
 }
-/* line 52, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 62, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form textarea, #user_session #new form textarea {
   border: 1px solid #999;
   padding: 6px 8px;
   line-height: 100%;
 }
-/* line 57, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 67, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input, #user_session #new form input {
   font-family: inherit;
   font-size: 14px;
 }
-/* line 61, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 71, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input.text, #user #new form input.title, #user #new form input[type=text], #user #new form input[type=password], #user_session #new form input.text, #user_session #new form input.title, #user_session #new form input[type=text], #user_session #new form input[type=password] {
-  width: 500px;
   border: 1px solid #999;
   padding: 6px 8px;
   line-height: 100%;
 }
-/* line 67, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 76, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input.title, #user_session #new form input.title {
   font-size: 1.5em;
 }
-/* line 69, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 78, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input[type=checkbox], #user #new form input.checkbox, #user_session #new form input[type=checkbox], #user_session #new form input.checkbox,
 #user #new form input[type=radio], #user #new form input.radio, #user_session #new form input[type=radio], #user_session #new form input.radio {
   position: relative;
   top: 0em;
 }
-/* line 73, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 82, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input[type=submit], #user_session #new form input[type=submit] {
   text-align: right;
 }
-/* line 76, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 85, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input.text:focus, #user #new form input.title:focus, #user #new form input[type=text]:focus, #user #new form input[type=password]:focus, #user_session #new form input.text:focus, #user_session #new form input.title:focus, #user_session #new form input[type=text]:focus, #user_session #new form input[type=password]:focus {
   background: #FFFFCC;
 }
-/* line 82, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 91, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .date li, #user #new form .time li, #user #new form .datetime li, #user_session #new form .date li, #user_session #new form .time li, #user_session #new form .datetime li {
   margin: 0 0.3em 0 0;
 }
-/* line 90, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 99, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation li, #user_session #new form #errorExplanation li {
   margin-left: 15px;
 }
-/* line 92, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 101, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form form p, #user #new form .errors, #user_session #new form form p, #user_session #new form .errors {
   padding: 3px 0px;
 }
-/* line 95, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 104, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .required input, #user #new form .required textarea, #user #new form .required select, #user_session #new form .required input, #user_session #new form .required textarea, #user_session #new form .required select {
   background-color: #fff;
 }
-/* line 98, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 107, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .error input, #user #new form .error textarea, #user #new form .error select, #user_session #new form .error input, #user_session #new form .error textarea, #user_session #new form .error select {
   background-color: #fcc;
   border: 1px solid #f66;
 }
-/* line 102, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 111, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .optional input, #user #new form .optional textarea, #user #new form .optional select, #user_session #new form .optional input, #user_session #new form .optional textarea, #user_session #new form .optional select {
   background-color: #fff;
 }
-/* line 104, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 113, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .errors, #user_session #new form .errors {
   color: #a00;
 }
-/* line 106, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 115, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .errors li, #user_session #new form .errors li {
   margin-left: 1.2em;
 }
-/* line 108, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 117, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form p.inline-errors, #user_session #new form p.inline-errors {
   color: #f00;
 }
-/* line 110, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 119, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form p.inline-hints, #user_session #new form p.inline-hints {
   color: #777;
 }
-/* line 113, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 122, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .fieldWithErrors, #user_session #new form .fieldWithErrors {
   background: #CC6666;
   padding: .75em .2em;
   background: #CCCCCC;
 }
-/* line 118, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 127, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .fieldWithErrors input, #user_session #new form .fieldWithErrors input {
   border: 1px solid red;
 }
-/* line 121, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 130, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation, #user_session #new form #errorExplanation {
-  width: 400px;
+  width: 90%;
   border: 2px solid #CF0000;
   padding: 0;
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 128, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 137, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation h2, #user_session #new form #errorExplanation h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -507,23 +517,33 @@
   background-color: #c00;
   color: #fff;
 }
-/* line 137, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 146, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation p, #user_session #new form #errorExplanation p {
   color: #333;
   margin-bottom: 0;
   padding: 8px;
 }
-/* line 141, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 150, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation ul, #user_session #new form #errorExplanation ul {
   margin: 2px 24px;
 }
-/* line 143, ../../../app/stylesheets/partials/_skintastic.sass */
+/* line 152, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation ul li, #user_session #new form #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
 }
-/* line 151, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .commit input, #user_session #new form .commit input {
+/* line 159, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form fieldset.buttons, #user_session #new form fieldset.buttons {
+  max-width: 150px;
+  overflow: hidden;
+}
+/* line 163, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form fieldset.buttons .commit, #user_session #new form fieldset.buttons .commit {
+  display: inline;
+  float: right;
+}
+/* line 165, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form fieldset.buttons .commit input, #user_session #new form fieldset.buttons .commit input {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -534,6 +554,7 @@
   padding: .5em .75em;
   color: white;
   font-size: .85em;
+  text-align: right;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_textbox.sass */
@@ -808,36 +829,24 @@
   display: inline;
   float: left;
 }
-/* line 30, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #not_complete .todo .col_move img {
-  width: 10px;
-  height: 10px;
-  margin: .05em;
-}
-/* line 35, ../../../app/stylesheets/partials/_todos.sass */
+/* line 31, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_cb {
   display: inline;
   float: left;
   width: 20px;
 }
-/* line 40, ../../../app/stylesheets/partials/_todos.sass */
+/* line 36, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_label .label {
   display: inline;
   float: left;
   padding-right: 15px;
 }
-/* line 44, ../../../app/stylesheets/partials/_todos.sass */
+/* line 40, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_notes {
   display: inline;
   float: left;
 }
-/* line 46, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #not_complete .todo .col_notes img {
-  width: 10px;
-  height: 10px;
-  margin: .05em;
-}
-/* line 53, ../../../app/stylesheets/partials/_todos.sass */
+/* line 45, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_tags .tags .tag {
   font-size: 10px;
   color: #666;
@@ -851,32 +860,33 @@
   height: 16px;
   background: url(/images/tag.gif) center left no-repeat;
   border-right: 1px solid #c2c1c1;
+  cursor: pointer;
 }
-/* line 68, ../../../app/stylesheets/partials/_todos.sass */
+/* line 62, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 {
   font-size: 1em;
   margin: 1em 0em .25em 0em;
 }
-/* line 72, ../../../app/stylesheets/partials/_todos.sass */
+/* line 66, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 a {
   color: black;
 }
-/* line 75, ../../../app/stylesheets/partials/_todos.sass */
+/* line 69, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
 }
-/* line 77, ../../../app/stylesheets/partials/_todos.sass */
+/* line 71, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .completed_at, #todo #index #completed .completed .completed_by {
   color: gray;
 }
-/* line 81, ../../../app/stylesheets/partials/_todos.sass */
+/* line 75, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .label a {
   text-decoration: none;
   color: black;
 }
-/* line 85, ../../../app/stylesheets/partials/_todos.sass */
+/* line 79, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .label a:hover {
   text-decoration: underline;
 }
@@ -912,18 +922,46 @@
   float: right;
   padding-left: 5px;
 }
-/* line 26, ../../../app/stylesheets/partials/_notes.sass */
+/* line 27, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .body {
   padding: .5em;
 }
 
-/* line 16, ../../../app/stylesheets/public.sass */
+/* line 1, ../../../app/stylesheets/partials/_histories.sass */
+#history {
+  overflow: auto;
+  height: 8em;
+  font-size: .90em;
+  margin-top: 1em;
+  border-top: 1px solid gray;
+  padding-top: .5em;
+}
+/* line 9, ../../../app/stylesheets/partials/_histories.sass */
+#history p {
+  margin-top: 0px;
+}
+/* line 13, ../../../app/stylesheets/partials/_histories.sass */
+#history .history .row {
+  overflow: hidden;
+}
+/* line 16, ../../../app/stylesheets/partials/_histories.sass */
+#history .history .row .created_at, #history .history .row .user, #history .history .row .event {
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15em;
+  color: gray;
+  display: inline;
+  float: left;
+  padding-right: .20em;
+}
+
+/* line 17, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px .20em;
 }
 
-/* line 20, ../../../app/stylesheets/public.sass */
+/* line 21, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
@@ -931,29 +969,29 @@ body {
   width: 99%;
 }
 
-/* line 27, ../../../app/stylesheets/public.sass */
+/* line 28, ../../../app/stylesheets/public.sass */
 a {
   color: #0000FF;
 }
-/* line 29, ../../../app/stylesheets/public.sass */
+/* line 30, ../../../app/stylesheets/public.sass */
 a img {
   border: none;
 }
 
-/* line 32, ../../../app/stylesheets/public.sass */
+/* line 33, ../../../app/stylesheets/public.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 37, ../../../app/stylesheets/public.sass */
+/* line 38, ../../../app/stylesheets/public.sass */
 .labelHighlight {
   color: #999999;
   text-align: right;
 }
 
-/* line 41, ../../../app/stylesheets/public.sass */
+/* line 42, ../../../app/stylesheets/public.sass */
 #toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -962,19 +1000,19 @@ a img {
   background: #97afae;
   padding: .25em;
 }
-/* line 46, ../../../app/stylesheets/public.sass */
+/* line 47, ../../../app/stylesheets/public.sass */
 #toolbar table {
   width: 100%;
 }
-/* line 49, ../../../app/stylesheets/public.sass */
+/* line 50, ../../../app/stylesheets/public.sass */
 #toolbar table td {
   width: 33%;
 }
-/* line 52, ../../../app/stylesheets/public.sass */
+/* line 53, ../../../app/stylesheets/public.sass */
 #toolbar table td.left {
   text-align: left;
 }
-/* line 55, ../../../app/stylesheets/public.sass */
+/* line 56, ../../../app/stylesheets/public.sass */
 #toolbar table td.center > h1 {
   color: #FFFFFF;
   font-size: 14pt;
@@ -983,23 +1021,23 @@ a img {
   margin: 0;
   padding: 0;
 }
-/* line 63, ../../../app/stylesheets/public.sass */
+/* line 64, ../../../app/stylesheets/public.sass */
 #toolbar table td.center > h1 .button {
   display: inline;
   float: right;
 }
 
-/* line 66, ../../../app/stylesheets/public.sass */
+/* line 67, ../../../app/stylesheets/public.sass */
 #container {
   background: #fff;
   margin: 0px;
 }
 
-/* line 70, ../../../app/stylesheets/public.sass */
+/* line 71, ../../../app/stylesheets/public.sass */
 #flash_messages {
   margin: .25em .50em;
 }
-/* line 73, ../../../app/stylesheets/public.sass */
+/* line 74, ../../../app/stylesheets/public.sass */
 #flash_messages .notice, #flash_messages .error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -1008,12 +1046,12 @@ a img {
   -webkit-border-radius: 4px;
   margin: .25em;
 }
-/* line 78, ../../../app/stylesheets/public.sass */
+/* line 79, ../../../app/stylesheets/public.sass */
 #flash_messages .notice {
   background-color: #CFC;
   border: solid 1px #6C6;
 }
-/* line 82, ../../../app/stylesheets/public.sass */
+/* line 83, ../../../app/stylesheets/public.sass */
 #flash_messages .error {
   background-color: #FCC;
   border: solid 1px #C66;

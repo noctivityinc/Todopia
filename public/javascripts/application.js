@@ -15,13 +15,10 @@ $(function(){
       $('#note_body').focus(); 
       
       $('#new_note').ajaxForm({ 
-          beforeSubmit: function(){
-           console.log('new note'); 
-          },
+          clearForm: true,
           success: function(rText) {
-            console.log(rText)
             $('#facebox').find('#index').fadeOut(100).html(rText).fadeIn(200);
-            get_checklist();
+            $('#facebox').find('#note_body').focus();
            }
        });
        
@@ -31,11 +28,12 @@ $(function(){
           url: url,
           success: function(responseText) {
             $('#facebox').find('#index').fadeOut(100).html(responseText).fadeIn(200);
-            get_checklist();
           }
         })
         return false;
       })
+    }).bind('close.facebox', function(){
+      get_checklist();
     })
     
     $(":text").labelify({ labelledClass: "labelHighlight" });
@@ -67,7 +65,13 @@ function bind_checklist_keyboard(){
     $(this).closest('form').find('.todo_label').click()
   });
   
+  $('.todo_checkbox').bind('keydown', 'n', function(){ 
+    $(this).closest('form').find('.note_trigger').click()
+  });
+  
   checklist_sortable()
+  console.log($.cookie('complete_div_visible'))
+  if ($.cookie('complete_div_visible') == 'true') {$('#completed .list').show()} else {$('#completed .list').hide()}
   $('.todo_checkbox:first').focus();
 }
 

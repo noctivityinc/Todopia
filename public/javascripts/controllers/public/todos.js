@@ -24,7 +24,9 @@ $(function(){
   })
   
   $('#complete_toggle').live('click',function(){
-    $('#completed .list').slideToggle('fast');
+    $('#completed .list').slideToggle('fast', function(){
+      $.cookie('complete_div_visible', $(this).is(':visible'), {expires: 7});
+    });
     return false;
   })
   
@@ -48,7 +50,15 @@ $(function(){
     return false;
   })
   
+  $('.tag_filter').live('click',function(){
+    url = $(this).attr('rel')
+    $.ajax({url: url, success: function(responseText){
+       reload_checklist(responseText);
+    }})
+    return false;
+  })
   
+  if ($.cookie('complete_div_visible')==true) { $('#completed .list').show() } else { $('#completed .list').hide() }
 })
 
 function new_todo(noslide){

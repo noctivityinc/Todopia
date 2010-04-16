@@ -7,7 +7,8 @@ class TodoObserver < ActiveRecord::Observer
     if todo.completed
       todo.histories.create(:event =>'completed', :user => todo.completer)
     else
-      todo.histories.create(:event => 'updated', :user => todo.user)
+      changes = todo.changes.reject {|k,v| %w{updated_at created_at}.include?(k) }
+      todo.histories.create(:event => "updated #{changes}", :user => todo.user)
     end
   end
 end

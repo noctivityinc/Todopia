@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :users, :controller => 'public/users', :shallow => true,  do |user|
-    user.resources :todos, :controller => 'public/todos', :member => { :delete => :get }, :collection => {:update_order => :get}  do |todo|
+    user.resources :todos, :controller => 'public/todos', :member => { :delete => :get, :filter => :get }, :collection => {:update_order => :get}  do |todo|
       todo.resources :histories, :controller => 'public/histories'
       todo.resources :notes, :controller => 'public/notes', :member => { :delete => :get }
     end

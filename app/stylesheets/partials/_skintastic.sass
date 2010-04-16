@@ -1,11 +1,20 @@
 #user, #user_session
   #new
+    !floated_total_width = 300px
+    // Total Width of form
+    //
+    !floated_input_width = 200px
+    // Width of inputs
+    //
+    !floated_label_width = 100px
+    
     +float-form
     
     form
-      :margin 1em
+      :margin .1em
       :background #eee
-      :padding .50em 1em
+      :padding .50em .1em
+      +rounded
   
       // <li> Field wrappers
       li
@@ -19,6 +28,7 @@
       fieldset
         :margin-top 20px
         :border none
+
       li
         fieldset
           :padding 0
@@ -59,7 +69,6 @@
         :font-size 14px
 
         &.text, &.title, &[type=text], &[type=password]
-          :width 500px
           :border 1px solid #999
           :padding 6px 8px
           :line-height 100%
@@ -119,7 +128,7 @@
           border: 1px solid red
 
       #errorExplanation
-        :width 400px
+        :width 90%
         :border 2px solid #CF0000
         :padding 0
         :padding-bottom 12px
@@ -147,7 +156,13 @@
       //--------------------------------------------------------
       // Submit Buttons
       //--------------------------------------------------------
-      .commit
-        input
-          +button(green)
+      fieldset.buttons
+        max-width: 150px
+        overflow: hidden
+
+        .commit
+          +float-right
+          input
+            +button(green)
+            text-align: right
 

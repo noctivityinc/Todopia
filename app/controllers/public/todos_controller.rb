@@ -46,8 +46,26 @@ class Public::TodosController < PublicController
     render_list
   end
 
-  def search_tags
-    query = params[:search]
+  def filter
+    tag = params[:tag]
+    @tags = cookies[:tags].blank? ? [] : cookies[:tags].split(",")
+
+    if params[:remove]
+      @tags.reject! {|x| x == tag}
+    else
+      @tags << tag
+    end
+
+    cookies[:tags] = @tags.join(',')
+
+    unless @tags.empty?
+      @todo = @user.todos.new
+      @todos = @user.todos.not_complete.tagged_with(@tags)
+      @completed = @user.todos.complete.tagged_with(@tags)
+      render :partial => 'list'
+    else
+      render_list
+    end
   end
 
   def update_order

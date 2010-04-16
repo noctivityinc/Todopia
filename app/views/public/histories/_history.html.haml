@@ -1,0 +1,5 @@
+.history
+  .row
+    .created_at= history.created_at.to_s(:short)
+    .user= "[#{history.user.login}]"
+    .event= history.event
