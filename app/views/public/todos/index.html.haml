@@ -1,0 +1,16 @@
+- content_for :head do
+  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js', 'jquery.hotkeys'
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.custom', :cache => true
+
+#todo
+  - title "Todopia"
+
+  #new.dialog= render :partial => 'form'
+
+  #flash= render :partial => "layouts/flash"
+  
+  #index= render 'list'
+    
+  #urls
+    .tag_search{:rel => "#{user_tags_path(@user)}"}
+    .todo_index{:rel => "#{user_todos_path(@user)}"}

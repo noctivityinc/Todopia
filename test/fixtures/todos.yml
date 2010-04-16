@@ -1,0 +1,28 @@
+# == Schema Information
+# Schema version: 20100414145449
+#
+# Table name: todos
+#
+#  id           :integer         not null, primary key
+#  label        :string(255)
+#  position     :integer
+#  completed_at :datetime
+#  user_id      :integer
+#  completed_by :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+one:
+  label: MyString
+  position: 1
+  completed_at: 2010-04-14 10:53:18
+  user_id: 1
+  completed_by: 1
+
+two:
+  label: MyString
+  position: 1
+  completed_at: 2010-04-14 10:53:18
+  user_id: 1
+  completed_by: 1

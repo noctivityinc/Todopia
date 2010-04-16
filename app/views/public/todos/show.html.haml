@@ -1,0 +1,24 @@
+- title "Todo"
+
+%p
+  %strong Label:
+  =h @todo.label
+%p
+  %strong Position:
+  =h @todo.position
+%p
+  %strong Completed At:
+  =h @todo.completed_at
+%p
+  %strong User:
+  =h @todo.user_id
+%p
+  %strong Completed By:
+  =h @todo.completed_by
+
+%p
+  = link_to "Edit", edit_todo_path(@todo)
+  |
+  = link_to "Destroy", @todo, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", todos_path

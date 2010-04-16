@@ -1,0 +1,11 @@
+#user_session
+  #new
+    - title "Log in"
+
+    - semantic_form_for @user_session do |f|
+      - f.inputs do
+        = f.input :login, :label => 'Username'
+        = f.input :password, :label => 'Password', :as => :password 
+  
+      - f.buttons do
+        = f.commit_button 'Login'

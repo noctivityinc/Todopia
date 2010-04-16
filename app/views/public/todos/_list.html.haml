@@ -1,0 +1,6 @@
+#not_complete{:rel => update_order_user_todos_path(current_user)}= render @todos
+
+- unless @completed.blank?
+  #completed
+    %h2= link_to "Completed", '#', :id => 'complete_toggle' 
+    .list= render @completed

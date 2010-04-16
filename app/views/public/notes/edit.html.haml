@@ -1,0 +1,8 @@
+- title "Edit Note"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Show", note_path(@note)
+  |
+  = link_to "View All", notes_path

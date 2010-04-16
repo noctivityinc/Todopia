@@ -1,0 +1,18 @@
+- title "History"
+
+%p
+  %strong Todo:
+  =h @history.todo_id
+%p
+  %strong User:
+  =h @history.user_id
+%p
+  %strong Event:
+  =h @history.event
+
+%p
+  = link_to "Edit", edit_history_path(@history)
+  |
+  = link_to "Destroy", @history, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", histories_path

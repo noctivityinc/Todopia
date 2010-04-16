@@ -1,0 +1,17 @@
+- title "Histories"
+
+%table
+  %tr
+    %th Todo
+    %th User
+    %th Event
+  - for history in @histories
+    %tr
+      %td= h history.todo_id
+      %td= h history.user_id
+      %td= h history.event
+      %td= link_to 'Show', history
+      %td= link_to 'Edit', edit_history_path(history)
+      %td= link_to 'Destroy', history, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New History", new_history_path

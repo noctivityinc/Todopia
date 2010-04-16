@@ -1,0 +1,6 @@
+.note
+  .row
+    .created_at= note.created_at
+    .trash= link_to (image_tag "icons/trash_on.png", :title => "Delete Note"), '#', :rel => delete_note_path(note), :class => 'delete_note' 
+    .user= note.user.login
+  .body= note.body

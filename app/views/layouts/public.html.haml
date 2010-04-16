@@ -1,0 +1,20 @@
+!!! Strict
+%html{html_attrs}
+  
+  %head
+    %title
+      = h(yield(:title) || "Untitled")
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
+    
+    = stylesheet_link_tag 'compiled/public.css'
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", 'jquery.form', 'facebox', 'jquery.labelify', 'flash', 'GrowingInput', 'TextboxList', 'TextboxList.Autocomplete'
+    = javascript_include_tag 'application', "controllers/#{params[:controller]}"
+    = javascript_tag "var AUTH_TOKEN = encodeURIComponent(#{form_authenticity_token.inspect});" if protect_against_forgery?
+        
+    = yield(:head)
+  
+  %body
+    #toolbar= render :partial => "layouts/toolbar"
+        
+    #container
+      = yield
