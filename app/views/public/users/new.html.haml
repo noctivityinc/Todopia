@@ -1,0 +1,13 @@
+#user
+  #new
+    - title "Sign up"
+
+    - semantic_form_for @user do |f|
+      - f.inputs do
+        = f.input :login, :label => 'Username'
+        = f.input :email, :label => 'Email'
+        = f.input :password, :label => 'Password', :as => :password 
+        = f.input :password_confirmation, :label => 'Confirm', :as => :password 
+    
+      - f.buttons do
+        = f.commit_button 'Sign Up!'

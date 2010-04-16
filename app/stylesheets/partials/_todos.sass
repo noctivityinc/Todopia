@@ -1,0 +1,88 @@
+#todo
+  #new
+    display: none
+    padding: 1em
+    
+    p
+      margin: .15em
+      padding: .15em
+    
+    form    
+      input
+        &.text, &.title, &[type=text], &[type=password]
+          :width 90%
+          :border 1px solid #999
+          :padding 6px 8px
+          :line-height 100%
+
+  #index
+    #not_complete
+      margin-top: 1em
+      
+      .todo
+        overflow: hidden
+
+        .col
+          padding-right: 5px
+        
+        .col_move
+          +float-left
+          img
+            width: 10px
+            height: 10px
+            margin: .05em
+      
+        .col_cb
+          +float-left
+          width: 20px
+      
+        .col_label
+          .label
+            +float-left
+            padding-right: 15px
+
+        .col_notes
+          +float-left
+          img
+            width: 10px
+            height: 10px
+            margin: .05em
+
+        .col_tags
+          .tags
+            .tag
+              font-size: 10px
+              color: #666
+              display: block
+              float: left
+              padding-left: 20px
+              padding-right: 10px
+              padding-top: 2px
+              margin-top: 0px
+              text-decoration: none
+              height: 16px
+              background: url(/images/tag.gif) center left no-repeat
+              border-right: 1px solid #c2c1c1
+
+    #completed
+      h2
+        font-size: 1em
+        margin: 1em 0em .25em 0em
+        
+        a
+          color: black
+        
+      .completed
+        +alt
+        .completed_at, .completed_by
+          color: gray
+        
+        .label
+          a
+            text-decoration: none
+            color: black
+            
+          a:hover
+            text-decoration: underline
+      
+      

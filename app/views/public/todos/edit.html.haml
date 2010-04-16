@@ -1,0 +1,8 @@
+- title "Edit Todo"
+
+= render :partial => 'form'
+
+%p
+  = link_to "Show", todo_path(@todo)
+  |
+  = link_to "View All", todos_path

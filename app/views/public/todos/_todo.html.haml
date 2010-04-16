@@ -1,0 +1,21 @@
+- if todo.completed_at
+  .completed
+    %span.completed_at= todo.completed_at.to_s(:short)
+    %span.completed_by= (todo.completer == current_user) ? '[me]' : "[#{todo.completer.login}]"
+    %span.label= link_to todo.label, '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
+- else
+  .todo(id="cb_todo_#{todo.id}")
+    - form_for todo do |f|
+      .col_move.col
+        = image_tag "icons/move.jpg", :title => "move", :class => "handle"
+      .col_cb.col
+        = f.check_box :completed, :class => 'todo_checkbox' 
+      .col_label.col
+        .label= f.label todo.id, todo.label, :class => 'todo_label', :rel => edit_todo_path(todo)
+      .col_notes.col
+        = link_to (notes_icon(todo)), todo_notes_path(todo), :rel => 'facebox' 
+      .col_tags.col
+        .tags
+          - todo.tag_list.each do |tag|
+            .tag= tag
+
