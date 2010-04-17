@@ -50,6 +50,7 @@ $(function(){
   })
   
   $('.tag_filter').live('click',function(){
+    $('#index').fadeOut(100)
     url = $(this).attr('rel')
     $.ajax({url: url, success: function(responseText){
        reload_checklist(responseText);
@@ -57,7 +58,7 @@ $(function(){
     return false;
   })
   
-  if ($.cookie('complete_div_visible')==true) { $('#completed .list').show() } else { $('#completed .list').hide() }
+  if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }
 })
 
 function new_todo(noslide){
@@ -75,8 +76,8 @@ function show_todo_form(addedit){
     if ($('#todo #new').is(':visible')) {
       $('#todo_toggle').text('Hide')
       if (addedit == 'edit') {setup_edit_form()} else {setup_add_form()};
-      setup_autocomplete();
       bind_add_edit_keyboard();
+      setup_autocomplete();
     } else {
       $('#todo_toggle').text('+ New Todo')
       bind_checklist_keyboard();
@@ -114,8 +115,11 @@ function setup_edit_form() {
 function setup_autocomplete() {
   $('.textboxlist').remove();
   
-  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, plugins: {autocomplete: {}}});
+  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, bitsOptions: {editable: {addOnBlur: true}}, plugins: {autocomplete: {}}});
 	t4.getContainer().addClass('textboxlist-loading');
+  // t4.addEvent('bitAdd',function(bit){
+  //  clog(bit.value)
+  // })
 	  
 	$.ajax({url: $('#urls .tag_search').attr('rel'), dataType: 'json', success: function(r){
 		t4.plugins['autocomplete'].setValues(r);
@@ -125,8 +129,8 @@ function setup_autocomplete() {
 	$('#todo_submit').show();
   $('.spinner').hide();
 	
-	$(":text").labelify({ labelledClass: "labelHighlight" });
-	$(".textboxlist-bit-editable-input").labelify({ labelledClass: "labelHighlight", text: function(input) { return "+ tag"; } });
+  $(":text").labelify({ labelledClass: "labelHighlight" });
+  $(".textboxlist-bit-editable-input").labelify({ labelledClass: "labelHighlight", text: function(input) { return "+ tag"; } });
 	$('#todo_label').focus();
 }
 

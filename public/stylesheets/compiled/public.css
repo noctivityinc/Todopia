@@ -1047,7 +1047,7 @@ a img {
 
 /* line 71, ../../../app/stylesheets/public.sass */
 #flash_messages {
-  margin: .25em .50em;
+  margin: 1em .50em;
 }
 /* line 74, ../../../app/stylesheets/public.sass */
 #flash_messages .notice, #flash_messages .error {

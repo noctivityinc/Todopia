@@ -21,12 +21,7 @@ class Public::TodosController < PublicController
 
   def create
     @todo = @user.todos.new(params[:todo])
-    if @todo.save
-      render_list
-    else
-      flash.error = @todo.errors.full_messages
-      render_list
-    end
+    render_list
   end
 
   def edit
@@ -86,7 +81,7 @@ class Public::TodosController < PublicController
     @todo = Todo.find(params[:id])
     @user = @todo.user
   end
-  
+
   def load_todos
     @todo = @user.todos.new
     @todos = @user.todos.not_complete

@@ -52,10 +52,10 @@ function get_checklist() {
 }
 
 function reload_checklist(responseText) {
-  clog('reload_checklist');
-  $('#todo').find('#index').html(responseText);
-  bind_checklist_keyboard();
-  $('a[rel*=facebox]').facebox() 
+  $('#todo').find('#index').html(responseText).fadeIn(100, function(){
+    bind_checklist_keyboard();
+    $('a[rel*=facebox]').facebox() 
+  });
 }
 
 function bind_checklist_keyboard(){

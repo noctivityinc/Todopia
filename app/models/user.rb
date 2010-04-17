@@ -36,7 +36,12 @@ class User < ActiveRecord::Base
   private
 
   def not_reserved_word
-
+    if controllers_list.include? self.login 
+      self.errors.add('login','is not available.')
+      false
+    else
+      true
+    end
   end
 
   def controllers_list
