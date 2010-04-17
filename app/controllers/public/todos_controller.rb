@@ -55,7 +55,6 @@ class Public::TodosController < PublicController
     cookies[:tags] = @tags.join(',')
 
     unless @tags.empty?
-      p @tags
       @todo = @user.todos.new
       @todos = @user.todos.not_complete.tagged_with(@tags)
       @completed = @user.todos.complete.tagged_with(@tags)
