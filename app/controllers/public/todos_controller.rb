@@ -21,6 +21,7 @@ class Public::TodosController < PublicController
 
   def create
     @todo = @user.todos.new(params[:todo])
+    @todo.save
     render_list
   end
 
@@ -56,8 +57,8 @@ class Public::TodosController < PublicController
 
     unless @tags.empty?
       @todo = @user.todos.new
-      @todos = @user.todos.tagged_with(@tags).not_complete
-      @completed = @user.todos.tagged_with(@tags).complete
+      @todos = @user.todos.tagged_with(@tags, :any => true).not_complete
+      @completed = @user.todos.tagged_with(@tags, :any => true).complete
       render :partial => 'list'
     else
       render_list
