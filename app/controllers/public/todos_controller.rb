@@ -1,6 +1,7 @@
 class Public::TodosController < PublicController
   before_filter :get_user, :only => [:index, :new, :create, :update_order]
   before_filter :get_todo, :except => [:index, :new, :create, :update_order]
+  before_filter :verify_user
 
   def index
     load_todos
@@ -85,7 +86,7 @@ class Public::TodosController < PublicController
     @todo = Todo.find(params[:id])
     @user = @todo.user
   end
-
+  
   def load_todos
     @todo = @user.todos.new
     @todos = @user.todos.not_complete
