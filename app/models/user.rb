@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   acts_as_authentic do |c|
     c.login_field = "login"
   end
-  # has_friendly_id :login
+  has_friendly_id :login
 
   has_many :todos, :dependent => :destroy
 
