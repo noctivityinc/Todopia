@@ -10,7 +10,6 @@ $(function(){
   $('.todo_checkbox').live('click',function(){
     cb = $(this);
     ndx = cb.closest('.todo').index();
-    console.log(ndx)
     $(this).closest('form').ajaxSubmit({ 
            clearForm: true,
            beforeSubmit: function(){
@@ -138,6 +137,7 @@ function bind_keyboard() {
 }
 
 function bind_add_edit_keyboard() {
+  $('input:not(.todo_checkbox)').unbind();
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+n', function(){ new_todo(); });
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
 }

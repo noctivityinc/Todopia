@@ -40,6 +40,8 @@ $(function(){
     
     if ($.cookie('warning_message_trigger')!='true') $('#warning_message_trigger').trigger('click');
     $.cookie('warning_message_trigger', 'true', {expires: 365});
+    
+    clog('loaded')
   });
 })
 
@@ -50,12 +52,15 @@ function get_checklist() {
 }
 
 function reload_checklist(responseText) {
+  clog('reload_checklist');
   $('#todo').find('#index').html(responseText);
   bind_checklist_keyboard();
   $('a[rel*=facebox]').facebox() 
 }
 
 function bind_checklist_keyboard(){
+  $('.todo_checkbox').unbind();
+  
   $('.todo_checkbox').bind('keydown', 'down', function(){ 
     $(this).closest('.todo').next('.todo').find('.todo_checkbox').focus()
   });
@@ -69,11 +74,11 @@ function bind_checklist_keyboard(){
   });
   
   $('.todo_checkbox').bind('keydown', 'n', function(){ 
+    clog('here')
     $(this).closest('form').find('.note_trigger').click()
   });
   
   checklist_sortable()
-  console.log($.cookie('complete_div_visible'))
   if ($.cookie('complete_div_visible') == 'true') {$('#completed .list').show()} else {$('#completed .list').hide()}
   $('.todo_checkbox:first').focus();
 }
@@ -89,4 +94,15 @@ function checklist_sortable() {
       }
     });
   $('#not_complete').disableSelection();
+}
+
+function clog(message, type) {
+    if (type == null) {
+        type = "log"
+    }
+    if (typeof(console) != "undefined") {
+        console[type](message);
+    } else {
+        window.status = message;
+    }
 }
