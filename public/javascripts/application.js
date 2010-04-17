@@ -17,7 +17,7 @@ $(function(){
       $('#new_note').ajaxForm({ 
           clearForm: true,
           success: function(rText) {
-            $('#facebox').find('#index').fadeOut(100).html(rText).fadeIn(200);
+            $('#facebox').find('#index').fadeOut(200).html(rText).fadeIn(200);
             $('#facebox').find('#note_body').focus();
            }
        });
@@ -27,7 +27,7 @@ $(function(){
         $.ajax({
           url: url,
           success: function(responseText) {
-            $('#facebox').find('#index').fadeOut(100).html(responseText).fadeIn(200);
+            $('#facebox').find('#index').fadeOut(200).html(responseText).fadeIn(200);
           }
         })
         return false;
@@ -52,7 +52,7 @@ function get_checklist() {
 }
 
 function reload_checklist(responseText) {
-  $('#todo').find('#index').html(responseText).fadeIn(100, function(){
+  $('#todo').find('#index').html(responseText).fadeIn(200, function(){
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
   });

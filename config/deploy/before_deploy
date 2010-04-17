@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+source ~/.bashrc
+
+RAILS_ENV="${RAILS_ENV:-"development"}"
+
+cd $current_path
+$scripts_path/log "info" "Stopping unicorns..."
+bdsm unicorn stop

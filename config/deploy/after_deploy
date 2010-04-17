@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+source ~/.bashrc
+
+RAILS_ENV="${RAILS_ENV:-development}"
+
+cd $current_path
+
+$scripts_path/log "info" "Run bundler..."
+bundle install 
+
+$scripts_path/log "info" "Running migrations..."
+rake db:migrate --trace >> ~/shared/log/migrate.log 2>&1
+
+# $scripts_path/log "info" "Updating cron via whenever..."
+# whenever -w
+
+mkdir -p $current_path/tmp/pids
+
+$scripts_path/log "info" "Starting unicorns..."
+bdsm unicorn start
+
+rake hoptoad:deploy TO=$environment
