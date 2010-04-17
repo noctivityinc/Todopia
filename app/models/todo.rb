@@ -40,7 +40,7 @@ class Todo < ActiveRecord::Base
   end
   
   def tag_string_to_tag_list
-    self.tag_list = self.tag_string unless self.tag_string.blank?
+    self.tag_list = self.tag_string.downcase unless self.tag_string.blank?
   end
   
   def check_completed

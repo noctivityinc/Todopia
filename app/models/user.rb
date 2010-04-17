@@ -27,6 +27,30 @@ class User < ActiveRecord::Base
   acts_as_authentic do |c|
     c.login_field = "login"
   end
-  
-  has_many :todos, :dependent => :destroy 
+  has_friendly_id :login
+
+  has_many :todos, :dependent => :destroy
+
+  validate :not_reserved_word
+
+  private
+
+  def not_reserved_word
+    if controllers_list.include? self.login 
+      self.errors.add('login','is not available.')
+      false
+    else
+      true
+    end
+  end
+
+  def controllers_list
+    @controller_actions = ActionController::Routing::Routes.routes.inject({}) do |controller_actions, route|
+      rrc = route.requirements[:controller]
+      rrc = rrc.split('/',2)[1] if rrc =~ /\//
+      (controller_actions[rrc] ||= []) << route.requirements[:action]
+      controller_actions
+    end
+    @controller_actions.flatten.flatten.uniq
+  end
 end
