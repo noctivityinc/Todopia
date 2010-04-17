@@ -52,7 +52,7 @@ $(function(){
   $('.tag_filter').live('click',function(){
     clog('here');
     url = $(this).attr('rel')
-    $('#index').fadeOut(100, function(){
+    $('#index').fadeOut(200, function(){
       $.ajax({url: url, success: function(responseText){
          clog(url)
          clog(responseText)
@@ -76,7 +76,7 @@ function new_todo(noslide){
 }
 
 function show_todo_form(addedit){
-  $('#todo #new').slideToggle(100, function(){
+  $('#todo #new').slideToggle(200, function(){
     if ($('#todo #new').is(':visible')) {
       $('#todo_toggle').text('Hide')
       if (addedit == 'edit') {setup_edit_form()} else {setup_add_form()};
@@ -110,7 +110,7 @@ function setup_edit_form() {
        clearForm: true,
        beforeSubmit: showRequest,
        success: function(responseText){ 
-         $('#todo #new').slideUp(100); 
+         $('#todo #new').slideUp(200); 
          reload_checklist(responseText);
          $('.todo_checkbox:first').focus(); }
    });
