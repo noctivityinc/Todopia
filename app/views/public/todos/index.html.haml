@@ -11,6 +11,30 @@
   
   #index= render 'list'
     
+  #docs
+    %p 
+      %u Keyboard Shortcuts
+    .sc 
+      %b Ctrl+N 
+      toggles new todo panel
+    .sc 
+      %b f 
+      takes you to first checkbox
+    .sc
+      %b space
+      marks as complete
+    .sc 
+      %b e
+      edits selected item
+    .sc
+      %b n
+      create/view notes & history
+    %p 
+      %u Also...
+    .sc Click tag(s) to filter
+    .sc Click completed item to delete
+    .sc Drag to move to reposition    
+  
   #urls
     .tag_search{:rel => "#{user_tags_path(@user)}"}
     .todo_index{:rel => "#{user_todos_path(@user)}"}

@@ -7,6 +7,7 @@ class Public::NotesController < PublicController
   def index
     @notes = @todo.notes.all
     @note = @todo.notes.new
+    @histories = @todo.histories.all
   end
 
   def show

@@ -15,5 +15,7 @@ class History < ActiveRecord::Base
   belongs_to :user
   belongs_to :todo
   
+  default_scope :order => 'created_at ASC'
+  
   validates_presence_of :event
 end

@@ -1,0 +1,21 @@
+- title "Invites"
+
+%table
+  %tr
+    %th Inviter
+    %th Email
+    %th Name
+    %th Token
+    %th Accepted at
+  - for invite in @invites
+    %tr
+      %td= h invite.inviter_id
+      %td= h invite.email
+      %td= h invite.name
+      %td= h invite.token
+      %td= h invite.accepted_at
+      %td= link_to 'Show', invite
+      %td= link_to 'Edit', edit_invite_path(invite)
+      %td= link_to 'Destroy', invite, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Invite", new_invite_path
