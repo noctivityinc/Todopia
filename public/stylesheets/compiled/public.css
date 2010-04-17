@@ -890,6 +890,18 @@
 #todo #index #completed .completed .label a:hover {
   text-decoration: underline;
 }
+/* line 82, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs {
+  font-size: .90em;
+  color: #666;
+  text-align: center;
+  margin-top: 6em;
+}
+/* line 87, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .sc {
+  display: inline;
+  padding-right: 1em;
+}
 
 /* line 5, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note {

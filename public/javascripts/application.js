@@ -37,6 +37,9 @@ $(function(){
     })
     
     $(":text").labelify({ labelledClass: "labelHighlight" });
+    
+    if ($.cookie('warning_message_trigger')!='true') $('#warning_message_trigger').trigger('click');
+    $.cookie('warning_message_trigger', 'true', {expires: 365});
   });
 })
 

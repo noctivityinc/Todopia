@@ -2,9 +2,12 @@ source 'http://rubygems.org'
 source 'http://gems.github.com'
 source :gemcutter
 
+gem 'bundler', :require => nil
+gem 'rubygems-update', :require => nil
+
 gem 'rails', '~> 2.3.5', :require => nil
 
-gem 'pg'
+gem 'pg', '0.8.0'
 
 gem "authlogic"
 gem 'haml'
