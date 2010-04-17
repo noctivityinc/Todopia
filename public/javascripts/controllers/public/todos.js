@@ -50,11 +50,15 @@ $(function(){
   })
   
   $('.tag_filter').live('click',function(){
-    $('#index').fadeOut(100)
+    clog('here');
     url = $(this).attr('rel')
-    $.ajax({url: url, success: function(responseText){
-       reload_checklist(responseText);
-    }})
+    $('#index').fadeOut(100, function(){
+      $.ajax({url: url, success: function(responseText){
+         clog(url)
+         clog(responseText)
+         reload_checklist(responseText);
+      }})      
+    })
     return false;
   })
   
