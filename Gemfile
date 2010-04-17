@@ -13,7 +13,7 @@ gem "authlogic"
 gem 'haml'
 gem 'compass', '0.10.0.rc1'
 gem 'acts-as-taggable-on'
-gem "friendly_id"
+gem "friendly_id", "~> 2.3"
 gem 'formtastic'
 gem 'annotate-models'
 
