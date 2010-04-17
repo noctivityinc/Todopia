@@ -1,7 +1,7 @@
 class Public::TagsController < PublicController
   
   def show
-    user = User.find_by_id(params[:user_id])
+    user = User.find(params[:user_id])
     render :text => '' unless user
     
     tags = user.todos.map {|x| x.tags}.flatten.map {|x| [x.name, x.name]}.uniq!
