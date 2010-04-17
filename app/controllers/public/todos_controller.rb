@@ -56,8 +56,8 @@ class Public::TodosController < PublicController
 
     unless @tags.empty?
       @todo = @user.todos.new
-      @todos = @user.todos.not_complete.tagged_with(@tags)
-      @completed = @user.todos.complete.tagged_with(@tags)
+      @todos = @user.todos.tagged_with(@tags, :any => true).not_complete
+      @completed = @user.todos.tagged_with(@tags, :any => true).complete
       render :partial => 'list'
     else
       render_list
