@@ -79,13 +79,13 @@ function new_todo(noslide){
     $.ajax({url: url, success: function(responseText){
       bind_checklist_keyboard();
       $('#new').html(responseText)
-      show_todo_form('add');
+      toggle_todo_form('add');
     }})
     return false;
 }
 
-function show_todo_form(addedit){
-  $('#todo #new').slideToggle(200, function(){
+function toggle_todo_form(addedit){
+  $('#todo #new').toggle(200, function(){
     if ($('#todo #new').is(':visible')) {
       $('#todo_toggle').text('Hide')
       if (addedit == 'edit') {setup_edit_form()} else {setup_add_form()};
@@ -103,7 +103,7 @@ function edit_todo(el){
   $.ajax({url: url, success: function(responseText){
       $('#new').html(responseText)
       $('#todo #new').hide();
-      show_todo_form('edit');
+      toggle_todo_form('edit');
   }})
 }
 
@@ -183,12 +183,14 @@ function bind_keyboard() {
   $(document).bind('keydown', 'f', function(){ $('body').data('position',0); $('.todo_checkbox:first').focus(); });
   $(document).bind('keydown', 'ctrl+n', function(){ new_todo(); });
   $(document).bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
+  $('body:not(#new)').bind('keydown', 'c', function(){ new_todo(); });
 }
 
 function bind_add_edit_keyboard() {
   $('input:not(.todo_checkbox)').unbind();
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+n', function(){ new_todo(); });
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
+  $('input').bind('keydown','esc', function(){ toggle_todo_form(); })
 }
 
 function setup_tooltips(){

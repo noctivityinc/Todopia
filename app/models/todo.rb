@@ -77,7 +77,7 @@ class Todo < ActiveRecord::Base
 
   def post_tag_plugins
     return unless self.tag_string
-    self.tag_string.split(',').each {|tag| self.user.tag_groups.create(:tag => tag[1..-1]) if tag.starts_with? '!' }
+    self.tag_string.downcase.split(',').each {|tag| self.user.tag_groups.create(:tag => tag[1..-1]) if tag.starts_with? '!' }
   end
 
 

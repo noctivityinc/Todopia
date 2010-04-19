@@ -1,0 +1,11 @@
+h1. Todopia Release Notes
+
+h3. 0.1.19
+* Added keyboard shortcut "c" to create new todo (like gmail)
+* Added keyboard shortcut "#" to delete todo
+* Added ability to close new todo panel with escape key
+* Hiding some keyboard shortcuts on main page for cleanliness
+* Added icon to delete today without having to first complete
+* Added RELEASE NOTES
+* Fixed uppercase grouping bug
+* Integrated User Voice
