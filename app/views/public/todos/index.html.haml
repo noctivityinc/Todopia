@@ -12,29 +12,31 @@
   #index= render 'list'
     
   #docs
-    %p 
-      %u Keyboard Shortcuts
-    .sc 
-      %b ctrl+n 
-      toggles new todo panel
-    .sc 
-      %b j
-      next todo
-    .sc 
-      %b k 
-      previous todo
-    .sc 
-      %b f 
-      takes you to first checkbox
-    .sc
-      %b space/enter
-      marks as complete
-    .sc 
-      %b e
-      edits selected item
-    .sc
-      %b n
-      create/view notes & history
+    - unless request.env["HTTP_USER_AGENT"][/Mobile/]
+      %p 
+        %u Keyboard Shortcuts
+      .sc 
+        %b ctrl+n 
+        toggles new todo panel
+      .sc 
+        %b j
+        next todo
+      .sc 
+        %b k 
+        previous todo
+      .sc 
+        %b f 
+        takes you to first checkbox
+      .sc
+        %b space/enter
+        marks as complete
+      .sc 
+        %b e
+        edits selected item
+      .sc
+        %b n
+        create/view notes & history
+      
     %p 
       %u Tag Actions
       .sc

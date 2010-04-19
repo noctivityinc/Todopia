@@ -5,10 +5,10 @@
     %span.label= link_to todo.label, '#', :title => todo.tag_list
     %span.undo= link_to image_tag("icons/undo.png", :title => "uncheck", :class => "icon"), '#', :class => 'uncheck_todo', :rel => uncheck_todo_path(todo)
     %span.trash= link_to image_tag("icons/trash_on.png", :title => "delete todo", :class => "icon"), '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
-    %span.note= link_to (notes_icon(todo)), todo_notes_path(todo), :rel => 'facebox', :class => 'note_trigger'  
+    %span.note= show_notes(todo)
 - else
   .todo(id="cb_todo_#{todo.id}")
-    - form_for todo do |f|
+    - form_for todo, :html => {:class => 'complete_todo_form'} do |f|
       .col_move.col
         = image_tag "icons/move.jpg", :title => "move", :class => "handle icon"
       .col_cb.col
