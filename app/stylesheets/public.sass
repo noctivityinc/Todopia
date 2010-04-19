@@ -47,22 +47,36 @@ a
   table
     width: 100% 
     
-    td
-      width: 33%
-      
     td.left
       text-align: left
+      width: 100px
+      
+    td.please_wait
+      width: 1.75em
+      text-align: left
+      img
+        +rounded
+        margin: 0
+        padding: 0
+        width: 1.5em
+        height: 1.5em
   
-    td.center > h1
-      color: #FFFFFF
-      font-size: 14pt
-      font-weight: bold
-      text-align: center
-      margin: 0
-      padding: 0
-    
+    td.center 
+      h1
+        color: #FFFFFF
+        font-size: 14pt
+        font-weight: bold
+        text-align: center
+        margin: 0
+        padding: 0
+
       .button
         +float-right
+        
+    td.right
+      width: 100px
+        
+        
 
 #container
   :background #fff
