@@ -63,9 +63,11 @@ function setup_ajax(){
   $.ajaxSetup({
       'beforeSend': function(xhr) {
           xhr.setRequestHeader("Accept", "text/javascript")
+          $('.spinner').fadeIn(200);
       },
       dataType: 'html',
       complete: function(XMLHttpRequest, textStatus) {
+          $('.spinner').hide();
           }
   })
   
