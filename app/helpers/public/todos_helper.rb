@@ -29,8 +29,20 @@ module Public::TodosHelper
       link_to (notes_icon(todo)), todo_notes_path(todo), :rel => 'facebox', :class => 'note_trigger icon note_list', 'url:showmin' => list_todo_notes_path(todo)
     end
   end
+  
+  def tag_groups_empty?
+    if current_user.tag_groups.empty?
+      return true
+    else
+      return current_user.tag_groups.ordered.detect {|tg| @todos.tagged_with(tg.tag).blank? }
+    end
+  end
 
   def todos_without_tags
-    @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+    if current_user.tag_groups.empty?
+      @todos
+    else
+      @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+    end
   end
 end
