@@ -69,3 +69,8 @@
     %a{ :href => "#delete" }
       Delete
 
+:javascript
+  $(function(){
+    #{'new_todo();' if current_user.todos.not_complete.empty?}
+  })
+  
