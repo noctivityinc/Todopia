@@ -38,8 +38,7 @@ $(function(){
       })
       return false;
     })
-  }).bind('close.facebox', function(){
-    setup_ajax();
+  }).bind('afterClose.facebox', function(){
     get_checklist();
   })
   
@@ -83,9 +82,8 @@ function setup_ajax(){
 }
 
 function get_checklist() {
-  clog($('#urls .todo_reload').attr('rel'))
   $.ajax({url: $('#urls .todo_reload').attr('rel'), 
-      success: function(todoResponse) { clog('reload'); reload_checklist(todoResponse); }
+      success: function(todoResponse) { reload_checklist(todoResponse); }
     })
 }   
 
@@ -106,6 +104,7 @@ function bind_checklist_keyboard(){
     position = (position > $('.todo_checkbox').length-1) ? $('.todo_checkbox').length-1 : position
     $('.todo_checkbox:eq('+position+')').focus()
     $('body').data('position',position)
+    return false;
   });
   
   $('.todo_checkbox').bind('keydown', 'k', function(){ 
@@ -113,18 +112,22 @@ function bind_checklist_keyboard(){
     position = (position < 0) ? 0 : position
     $('.todo_checkbox:eq('+position+')').focus()
     $('body').data('position',position)
+    return false;
   });
   
   $('.todo_checkbox').bind('keydown', 'e', function(){ 
     edit_todo($(this).closest('.todo').find('.todo_label'))
+    return false;
   });
   
   $('.todo_checkbox').bind('keydown', 'n', function(){ 
     $(this).closest('.todo').find('.note_trigger').click()
+    return false;    
   });
   
   $('.todo_checkbox').bind('keydown', '#', function(){ 
     $(this).closest('.todo').find('.delete_todo').click()
+    return false;    
   });
   
   checklist_sortable()
