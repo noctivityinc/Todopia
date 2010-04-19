@@ -34,7 +34,7 @@ module Public::TodosHelper
     if current_user.tag_groups.empty?
       return true
     else
-      return current_user.tag_groups.ordered.detect {|tg| @todos.tagged_with(tg.tag).blank? }
+      return @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}, :any => true).empty?
     end
   end
 
