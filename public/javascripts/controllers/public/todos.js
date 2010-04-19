@@ -149,6 +149,10 @@ function setup_edit_form() {
        success: function(responseText){ 
          $('#todo #new').slideUp(200); 
          reload_checklist(responseText);
+       },
+       error: function(responseText, statusText, xhr, form){
+        setup_autocomplete();
+        $('#todo_label').addClass('fieldWithErrors');
        }
    });
 }

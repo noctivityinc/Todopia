@@ -1,17 +1,17 @@
 # == Schema Information
-# Schema version: 20100417164049
+# Schema version: 20100419153602
 #
 # Table name: todos
 #
-#  id           :integer         not null, primary key
-#  label        :string(255)
-#  position     :integer
-#  completed_at :datetime
-#  user_id      :integer
-#  completed_by :integer
-#  created_at   :datetime
-#  updated_at   :datetime
-#  due_date     :date
+#  id              :integer         not null, primary key
+#  label           :string(255)
+#  position        :integer
+#  completed_at    :datetime
+#  user_id         :integer
+#  completed_by_id :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  due_date        :date
 #
 
 class Todo < ActiveRecord::Base
@@ -21,7 +21,7 @@ class Todo < ActiveRecord::Base
   has_many :notes, :dependent => :destroy
   has_many :histories, :dependent => :destroy
   belongs_to :user
-  belongs_to :completed_by, :class_name => "User", :foreign_key => "completed_by"
+  belongs_to :completed_by, :class_name => "User", :foreign_key => "completed_by_id"
 
   validates_presence_of :label
   validate :not_labelify_label
@@ -30,7 +30,7 @@ class Todo < ActiveRecord::Base
   named_scope :complete, :conditions => ['completed_at IS NOT ?', nil], :order => 'completed_at DESC'
 
   before_create :set_position
-  before_save :tag_string_to_tag_list, :pre_tag_plugins
+  before_save :set_completed_by_id, :tag_string_to_tag_list, :pre_tag_plugins
   before_update :check_completed
 
   after_save :post_tag_plugins
@@ -46,6 +46,10 @@ class Todo < ActiveRecord::Base
 
   def set_position
     self.position = 0
+  end
+  
+  def set_completed_by_id
+    self.completed_by_id = completed_by.id if completed_by
   end
 
   def tag_string_to_tag_list
