@@ -11,6 +11,12 @@ Yeah yeah, I know.  Todo lists are the hello world of the 4G language ecosystem.
 # Free Sharing.  I wanted to be able to share todos among people I'm working with, or my wife.
 # OPEN SOURCE.  Im hoping that someone will create an iPad app, and blackberry, and Mac menu-bar :)  
 
+h2. Can I try it?
+
+Ya.  It's live and ready and working at "http://www.todopia.com":http://www.todopia.com 
+
+Give it a try and let me know what you think.
+
 h2. So what does it do?
 
 It's a rapid todo list manager with crazy flexible tags.  That's basically it.  You enter a todo and tag the crap out of it.  If you tag something with a "!tag" in front then any tag with that label will be grouped.  Enter a date, or enter something like "2 days from now" or "tomorrow" and a due date will be assigned.  And coming soon (this week, maybe :)), enter '@tag' and that todo will be shared with anyone else collaborating on that tag.  

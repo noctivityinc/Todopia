@@ -932,18 +932,26 @@
 #todo #docs .sc a {
   color: #333;
 }
-
 /* line 106, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .sc a[rel=toggle] {
+  color: blue;
+}
+/* line 109, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs #more_keyboard {
+  margin-top: .5em;
+}
+
+/* line 112, ../../../app/stylesheets/partials/_todos.sass */
 #tagGroupMenu {
   margin: 1em;
   float: left;
 }
-/* line 109, ../../../app/stylesheets/partials/_todos.sass */
+/* line 115, ../../../app/stylesheets/partials/_todos.sass */
 #tagGroupMenu ul {
   padding: 0px;
   margin: 1em 1em;
 }
-/* line 112, ../../../app/stylesheets/partials/_todos.sass */
+/* line 118, ../../../app/stylesheets/partials/_todos.sass */
 #tagGroupMenu li {
   font-size: 11px;
   width: 99%;

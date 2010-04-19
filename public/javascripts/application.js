@@ -48,6 +48,13 @@ $(function(){
   if ($.cookie('warning_message_trigger')!='true') $('#warning_message_trigger').trigger('click');
   $.cookie('warning_message_trigger', 'true', {expires: 365});
   
+  $('a[rel=toggle]').live('click',function(){
+    $($(this).attr('href')).toggle();
+    select_current_checkbox();
+  }).each(function(el){
+    $($(this).attr('href')).hide();
+  })
+  
   clog('loaded')
 })
 
@@ -116,9 +123,17 @@ function bind_checklist_keyboard(){
     $(this).closest('.todo').find('.note_trigger').click()
   });
   
+  $('.todo_checkbox').bind('keydown', '#', function(){ 
+    $(this).closest('.todo').find('.delete_todo').click()
+  });
+  
   checklist_sortable()
   if ($.cookie('complete_div_visible') == 'true') {$('#completed .list').show()} else {$('#completed .list').hide()}
  
+  select_current_checkbox();
+}
+
+function select_current_checkbox(){
   var position = $('body').data('position');
   $('.todo_checkbox:eq('+position+')').focus();
 }
