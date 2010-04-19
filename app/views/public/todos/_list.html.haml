@@ -1,4 +1,11 @@
-#not_complete{:rel => update_order_user_todos_path(current_user)}= render @todos
+#not_complete
+  - TagGroup.ordered.each do |tg|
+    - unless @todos.tagged_with(tg.tag).blank?
+      %h2
+        = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id  
+      .tag_group= render @todos.tagged_with(tg.tag)
+  %h2= link_to "and ze rest... (#{todos_without_tags.count})", '#', :class => 'select_tag_group'
+  .tag_group= render todos_without_tags
 
 - unless @completed.blank?
   #completed

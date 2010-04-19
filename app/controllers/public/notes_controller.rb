@@ -1,5 +1,5 @@
 class Public::NotesController < PublicController
-  before_filter :get_todo, :only => [:index, :new, :create]
+  before_filter :get_todo, :except => [:show, :edit, :update, :destroy, :delete]
   before_filter :get_note, :only => [:show, :edit, :update, :destroy, :delete]
 
   layout false
@@ -10,7 +10,8 @@ class Public::NotesController < PublicController
     @histories = @todo.histories.all
   end
 
-  def show
+  def list
+    @notes = @todo.notes.all
   end
 
   def new

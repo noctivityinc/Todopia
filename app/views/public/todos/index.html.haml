@@ -1,6 +1,6 @@
 - content_for :head do
   = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js', 'jquery.hotkeys'
-  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.custom', :cache => true
+  = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.custom', 'jquery.contextMenu',  :cache => true
 
 #todo
   - title "Todopia"
@@ -18,10 +18,16 @@
       %b ctrl+n 
       toggles new todo panel
     .sc 
+      %b j
+      next todo
+    .sc 
+      %b k 
+      previous todo
+    .sc 
       %b f 
       takes you to first checkbox
     .sc
-      %b space
+      %b space/enter
       marks as complete
     .sc 
       %b e
@@ -30,11 +36,34 @@
       %b n
       create/view notes & history
     %p 
+      %u Tag Actions
+      .sc
+        %b !tag
+        create a group for all tags labeled "tag"
+      .sc
+        %b 
+          any date or 
+          = link_to 'date expression', '#', :title => 'e.g 4/15/10 or "2 weeks from now" or "tomorrow"' 
+        creates a due date for the item 
+    %p 
       %u Also...
     .sc Click tag(s) to filter
-    .sc Click completed item to delete
-    .sc Drag to move to reposition    
+    .sc Right click a tag group to ungroup, delete or check all
+    .sc Drag handle to reposition in group    
   
   #urls
     .tag_search{:rel => "#{user_tags_path(@user)}"}
-    .todo_index{:rel => "#{user_todos_path(@user)}"}
+    .todo_reload{:rel => "#{reload_user_todos_path(@user)}"}
+    .order_todos{:rel => update_order_user_todos_path(current_user)}
+
+%ul#tagGroupMenu.contextMenu
+  %li.check_all
+    %a{ :href => "#check_all" }
+      Check All
+  %li.ungroup
+    %a{ :href => "#ungroup" }
+      Ungroup
+  %li.delete
+    %a{ :href => "#delete" }
+      Delete
+

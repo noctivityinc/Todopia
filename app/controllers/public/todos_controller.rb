@@ -1,11 +1,10 @@
 class Public::TodosController < PublicController
-  before_filter :get_user, :only => [:index, :new, :create, :update_order]
-  before_filter :get_todo, :except => [:index, :new, :create, :update_order]
+  before_filter :get_user, :only => [:index, :new, :create, :reload, :update_order]
+  before_filter :get_todo, :except => [:index, :new, :create, :reload, :update_order]
   before_filter :verify_user
 
   def index
     load_todos
-    render_list
   end
 
   def show
@@ -33,9 +32,20 @@ class Public::TodosController < PublicController
     end
   end
 
+  def reload
+    render_list
+  end
+
   def update
     @todo.completed_by = current_user
-    render_list if @todo.update_attributes(params[:todo])
+    @todo.update_attributes(params[:todo])
+    render_list
+  end
+
+  def uncheck
+    @todo.completed_by = @todo.completed_at = nil
+    @todo.save
+    render_list
   end
 
   def delete
@@ -96,7 +106,9 @@ class Public::TodosController < PublicController
         load_todos
         render :partial => 'list'
       }
-      format.html {  }
+      format.html { }
     end
   end
+
+
 end

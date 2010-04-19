@@ -19,27 +19,36 @@
     #not_complete
       margin-top: 1em
       
+      h2
+        font-size: 1.15em
+        margin: 1em 0em .25em 0em
+        
+        a
+          color: black
+      
       .todo
         overflow: hidden
 
         .col
           padding-right: 5px
+          +float-left
         
-        .col_move
-          +float-left
-      
         .col_cb
-          +float-left
           width: 20px
       
         .col_label
-          .label
-            +float-left
-            padding-right: 15px
+          padding-right: 15px
 
-        .col_notes
-          +float-left
-
+        .due_date
+          +alt
+          font-size: .95em
+          color: #666
+          
+        .due_date_past_due
+          +alt
+          color: red
+          padding-right: 15px
+          
         .col_tags
           .tags
             .tag
@@ -76,9 +85,6 @@
             text-decoration: none
             color: black
             
-          a:hover
-            text-decoration: underline
-            
   #docs
     font-size: .90em
     color: #666
@@ -87,5 +93,19 @@
     .sc
       display: inline
       padding-right: 1em
-    
-    
+      
+      a
+        color: #333
+
+#tagGroupMenu
+  margin: 1em
+  float: left
+  ul
+    padding: 0px
+    margin: 1em 1em
+  li
+    font-size: 11px
+    width: 99%
+    padding: 1px 0px
+    margin: 0px 0px
+    list-style: none
