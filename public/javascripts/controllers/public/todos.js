@@ -1,18 +1,18 @@
 $(function(){
-  setup_edit_form();
-  setup_tooltips();
-  bind_keyboard();
-  bind_checklist_keyboard();
+  complete_todo_form_options = { 
+          clearForm: true,
+          beforeSubmit: function(formData, jqForm, options){
+           jqForm.find('.col').css('font-weight','bold').css('background', '#FFFF66').fadeOut('slow');
+          },
+          success: function(responseText){
+            reload_checklist(responseText);
+            // $('.edit_todo:eq('+ndx+')').find('.todo_checkbox').focus()
+          }
+      }
   
   $('#todo_toggle').click(function(){
     new_todo();
     return false;
-  })
-  
-  $('.todo_checkbox').livequery('click',function(){
-    cb = $(this);
-    ndx = cb.closest('.todo').index();
-    $(this).closest('form').ajaxSubmit(edit_todo_form_options);
   })
   
   $('#complete_toggle').livequery('click',function(){
@@ -22,8 +22,8 @@ $(function(){
     return false;
   })
   
-  
   $('.uncheck_todo').livequery('click',function(){
+    $(this).closest('.completed').hide();
     url = $(this).attr('rel')
     $.ajax({url: url, success: function(responseText){
        reload_checklist(responseText);
@@ -57,7 +57,6 @@ $(function(){
   })
   
   $('.tag_filter').livequery('click',function(){
-    clog('here');
     url = $(this).attr('rel')
     $('#index').hide();
       $.ajax({url: url, success: function(responseText){
@@ -69,6 +68,10 @@ $(function(){
   
   if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }
   
+  setup_complete_todo_form();
+  setup_tooltips();
+  bind_keyboard();
+  bind_checklist_keyboard();
 })
 
 function new_todo(noslide){
@@ -104,6 +107,20 @@ function edit_todo(el){
   }})
 }
 
+function setup_complete_todo_form() {
+  $('.todo_checkbox').live('click',function(){
+    clog('todo_checkbox');
+    clog($(this))
+    $(this).closest('form').ajaxSubmit(complete_todo_form_options); 
+  })
+  
+  $('.complete_todo_form').livequery('submit', function(){
+    clog('complete submitting...')
+   $(this).ajaxSubmit(complete_todo_form_options); 
+   return false;
+  })
+}
+
 function showRequest() {
   $('#todo_submit').hide();
   $('.spinner').show();
@@ -134,7 +151,7 @@ function setup_edit_form() {
 function setup_autocomplete() {
   $('.textboxlist').remove();
   
-  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, plugins: {autocomplete: {}}});
+  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, plugins: {autocomplete: {}}, bitsOptions: {editable: {addOnBlur: true}}});
 	t4.getContainer().addClass('textboxlist-loading');
   // t4.addEvent('bitAdd',function(bit){
   //  clog(bit.value)
