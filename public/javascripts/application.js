@@ -4,10 +4,10 @@ $(function(){
   $('body').data('position',0)
   $('a[rel*=facebox]').facebox() 
   
-  edit_todo_form_options = { 
+  complete_todo_form_options = { 
          clearForm: true,
-         beforeSubmit: function(){
-          cb.closest('form').find('label').css('font-weight','bold').fadeOut('slow');
+         beforeSubmit: function(formData, jqForm, options){
+          jqForm.find('.col').css('font-weight','bold').css('background', '#FFFF66').fadeOut('slow');
          },
          success: function(responseText){
            reload_checklist(responseText);
@@ -83,15 +83,10 @@ function get_checklist() {
 function reload_checklist(responseText) {
   $('#todo').find('#index').html(responseText).fadeIn(200, function(){
     setup_ajax();
-    setup_edit_form();
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
   });
-}
-
-function setup_edit_form() {
-  $('.edit_todo').ajaxForm(edit_todo_form_options);
 }
 
 function bind_checklist_keyboard(){
@@ -122,9 +117,8 @@ function bind_checklist_keyboard(){
   checklist_sortable()
   if ($.cookie('complete_div_visible') == 'true') {$('#completed .list').show()} else {$('#completed .list').hide()}
  
-  var position = $('body').data('position')
-  clog(position)
-  $('.todo_checkbox:eq('+position+')').focus()
+  var position = $('body').data('position');
+  $('.todo_checkbox:eq('+position+')').focus();
 }
 
 function checklist_sortable() {
@@ -141,12 +135,10 @@ function checklist_sortable() {
 }
 
 function clog(message, type) {
-    if (type == null) {
-        type = "log"
+  try
+    {
+    console.log(message)
     }
-    if (typeof(console) != "undefined") {
-        console[type](message);
-    } else {
-        window.status = message;
-    }
+  catch(err)
+    {}
 }

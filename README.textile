@@ -13,12 +13,9 @@ Yeah yeah, I know.  Todo lists are the hello world of the 4G language ecosystem.
 
 h2. So what does it do?
 
-It's a rapid todo list manager with crazy flexible tags.  That's basically it.  You enter a todo and tag the crap out of it.  If you tag something with a "!tag" in 
-front then any tag with that label will be grouped.  Enter a date, or enter something like "2 days from now" or "tomorrow" and a due date will be assigned.  And 
-coming soon (this week, maybe :)), enter '@tag' and that todo will be shared with anyone else collaborating on that tag.  
+It's a rapid todo list manager with crazy flexible tags.  That's basically it.  You enter a todo and tag the crap out of it.  If you tag something with a "!tag" in front then any tag with that label will be grouped.  Enter a date, or enter something like "2 days from now" or "tomorrow" and a due date will be assigned.  And coming soon (this week, maybe :)), enter '@tag' and that todo will be shared with anyone else collaborating on that tag.  
 
-Like GTD methodology?  Use it.  Use the tags you want for today, sometime, this week etc?  Like the due date philosophy?  Go for it?  Into Waynesism or whatever 
-your name might be?  Go crazy.  That's the point.  Ya only got a todo and tags
+Like GTD methodology?  Use it.  Use the tags you want for today, sometime, this week etc?  Like the due date philosophy?  Go for it?  Into Waynesism or whatever your name might be?  Go crazy.  That's the point.  Ya only got a todo and tags
 
 h2. RAPID (did I say RAPID) data entry.  No swag.
 
