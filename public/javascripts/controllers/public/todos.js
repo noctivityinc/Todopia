@@ -130,9 +130,14 @@ function setup_add_form() {
   $('.new_todo').ajaxForm({ 
        clearForm: true,
        beforeSubmit: showRequest,
-       success: function(responseText){
+       success: function(responseText, status){
         reload_checklist(responseText);
         setup_autocomplete();
+        $('#todo_label').removeClass('fieldWithErrors');
+       },
+       error: function(responseText, statusText, xhr, form){
+        setup_autocomplete();
+        $('#todo_label').addClass('fieldWithErrors');
        }
    });
 }

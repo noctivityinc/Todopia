@@ -20,8 +20,7 @@ class Public::TodosController < PublicController
 
   def create
     @todo = @user.todos.new(params[:todo])
-    @todo.save
-    render_list
+    @todo.save ? render_list : render_list(500)
   end
 
   def edit
@@ -38,8 +37,7 @@ class Public::TodosController < PublicController
 
   def update
     @todo.completed_by = current_user
-    @todo.update_attributes(params[:todo])
-    render_list
+    @todo.update_attributes(params[:todo]) ? render_list : render_list(500)
   end
 
   def uncheck
@@ -99,12 +97,12 @@ class Public::TodosController < PublicController
     @completed = @user.todos.complete
   end
 
-  def render_list
+  def render_list(status=200)
     puts "XHR: #{request.xhr?}"
     respond_to do |format|
       format.js {
         load_todos
-        render :partial => 'list'
+        render :partial => 'list', :status => status 
       }
       format.html { }
     end

@@ -1,7 +1,7 @@
 - if todo.completed_at
   .completed
     %span.completed_at= todo.completed_at.to_s(:short)
-    %span.completed_by= (todo.completer == current_user) ? '[me]' : "[#{todo.completer.login}]"
+    %span.completed_by= (todo.completed_by == current_user) ? '[me]' : "[#{todo.completed_by.login}]"
     %span.label= link_to todo.label, '#', :title => todo.tag_list
     %span.undo= link_to image_tag("icons/undo.png", :title => "uncheck", :class => "icon"), '#', :class => 'uncheck_todo', :rel => uncheck_todo_path(todo)
     %span.trash= link_to image_tag("icons/trash_on.png", :title => "delete todo", :class => "icon"), '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
@@ -14,7 +14,7 @@
       .col_cb.col
         = f.check_box :completed, :class => 'todo_checkbox' 
       .col_label.col
-        .label= f.label todo.id, todo.label, :class => 'todo_label', :rel => edit_todo_path(todo)
+        .label= f.label todo.id, todo.label, :class => "todo_label #{'fieldWithErrors' unless @todo.errors.empty?}", :rel => edit_todo_path(todo)
       = show_due_date(todo)
       .col_notes.col
         = show_notes(todo)
