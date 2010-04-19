@@ -16,27 +16,36 @@
       %p 
         %u Keyboard Shortcuts
       .sc 
-        %b ctrl+n 
-        toggles new todo panel
+        %b c 
+        create new todo
       .sc 
         %b j
         next todo
       .sc 
         %b k 
         previous todo
-      .sc 
-        %b f 
-        takes you to first checkbox
       .sc
         %b space/enter
         marks as complete
-      .sc 
-        %b e
-        edits selected item
       .sc
-        %b n
-        create/view notes & history
-      
+        = link_to "more...", '#more_keyboard', :rel => 'toggle' 
+      #more_keyboard
+        .sc
+          %b e
+          edit todo
+        .sc
+          %b n
+          create/view notes & history
+        .sc 
+          %b f 
+          jump to first todo
+        .sc
+          %b #
+          delete todo
+        .sc
+          %b esc
+          cancels new todo
+              
     %p 
       %u Tag Actions
       .sc

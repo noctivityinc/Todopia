@@ -16,6 +16,7 @@
       .col_label.col
         .label= f.label todo.id, todo.label, :class => "todo_label #{'fieldWithErrors' unless @todo.errors.empty?}", :rel => edit_todo_path(todo)
       = show_due_date(todo)
+      .col_trash.col= link_to image_tag("icons/trash_on.png", :title => "delete todo", :class => "icon"), '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
       .col_notes.col
         = show_notes(todo)
       .col_tags.col
