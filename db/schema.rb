@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100417164049) do
+ActiveRecord::Schema.define(:version => 20100419153602) do
 
   create_table "histories", :force => true do |t|
     t.integer  "todo_id"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(:version => 20100417164049) do
     t.integer  "position"
     t.datetime "completed_at"
     t.integer  "user_id"
-    t.integer  "completed_by"
+    t.integer  "completed_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "due_date"
