@@ -21,11 +21,10 @@ class Todo < ActiveRecord::Base
   has_many :notes, :dependent => :destroy
   has_many :histories, :dependent => :destroy
   belongs_to :user
-  belongs_to :completer, :class_name => "User", :foreign_key => "completed_by"
+  belongs_to :completed_by, :class_name => "User", :foreign_key => "completed_by"
 
   validates_presence_of :label
-  validates_length_of :label, :within => 2..255, :unless => Proc.new {|todo| todo.label.blank? }
-  validates_format_of :label, :with => /[^\+\sAdd\snew\stodo]/, :on => :create, :message => "is invalid"
+  validate :not_labelify_label
 
   named_scope :not_complete, :conditions => ['completed_at IS ?', nil], :order => 'position ASC, created_at DESC'
   named_scope :complete, :conditions => ['completed_at IS NOT ?', nil], :order => 'completed_at DESC'
@@ -34,10 +33,16 @@ class Todo < ActiveRecord::Base
   before_save :tag_string_to_tag_list, :pre_tag_plugins
   before_update :check_completed
 
-
   after_save :post_tag_plugins
 
   private
+
+  def not_labelify_label
+    if self.label.strip == '+ Add new todo'
+      errors.add('label','cannot be blank')
+      return false
+    end
+  end
 
   def set_position
     self.position = 0

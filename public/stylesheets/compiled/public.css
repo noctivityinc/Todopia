@@ -813,41 +813,54 @@
   line-height: 100%;
 }
 /* line 18, ../../../app/stylesheets/partials/_todos.sass */
+#todo #new form .fieldWithErrors {
+  padding: .8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4;
+}
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.0.rc1/frameworks/blueprint/stylesheets/blueprint/_interaction.sass */
+#todo #new form .fieldWithErrors a {
+  color: #8a1f11;
+}
+/* line 21, ../../../app/stylesheets/partials/_todos.sass */
 #todo #please_wait {
   margin: 2em auto;
 }
-/* line 22, ../../../app/stylesheets/partials/_todos.sass */
+/* line 25, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete {
   margin-top: 1em;
 }
-/* line 25, ../../../app/stylesheets/partials/_todos.sass */
+/* line 28, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete h2 {
   font-size: 1.15em;
   margin: 1em 0em .25em 0em;
 }
-/* line 29, ../../../app/stylesheets/partials/_todos.sass */
+/* line 32, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete h2 a {
   color: black;
 }
-/* line 32, ../../../app/stylesheets/partials/_todos.sass */
+/* line 35, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo {
   overflow: hidden;
 }
-/* line 35, ../../../app/stylesheets/partials/_todos.sass */
+/* line 38, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col {
   padding-right: 5px;
   display: inline;
   float: left;
 }
-/* line 39, ../../../app/stylesheets/partials/_todos.sass */
+/* line 42, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_cb {
   width: 20px;
 }
-/* line 42, ../../../app/stylesheets/partials/_todos.sass */
+/* line 45, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_label {
   padding-right: 15px;
 }
-/* line 45, ../../../app/stylesheets/partials/_todos.sass */
+/* line 48, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .due_date {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
@@ -855,7 +868,7 @@
   font-size: .95em;
   color: #666;
 }
-/* line 50, ../../../app/stylesheets/partials/_todos.sass */
+/* line 53, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .due_date_past_due {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
@@ -863,7 +876,7 @@
   color: red;
   padding-right: 15px;
 }
-/* line 57, ../../../app/stylesheets/partials/_todos.sass */
+/* line 60, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_tags .tags .tag {
   font-size: 10px;
   color: #666;
@@ -879,58 +892,58 @@
   border-right: 1px solid #c2c1c1;
   cursor: pointer;
 }
-/* line 74, ../../../app/stylesheets/partials/_todos.sass */
+/* line 77, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 {
   font-size: 1em;
   margin: 1em 0em .25em 0em;
 }
-/* line 78, ../../../app/stylesheets/partials/_todos.sass */
+/* line 81, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 a {
   color: black;
 }
-/* line 81, ../../../app/stylesheets/partials/_todos.sass */
+/* line 84, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
 }
-/* line 83, ../../../app/stylesheets/partials/_todos.sass */
+/* line 86, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .completed_at, #todo #index #completed .completed .completed_by {
   color: gray;
 }
-/* line 87, ../../../app/stylesheets/partials/_todos.sass */
+/* line 90, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .label a {
   text-decoration: none;
   color: black;
 }
-/* line 91, ../../../app/stylesheets/partials/_todos.sass */
+/* line 94, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs {
   font-size: .90em;
   color: #666;
   text-align: center;
   margin-top: 6em;
 }
-/* line 96, ../../../app/stylesheets/partials/_todos.sass */
+/* line 99, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs .sc {
   display: inline;
   padding-right: 1em;
 }
-/* line 100, ../../../app/stylesheets/partials/_todos.sass */
+/* line 103, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs .sc a {
   color: #333;
 }
 
-/* line 103, ../../../app/stylesheets/partials/_todos.sass */
+/* line 106, ../../../app/stylesheets/partials/_todos.sass */
 #tagGroupMenu {
   margin: 1em;
   float: left;
 }
-/* line 106, ../../../app/stylesheets/partials/_todos.sass */
+/* line 109, ../../../app/stylesheets/partials/_todos.sass */
 #tagGroupMenu ul {
   padding: 0px;
   margin: 1em 1em;
 }
-/* line 109, ../../../app/stylesheets/partials/_todos.sass */
+/* line 112, ../../../app/stylesheets/partials/_todos.sass */
 #tagGroupMenu li {
   font-size: 11px;
   width: 99%;
@@ -1009,13 +1022,13 @@
   padding-right: .20em;
 }
 
-/* line 17, ../../../app/stylesheets/public.sass */
+/* line 18, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px .20em;
 }
 
-/* line 21, ../../../app/stylesheets/public.sass */
+/* line 22, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
@@ -1023,29 +1036,29 @@ body {
   width: 99%;
 }
 
-/* line 28, ../../../app/stylesheets/public.sass */
+/* line 29, ../../../app/stylesheets/public.sass */
 a {
   color: #0000FF;
 }
-/* line 30, ../../../app/stylesheets/public.sass */
+/* line 31, ../../../app/stylesheets/public.sass */
 a img {
   border: none;
 }
 
-/* line 33, ../../../app/stylesheets/public.sass */
+/* line 34, ../../../app/stylesheets/public.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 38, ../../../app/stylesheets/public.sass */
+/* line 39, ../../../app/stylesheets/public.sass */
 .labelHighlight {
   color: #999999;
   text-align: right;
 }
 
-/* line 42, ../../../app/stylesheets/public.sass */
+/* line 43, ../../../app/stylesheets/public.sass */
 #toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1054,21 +1067,21 @@ a img {
   background: #97afae;
   padding: .25em;
 }
-/* line 47, ../../../app/stylesheets/public.sass */
+/* line 48, ../../../app/stylesheets/public.sass */
 #toolbar table {
   width: 100%;
 }
-/* line 50, ../../../app/stylesheets/public.sass */
+/* line 51, ../../../app/stylesheets/public.sass */
 #toolbar table td.left {
   text-align: left;
   width: 100px;
 }
-/* line 54, ../../../app/stylesheets/public.sass */
+/* line 55, ../../../app/stylesheets/public.sass */
 #toolbar table td.please_wait {
   width: 1.75em;
   text-align: left;
 }
-/* line 57, ../../../app/stylesheets/public.sass */
+/* line 58, ../../../app/stylesheets/public.sass */
 #toolbar table td.please_wait img {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1079,7 +1092,7 @@ a img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 65, ../../../app/stylesheets/public.sass */
+/* line 66, ../../../app/stylesheets/public.sass */
 #toolbar table td.center h1 {
   color: #FFFFFF;
   font-size: 14pt;
@@ -1088,27 +1101,27 @@ a img {
   margin: 0;
   padding: 0;
 }
-/* line 73, ../../../app/stylesheets/public.sass */
+/* line 74, ../../../app/stylesheets/public.sass */
 #toolbar table td.center .button {
   display: inline;
   float: right;
 }
-/* line 76, ../../../app/stylesheets/public.sass */
+/* line 77, ../../../app/stylesheets/public.sass */
 #toolbar table td.right {
   width: 100px;
 }
 
-/* line 81, ../../../app/stylesheets/public.sass */
+/* line 82, ../../../app/stylesheets/public.sass */
 #container {
   background: #fff;
   margin: 0px;
 }
 
-/* line 85, ../../../app/stylesheets/public.sass */
+/* line 86, ../../../app/stylesheets/public.sass */
 #flash_messages {
   margin: 1em .50em;
 }
-/* line 88, ../../../app/stylesheets/public.sass */
+/* line 89, ../../../app/stylesheets/public.sass */
 #flash_messages .notice, #flash_messages .error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -1117,12 +1130,12 @@ a img {
   -webkit-border-radius: 4px;
   margin: .25em;
 }
-/* line 93, ../../../app/stylesheets/public.sass */
+/* line 94, ../../../app/stylesheets/public.sass */
 #flash_messages .notice {
   background-color: #CFC;
   border: solid 1px #6C6;
 }
-/* line 97, ../../../app/stylesheets/public.sass */
+/* line 98, ../../../app/stylesheets/public.sass */
 #flash_messages .error {
   background-color: #FCC;
   border: solid 1px #C66;
