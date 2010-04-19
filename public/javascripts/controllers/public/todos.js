@@ -148,6 +148,7 @@ function setup_edit_form() {
        beforeSubmit: showRequest,
        success: function(responseText){ 
          $('#todo #new').slideUp(200); 
+         $('#todo_toggle').text('+ New Todo')
          reload_checklist(responseText);
        },
        error: function(responseText, statusText, xhr, form){
@@ -180,17 +181,17 @@ function setup_autocomplete() {
 }
 
 function bind_keyboard() {
-  $(document).bind('keydown', 'f', function(){ $('body').data('position',0); $('.todo_checkbox:first').focus(); });
-  $(document).bind('keydown', 'ctrl+n', function(){ new_todo(); });
-  $(document).bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
-  $('body:not(#new)').bind('keydown', 'c', function(){ new_todo(); });
+  $(document).bind('keydown', 'f', function(){ $('body').data('position',0); $('.todo_checkbox:first').focus(); return false; });
+  $(document).bind('keydown', 'ctrl+n', function(){ new_todo(); return false; });
+  $(document).bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); return false; });
+  $('body:not(#new)').bind('keydown', 'c', function(){ new_todo(); return false; });
 }
 
 function bind_add_edit_keyboard() {
   $('input:not(.todo_checkbox)').unbind();
-  $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+n', function(){ new_todo(); });
-  $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
-  $('input').bind('keydown','esc', function(){ toggle_todo_form(); })
+  $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+n', function(){ new_todo();     return false; });
+  $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit();     return false; });
+  $('input').bind('keydown','esc', function(){ toggle_todo_form();     return false; })
 }
 
 function setup_tooltips(){
