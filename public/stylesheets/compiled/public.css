@@ -817,36 +817,49 @@
   margin-top: 1em;
 }
 /* line 22, ../../../app/stylesheets/partials/_todos.sass */
+#todo #index #not_complete h2 {
+  font-size: 1.15em;
+  margin: 1em 0em .25em 0em;
+}
+/* line 26, ../../../app/stylesheets/partials/_todos.sass */
+#todo #index #not_complete h2 a {
+  color: black;
+}
+/* line 29, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo {
   overflow: hidden;
 }
-/* line 25, ../../../app/stylesheets/partials/_todos.sass */
+/* line 32, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col {
   padding-right: 5px;
-}
-/* line 28, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #not_complete .todo .col_move {
   display: inline;
   float: left;
-}
-/* line 31, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #not_complete .todo .col_cb {
-  display: inline;
-  float: left;
-  width: 20px;
 }
 /* line 36, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #not_complete .todo .col_label .label {
-  display: inline;
-  float: left;
+#todo #index #not_complete .todo .col_cb {
+  width: 20px;
+}
+/* line 39, ../../../app/stylesheets/partials/_todos.sass */
+#todo #index #not_complete .todo .col_label {
   padding-right: 15px;
 }
-/* line 40, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #not_complete .todo .col_notes {
-  display: inline;
-  float: left;
+/* line 42, ../../../app/stylesheets/partials/_todos.sass */
+#todo #index #not_complete .todo .due_date {
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15em;
+  font-size: .95em;
+  color: #666;
 }
-/* line 45, ../../../app/stylesheets/partials/_todos.sass */
+/* line 47, ../../../app/stylesheets/partials/_todos.sass */
+#todo #index #not_complete .todo .due_date_past_due {
+  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-style: italic;
+  font-size: 1.15em;
+  color: red;
+  padding-right: 15px;
+}
+/* line 54, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo .col_tags .tags .tag {
   font-size: 10px;
   color: #666;
@@ -862,59 +875,78 @@
   border-right: 1px solid #c2c1c1;
   cursor: pointer;
 }
-/* line 62, ../../../app/stylesheets/partials/_todos.sass */
+/* line 71, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 {
   font-size: 1em;
   margin: 1em 0em .25em 0em;
 }
-/* line 66, ../../../app/stylesheets/partials/_todos.sass */
+/* line 75, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 a {
   color: black;
 }
-/* line 69, ../../../app/stylesheets/partials/_todos.sass */
+/* line 78, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
 }
-/* line 71, ../../../app/stylesheets/partials/_todos.sass */
+/* line 80, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .completed_at, #todo #index #completed .completed .completed_by {
   color: gray;
 }
-/* line 75, ../../../app/stylesheets/partials/_todos.sass */
+/* line 84, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .label a {
   text-decoration: none;
   color: black;
 }
-/* line 79, ../../../app/stylesheets/partials/_todos.sass */
-#todo #index #completed .completed .label a:hover {
-  text-decoration: underline;
-}
-/* line 82, ../../../app/stylesheets/partials/_todos.sass */
+/* line 88, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs {
   font-size: .90em;
   color: #666;
   text-align: center;
   margin-top: 6em;
 }
-/* line 87, ../../../app/stylesheets/partials/_todos.sass */
+/* line 93, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs .sc {
   display: inline;
   padding-right: 1em;
 }
+/* line 97, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .sc a {
+  color: #333;
+}
 
-/* line 5, ../../../app/stylesheets/partials/_notes.sass */
-#notes #index .note {
+/* line 100, ../../../app/stylesheets/partials/_todos.sass */
+#tagGroupMenu {
+  margin: 1em;
+  float: left;
+}
+/* line 103, ../../../app/stylesheets/partials/_todos.sass */
+#tagGroupMenu ul {
+  padding: 0px;
+  margin: 1em 1em;
+}
+/* line 106, ../../../app/stylesheets/partials/_todos.sass */
+#tagGroupMenu li {
+  font-size: 11px;
+  width: 99%;
+  padding: 1px 0px;
+  margin: 0px 0px;
+  list-style: none;
+}
+
+/* line 3, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note, #notes #list .note {
   border-top: 1px dotted gray;
   padding: 1em 0em;
   margin: 1em 0em;
 }
-/* line 10, ../../../app/stylesheets/partials/_notes.sass */
-#notes #index .note .row {
+/* line 8, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note .row, #notes #list .note .row {
   overflow: hidden;
 }
-/* line 13, ../../../app/stylesheets/partials/_notes.sass */
-#notes #index .note .row .created_at, #notes #index .note .row .user {
+/* line 11, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note .row .created_at, #notes #index .note .row .user, #notes #list .note .row .created_at, #notes #list .note .row .user {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
@@ -923,20 +955,26 @@
   display: inline;
   float: left;
 }
-/* line 19, ../../../app/stylesheets/partials/_notes.sass */
-#notes #index .note .row .user {
+/* line 17, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note .row .user, #notes #list .note .row .user {
   display: inline;
   float: right;
 }
-/* line 22, ../../../app/stylesheets/partials/_notes.sass */
-#notes #index .note .row .trash {
+/* line 20, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note .row .trash, #notes #list .note .row .trash {
   display: inline;
   float: right;
   padding-left: 5px;
 }
-/* line 27, ../../../app/stylesheets/partials/_notes.sass */
-#notes #index .note .body {
+/* line 25, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note .body, #notes #list .note .body {
   padding: .5em;
+}
+/* line 29, ../../../app/stylesheets/partials/_notes.sass */
+#notes #list .note {
+  color: white;
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_histories.sass */

@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100414145449
+# Schema version: 20100417164049
 #
 # Table name: todos
 #
@@ -11,6 +11,7 @@
 #  completed_by :integer
 #  created_at   :datetime
 #  updated_at   :datetime
+#  due_date     :date
 #
 
 one:

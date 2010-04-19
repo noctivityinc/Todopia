@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
   has_friendly_id :login
 
   has_many :todos, :dependent => :destroy
+  has_many :tag_groups
 
   validate :not_reserved_word
 

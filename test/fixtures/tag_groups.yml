@@ -1,0 +1,21 @@
+# == Schema Information
+# Schema version: 20100417164049
+#
+# Table name: tag_groups
+#
+#  id         :integer         not null, primary key
+#  tag        :string(255)
+#  user_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tag: MyString
+  user_id: 1
+
+two:
+  tag: MyString
+  user_id: 1

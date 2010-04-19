@@ -1,0 +1,63 @@
+h1. Todopia
+
+Ok, let's get this out of the way from the git-go...
+
+h2.  Why?
+
+Yeah yeah, I know.  Todo lists are the hello world of the 4G language ecosystem.  So why did I do this?  Four reasons:
+
+# It's open source.  Fork it, play with it, make it your own
+# Simple.  All I wanted was something where I could rapidly enter, sort and group todos.  With plugin functionality.
+# Free Sharing.  I wanted to be able to share todos among people I'm working with, or my wife.
+# OPEN SOURCE.  Im hoping that someone will create an iPad app, and blackberry, and Mac menu-bar :)  
+
+h2. So what does it do?
+
+It's a rapid todo list manager with crazy flexible tags.  That's basically it.  You enter a todo and tag the crap out of it.  If you tag something with a "!tag" in 
+front then any tag with that label will be grouped.  Enter a date, or enter something like "2 days from now" or "tomorrow" and a due date will be assigned.  And 
+coming soon (this week, maybe :)), enter '@tag' and that todo will be shared with anyone else collaborating on that tag.  
+
+Like GTD methodology?  Use it.  Use the tags you want for today, sometime, this week etc?  Like the due date philosophy?  Go for it?  Into Waynesism or whatever 
+your name might be?  Go crazy.  That's the point.  Ya only got a todo and tags
+
+h2. RAPID (did I say RAPID) data entry.  No swag.
+
+Once you login just use the keyboard like a mad-man.
+
+b. Keyboard Shortcuts
+
+* ctrl+n: toggles new todo panel 
+* j: next todo 
+* k: previous todo 
+* f: takes you to first checkbox 
+* space/enter: marks as complete 
+* e: edits selected item 
+* n: create/view notes & history
+
+b. Tag Actions
+
+* !tag: create a group for all tags labeled "tag" 
+* any date or date expression: creates a due date for the item
+
+b. Also...
+
+* Click tag(s) to filter 
+* Right click a tag group to ungroup, delete or check all 
+* Drag handle to reposition in group
+* Click the undo icon to "uncheck" a completed task
+
+Of course, you can use the mouse too.
+
+h2.  Notes and History
+
+Any todo can have as many notes attached as you want. 
+
+Todopia also records an audit trail of who did what.
+
+h2.  What if I don't use yer fancy-pants javascripts?
+
+Umm, what year is this?  Are you still using IE?  Dear god.  Go away. Please.
+
+h1.  Issues/Suggestions/Etc
+
+I'm going to be adding Uservoice but for now just add any issues in Github.  Please let me know OS and Browser since this thing is crazy jQuery.

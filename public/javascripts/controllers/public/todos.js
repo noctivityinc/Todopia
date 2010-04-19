@@ -1,4 +1,6 @@
 $(function(){
+  setup_edit_form();
+  setup_tooltips();
   bind_keyboard();
   bind_checklist_keyboard();
   
@@ -7,29 +9,29 @@ $(function(){
     return false;
   })
   
-  $('.todo_checkbox').live('click',function(){
+  $('.todo_checkbox').livequery('click',function(){
     cb = $(this);
     ndx = cb.closest('.todo').index();
-    $(this).closest('form').ajaxSubmit({ 
-           clearForm: true,
-           beforeSubmit: function(){
-            cb.closest('form').find('label').css('font-weight','bold').fadeOut('slow');
-           },
-           success: function(responseText){
-             reload_checklist(responseText);
-             $('.edit_todo:eq('+ndx+')').find('.todo_checkbox').focus()
-           }
-       });
+    $(this).closest('form').ajaxSubmit(edit_todo_form_options);
   })
   
-  $('#complete_toggle').live('click',function(){
+  $('#complete_toggle').livequery('click',function(){
     $('#completed .list').slideToggle('fast', function(){
       $.cookie('complete_div_visible', $(this).is(':visible'), {expires: 7});
     });
     return false;
   })
   
-  $('.delete_todo').live('click',function(){
+  
+  $('.uncheck_todo').livequery('click',function(){
+    url = $(this).attr('rel')
+    $.ajax({url: url, success: function(responseText){
+       reload_checklist(responseText);
+    }})
+    return false;
+  })
+    
+  $('.delete_todo').livequery('click',function(){
     if(confirm('Are you sure you want to delete this todo?')) {
       url = $(this).attr('rel')
       $.ajax({url: url, success: function(responseText){
@@ -39,30 +41,34 @@ $(function(){
     return false;
   })
   
-  $('.todo_label').live('click',function(){
-    url = $(this).attr('rel')
-    $.ajax({url: url, success: function(responseText){
-        $('#new').html(responseText)
-        $('#todo #new').hide();
-        show_todo_form('edit');
-    }})
+  $('.delete_tag_group').livequery('click',function(){
+    if(confirm('Are you sure you want to remove this group?  The items within will become unfiled not removed.')) {
+      url = $(this).attr('rel')
+      $.ajax({url: url, success: function(responseText){
+        get_checklist();
+      }})
+    }
+    return false;
+  })  
+  
+  $('.todo_label').livequery('click',function(){
+    edit_todo($(this))
     return false;
   })
   
-  $('.tag_filter').live('click',function(){
+  $('.tag_filter').livequery('click',function(){
     clog('here');
     url = $(this).attr('rel')
-    $('#index').fadeOut(200, function(){
+    $('#index').hide();
       $.ajax({url: url, success: function(responseText){
-         clog(url)
-         clog(responseText)
          reload_checklist(responseText);
       }})      
-    })
+
     return false;
   })
   
   if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }
+  
 })
 
 function new_todo(noslide){
@@ -89,6 +95,15 @@ function show_todo_form(addedit){
   });
 }
 
+function edit_todo(el){
+  url = el.attr('rel')
+  $.ajax({url: url, success: function(responseText){
+      $('#new').html(responseText)
+      $('#todo #new').hide();
+      show_todo_form('edit');
+  }})
+}
+
 function showRequest() {
   $('#todo_submit').hide();
   $('.spinner').show();
@@ -112,14 +127,14 @@ function setup_edit_form() {
        success: function(responseText){ 
          $('#todo #new').slideUp(200); 
          reload_checklist(responseText);
-         $('.todo_checkbox:first').focus(); }
+       }
    });
 }
 
 function setup_autocomplete() {
   $('.textboxlist').remove();
   
-  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, bitsOptions: {editable: {addOnBlur: true}}, plugins: {autocomplete: {}}});
+  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, plugins: {autocomplete: {}}});
 	t4.getContainer().addClass('textboxlist-loading');
   // t4.addEvent('bitAdd',function(bit){
   //  clog(bit.value)
@@ -139,7 +154,7 @@ function setup_autocomplete() {
 }
 
 function bind_keyboard() {
-  $(document).bind('keydown', 'f', function(){ $('.todo_checkbox:first').focus(); });
+  $(document).bind('keydown', 'f', function(){ $('body').data('position',0); $('.todo_checkbox:first').focus(); });
   $(document).bind('keydown', 'ctrl+n', function(){ new_todo(); });
   $(document).bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
 }
@@ -150,3 +165,13 @@ function bind_add_edit_keyboard() {
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); });
 }
 
+function setup_tooltips(){
+  $(".note_list").livequery(function(){
+        var urlString = $(this).attr('url:showmin')
+        $(this).qtip({ 
+           content: { url: urlString, method: 'get'}, 
+           adjust: { screen: true },
+           style: { color: '#ffffff', width: 350, padding: 5, color: 'black', name: 'dark', tip: 'leftTop',border: { 'width': 7, 'radius': 5, 'color': '#000' }}
+        });
+  });
+}

@@ -17,6 +17,7 @@ gem "friendly_id", "~> 2.3"
 gem 'formtastic'
 gem 'annotate-models'
 gem 'hoptoad_notifier'
+gem 'chronic'
 
 # github pulls
 gem 'nifty-generators'
