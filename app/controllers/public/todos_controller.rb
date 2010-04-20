@@ -1,6 +1,6 @@
 class Public::TodosController < PublicController
-  before_filter :get_user, :only => [:index, :new, :create, :reload, :update_order]
-  before_filter :get_todo, :except => [:index, :new, :create, :reload, :update_order]
+  before_filter :get_user, :only => [:index, :new, :create, :reload, :update_order, :filter]
+  before_filter :get_todo, :except => [:index, :new, :create, :reload, :update_order, :filter]
   before_filter :verify_user
 
   def index
@@ -52,25 +52,7 @@ class Public::TodosController < PublicController
   end
 
   def filter
-    tag = params[:tag]
-    @tags = cookies[:tags].blank? ? [] : cookies[:tags].split(",")
-
-    if params[:remove]
-      @tags.reject! {|x| x == tag}
-    else
-      @tags << tag
-    end
-
-    cookies[:tags] = @tags.join(',')
-
-    unless @tags.empty?
-      @todo = @user.todos.new
-      @todos = @user.todos.tagged_with(@tags, :any => false).not_complete
-      @completed = @user.todos.tagged_with(@tags, :any => false).complete
-      render :partial => 'list'
-    else
-      render_list
-    end
+    params[:unfiled] ? filter_without_tags : filter_by_tag
   end
 
   def update_order
@@ -102,11 +84,38 @@ class Public::TodosController < PublicController
     respond_to do |format|
       format.js {
         load_todos
-        render :partial => 'list', :status => status 
+        render :partial => 'list', :status => status
       }
       format.html { }
     end
   end
 
+  def filter_without_tags
+    load_todos
+    @todos = current_user.todos.unfiled
+    render :partial => 'list'
+  end
+
+  def filter_by_tag
+    tag = params[:tag]
+    @tags = cookies[:tags].blank? ? [] : cookies[:tags].split(",")
+
+    if params[:remove]
+      @tags.reject! {|x| x == tag}
+    else
+      @tags << tag unless tag.blank?
+    end
+
+    cookies[:tags] = @tags.join(',')
+
+    unless @tags.empty?
+      @todo = @user.todos.new
+      @todos = @user.todos.tagged_with(@tags, :any => false).not_complete
+      @completed = @user.todos.tagged_with(@tags, :any => false).complete
+      render :partial => 'list'
+    else
+      render_list
+    end
+  end
 
 end

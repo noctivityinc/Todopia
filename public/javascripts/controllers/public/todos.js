@@ -109,13 +109,10 @@ function edit_todo(el){
 
 function setup_complete_todo_form() {
   $('.todo_checkbox').live('click',function(){
-    clog('todo_checkbox');
-    clog($(this))
     $(this).closest('form').ajaxSubmit(complete_todo_form_options); 
   })
   
   $('.complete_todo_form').livequery('submit', function(){
-    clog('complete submitting...')
    $(this).ajaxSubmit(complete_todo_form_options); 
    return false;
   })
@@ -161,7 +158,7 @@ function setup_edit_form() {
 function setup_autocomplete() {
   $('.textboxlist').remove();
   
-  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, plugins: {autocomplete: {}}, bitsOptions: {editable: {addOnBlur: true}}});
+  var t4 = new $.TextboxList('#todo_tag_string', {unique: true, plugins: {autocomplete: {minLength: 1}}, bitsOptions: {editable: {addOnBlur: true}}});
 	t4.getContainer().addClass('textboxlist-loading');
   // t4.addEvent('bitAdd',function(bit){
   //  clog(bit.value)
