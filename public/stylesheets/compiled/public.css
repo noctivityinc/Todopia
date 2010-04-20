@@ -261,99 +261,110 @@
   border: 0;
   display: inline;
 }
-/* line 315, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 234, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new fieldset, #user_session #new fieldset {
-  width: 300px;
+  width: 100%;
 }
-/* line 317, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new label, #user_session #new label {
-  float: left;
-  width: 100px;
-  text-align: left;
+/* line 236, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new ol, #user_session #new ol {
   padding-left: 0;
 }
-/* line 323, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li ol, #user_session #new li ol {
-  padding: 0 0px 0 100px;
+/* line 238, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new input, #user_session #new input {
+  clear: both;
+  float: none;
 }
-/* line 326, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 241, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new li, #user_session #new li {
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+}
+/* line 244, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new li ol, #user_session #new li ol {
+  padding: 0;
+}
+/* line 246, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new li li, #user_session #new li li {
+  clear: none;
+  width: auto;
+}
+/* line 250, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li fieldset legend, #user #new li fieldset legend .label, #user_session #new li fieldset legend, #user_session #new li fieldset legend .label {
   display: block;
+  clear: both;
 }
-/* line 328, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset legend, #user_session #new li fieldset legend {
-  width: 100px;
-  text-align: left;
-  display: inline;
-  float: left;
-  clear: none;
-  padding: 0;
-  width: 300px;
-}
-/* line 331, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 253, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li fieldset .label, #user_session #new li fieldset .label {
-  position: absolute;
-  width: 100px;
-  top: 0px;
-  left: 0;
+  position: relative;
 }
-/* line 339, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset label, #user_session #new li fieldset label {
-  padding-left: 0;
-}
-/* line 341, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 255, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new li fieldset label, #user #new li fieldset input, #user_session #new li fieldset label, #user_session #new li fieldset input {
   width: auto;
+}
+/* line 258, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new .date ol, #user #new .time ol, #user #new .datetime ol, #user_session #new .date ol, #user_session #new .time ol, #user_session #new .datetime ol {
+  width: 100%;
+}
+/* line 260, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new .date li, #user #new .time li, #user #new .datetime li, #user_session #new .date li, #user_session #new .time li, #user_session #new .datetime li {
   display: inline;
   clear: none;
-  text-align: left;
+  float: left;
+  padding-right: 0;
 }
-/* line 346, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset select, #user_session #new li fieldset select {
-  padding: 0;
-  clear: both;
-  display: block;
-}
-/* line 350, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .inline-hints, #user #new .inline-errors, #user #new .errors, #user_session #new .inline-hints, #user_session #new .inline-errors, #user_session #new .errors {
-  margin: 0 0 0 100px;
-}
-/* line 352, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new input, #user #new textarea, #user_session #new input, #user_session #new textarea {
-  width: 200px;
-}
-/* line 354, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new select, #user_session #new select {
-  width: auto;
-}
-/* line 360, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 266, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new .checkbox li, #user #new .radio li, #user_session #new .checkbox li, #user_session #new .radio li {
   display: block;
-  clear: both;
 }
-/* line 363, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 268, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new .checkbox input, #user #new .radio input, #user_session #new .checkbox input, #user_session #new .radio input {
   border: none;
 }
-/* line 365, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .buttons, #user_session #new .buttons {
-  padding-left: 100px;
-  width: 200px;
+/* line 270, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new label, #user_session #new label {
+  display: block;
+  clear: both;
+  float: none;
+  width: auto;
 }
-/* line 368, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 273, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new input, #user #new textarea, #user_session #new input, #user_session #new textarea {
+  width: auto;
+}
+/* line 278, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new select, #user_session #new select {
+  width: auto;
+}
+/* line 283, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new .errors li, #user_session #new .errors li {
+  display: list-item;
+}
+/* line 286, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new .buttons ol, #user_session #new .buttons ol {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 289, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new .buttons li, #user_session #new .buttons li {
+  float: left;
+  width: auto;
+  clear: none;
+  display: inline;
+}
+/* line 297, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new .buttons input, #user_session #new .buttons input {
   width: auto;
 }
-/* line 373, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .buttons li, #user_session #new .buttons li {
-  width: auto;
-  float: left;
-  display: inline;
-}
-/* line 384, ../../../app/stylesheets/partials/_formtastic_base.sass */
+/* line 302, ../../../app/stylesheets/partials/_formtastic_base.sass */
 #user #new #errorExplanation, #user_session #new #errorExplanation {
-  margin-left: 100px;
-  width: 200px;
+  width: 100%;
+}
+/* line 304, ../../../app/stylesheets/partials/_formtastic_base.sass */
+#user #new .label, #user_session #new .label {
+  #left: -0.5em;
+  #position: relative;
 }
 /* line 13, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form, #user_session #new form {
@@ -942,17 +953,17 @@
 }
 
 /* line 112, ../../../app/stylesheets/partials/_todos.sass */
-#tagGroupMenu {
+.contextMenu {
   margin: 1em;
   float: left;
 }
 /* line 115, ../../../app/stylesheets/partials/_todos.sass */
-#tagGroupMenu ul {
+.contextMenu ul {
   padding: 0px;
   margin: 1em 1em;
 }
 /* line 118, ../../../app/stylesheets/partials/_todos.sass */
-#tagGroupMenu li {
+.contextMenu li {
   font-size: 11px;
   width: 99%;
   padding: 1px 0px;
@@ -1053,20 +1064,25 @@ a img {
   border: none;
 }
 
-/* line 34, ../../../app/stylesheets/public.sass */
+/* line 35, ../../../app/stylesheets/public.sass */
+.print_only {
+  display: none;
+}
+
+/* line 38, ../../../app/stylesheets/public.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 39, ../../../app/stylesheets/public.sass */
+/* line 43, ../../../app/stylesheets/public.sass */
 .labelHighlight {
   color: #999999;
   text-align: right;
 }
 
-/* line 43, ../../../app/stylesheets/public.sass */
+/* line 47, ../../../app/stylesheets/public.sass */
 #toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1075,21 +1091,21 @@ a img {
   background: #97afae;
   padding: .25em;
 }
-/* line 48, ../../../app/stylesheets/public.sass */
+/* line 52, ../../../app/stylesheets/public.sass */
 #toolbar table {
   width: 100%;
 }
-/* line 51, ../../../app/stylesheets/public.sass */
+/* line 55, ../../../app/stylesheets/public.sass */
 #toolbar table td.left {
   text-align: left;
   width: 100px;
 }
-/* line 55, ../../../app/stylesheets/public.sass */
+/* line 59, ../../../app/stylesheets/public.sass */
 #toolbar table td.please_wait {
   width: 1.75em;
   text-align: left;
 }
-/* line 58, ../../../app/stylesheets/public.sass */
+/* line 62, ../../../app/stylesheets/public.sass */
 #toolbar table td.please_wait img {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1100,7 +1116,7 @@ a img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 66, ../../../app/stylesheets/public.sass */
+/* line 70, ../../../app/stylesheets/public.sass */
 #toolbar table td.center h1 {
   color: #FFFFFF;
   font-size: 14pt;
@@ -1109,27 +1125,27 @@ a img {
   margin: 0;
   padding: 0;
 }
-/* line 74, ../../../app/stylesheets/public.sass */
+/* line 78, ../../../app/stylesheets/public.sass */
 #toolbar table td.center .button {
   display: inline;
   float: right;
 }
-/* line 77, ../../../app/stylesheets/public.sass */
+/* line 81, ../../../app/stylesheets/public.sass */
 #toolbar table td.right {
   width: 100px;
 }
 
-/* line 82, ../../../app/stylesheets/public.sass */
+/* line 86, ../../../app/stylesheets/public.sass */
 #container {
   background: #fff;
   margin: 0px;
 }
 
-/* line 86, ../../../app/stylesheets/public.sass */
+/* line 90, ../../../app/stylesheets/public.sass */
 #flash_messages {
   margin: 1em .50em;
 }
-/* line 89, ../../../app/stylesheets/public.sass */
+/* line 93, ../../../app/stylesheets/public.sass */
 #flash_messages .notice, #flash_messages .error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -1138,12 +1154,12 @@ a img {
   -webkit-border-radius: 4px;
   margin: .25em;
 }
-/* line 94, ../../../app/stylesheets/public.sass */
+/* line 98, ../../../app/stylesheets/public.sass */
 #flash_messages .notice {
   background-color: #CFC;
   border: solid 1px #6C6;
 }
-/* line 98, ../../../app/stylesheets/public.sass */
+/* line 102, ../../../app/stylesheets/public.sass */
 #flash_messages .error {
   background-color: #FCC;
   border: solid 1px #C66;

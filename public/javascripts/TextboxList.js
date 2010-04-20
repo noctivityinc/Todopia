@@ -28,6 +28,7 @@ $.TextboxList = function(element, _options){
 		bitsOptions: {editable: {}, box: {}},
     plugins: {},
 		// tip: you can change encode/decode with JSON.stringify and JSON.parse
+		check: function(s){ return $.trim(s).replace(/,/g, '') != ''; },
 		encode: function(o){ 
 			return $.grep($.map(o, function(v){		
 				v = (chk(v[0]) ? v[0] : v[1]);
@@ -104,6 +105,7 @@ $.TextboxList = function(element, _options){
 	
 	var create = function(klass, value, opt){
 		if (klass == 'box'){
+		  if ((!value[0] && !value[1]) || (chk(value[1]) && !options.check(value[1]))) return false;
 			if (chk(options.max) && list.children('.' + options.prefix + '-bit-box').length + 1 > options.max) return false;
 			if (options.unique && $.inArray(uniqueValue(value), index) != -1) return false;		
 		}		

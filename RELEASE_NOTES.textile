@@ -1,5 +1,18 @@
 h1. Todopia Release Notes
 
+h3. 0.1.21
+* Added remember me option to login
+* Nicely formatted print output.  Just the facts ma'am
+* Ability to print any group
+* Ability to check, delete or print all unfilled todos
+* Added hook to checklist reload
+* Uservoice tab hidden in fluid app
+* Added link to release notes from from readme
+* Fixed bug dealing with blank tags
+
+h3. 0.1.20
+* Firefox keyboard fixes.  It now works.
+
 h3. 0.1.19
 * Added keyboard shortcut "c" to create new todo (like gmail)
 * Added keyboard shortcut "#" to delete todo

@@ -7,6 +7,7 @@
       - f.inputs do
         = f.input :login, :label => 'Username'
         = f.input :password, :label => 'Password', :as => :password 
+        = f.input :remember_me, :label => 'Remember Me?', :as => :boolean, :required => false
   
       - f.buttons do
         = f.commit_button 'Login'

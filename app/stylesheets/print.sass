@@ -1,8 +1,92 @@
-@import blueprint.sass
+@import blueprint/reset.sass
+@import blueprint/interaction.sass
+@import partials/base.sass
+@import compass/css3/gradient.sass
+@import compass/utilities.sass
+@import partials/boxes.sass
 
-// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
-// +blueprint-print
+html, body
+  margin: 0px
+  padding: 0px .20em
 
-//Recommended Blueprint configuration with scoping and semantic layout:
-body.bp
-  +blueprint-print(true)
+body
+  :background-color = !primary_color
+  :font
+    :family Verdana, Helvetica, Arial
+    :size 14px
+  :width = !screen_width
+  
+.screen_only
+  display: none
+  
+#uservoice-feedback
+  display: none
+
+#toolbar
+  +rounded
+  background= !toolbar_color
+  .left, .right
+    display: none
+    
+  h1
+    color: #FFFFFF
+    font-size: 14pt
+    font-weight: bold
+    text-align: center
+    margin: 0
+    padding: 0
+
+#todo
+  #new, #flash, #docs, #urls, #tagGroupMenu, #facebox, #footer, .icon, #completed
+    display: none
+  
+  #index
+    #not_complete
+      h2
+        font-size: 1.10em
+        margin: 1em 0em .25em 0em
+        
+        a
+          color: black
+          text-decoration: none
+      
+      .todo
+        overflow: hidden
+        margin-top: .25em
+
+        .col
+          padding-right: 5px
+          +float-left
+        
+        .col_cb
+          width: 20px
+          input
+            border: 1px solid black
+      
+        .col_label
+          padding-right: 15px
+
+        .due_date
+          +alt
+          font-size: .95em
+          color: #666
+          
+        .due_date_past_due
+          +alt
+          color: red
+          padding-right: 15px
+          
+        .col_tags
+          .tags
+            .tag
+              font-size: 10px
+              color: #666
+              display: block
+              float: left
+              padding-left: 10px
+              padding-top: 2px
+              margin-top: 0px
+              text-decoration: none
+              height: 16px
+              
+

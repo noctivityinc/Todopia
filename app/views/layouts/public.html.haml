@@ -6,7 +6,8 @@
       = h(yield(:title) || "Untitled")
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     
-    = stylesheet_link_tag 'compiled/public.css'
+    = stylesheet_link_tag 'compiled/public.css', :media => 'screen' 
+    = stylesheet_link_tag 'compiled/print.css', :media => 'print' 
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", 'jquery.livequery', 'jquery.form', 'jquery.cookie', 'facebox', 'jquery.labelify', 'jquery.contextMenu', 'flash', 'GrowingInput', 'TextboxList', 'TextboxList.Autocomplete', 'jquery.qtip-1.0.0-rc3.min'
     = javascript_include_tag 'controllers/public/tag_groups', 'application', "controllers/#{params[:controller]}"
     = javascript_tag "var AUTH_TOKEN = encodeURIComponent(#{form_authenticity_token.inspect});" if protect_against_forgery?
@@ -33,10 +34,12 @@
       };
   
       function _loadUserVoice() {
-      var s = document.createElement('script');
-      s.setAttribute('type', 'text/javascript');
-      s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
-      document.getElementsByTagName('head')[0].appendChild(s);
+        if (window.fluid==undefined) {
+        var s = document.createElement('script');
+        s.setAttribute('type', 'text/javascript');
+        s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
+        document.getElementsByTagName('head')[0].appendChild(s);
+        }
       }
       _loadSuper = window.onload;
       window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };

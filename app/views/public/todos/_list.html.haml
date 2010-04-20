@@ -2,13 +2,13 @@
   - current_user.tag_groups.ordered.each do |tg|
     - unless @todos.tagged_with(tg.tag).blank?
       %h2
-        = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id  
+        = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id, 'url:filter' => filter_user_todos_path(current_user, :tag => tg.tag)
       .tag_group= render @todos.tagged_with(tg.tag)
 
-  - unless todos_without_tags.empty?
+  - unless unfiled_todos.empty?
     - unless tag_groups_empty?
-      %h2= link_to "and ze rest... (#{todos_without_tags.count})", '#', :class => 'select_tag_group'
-    .tag_group= render todos_without_tags
+      %h2= link_to "and ze rest... (#{unfiled_todos.count})", '#', :class => 'select_tag_group unfiled_group', :rel => current_user.id, 'url:filter' => filter_user_todos_path(current_user, :unfiled => true) 
+    .tag_group= render unfiled_todos
 
 - unless @completed.blank?
   #completed

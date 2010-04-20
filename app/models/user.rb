@@ -29,15 +29,18 @@ class User < ActiveRecord::Base
   end
   has_friendly_id :login
 
-  has_many :todos, :dependent => :destroy
   has_many :tag_groups
+  has_many :todos, :dependent => :destroy do
+    def unfiled; first.user.tag_groups.empty? ? not_complete : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :exclude => true); end
+    def filed; first.user.tag_groups.empty? ? nil : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :any => true); end
+  end
 
   validate :not_reserved_word
 
   private
 
   def not_reserved_word
-    if controllers_list.include? self.login 
+    if controllers_list.include? self.login
       self.errors.add('login','is not available.')
       false
     else

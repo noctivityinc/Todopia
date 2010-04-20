@@ -17,6 +17,8 @@ Ya.  It's live and ready and working at "http://www.todopia.com":http://www.todo
 
 Give it a try and let me know what you think.
 
+Also, "here":http://github.com/noctivityinc/Todopia/blob/master/RELEASE_NOTES.textile are the "release notes.":http://github.com/noctivityinc/Todopia/blob/master/RELEASE_NOTES.textile
+
 h2. So what does it do?
 
 It's a rapid todo list manager with crazy flexible tags.  That's basically it.  You enter a todo and tag the crap out of it.  If you tag something with a "!tag" in front then any tag with that label will be grouped.  Enter a date, or enter something like "2 days from now" or "tomorrow" and a due date will be assigned.  And coming soon (this week, maybe :)), enter '@tag' and that todo will be shared with anyone else collaborating on that tag.  

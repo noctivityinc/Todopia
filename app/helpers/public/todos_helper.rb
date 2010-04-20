@@ -14,7 +14,7 @@ module Public::TodosHelper
   end
 
   def tag_rel_url(todo, tag)
-    (@tags && @tags.include?(tag)) ? filter_todo_path(todo, :tag => tag, :remove => true)  : filter_todo_path(todo, :tag => tag)
+    (@tags && @tags.include?(tag)) ? filter_user_todos_path(current_user, :tag => tag, :remove => true)  : filter_user_todos_path(current_user, :tag => tag)
   end
 
   def show_due_date(todo)
@@ -38,7 +38,7 @@ module Public::TodosHelper
     end
   end
 
-  def todos_without_tags
+  def unfiled_todos
     if current_user.tag_groups.empty?
       @todos
     else

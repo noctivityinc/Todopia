@@ -19,10 +19,31 @@ function bind_tag_group(){
           break;
         case 'check_all':
           check_all(el)
-          break;
+          break;o
         case 'delete':
           delete_all(el)
           break;
+        case 'print':
+          print_all(el)
+          break;          
+        }
+  })
+  
+  $(".unfiled_group").contextMenu({
+      menu: 'unfiledGroupMenu'
+  },
+      function(action, el, pos) {
+        switch(action)
+        {
+        case 'check_unfiled':
+          check_unfiled(el)
+          break;
+        case 'delete_unfiled':
+          delete_unfiled(el)
+          break;
+        case 'print':
+          print_all(el)
+          break;          
         }
   })
 }
@@ -43,6 +64,19 @@ function check_all(el){
   }})
 }
 
+function print_all(el){
+  url = $(el).attr('url:filter')
+  $('#index').hide();
+  $.ajax({url: url, success: function(responseText){
+     reload_checklist(responseText);
+     $(document).bind('checklist.reloaded',function(){
+       window.print();      
+       $(document).unbind('checklist.reloaded')
+       get_checklist();
+     })
+  }})      
+}
+
 function delete_all(el){
   if(confirm('Are you sure you want to delete this group and ALL the items within it? Hint - if you just want to remove the GROUPING, pick "Remove Group"')) {
     id = $(el).attr('rel')
@@ -51,3 +85,20 @@ function delete_all(el){
     }})
   }
 }
+
+function check_unfiled(el){
+  id = $(el).attr('rel')
+  $.ajax({url: '/users/'+id+'/tag_groups/check_unfiled', success: function(){
+    get_checklist()
+  }})
+}
+
+function delete_unfiled(el){
+  if(confirm('Are you sure you want to delete ALL unfiled todos?')) {
+    id = $(el).attr('rel')
+    $.ajax({url: '/users/'+id+'/tag_groups/delete_unfiled', success: function(responseText){
+      get_checklist();
+    }})
+  }
+}
+

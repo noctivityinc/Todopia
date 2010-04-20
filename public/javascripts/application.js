@@ -54,7 +54,6 @@ $(function(){
     $($(this).attr('href')).hide();
   })
   
-  clog('loaded')
 })
 
 function setup_ajax(){
@@ -93,6 +92,7 @@ function reload_checklist(responseText) {
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
+    $(document).trigger('checklist.reloaded')
   });
 }
 
