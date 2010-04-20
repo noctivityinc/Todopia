@@ -1,6 +1,7 @@
 h1. Todopia Release Notes
 
 h3. 0.1.21
+* Added remember me option to login
 * Nicely formatted print output.  Just the facts ma'am
 * Ability to print any group
 * Ability to check, delete or print all unfilled todos
