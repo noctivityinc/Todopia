@@ -16,6 +16,12 @@ module Public::TodosHelper
   def tag_rel_url(todo, tag)
     (@tags && @tags.include?(tag)) ? filter_user_todos_path(current_user, :tag => tag, :remove => true)  : filter_user_todos_path(current_user, :tag => tag)
   end
+  
+  def get_todo_css(todo)
+    (css ||= []) << 'waiting' if todo.waiting_since
+    (css ||= []) << 'blink' if todo.due_date && todo.due_date <= Date.today 
+    css.join(' ') if css
+  end
 
   def show_due_date(todo)
     return unless todo.due_date
