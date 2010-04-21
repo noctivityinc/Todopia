@@ -1,6 +1,6 @@
 class Public::TodosController < PublicController
-  before_filter :get_user, :only => [:index, :new, :create, :reload, :update_order, :filter]
-  before_filter :get_todo, :except => [:index, :new, :create, :reload, :update_order, :filter]
+  before_filter :get_user, :only => [:index, :new, :create, :reload, :filter]
+  before_filter :get_todo, :except => [:index, :new, :create, :reload, :filter]
   before_filter :verify_user
 
   def index
@@ -55,11 +55,22 @@ class Public::TodosController < PublicController
     params[:unfiled] ? filter_without_tags : filter_by_tag
   end
 
-  def update_order
-    todo_order = params[:cb_todo]
-    todo_order.each_with_index do |id, ndx|
-      Todo.update(id, {:position => ndx})
+  def move
+    move_from = params[:move_from]
+    move_to = params[:move_to]
+
+    unless move_from == move_to
+      @todo.tag_list = @todo.tag_list.to_a.reject {|x| x==move_from} unless move_from == '-99'
+      @todo.tag_list.push(move_to) unless move_to == '-99'
+      @todo.save
     end
+
+    render_list
+  end
+  
+  def wait
+    @todo.toggle_waiting
+    render_list
   end
 
   private

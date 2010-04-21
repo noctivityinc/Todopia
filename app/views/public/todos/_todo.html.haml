@@ -7,7 +7,7 @@
     %span.trash= link_to image_tag("icons/trash_on.png", :title => "delete todo", :class => "icon"), '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
     %span.note= show_notes(todo)
 - else
-  .todo(id="cb_todo_#{todo.id}")
+  .todo{:id => "cb_todo_#{todo.id}", 'todo:id' => todo.id, :class => (todo.waiting_since ? 'waiting' : '')}
     - form_for todo, :html => {:class => 'complete_todo_form'} do |f|
       .col_move.col
         = image_tag "icons/move.jpg", :title => "move", :class => "handle icon"
@@ -16,6 +16,8 @@
       .col_label.col
         .label= f.label todo.id, todo.label, :class => "todo_label #{'fieldWithErrors' unless @todo.errors.empty?}", :rel => edit_todo_path(todo)
       = show_due_date(todo)
+      .col_wait.col
+        = show_waiting(todo)
       .col_trash.col= link_to image_tag("icons/trash_on.png", :title => "delete todo", :class => "icon"), '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
       .col_notes.col
         = show_notes(todo)
@@ -24,4 +26,3 @@
           - todo.tag_list.each do |tag|
             .tag{:style => "background: #{tag_background(tag)} center left no-repeat", :class => 'tag_filter' , :rel => "#{tag_rel_url(todo, tag)}"}
               = tag
-
