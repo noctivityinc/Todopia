@@ -149,7 +149,7 @@ body {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   margin: .25em;
-  background: #97afae;
+  background: #205bab;
 }
 /* line 28, ../../../app/stylesheets/print.sass */
 #toolbar .left, #toolbar .right {
@@ -166,7 +166,7 @@ body {
 }
 
 /* line 40, ../../../app/stylesheets/print.sass */
-#todo #new, #todo #flash, #todo #docs, #todo #urls, #todo #tagGroupMenu, #todo #facebox, #todo #footer, #todo .icon, #todo #completed {
+#todo #new, #todo #flash, #todo #docs, #todo #urls, #todo #facebox, #todo #footer, #todo .icon, #todo #completed, #todo .contextMenu {
   display: none;
 }
 /* line 45, ../../../app/stylesheets/print.sass */

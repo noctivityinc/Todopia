@@ -8,6 +8,7 @@
           = link_to "Log In", login_path, :class => 'yellow-button'
         - elsif params[:controller] == 'user_sessions'
           = link_to "Sign Up", signup_path, :class => 'yellow-button'
+      = link_to "Print", '#', :class => 'button', :id => 'print_button' 
     %td.please_wait
       = image_tag "big_spinner.gif", :title => "please wait...", :class => 'spinner'
     %td.center

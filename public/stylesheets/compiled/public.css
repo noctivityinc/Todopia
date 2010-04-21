@@ -1109,7 +1109,7 @@ a img {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   margin: .25em;
-  background: #97afae;
+  background: #205bab;
   padding: .25em;
 }
 /* line 52, ../../../app/stylesheets/public.sass */
@@ -1119,7 +1119,7 @@ a img {
 /* line 55, ../../../app/stylesheets/public.sass */
 #toolbar table td.left {
   text-align: left;
-  width: 100px;
+  width: 200px;
 }
 /* line 59, ../../../app/stylesheets/public.sass */
 #toolbar table td.please_wait {

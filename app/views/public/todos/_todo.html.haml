@@ -7,7 +7,7 @@
     %span.trash= link_to image_tag("icons/trash_on.png", :title => "delete todo", :class => "icon"), '#', :class => 'delete_todo', :rel => delete_todo_path(todo)
     %span.note= show_notes(todo)
 - else
-  .todo{:id => "cb_todo_#{todo.id}", 'todo:id' => todo.id, :class => (todo.waiting_since ? 'waiting' : '')}
+  .todo{:id => "cb_todo_#{todo.id}", 'todo:id' => todo.id, :class => get_todo_css(todo)}
     - form_for todo, :html => {:class => 'complete_todo_form'} do |f|
       .col_move.col
         = image_tag "icons/move.jpg", :title => "move", :class => "handle icon"
