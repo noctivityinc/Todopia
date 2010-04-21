@@ -81,7 +81,7 @@ function setup_ajax(){
 }
 
 function get_checklist() {
-  $.ajax({url: $('#urls .todo_reload').attr('rel'), 
+  $.ajax({url: $('#urls').attr('url:todo_reload'), 
       success: function(todoResponse) { reload_checklist(todoResponse); }
     })
 }   
@@ -125,6 +125,13 @@ function bind_checklist_keyboard(){
     return false;    
   });
   
+  
+  $('.todo_checkbox').bind('keydown', 'w', function(){ 
+    $(this).closest('.todo').find('.wait_todo').click()
+    $('body').data('position',0);
+    return false;    
+  });
+  
   $('.todo_checkbox').bind('keydown', '#', function(){ 
     $(this).closest('.todo').find('.delete_todo').click()
     return false;    
@@ -143,12 +150,26 @@ function select_current_checkbox(){
 
 function checklist_sortable() {
   $(".tag_group").sortable({handle: '.handle', 
+    connectWith: '.tag_group', 
     placeholder: 'ui-state-highlight',
-    update: function() { 
-      order = $(".tag_group").sortable('serialize'); 
-      url = $("#urls #order_todos").attr('rel');
-      url = url+'?'+order
-      $.ajax({url:url})
+    stop: function(event, ui) { 
+      var ui_item = ui.item
+      todo_id = ui.item.attr('todo:id')
+      old_tag_group = $(this).attr('tg:tag')
+      new_tag_group = ui.item.closest('.tag_group').attr('tg:tag')
+      move_url = $('#urls').attr('url:move_todo')
+      ui.item.find('.todo_checkbox').focus();
+      
+      if(old_tag_group!=new_tag_group)
+        $.post(move_url, {move_from: old_tag_group, move_to: new_tag_group, id: todo_id}, function(todoResponse) { 
+          $(document).bind('checklist.reloaded', function(){
+              ui_item.find('.todo_checkbox').focus();
+              $(document).unbind('checklist.reloaded') 
+            })
+          reload_checklist(todoResponse); 
+          })
+      
+
       }
     });
   $('#not_complete').disableSelection();

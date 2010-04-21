@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100419153602) do
+ActiveRecord::Schema.define(:version => 20100421004421) do
 
   create_table "histories", :force => true do |t|
     t.integer  "todo_id"
@@ -73,13 +73,14 @@ ActiveRecord::Schema.define(:version => 20100419153602) do
 
   create_table "todos", :force => true do |t|
     t.string   "label"
-    t.integer  "position"
+    t.integer  "priority"
     t.datetime "completed_at"
     t.integer  "user_id"
     t.integer  "completed_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "due_date"
+    t.datetime "waiting_since"
   end
 
   create_table "users", :force => true do |t|

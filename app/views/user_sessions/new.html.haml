@@ -11,6 +11,18 @@
   
       - f.buttons do
         = f.commit_button 'Login'
+        
+  #fun_stuff
+    %h3 New Fun Stuff
+    %ul
+      %li Create a group by prefacing a tag with !
+      %li Drag/drop todos into groups 
+      %li Click the clock or hit "w" if waiting on someone/thing to complete
+      %li Enter a tag with a # then number (e.g. #1, #2) to set a priority
+      %li Enter a due date as a tag (e.g. tomorrow, 2 days from now, 5/15/2010)
+      %li "c" creates a new todo, escape cancels
+      %li "#" now deletes a todo
+  
 
 = link_to 'click me', '#warning_message', :rel => 'facebox', :style => 'display:none', :id => 'warning_message_trigger'
 #warning_message{:style => 'display:none'}

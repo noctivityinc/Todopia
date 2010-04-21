@@ -1,17 +1,18 @@
 # == Schema Information
-# Schema version: 20100419153602
+# Schema version: 20100421004421
 #
 # Table name: todos
 #
 #  id              :integer         not null, primary key
 #  label           :string(255)
-#  position        :integer
+#  priority        :integer
 #  completed_at    :datetime
 #  user_id         :integer
 #  completed_by_id :integer
 #  created_at      :datetime
 #  updated_at      :datetime
 #  due_date        :date
+#  waiting_since   :datetime
 #
 
 one:

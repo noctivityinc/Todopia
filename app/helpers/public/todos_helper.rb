@@ -30,6 +30,14 @@ module Public::TodosHelper
     end
   end
   
+  def show_waiting(todo)
+    if todo.waiting_since
+     link_to  image_tag("icons/waiting.png", :title => "since #{todo.waiting_since.strftime('%m/%d/%Y')}.  click or (w) to resume", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
+    else
+     link_to image_tag("icons/clock.png", :title => "waiting...", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
+    end
+  end
+  
   def tag_groups_empty?
     if current_user.tag_groups.empty?
       return true

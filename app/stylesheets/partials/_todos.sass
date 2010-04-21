@@ -34,6 +34,16 @@
       
       .todo
         overflow: hidden
+        
+        &.waiting
+          font-size: .90em        
+          color: #666
+          
+          .wait_todo
+            +alt
+            
+          a
+            color: #666
 
         .col
           padding-right: 5px
@@ -54,6 +64,7 @@
           +alt
           color: red
           padding-right: 15px
+          font-size: .95em
           
         .col_tags
           .tags
@@ -72,6 +83,9 @@
               border-right: 1px solid #c2c1c1
               cursor: pointer
               
+      .ui-state-highlight
+        height: 1.5em
+        line-height: 1.2em
 
     #completed
       h2

@@ -31,6 +31,14 @@ $(function(){
     return false;
   })
     
+  $('.wait_todo').livequery('click',function(){
+    url = $(this).attr('rel')
+    $.ajax({url: url, success: function(responseText){
+       reload_checklist(responseText);
+    }})
+    return false;
+  })
+  
   $('.delete_todo').livequery('click',function(){
     if(confirm('Are you sure you want to delete this todo?')) {
       url = $(this).attr('rel')
@@ -164,7 +172,7 @@ function setup_autocomplete() {
   //  clog(bit.value)
   // })
 	  
-	$.ajax({url: $('#urls .tag_search').attr('rel'), dataType: 'json', success: function(r){
+	$.ajax({url: $('#urls').attr('url:tag_search'), dataType: 'json', success: function(r){
 		t4.plugins['autocomplete'].setValues(r);
 		t4.getContainer().removeClass('textboxlist-loading');
 	}});

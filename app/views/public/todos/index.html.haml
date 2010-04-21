@@ -41,6 +41,9 @@
           %b f 
           jump to first todo
         .sc
+          %b w
+          waiting on externality
+        .sc
           %b #
           delete todo
         .sc
@@ -57,17 +60,15 @@
           any date or 
           = link_to 'date expression', '#', :title => 'e.g 4/15/10 or "2 weeks from now" or "tomorrow"' 
         creates a due date for the item 
+      .sc
+        %b #1, #2, #3, etc
+        sets a priority, 1 being highest
     %p 
       %u Also...
     .sc Click tag(s) to filter
     .sc Right click a tag group to ungroup, delete or check all
-    .sc Drag handle to reposition in group    
+    .sc Drag/drop todos into groups    
   
-  #urls
-    .tag_search{:rel => "#{user_tags_path(@user)}"}
-    .todo_reload{:rel => "#{reload_user_todos_path(@user)}"}
-    .order_todos{:rel => update_order_user_todos_path(current_user)}
-
   %ul#tagGroupMenu.contextMenu
     %li.check_all
       %a{ :href => "#check_all" }
@@ -92,6 +93,8 @@
     %li.delete
       %a{ :href => "#delete_unfiled" }
         Delete
+
+  #urls{'url:move_todo' => move_user_todos_path(current_user), 'url:tag_search' => user_tags_path(@user), 'url:todo_reload' => reload_user_todos_path(@user)}
 
 :javascript
   $(function(){
