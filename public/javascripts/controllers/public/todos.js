@@ -80,6 +80,7 @@ $(function(){
   setup_tooltips();
   bind_keyboard();
   bind_checklist_keyboard();
+  bind_timers();
 })
 
 function new_todo(noslide){

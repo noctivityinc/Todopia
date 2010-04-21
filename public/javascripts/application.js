@@ -1,3 +1,5 @@
+var tmr;
+
 $(function(){
   setup_ajax();
   $('.spinner').hide();
@@ -53,7 +55,6 @@ $(function(){
   }).each(function(el){
     $($(this).attr('href')).hide();
   })
-  
 })
 
 function setup_ajax(){
@@ -89,9 +90,11 @@ function get_checklist() {
 function reload_checklist(responseText) {
   $('#todo').find('#index').html(responseText).fadeIn(200, function(){
     setup_ajax();
+    setup_complete_todo_form();
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
+    bind_timers();
     $(document).trigger('checklist.reloaded')
   });
 }
@@ -173,6 +176,17 @@ function checklist_sortable() {
       }
     });
   $('#not_complete').disableSelection();
+}
+
+function bind_timers(){
+    $('body, input, textarea').bind('keydown', set_checklist_refresh)
+    $(document).bind('click', set_checklist_refresh)
+    set_checklist_refresh()
+}
+
+function set_checklist_refresh (){
+  clearInterval(tmr)
+  tmr = setInterval ( "get_checklist()", 600000);
 }
 
 function clog(message, type) {

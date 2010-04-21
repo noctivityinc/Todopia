@@ -1,6 +1,11 @@
 h1. Todopia Release Notes
 
-h4. 0.1.22
+h3. 0.1.23 (hotfix)
+* Added 10 minute auto-refresh
+* Reordered todos so that due/past due first, then priorities, then dates
+* Fixed (i hope) binding of spacebar issue
+
+h3. 0.1.22
 * Drag and drop todos into groups 
 * Position is not priority, setable with a #number tag (1 highest, 10 lowest)
 * Clicking clock or "w" sets a task to waiting

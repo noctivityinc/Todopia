@@ -27,7 +27,9 @@ class Todo < ActiveRecord::Base
   validates_presence_of :label
   validate :not_labelify_label
 
-  named_scope :not_complete, :conditions => ['completed_at IS ?', nil], :order => 'waiting_since DESC, priority ASC, created_at DESC'
+  named_scope :not_complete, :conditions => ['completed_at IS ?', nil], :order => 'waiting_since DESC, priority ASC, due_date ASC, created_at DESC'
+  named_scope :due, :conditions => ['due_date <= ?', Date.today]
+  named_scope :not_due, :conditions => ['due_date > ? OR due_date IS ?', Date.today, nil]
   named_scope :complete, :conditions => ['completed_at IS NOT ?', nil], :order => 'completed_at DESC'
 
   before_create :set_priority
@@ -51,7 +53,7 @@ class Todo < ActiveRecord::Base
   end
 
   def set_priority
-    self.priority = 10
+    self.priority ||= 10
   end
 
   def set_completed_by_id
@@ -68,7 +70,7 @@ class Todo < ActiveRecord::Base
 
   def filter_plugins
     new_list = self.tag_string.split(',').map do |tag|
-      if %w{! @ #}.include? tag[0]
+      if %w{!}.include? tag[0]
         tag[1..-1]
       else
         tag if !Chronic.parse(tag)

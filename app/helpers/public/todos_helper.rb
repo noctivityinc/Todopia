@@ -29,15 +29,15 @@ module Public::TodosHelper
       link_to (notes_icon(todo)), todo_notes_path(todo), :rel => 'facebox', :class => 'note_trigger icon note_list', 'url:showmin' => list_todo_notes_path(todo)
     end
   end
-  
+
   def show_waiting(todo)
     if todo.waiting_since
-     link_to  image_tag("icons/waiting.png", :title => "since #{todo.waiting_since.strftime('%m/%d/%Y')}.  click or (w) to resume", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
+      link_to  image_tag("icons/waiting.png", :title => "since #{todo.waiting_since.strftime('%m/%d/%Y')}.  click or (w) to resume", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
     else
-     link_to image_tag("icons/clock.png", :title => "waiting...", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
+      link_to image_tag("icons/clock.png", :title => "waiting...", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
     end
   end
-  
+
   def tag_groups_empty?
     if current_user.tag_groups.empty?
       return true
@@ -46,11 +46,15 @@ module Public::TodosHelper
     end
   end
 
-  def unfiled_todos
+  def unfiled_todos(scope=nil)
     if current_user.tag_groups.empty?
       @todos
     else
-      @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+      if scope
+        @todos.send(scope.intern).tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+      else
+        @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+      end
     end
   end
 end

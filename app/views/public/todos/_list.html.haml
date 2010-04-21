@@ -3,12 +3,16 @@
     - unless @todos.tagged_with(tg.tag).blank?
       %h2
         = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id, 'url:filter' => filter_user_todos_path(current_user, :tag => tg.tag)
-      .tag_group{'tg:tag' => tg.tag}= render @todos.tagged_with(tg.tag)
+      .tag_group{'tg:tag' => tg.tag}
+        = render @todos.due.tagged_with(tg.tag)
+        = render @todos.not_due.tagged_with(tg.tag)
 
   - unless unfiled_todos.empty?
     - unless tag_groups_empty?
       %h2= link_to "and ze rest... (#{unfiled_todos.count})", '#', :class => 'select_tag_group unfiled_group', :rel => current_user.id, 'url:filter' => filter_user_todos_path(current_user, :unfiled => true) 
-    .tag_group{'tg:tag' => '-99'}= render unfiled_todos
+    .tag_group{'tg:tag' => '-99'}
+      = render unfiled_todos('due')
+      = render unfiled_todos('not_due')
 
 - unless @completed.blank?
   #completed
