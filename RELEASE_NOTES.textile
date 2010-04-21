@@ -1,5 +1,11 @@
 h1. Todopia Release Notes
 
+h3. 0.1.24 (hotfix)
+* Print button added
+* New toolbar color
+* Fixed print css 
+* Added highlight for anything due or past due
+
 h3. 0.1.23 (hotfix)
 * Added 10 minute auto-refresh
 * Reordered todos so that due/past due first, then priorities, then dates

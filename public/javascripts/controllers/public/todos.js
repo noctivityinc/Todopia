@@ -74,6 +74,15 @@ $(function(){
     return false;
   })
   
+  $('#print_button').live('click', function(){
+     window.print();      
+     return false;
+  })
+  
+  $('.blink').livequery(function(){
+    $(this).animate( { backgroundColor: '#FFFF99' }, 1000).animate( { backgroundColor: 'white' }, 1000);
+  })
+  
   if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }
   
   setup_complete_todo_form();
