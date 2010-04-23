@@ -9,9 +9,8 @@
         - elsif params[:controller] == 'user_sessions'
           = link_to "Sign Up", signup_path, :class => 'yellow-button'
       = link_to "Print", '#', :class => 'button', :id => 'print_button' 
-    %td.please_wait
-      = image_tag "big_spinner.gif", :title => "please wait...", :class => 'spinner'
     %td.center
+      = image_tag "big_spinner.gif", :title => "please wait...", :class => 'spinner'
       - if show_title?
         %h1.screen_only
           =h yield(:title)
@@ -19,4 +18,4 @@
           =h yield(:print_title) 
     %td.right
       - if current_user
-        = link_to "+ New Todo", '#', :id => 'todo_toggle', :class => 'button', :rel => new_user_todo_path(current_user)
+        = link_to "+ New", '#', :id => 'todo_toggle', :class => 'button', :rel => new_user_todo_path(current_user)

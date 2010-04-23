@@ -23,7 +23,9 @@
 
   #index
     #not_complete
+      width: 98%
       margin-top: 1em
+      font-size: 12px
       
       h2
         font-size: 1.15em
@@ -36,7 +38,6 @@
         overflow: hidden
         
         &.waiting
-          font-size: .90em        
           color: #666
           
           .wait_todo
@@ -48,40 +49,54 @@
         .col
           padding-right: 5px
           +float-left
+          
+          img
+            vertical-align: baseline
         
-        .col_cb
-          width: 20px
+        #left_pane
+          display: table
+          float: left      
+          overflow: hidden      
+          min-width: 200px
+          max-width: 250px
+          
+          .col_cb
+            width: 20px
+            text-align: center
       
-        .col_label
-          padding-right: 15px
+          .col_label
+            padding-right: 15px
+            font-size: 1em
 
-        .due_date
-          +alt
-          font-size: .95em
-          color: #666
-          
-        .due_date_past_due
-          +alt
-          color: red
-          padding-right: 15px
-          font-size: .95em
-          
-        .col_tags
-          .tags
-            .tag
-              font-size: 10px
-              color: #666
-              display: block
-              float: left
-              padding-left: 20px
-              padding-right: 10px
-              padding-top: 2px
-              margin-top: 0px
-              text-decoration: none
-              height: 16px
-              background: url(/images/tag.gif) center left no-repeat
-              border-right: 1px solid #c2c1c1
-              cursor: pointer
+          .col_tags
+            .tags
+              overflow: hidden     
+              .tag
+                +float-left
+                font-size: .90em
+                color: #660066
+                text-decoration: none
+                padding: .25em .50em 0em .25em
+                margin: 0em
+                cursor: pointer
+                
+                &.selected
+                  background: yellow
+                
+        #right_pane
+          float: right        
+          overflow: hidden          
+
+          .col_due
+            width: 80px
+
+          .due_date
+            font-size: .90em
+            color: #666
+
+            &.past_due
+              color: red
+            
               
       .ui-state-highlight
         height: 1.5em
