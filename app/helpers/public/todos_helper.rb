@@ -9,23 +9,23 @@ module Public::TodosHelper
     end
   end
 
-  def tag_background(tag)
-    (@tags && @tags.include?(tag)) ? 'url(/images/tag_selected.gif)' : 'url(/images/tag.gif)'
+  def tag_css(tag)
+    'selected' if (@tags && @tags.include?(tag))
   end
 
   def tag_rel_url(todo, tag)
     (@tags && @tags.include?(tag)) ? filter_user_todos_path(current_user, :tag => tag, :remove => true)  : filter_user_todos_path(current_user, :tag => tag)
   end
   
-  def get_todo_css(todo)
+  def todo_css(todo)
     (css ||= []) << 'waiting' if todo.waiting_since
-    (css ||= []) << 'blink' if todo.due_date && todo.due_date <= Date.today 
+    (css ||= []) << 'blink' if todo.due_date && todo.due_date <= Date.today && !todo.waiting_since
     css.join(' ') if css
   end
 
   def show_due_date(todo)
-    return unless todo.due_date
-    "<div class='col_due col due_date#{todo.due_date > Date.today ? '' : '_past_due'}'>(Due: #{todo.due_date.strftime('%m/%d/%Y')})</div>"
+    return "&nbsp;" unless todo.due_date
+    "<div class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{todo.due_date.strftime('%m/%d/%Y')}</div>"
   end
 
   def show_notes(todo)
@@ -40,7 +40,7 @@ module Public::TodosHelper
     if todo.waiting_since
       link_to  image_tag("icons/waiting.png", :title => "since #{todo.waiting_since.strftime('%m/%d/%Y')}.  click or (w) to resume", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
     else
-      link_to image_tag("icons/clock.png", :title => "waiting...", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
+      link_to image_tag("icons/clock.png", :title => "in process...", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
     end
   end
 
