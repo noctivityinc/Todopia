@@ -30,6 +30,8 @@ class Todo < ActiveRecord::Base
   named_scope :not_complete, :conditions => ['completed_at IS ?', nil], :order => 'waiting_since DESC, priority ASC, due_date ASC, created_at DESC'
   named_scope :due, :conditions => ['due_date <= ?', Date.today]
   named_scope :not_due, :conditions => ['due_date > ? OR due_date IS ?', Date.today, nil]
+  named_scope :in_process, :conditions => ['waiting_since IS NOT ?', nil]
+  named_scope :not_in_process, :conditions => ['waiting_since IS ?', nil]
   named_scope :complete, :conditions => ['completed_at IS NOT ?', nil], :order => 'completed_at DESC'
 
   before_create :set_priority
