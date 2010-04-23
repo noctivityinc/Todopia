@@ -1,5 +1,10 @@
 h1. Todopia Release Notes
 
+h3. 0.2.1
+* New layout.  Cleaner.
+* Fixed order of items so in process is always last
+* If something is in process, shows waiting clock instead of checkbox.
+
 h3. 0.1.24 (hotfix)
 * Print button added
 * New toolbar color

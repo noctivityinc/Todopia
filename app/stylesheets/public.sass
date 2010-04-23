@@ -32,9 +32,6 @@ a
     :border none
     p
 
-.print_only
-  display: none
-
 .clear
   :clear both
   :height 0
@@ -54,19 +51,18 @@ a
     
     td.left
       text-align: left
-      width: 200px
+      width: 33%
+      min-width: 120px
       
-    td.please_wait
-      width: 1.75em
-      text-align: left
+    td.center 
+      min-width: 150px
       img
         +rounded
         margin: 0
         padding: 0
         width: 1.5em
         height: 1.5em
-  
-    td.center 
+    
       h1
         color: #FFFFFF
         font-size: 14pt
@@ -75,13 +71,11 @@ a
         margin: 0
         padding: 0
 
-      .button
-        +float-right
-        
+        &.screen_only
+          display: inline
+
     td.right
       width: 100px
-        
-        
 
 #container
   :background #fff
@@ -104,5 +98,7 @@ a
     :border solid 1px #C66
 
 
+.print_only
+  display: none
 
 
