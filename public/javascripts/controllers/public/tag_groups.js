@@ -23,6 +23,9 @@ function bind_tag_group(){
         case 'delete':
           delete_all(el)
           break;
+        case 'rename':
+          rename(el);
+          break;
         case 'print':
           print_all(el)
           break;          
@@ -75,6 +78,16 @@ function print_all(el){
        get_checklist();
      })
   }})      
+}
+
+function rename(el){
+  var new_name = prompt('Enter group name:',el.attr('tg:tag'))
+  if (new_name!='') {
+    id = $(el).attr('rel')
+    $.ajax({url: '/tag_groups/'+id+'/rename?name='+new_name, success: function(){
+      get_checklist()
+    }})
+  }
 }
 
 function delete_all(el){

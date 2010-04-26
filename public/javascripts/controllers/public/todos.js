@@ -32,11 +32,8 @@ $(function(){
   })
     
   $('.wait_todo').livequery('click',function(){
-    url = $(this).attr('rel')
-    $.ajax({url: url, success: function(responseText){
-       reload_checklist(responseText);
-    }})
-    return false;
+    url = $(this).attr('rel');
+    toggle_waiting(url)
   })
   
   $('.delete_todo').livequery('click',function(){
@@ -125,6 +122,13 @@ function edit_todo(el){
   }})
 }
 
+function toggle_waiting(url){
+  $.ajax({url: url, success: function(responseText){
+     reload_checklist(responseText);
+     return false
+  }})
+}
+
 function setup_complete_todo_form() {
   $('.todo_checkbox').live('click',function(){
     $(this).closest('form').ajaxSubmit(complete_todo_form_options); 
@@ -206,7 +210,7 @@ function bind_add_edit_keyboard() {
   $('input:not(.todo_checkbox)').unbind();
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+n', function(){ new_todo();     return false; });
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit();     return false; });
-  $('input').bind('keydown','esc', function(){ toggle_todo_form();     return false; })
+  $('input').bind('keydown','esc', function(){ toggle_todo_form(); return false; })
 }
 
 function setup_tooltips(){

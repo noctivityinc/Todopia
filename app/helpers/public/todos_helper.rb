@@ -23,6 +23,10 @@ module Public::TodosHelper
     css.join(' ') if css
   end
 
+  def todo_cb_css(todo)
+    todo.waiting_since ? 'vanish' : ''
+  end
+
   def show_due_date(todo)
     return "&nbsp;" unless todo.due_date
     "<div class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{todo.due_date.strftime('%m/%d/%Y')}</div>"

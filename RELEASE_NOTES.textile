@@ -1,5 +1,13 @@
 h1. Todopia Release Notes
 
+h3. 0.2.2
+* Ability to select "waiting" items
+* Current selected todo arrow indicator
+* Ability to delete with "d" key
+* Ability to rename groups
+* Ability to change due date tags
+* Ability to reprioritize via drag/drop (though due date still takes precendence, using #1, #2, tags recommended)
+
 h3. 0.2.1
 * New layout.  Cleaner.
 * Fixed order of items so in process is always last

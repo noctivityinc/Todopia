@@ -10,13 +10,14 @@
   .todo{:id => "cb_todo_#{todo.id}", 'todo:id' => todo.id, :class => todo_css(todo)}
     - form_for todo, :html => {:class => 'complete_todo_form'} do |f|
       #left_pane
+        .col_select.col
+          &nbsp;
         .col_move.col
           = image_tag "icons/move.jpg", :title => "move", :class => "handle icon"
         .col_cb.col
           - if todo.waiting_since
             = show_waiting(todo)
-          - else
-            = f.check_box :completed, :class => 'todo_checkbox' 
+          = f.check_box :completed, :class => "todo_checkbox #{todo_cb_css(todo)}"
         .col_label.col
           .label= f.label todo.id, todo.label, :class => "todo_label #{'fieldWithErrors' unless @todo.errors.empty?}", :rel => edit_todo_path(todo)
         .col_tags.col

@@ -79,6 +79,9 @@
     %li.ungroup
       %a{ :href => "#ungroup" }
         Ungroup
+    %li.rename
+      %a{ :href => "#rename" }
+        Rename
     %li.delete
       %a{ :href => "#delete" }
         Delete
@@ -94,7 +97,7 @@
       %a{ :href => "#delete_unfiled" }
         Delete
 
-  #urls{'url:move_todo' => move_user_todos_path(current_user), 'url:tag_search' => user_tags_path(@user), 'url:todo_reload' => reload_user_todos_path(@user)}
+  #urls{'url:move_todo' => move_user_todos_path(current_user), 'url:reorder_todos' => reorder_user_todos_path(current_user), 'url:tag_search' => user_tags_path(@user), 'url:todo_reload' => reload_user_todos_path(@user)}
 
 :javascript
   $(function(){
