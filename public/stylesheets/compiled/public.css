@@ -806,6 +806,66 @@
   height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
 }
 
+/* line 1, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-panel {
+  z-index: 25;
+  width: 5px;
+  position: absolute;
+}
+
+/* line 6, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-panel-content {
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+  overflow: hidden;
+  text-align: left;
+  background-color: #343434;
+  height: 0;
+  width: 100%;
+  color: white;
+  filter: alpha(opacity=75);
+  -khtml-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+  border-top: 1px solid black;
+}
+/* line 22, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-panel-content table {
+  margin: .5em auto;
+  width: 750px;
+}
+/* line 26, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-panel-content table tr > td {
+  text-align: center;
+}
+/* line 29, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-panel-content table tr > td a > img {
+  width: 72px;
+  height: 72px;
+}
+
+/* line 33, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-button {
+  display: none;
+}
+
+/* line 36, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-bottom {
+  bottom: 0;
+}
+
+/* line 39, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-left {
+  position: absolute;
+  left: 0;
+}
+
+/* line 43, ../../../app/stylesheets/partials/_slidebox.sass */
+.slide-top {
+  top: 0;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_todos.sass */
 #todo #new {
   display: none;
@@ -1000,19 +1060,18 @@
 #todo #docs #more_keyboard {
   margin-top: .5em;
 }
-
 /* line 149, ../../../app/stylesheets/partials/_todos.sass */
-.contextMenu {
+#todo .contextMenu {
   margin: 1em;
   float: left;
 }
 /* line 152, ../../../app/stylesheets/partials/_todos.sass */
-.contextMenu ul {
+#todo .contextMenu ul {
   padding: 0px;
   margin: 1em 1em;
 }
 /* line 155, ../../../app/stylesheets/partials/_todos.sass */
-.contextMenu li {
+#todo .contextMenu li {
   font-size: 11px;
   width: 99%;
   padding: 1px 0px;
@@ -1090,13 +1149,13 @@
   padding-right: .20em;
 }
 
-/* line 18, ../../../app/stylesheets/public.sass */
+/* line 19, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px .20em;
 }
 
-/* line 22, ../../../app/stylesheets/public.sass */
+/* line 23, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
@@ -1104,29 +1163,29 @@ body {
   width: 99%;
 }
 
-/* line 29, ../../../app/stylesheets/public.sass */
+/* line 30, ../../../app/stylesheets/public.sass */
 a {
   color: #0000FF;
 }
-/* line 31, ../../../app/stylesheets/public.sass */
+/* line 32, ../../../app/stylesheets/public.sass */
 a img {
   border: none;
 }
 
-/* line 35, ../../../app/stylesheets/public.sass */
+/* line 36, ../../../app/stylesheets/public.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 40, ../../../app/stylesheets/public.sass */
+/* line 41, ../../../app/stylesheets/public.sass */
 .labelHighlight {
   color: #999999;
   text-align: right;
 }
 
-/* line 44, ../../../app/stylesheets/public.sass */
+/* line 45, ../../../app/stylesheets/public.sass */
 #toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1135,21 +1194,21 @@ a img {
   background: #205bab;
   padding: .25em;
 }
-/* line 49, ../../../app/stylesheets/public.sass */
+/* line 50, ../../../app/stylesheets/public.sass */
 #toolbar table {
   width: 100%;
 }
-/* line 52, ../../../app/stylesheets/public.sass */
+/* line 53, ../../../app/stylesheets/public.sass */
 #toolbar table td.left {
   text-align: left;
   width: 33%;
-  min-width: 120px;
+  min-width: 75px;
 }
-/* line 57, ../../../app/stylesheets/public.sass */
+/* line 58, ../../../app/stylesheets/public.sass */
 #toolbar table td.center {
   min-width: 150px;
 }
-/* line 59, ../../../app/stylesheets/public.sass */
+/* line 60, ../../../app/stylesheets/public.sass */
 #toolbar table td.center img {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1160,7 +1219,7 @@ a img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 66, ../../../app/stylesheets/public.sass */
+/* line 67, ../../../app/stylesheets/public.sass */
 #toolbar table td.center h1 {
   color: #FFFFFF;
   font-size: 14pt;
@@ -1169,26 +1228,27 @@ a img {
   margin: 0;
   padding: 0;
 }
-/* line 74, ../../../app/stylesheets/public.sass */
+/* line 75, ../../../app/stylesheets/public.sass */
 #toolbar table td.center h1.screen_only {
   display: inline;
 }
-/* line 77, ../../../app/stylesheets/public.sass */
+/* line 78, ../../../app/stylesheets/public.sass */
 #toolbar table td.right {
-  width: 100px;
+  width: 33%;
+  min-width: 100px;
 }
 
-/* line 80, ../../../app/stylesheets/public.sass */
+/* line 82, ../../../app/stylesheets/public.sass */
 #container {
   background: #fff;
   margin: 0px;
 }
 
-/* line 84, ../../../app/stylesheets/public.sass */
+/* line 86, ../../../app/stylesheets/public.sass */
 #flash_messages {
   margin: 1em .50em;
 }
-/* line 87, ../../../app/stylesheets/public.sass */
+/* line 89, ../../../app/stylesheets/public.sass */
 #flash_messages .notice, #flash_messages .error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -1197,18 +1257,18 @@ a img {
   -webkit-border-radius: 4px;
   margin: .25em;
 }
-/* line 92, ../../../app/stylesheets/public.sass */
+/* line 94, ../../../app/stylesheets/public.sass */
 #flash_messages .notice {
   background-color: #CFC;
   border: solid 1px #6C6;
 }
-/* line 96, ../../../app/stylesheets/public.sass */
+/* line 98, ../../../app/stylesheets/public.sass */
 #flash_messages .error {
   background-color: #FCC;
   border: solid 1px #C66;
 }
 
-/* line 101, ../../../app/stylesheets/public.sass */
+/* line 103, ../../../app/stylesheets/public.sass */
 .print_only {
   display: none;
 }

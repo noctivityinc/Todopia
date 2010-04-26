@@ -5,6 +5,7 @@ $(function(){
   $('.spinner').hide();
   $('body').data('position',0)
   $('a[rel*=facebox]').facebox() 
+  $("#bottom_panel").slideBox({width: "100%", height: "100px", position: "bottom"});
   
   complete_todo_form_options = { 
          clearForm: true,
@@ -94,7 +95,6 @@ function reload_checklist(responseText) {
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
-    bind_timers();
     $(document).trigger('checklist.reloaded')
   });
 }
@@ -191,20 +191,6 @@ function checklist_sortable() {
       }
     });
   $('#not_complete').disableSelection();
-}
-
-function bind_timers(){
-  if (window.fluid==undefined) {
-    // don't use timers if using fluid.  weird issues
-    $('body, input, textarea').bind('keydown', set_checklist_refresh)
-    $(document).bind('click', set_checklist_refresh)
-    set_checklist_refresh()
-  }
-}
-
-function set_checklist_refresh (){
-  clearInterval(tmr)
-  tmr = setInterval ( "get_checklist()", 600000);
 }
 
 function clog(message, type) {

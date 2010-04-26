@@ -73,7 +73,17 @@ $(function(){
   
   $('#print_button').live('click', function(){
      window.print();      
+     $(".slide-options").trigger('click')
      return false;
+  })
+  
+  $('#email_button').live('click', function(){
+   url = $(this).attr('rel')
+    $.ajax({url: url, success: function(){
+       $.flash.show()
+       $(".slide-options").trigger('click')
+    }})      
+    return false;
   })
   
   $('.blink').livequery(function(){
@@ -86,7 +96,6 @@ $(function(){
   setup_tooltips();
   bind_keyboard();
   bind_checklist_keyboard();
-  bind_timers();
 })
 
 function new_todo(noslide){

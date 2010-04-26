@@ -1,5 +1,5 @@
 - content_for :head do
-  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js', 'jquery.hotkeys'
+  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js', 'jquery.hotkeys', 'slidebox'
   = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.custom', 'jquery.contextMenu',  :cache => true
 
 #todo
@@ -7,96 +7,12 @@
   - print_title "Todopia (#{current_user.login} @ #{Date.today})"
 
   #new.dialog= render :partial => 'form'
-
   #flash= render :partial => "layouts/flash"
-  
   #index= render 'list'
-    
-  #docs
-    - unless request.env["HTTP_USER_AGENT"][/Mobile/]
-      %p 
-        %u Keyboard Shortcuts
-      .sc 
-        %b c 
-        create new todo
-      .sc 
-        %b j
-        next todo
-      .sc 
-        %b k 
-        previous todo
-      .sc
-        %b space/enter
-        marks as complete
-      .sc
-        = link_to "more...", '#more_keyboard', :rel => 'toggle' 
-      #more_keyboard
-        .sc
-          %b e
-          edit todo
-        .sc
-          %b n
-          create/view notes & history
-        .sc 
-          %b f 
-          jump to first todo
-        .sc
-          %b w
-          waiting on externality
-        .sc
-          %b #
-          delete todo
-        .sc
-          %b esc
-          cancels new todo
-              
-    %p 
-      %u Tag Actions
-      .sc
-        %b !tag
-        create a group for all tags labeled "tag"
-      .sc
-        %b 
-          any date or 
-          = link_to 'date expression', '#', :title => 'e.g 4/15/10 or "2 weeks from now" or "tomorrow"' 
-        creates a due date for the item 
-      .sc
-        %b #1, #2, #3, etc
-        sets a priority, 1 being highest
-    %p 
-      %u Also...
-    .sc Click tag(s) to filter
-    .sc Right click a tag group to ungroup, delete or check all
-    .sc Drag/drop todos into groups    
+  #docs= render :partial => 'docs'
+  #bottom_panel= render :partial => 'bottom_panel'
+  = render :partial => 'context_menus'
   
-  %ul#tagGroupMenu.contextMenu
-    %li.check_all
-      %a{ :href => "#check_all" }
-        Check All
-    %li.print
-      %a{ :href => "#print" }
-        Print
-    %li.ungroup
-      %a{ :href => "#ungroup" }
-        Ungroup
-    %li.rename
-      %a{ :href => "#rename" }
-        Rename
-    %li.delete
-      %a{ :href => "#delete" }
-        Delete
-        
-  %ul#unfiledGroupMenu.contextMenu
-    %li.check_all
-      %a{ :href => "#check_unfiled" }
-        Check All
-    %li.print
-      %a{ :href => "#print" }
-        Print
-    %li.delete
-      %a{ :href => "#delete_unfiled" }
-        Delete
-
   #urls{'url:move_todo' => move_user_todos_path(current_user), 'url:reorder_todos' => reorder_user_todos_path(current_user), 'url:tag_search' => user_tags_path(@user), 'url:todo_reload' => reload_user_todos_path(@user)}
 
 :javascript

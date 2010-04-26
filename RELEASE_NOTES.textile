@@ -1,5 +1,11 @@
 h1. Todopia Release Notes
 
+h3. 0.2.3
+* New options dock for printing and email
+* Ability to send yourself an email copy of your todos
+* Removed auto-refresh due to oddities
+* Moved lots into partials :)
+
 h3. 0.2.2
 * Ability to select "waiting" items
 * Current selected todo arrow indicator
