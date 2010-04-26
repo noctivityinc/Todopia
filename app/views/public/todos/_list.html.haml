@@ -2,7 +2,7 @@
   - current_user.tag_groups.ordered.each do |tg|
     - unless @todos.tagged_with(tg.tag).blank?
       %h2
-        = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id, 'url:filter' => filter_user_todos_path(current_user, :tag => tg.tag)
+        = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id, 'url:filter' => filter_user_todos_path(current_user, :tag => tg.tag), 'tg:tag' => tg.tag
       .tag_group{'tg:tag' => tg.tag}
         = render @todos.due.not_in_process.tagged_with(tg.tag)
         = render @todos.not_due.not_in_process.tagged_with(tg.tag)

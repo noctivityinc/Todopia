@@ -26,3 +26,12 @@ config.action_mailer.delivery_method = :test
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
+# 
+ActionMailer::Base.smtp_settings = {
+  :address => "mail.blueboxgrid.com",
+  :port => "25",
+  :domain => "todopia.com",
+  :authentication => :login,
+  :user_name  => APP_CONFIG[:mail][:username]
+  :password  => APP_CONFIG[:mail][:password]
+}

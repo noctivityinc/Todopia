@@ -44,6 +44,15 @@ class Todo < ActiveRecord::Base
     self.waiting_since = (self.waiting_since ? nil : Time.now)
     self.save
   end
+  
+  def delete_tag(tag)
+    self.tags.find_by_name(tag).destroy rescue nil
+  end
+  
+  def rename_tag(tag, new_name)
+    tag = self.tags.find_by_name(tag)
+    tag.update_attribute(:name, new_name) if tag
+  end
 
   private
 
@@ -90,7 +99,6 @@ class Todo < ActiveRecord::Base
     return unless self.tag_string
     self.tag_string.downcase.split(',').each {|tag| self.user.tag_groups.create(:tag => tag[1..-1]) if tag.starts_with? '!' }
   end
-
-
+  
 
 end

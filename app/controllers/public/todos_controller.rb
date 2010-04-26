@@ -1,6 +1,6 @@
 class Public::TodosController < PublicController
-  before_filter :get_user, :only => [:index, :new, :create, :reload, :filter]
-  before_filter :get_todo, :except => [:index, :new, :create, :reload, :filter]
+  before_filter :get_user, :only => [:index, :new, :create, :reload, :filter, :reorder]
+  before_filter :get_todo, :except => [:index, :new, :create, :reload, :filter, :reorder]
   before_filter :verify_user
 
   def index
@@ -24,6 +24,7 @@ class Public::TodosController < PublicController
   end
 
   def edit
+    @todo.tag_list.push(@todo.due_date.strftime('%m/%d/%Y')) if @todo.due_date
     @todo.tag_string = @todo.tag_list
     respond_to do |format|
       format.js { render :partial => 'form' }
@@ -64,7 +65,12 @@ class Public::TodosController < PublicController
       @todo.tag_list.push(move_to) unless move_to == '-99'
       @todo.save
     end
-
+    render_list
+  end
+  
+  def reorder
+    todo_list = params[:cb_todo]
+    todo_list.each_with_index {|id, ndx| Todo.update(id,:priority => ndx+1)}
     render_list
   end
   
@@ -128,5 +134,6 @@ class Public::TodosController < PublicController
       render_list
     end
   end
+  
 
 end

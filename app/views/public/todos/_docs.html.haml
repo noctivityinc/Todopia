@@ -1,0 +1,55 @@
+- unless request.env["HTTP_USER_AGENT"][/Mobile/]
+  %p 
+    %u Keyboard Shortcuts
+  .sc 
+    %b c 
+    create new todo
+  .sc 
+    %b j
+    next todo
+  .sc 
+    %b k 
+    previous todo
+  .sc
+    %b space/enter
+    marks as complete
+  .sc
+    = link_to "more...", '#more_keyboard', :rel => 'toggle' 
+  #more_keyboard
+    .sc
+      %b e
+      edit todo
+    .sc
+      %b n
+      create/view notes & history
+    .sc 
+      %b f 
+      jump to first todo
+    .sc
+      %b w
+      waiting on externality
+    .sc
+      %b d/#
+      delete todo
+    .sc
+      %b esc
+      cancels new todo
+          
+%p 
+  %u Tag Actions
+  .sc
+    %b !tag
+    create a group for all tags labeled "tag"
+  .sc
+    %b 
+      any date or 
+      = link_to 'date expression', '#', :title => 'e.g 4/15/10 or "2 weeks from now" or "tomorrow"' 
+    creates a due date for the item 
+  .sc
+    %b #1, #2, #3, etc
+    sets a priority, 1 being highest
+%p 
+  %u Also...
+.sc Click tag(s) to filter
+.sc Right click a tag group to ungroup, delete or check all
+.sc Drag/drop todos into groups    

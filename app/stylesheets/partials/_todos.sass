@@ -60,9 +60,17 @@
           min-width: 200px
           max-width: 250px
           
+          .col_select
+            &.selected
+              background: transparent url(/images/icons/download.png) -41px -21px no-repeat
+          
           .col_cb
             width: 20px
             text-align: center
+            
+            input.vanish
+              position: absolute
+              left: -1000px
       
           .col_label
             padding-right: 15px
@@ -76,7 +84,7 @@
                 font-size: .90em
                 color: #660066
                 text-decoration: none
-                padding: .25em .50em 0em .25em
+                padding: .25em 1em 0em .50em
                 margin: 0em
                 cursor: pointer
                 
@@ -138,15 +146,16 @@
     #more_keyboard
       margin-top: .5em
 
-.contextMenu
-  margin: 1em
-  float: left
-  ul
-    padding: 0px
-    margin: 1em 1em
-  li
-    font-size: 11px
-    width: 99%
-    padding: 1px 0px
-    margin: 0px 0px
-    list-style: none
+  .contextMenu
+    margin: 1em
+    float: left
+    ul
+      padding: 0px
+      margin: 1em 1em
+    li
+      font-size: 11px
+      width: 99%
+      padding: 1px 0px
+      margin: 0px 0px
+      list-style: none
+

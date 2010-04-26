@@ -12,6 +12,15 @@ class Public::TagGroupsController < PublicController
     render :text => nil
   end
 
+  def rename
+    unless params[:name].blank?
+      @user.tag_groups.find_by_tag(params[:name]).delete rescue nil
+      @user.todos.not_complete.each {|x| x.rename_tag(@tag_group.tag, params[:name])}
+      @tag_group.update_attributes(:tag => params[:name])
+    end
+    render :text => nil, :status => 200
+  end
+
   def check_all
     @user.todos.not_complete.tagged_with(@tag_group.tag).each do |todo|
       todo.completed_by = current_user

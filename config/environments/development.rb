@@ -15,3 +15,23 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+config.after_initialize do
+  # ActionMailer::Base.delivery_method = :smtp
+  #  ActionMailer::Base.smtp_settings = {
+  #    :address => "mail.blueboxgrid.com",
+  #    :port => "25",
+  #    :domain => "todopia.com",
+  #    :authentication => :plain,
+  #    :user_name  => APP_CONFIG[:mail]["username"],
+  #    :password  => APP_CONFIG[:mail]["password"],
+  #    :enable_starttls_auto  => false
+  #  }
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => "localhost",
+    :port => 1025,
+    :domain => APP_CONFIG[:domain]
+  }
+
+end

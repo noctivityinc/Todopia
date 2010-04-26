@@ -1,0 +1,25 @@
+= "Todopia todos For #{@user.login} (#{Date.today.to_s(:long)})"
+= ""
+= ""
+- if @todos
+  - @user.tag_groups.ordered.each do |tg|
+    - unless @todos.not_complete.tagged_with(tg.tag).blank?
+      = "#{tg.tag.upcase} (#{@todos.tagged_with(tg.tag).count})"
+      - @todos.tagged_with(tg.tag).each do |todo|
+        = "* #{todo.label}"
+      \--------------------------------------------------
+      = ""
+
+  - unless unfiled_todos(nil,@user).empty?
+    - unless tag_groups_empty?(@user)
+      = "AND ZE REST... (#{unfiled_todos(nil,@user).count})"
+
+      - unfiled_todos(nil,@user).each do |todo|
+        = "* #{todo.label} #{todo.due_date ? '(due: '+ todo.due_date.strftime('%m/%d/%Y')+')' : ''} #{todo.waiting_since ? '(waiting since: '+ todo.waiting_since.strftime('%m/%d/%Y')+')' : ''}"
+
+= ""
+= ""
+= ""
+= ""
+Sent from http://www.todopia.com
+

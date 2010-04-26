@@ -23,6 +23,10 @@ module Public::TodosHelper
     css.join(' ') if css
   end
 
+  def todo_cb_css(todo)
+    todo.waiting_since ? 'vanish' : ''
+  end
+
   def show_due_date(todo)
     return "&nbsp;" unless todo.due_date
     "<div class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{todo.due_date.strftime('%m/%d/%Y')}</div>"
@@ -44,22 +48,24 @@ module Public::TodosHelper
     end
   end
 
-  def tag_groups_empty?
-    if current_user.tag_groups.empty?
+  def tag_groups_empty?(user=nil)
+    user ||= current_user
+    if user.tag_groups.empty?
       return true
     else
-      return @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}, :any => true).empty?
+      return @todos.tagged_with(user.tag_groups.map {|x| x.tag}, :any => true).empty?
     end
   end
 
-  def unfiled_todos(scope=nil)
-    if current_user.tag_groups.empty?
+  def unfiled_todos(scope=nil, user=nil)
+    user ||= current_user
+    if user.tag_groups.empty?
       @todos
     else
       if scope
-        @todos.send(scope.intern).tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+        @todos.send(scope.intern).tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
       else
-        @todos.tagged_with(current_user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+        @todos.tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
       end
     end
   end
