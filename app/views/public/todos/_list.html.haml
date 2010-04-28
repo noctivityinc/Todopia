@@ -12,8 +12,8 @@
     - unless tag_groups_empty?
       %h2= link_to "and ze rest... (#{unfiled_todos.count})", '#', :class => 'select_tag_group unfiled_group', :rel => current_user.id, 'url:filter' => filter_user_todos_path(current_user, :unfiled => true) 
     .tag_group{'tg:tag' => '-99'}
-      = render unfiled_todos('due').not_in_process
-      = render unfiled_todos('not_due').not_in_process
+      .due= render unfiled_todos('due').not_in_process
+      .not_due= render unfiled_todos('not_due').not_in_process
       .in_process= render unfiled_todos.in_process
 
 - unless @completed.blank?

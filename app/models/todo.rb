@@ -28,7 +28,7 @@ class Todo < ActiveRecord::Base
   validate :not_labelify_label
 
   named_scope :not_complete, :conditions => ['completed_at IS ?', nil], :order => 'waiting_since DESC, priority ASC, due_date ASC, created_at DESC'
-  named_scope :due, :conditions => ['due_date <= ?', Date.today]
+  named_scope :due, :conditions => ['due_date <= ? AND due_date IS NOT ?', Date.today, nil]
   named_scope :not_due, :conditions => ['due_date > ? OR due_date IS ?', Date.today, nil]
   named_scope :in_process, :conditions => ['waiting_since IS NOT ?', nil]
   named_scope :not_in_process, :conditions => ['waiting_since IS ?', nil]
