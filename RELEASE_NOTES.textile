@@ -1,5 +1,9 @@
 h1. Todopia Release Notes
 
+h3. 0.2.5 (hotfix)
+* Fixed min width issue in firefox
+* Fixed duplicate todo listing if unfiled
+
 h3. 0.2.3
 * New options dock for printing and email
 * Ability to send yourself an email copy of your todos
