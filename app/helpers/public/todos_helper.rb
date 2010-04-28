@@ -60,7 +60,7 @@ module Public::TodosHelper
   def unfiled_todos(scope=nil, user=nil)
     user ||= current_user
     if user.tag_groups.empty?
-      @todos
+      scope ? @todos.send(scope.intern) : @todos
     else
       if scope
         @todos.send(scope.intern).tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
