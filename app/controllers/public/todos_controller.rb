@@ -60,6 +60,8 @@ class Public::TodosController < PublicController
     move_from = params[:move_from]
     move_to = params[:move_to]
 
+    return unless move_from && move_to
+
     unless move_from == move_to
       @todo.tag_list = @todo.tag_list.to_a.reject {|x| x==move_from} unless move_from == '-99'
       @todo.tag_list.push(move_to) unless move_to == '-99'
@@ -70,7 +72,7 @@ class Public::TodosController < PublicController
   
   def reorder
     todo_list = params[:cb_todo]
-    todo_list.each_with_index {|id, ndx| Todo.update(id,:priority => ndx+1)}
+    todo_list.each_with_index {|id, ndx| Todo.update(id,:priority => ndx+1)} if todo_list
     render_list
   end
   
