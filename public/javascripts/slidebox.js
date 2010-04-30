@@ -13,7 +13,7 @@
 		var content = $(this).html();
 		var defaults = {
 			width: "100%",
-			height: "200px",
+			height: "200",
 			position: "bottom"			// Possible values : "top", "bottom"
 		}
 		
@@ -47,17 +47,48 @@
 		// Buttons action
 		$(".slide-button, .slide-options").click(function(){
 			if($('body').data('divPanel_visible') == 'true')
-				$(divContent).animate({height: "0px"}, 200, function(){
-				  $('body').data('divPanel_visible','false')
-				});
+				$(document).trigger('close.slideBox')
 			else {
-				$(divContent).animate({height: defaults.height}, 200, function(){
-				  $('body').data('divPanel_visible','true')
+				$(divContent).animate({height: defaults.height+'px'}, 200, function(){
+				  $('body').data('divPanel_visible','true');
+          showOverlay();
 				});
 				}
 			
 			$(".slide-button").toggle();
 		});
+		
+    function showOverlay() {
+      $("body").append('<div id="slideBox_overlay" class="slideBox_hide"></div>')
+      $('#slideBox_overlay').hide().addClass("slideBox_overlayBG")
+        .css("height",(document.height-defaults.height)+'px')
+        .click(function() {$(document).trigger('close.slideBox') })
+        .fadeIn(200)
+      return false
+    }
+    
+    function hideOverlay() {
+      $('#slideBox_overlay').fadeOut(200, function(){
+        $("#slideBox_overlay").removeClass("slideBox_overlayBG")
+        $("#slideBox_overlay").addClass("slideBox_hide") 
+        $("#slideBox_overlay").remove()
+      })
+
+      return false
+    }
+    
+    /*
+     * Bindings
+     */
+
+    $(document).bind('close.slideBox', function() {
+      clog('close')
+      $(divContent).animate({height: "0px"}, 200, function(){
+				  $('body').data('divPanel_visible','false');
+				  hideOverlay()
+				  $(document).trigger('afterClose.slideBox')
+				})
+    })
 	};
 	
 })(jQuery);
