@@ -1,5 +1,10 @@
 h1. Todopia Release Notes
 
+h3. 0.2.7 (hotfix)
+* Slide options panel width fixed
+* Clicking anywhere outside of slide options panel closes panel
+* Clicking flash messages hides them
+
 h3. 0.2.6 (hotfix)
 * Checking for todo list in reorder
 * Checking for move from and to when moving todos

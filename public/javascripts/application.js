@@ -5,7 +5,8 @@ $(function(){
   $('.spinner').hide();
   $('body').data('position',0)
   $('a[rel*=facebox]').facebox() 
-  $("#bottom_panel").slideBox({width: "100%", height: "100px", position: "bottom"});
+  $('#flash').click(function(){$(this).hide();})
+  $("#bottom_panel").slideBox({width: "100%", height: 100, position: "bottom"});
   
   complete_todo_form_options = { 
          clearForm: true,
