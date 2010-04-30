@@ -833,7 +833,7 @@
 /* line 22, ../../../app/stylesheets/partials/_slidebox.sass */
 .slide-panel-content table {
   margin: .5em auto;
-  width: 750px;
+  width: 95%;
 }
 /* line 26, ../../../app/stylesheets/partials/_slidebox.sass */
 .slide-panel-content table tr > td {
@@ -864,6 +864,25 @@
 /* line 43, ../../../app/stylesheets/partials/_slidebox.sass */
 .slide-top {
   top: 0;
+}
+
+/* line 46, ../../../app/stylesheets/partials/_slidebox.sass */
+#slideBox_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 53, ../../../app/stylesheets/partials/_slidebox.sass */
+.slideBox_hide {
+  z-index: -100;
+}
+
+/* line 56, ../../../app/stylesheets/partials/_slidebox.sass */
+.slideBox_overlayBG {
+  z-index: 99;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_todos.sass */
