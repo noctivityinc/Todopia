@@ -21,4 +21,9 @@
   %div{:style => 'margin-top: 2em; border-top:1px solid gray; padding-top: 1em; font-size: .85em'}
     Sent from 
     = link_to "http://www.todopia.com", "http://www.todopia.com"
+    %p= "Want to tinker?  Fork this and play at http://github.com/noctivityinc/Todopia"
+    %p  
+      You can shut off these daily summaries or set them to only send when you have overdue items by
+      = link_to "clicking here.", edit_user_url(@user)
+      
 

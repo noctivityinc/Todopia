@@ -1,5 +1,10 @@
 h1. Todopia Release Notes
 
+h3. 0.2.13 (hotfix)
+* Reenabled plain text email.  Appears to be an odd Gmail spam issue
+* Added link in daily summary to shutting off daily summary :)
+* Fixed login process to redirect to desired page is authentication was needed
+
 h3. 0.2.12 (hotfix)
 * Shut off plain text email copy due to odd BBG mail server issues
 * Enabled caching for javascript
