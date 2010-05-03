@@ -31,7 +31,7 @@ class Postoffice < ActionMailer::Base
     body       :greeting => 'Hi,'
   end
 
-  def email_todos(user, force_all=nil, sent_at = Time.now)
+  def email_todos(user, force_all=nil, sent_at=Time.now)
     subject    "#{'Overdue ' if user.email_summary_only_when_todos_due}Todopia Todos as of #{Date.today.to_s{:short}}"
     recipients user.email
     from       APP_CONFIG[:emails]["todo"]
