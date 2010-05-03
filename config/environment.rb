@@ -43,3 +43,5 @@ end
 
 ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!({:default => '%m/%d/%Y'})
 
+require 'jobs/send_daily_emails'
+

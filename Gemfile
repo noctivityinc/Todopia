@@ -18,6 +18,7 @@ gem 'formtastic'
 gem 'annotate-models'
 gem 'hoptoad_notifier'
 gem 'chronic'
+gem 'whenever'
 
 # github pulls
 gem 'nifty-generators'

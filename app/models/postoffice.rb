@@ -1,4 +1,7 @@
 class Postoffice < ActionMailer::Base
+  ActionMailer::Base.default_url_options[:host] = APP_CONFIG[:domain]
+  ActionController::Base.asset_host = APP_CONFIG[:domain]
+
   helper 'public/todos'
 
   def welcome(sent_at = Time.now)
@@ -6,7 +9,7 @@ class Postoffice < ActionMailer::Base
     recipients ''
     from       ''
     sent_on    sent_at
-    
+
     body       :greeting => 'Hi,'
   end
 
@@ -15,7 +18,7 @@ class Postoffice < ActionMailer::Base
     recipients ''
     from       ''
     sent_on    sent_at
-    
+
     body       :greeting => 'Hi,'
   end
 
@@ -24,18 +27,18 @@ class Postoffice < ActionMailer::Base
     recipients ''
     from       ''
     sent_on    sent_at
-    
+
     body       :greeting => 'Hi,'
   end
 
-  def email_todos(user, sent_at = Time.now)
-    subject    "Todopia Todos as of #{Date.today.to_s{:short}}"
+  def email_todos(user, force_all=nil, sent_at = Time.now)
+    subject    "#{'Overdue ' if user.email_summary_only_when_todos_due}Todopia Todos as of #{Date.today.to_s{:short}}"
     recipients user.email
     from       APP_CONFIG[:emails]["todo"]
     sent_on    sent_at
-    content_type 'text/plain'
-    
-    body       :user => user, :todos => user.todos.not_complete
+    content_type    "multipart/alternative"
+
+    body       :user => user, :todos => (user.email_summary_only_when_todos_due && !force_all) ? user.todos.not_complete.due : user.todos.not_complete
   end
 
 end

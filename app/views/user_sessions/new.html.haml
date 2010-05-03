@@ -1,8 +1,11 @@
+- title "Log in"
+
+- content_for :toolbar do
+  = render :partial => "layouts/toolbar_public"
+
 #user_session
   #flash= render :partial => "layouts/flash"
   #new
-    - title "Log in"
-
     - semantic_form_for @user_session do |f|
       - f.inputs do
         = f.input :login, :label => 'Username'
@@ -15,6 +18,7 @@
   #fun_stuff
     %h3 New Fun Stuff
     %ul
+      %li Schedule a todo in the future by tagging "starts DATE..."
       %li Create a group by prefacing a tag with !
       %li Drag/drop todos into groups 
       %li Click the clock or hit "w" if waiting on someone/thing to complete
@@ -24,22 +28,3 @@
       %li "#" now deletes a todo
   
 
-= link_to 'click me', '#warning_message', :rel => 'facebox', :style => 'display:none', :id => 'warning_message_trigger'
-#warning_message{:style => 'display:none'}
-  %h1 Thanks Wayne :)
-  
-  %p
-    If you are here it's probably cause Wayne Seguin told you to stop by.  This is a 
-    WORK IN PROGRESS and also open source :)  You can get it on Github.
-    
-  %p
-    The idea is simple - an ultra slick taggable todo-list that is sharable BY TAGS.  So you 
-    can RAPIDLY add todos, tag em, filter by em, blah blah.  But say you and a buddy are working 
-    on a project.  Well tag it as @project and then he will have access to it also (not yet, soon :).
-    
-  %p
-    Oh yeah, and its iPad/iPhone friendly as well plus you can use your keyboard for the entire thing.
-    
-  %p
-    Try it out and post any issues on Github at 
-    = link_to 'http://github.com/noctivityinc/Todopia', 'http://github.com/noctivityinc/Todopia'

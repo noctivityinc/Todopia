@@ -1,12 +1,12 @@
-= "Todopia todos For #{@user.login} (#{Date.today.to_s(:long)})"
+= "#{'Overdue ' if @user.email_summary_only_when_todos_due}Todopia todos for #{@user.login} (#{Date.today.to_s(:long)})"
 = ""
 = ""
-- if @todos
+- if @todos.active
   - @user.tag_groups.ordered.each do |tg|
-    - unless @todos.not_complete.tagged_with(tg.tag).blank?
-      = "#{tg.tag.upcase} (#{@todos.tagged_with(tg.tag).count})"
-      - @todos.tagged_with(tg.tag).each do |todo|
-        = "* #{todo.label}"
+    - unless @todos.active.not_complete.tagged_with(tg.tag).blank?
+      = "#{tg.tag.upcase} (#{@todos.active.tagged_with(tg.tag).count})"
+      - @todos.active.tagged_with(tg.tag).each do |todo|
+        = "* #{todo.label} #{todo.due_date ? '(due: '+ todo.due_date.strftime('%m/%d/%Y')+')' : ''} #{todo.waiting_since ? '(waiting since: '+ todo.waiting_since.strftime('%m/%d/%Y')+')' : ''}"
       \--------------------------------------------------
       = ""
 

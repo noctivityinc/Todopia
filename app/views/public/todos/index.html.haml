@@ -2,10 +2,14 @@
   = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js', 'jquery.hotkeys', 'slidebox'
   = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.custom', 'jquery.contextMenu',  :cache => true
 
-#todo
-  - title "Todopia"
-  - print_title "Todopia (#{current_user.login} @ #{Date.today})"
+- title "Todopia"
+- print_title "Todopia (#{current_user.login} @ #{Date.today})"
 
+
+- content_for :toolbar do
+  = render :partial => "layouts/toolbar_todo"
+
+#todo
   #new.dialog= render :partial => 'form'
   #flash= render :partial => "layouts/flash"
   #index= render 'list'
