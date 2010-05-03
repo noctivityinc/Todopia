@@ -2,6 +2,7 @@ $(function(){
   complete_todo_form_options = { 
           clearForm: true,
           beforeSubmit: function(formData, jqForm, options){
+           clog('submitting')
            jqForm.find('.col').css('font-weight','bold').css('background', '#FFFF66').fadeOut('slow');
           },
           success: function(responseText){
@@ -87,12 +88,26 @@ $(function(){
   })
   
   $('.blink').livequery(function(){
-    $(this).animate( { backgroundColor: '#FFFF99' }, 1000).animate( { backgroundColor: 'white' }, 1000);
+    clog($('body').data('blinked_overdue'))
+    if ($('body').data('blinked_overdue')!=true) {
+      $(this).animate( { backgroundColor: '#FFFF99' }, 1000).animate( { backgroundColor: 'white' }, 1000);
+      $('body').data('blinked_overdue',true)
+    }
   })
   
   if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }
   
-  setup_complete_todo_form();
+  $('.todo_checkbox').live('click',function(){
+    clog('click submit')
+    $(this).closest('form').ajaxSubmit(complete_todo_form_options); 
+  })
+  
+  $('.complete_todo_form').livequery('submit', function(){
+    clog('submit submit')
+   $(this).ajaxSubmit(complete_todo_form_options); 
+   return false;
+  })
+  
   setup_tooltips();
   bind_keyboard();
   bind_checklist_keyboard();
@@ -136,17 +151,6 @@ function toggle_waiting(url){
      reload_checklist(responseText);
      return false
   }})
-}
-
-function setup_complete_todo_form() {
-  $('.todo_checkbox').live('click',function(){
-    $(this).closest('form').ajaxSubmit(complete_todo_form_options); 
-  })
-  
-  $('.complete_todo_form').livequery('submit', function(){
-   $(this).ajaxSubmit(complete_todo_form_options); 
-   return false;
-  })
 }
 
 function showRequest() {

@@ -82,7 +82,8 @@ function print_all(el){
 
 function rename(el){
   var new_name = prompt('Enter group name:',el.attr('tg:tag'))
-  if (new_name!='') {
+  clog(new_name)
+  if (new_name!='' && new_name != null) {
     id = $(el).attr('rel')
     $.ajax({url: '/tag_groups/'+id+'/rename?name='+new_name, success: function(){
       get_checklist()
