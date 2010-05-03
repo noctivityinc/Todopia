@@ -1,4 +1,4 @@
-- title "Log in"
+- title "Todopia - Log in"
 
 - content_for :toolbar do
   = render :partial => "layouts/toolbar_public"
@@ -14,6 +14,9 @@
   
       - f.buttons do
         = f.commit_button 'Login'
+        
+      .forgot_password
+        = link_to "Forgot username or password?", new_reset_password_path
         
   #fun_stuff
     %h3 New Fun Stuff

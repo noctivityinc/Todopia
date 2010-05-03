@@ -1,4 +1,4 @@
-#user, #user_session
+#user, #user_session, #reset_password
   #new, #edit
     !floated_total_width = 300px
     // Total Width of form
@@ -13,7 +13,7 @@
     form
       :margin .1em
       :background #eee
-      :padding .50em .1em
+      :padding .50em .50em
       +rounded
   
       // <li> Field wrappers
@@ -26,7 +26,6 @@
       // Fieldsets
       //--------------------------------------------------------
       fieldset
-        :margin-top 20px
         :border none
 
       li
@@ -47,6 +46,8 @@
         :line-height 1.4em
         :font-size 13px
       legend
+        :margin-bottom 2em
+        :font-weight bold
         span
           :font-size 1.4em
           // Set lineheight for dumb IE
@@ -161,7 +162,6 @@
         overflow: hidden
 
         .commit
-          +float-right
           input
             +button(green)
             text-align: right

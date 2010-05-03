@@ -120,24 +120,24 @@
 }
 
 /* line 141, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new ul, #user #new ol, #user #new legend, #user #new p, #user #edit ul, #user #edit ol, #user #edit legend, #user #edit p, #user_session #new ul, #user_session #new ol, #user_session #new legend, #user_session #new p, #user_session #edit ul, #user_session #edit ol, #user_session #edit legend, #user_session #edit p {
+#user #new ul, #user #new ol, #user #new legend, #user #new p, #user #edit ul, #user #edit ol, #user #edit legend, #user #edit p, #user_session #new ul, #user_session #new ol, #user_session #new legend, #user_session #new p, #user_session #edit ul, #user_session #edit ol, #user_session #edit legend, #user_session #edit p, #reset_password #new ul, #reset_password #new ol, #reset_password #new legend, #reset_password #new p, #reset_password #edit ul, #reset_password #edit ol, #reset_password #edit legend, #reset_password #edit p {
   margin: 0;
   padding: 0;
 }
 /* line 144, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li, #user #edit li, #user_session #new li, #user_session #edit li {
+#user #new li, #user #edit li, #user_session #new li, #user_session #edit li, #reset_password #new li, #reset_password #edit li {
   margin-left: 0px;
   margin-right: 0px;
   padding-left: 0px;
   padding-right: 0px;
 }
 /* line 150, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new fieldset, #user #edit fieldset, #user_session #new fieldset, #user_session #edit fieldset {
+#user #new fieldset, #user #edit fieldset, #user_session #new fieldset, #user_session #edit fieldset, #reset_password #new fieldset, #reset_password #edit fieldset {
   display: block;
   *display: inline-block;
 }
 /* line 98, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new fieldset:after, #user #edit fieldset:after, #user_session #new fieldset:after, #user_session #edit fieldset:after {
+#user #new fieldset:after, #user #edit fieldset:after, #user_session #new fieldset:after, #user_session #edit fieldset:after, #reset_password #new fieldset:after, #reset_password #edit fieldset:after {
   content: " ";
   display: block;
   height: 0;
@@ -145,22 +145,22 @@
   visibility: hidden;
 }
 /* line 154, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new abbr, #user #new acronym, #user #edit abbr, #user #edit acronym, #user_session #new abbr, #user_session #new acronym, #user_session #edit abbr, #user_session #edit acronym {
+#user #new abbr, #user #new acronym, #user #edit abbr, #user #edit acronym, #user_session #new abbr, #user_session #new acronym, #user_session #edit abbr, #user_session #edit acronym, #reset_password #new abbr, #reset_password #new acronym, #reset_password #edit abbr, #reset_password #edit acronym {
   border: 0;
   font-variant: normal;
   font-weight: normal;
 }
 /* line 159, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new ol, #user #new ul, #user #edit ol, #user #edit ul, #user_session #new ol, #user_session #new ul, #user_session #edit ol, #user_session #edit ul {
+#user #new ol, #user #new ul, #user #edit ol, #user #edit ul, #user_session #new ol, #user_session #new ul, #user_session #edit ol, #user_session #edit ul, #reset_password #new ol, #reset_password #new ul, #reset_password #edit ol, #reset_password #edit ul {
   list-style: none;
 }
 /* line 162, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new label, #user #edit label, #user_session #new label, #user_session #edit label {
+#user #new label, #user #edit label, #user_session #new label, #user_session #edit label, #reset_password #new label, #reset_password #edit label {
   display: block;
   *display: inline-block;
 }
 /* line 98, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new label:after, #user #edit label:after, #user_session #new label:after, #user_session #edit label:after {
+#user #new label:after, #user #edit label:after, #user_session #new label:after, #user_session #edit label:after, #reset_password #new label:after, #reset_password #edit label:after {
   content: " ";
   display: block;
   height: 0;
@@ -168,44 +168,44 @@
   visibility: hidden;
 }
 /* line 166, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new input, #user #new textarea, #user #edit input, #user #edit textarea, #user_session #new input, #user_session #new textarea, #user_session #edit input, #user_session #edit textarea {
+#user #new input, #user #new textarea, #user #edit input, #user #edit textarea, #user_session #new input, #user_session #new textarea, #user_session #edit input, #user_session #edit textarea, #reset_password #new input, #reset_password #new textarea, #reset_password #edit input, #reset_password #edit textarea {
   vertical-align: middle;
 }
 /* line 170, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .check_boxes input, #user #new .radio input, #user #edit .check_boxes input, #user #edit .radio input, #user_session #new .check_boxes input, #user_session #new .radio input, #user_session #edit .check_boxes input, #user_session #edit .radio input {
+#user #new .check_boxes input, #user #new .radio input, #user #edit .check_boxes input, #user #edit .radio input, #user_session #new .check_boxes input, #user_session #new .radio input, #user_session #edit .check_boxes input, #user_session #edit .radio input, #reset_password #new .check_boxes input, #reset_password #new .radio input, #reset_password #edit .check_boxes input, #reset_password #edit .radio input {
   margin: 0;
 }
 /* line 172, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .check_boxes label, #user #new .radio label, #user #edit .check_boxes label, #user #edit .radio label, #user_session #new .check_boxes label, #user_session #new .radio label, #user_session #edit .check_boxes label, #user_session #edit .radio label {
+#user #new .check_boxes label, #user #new .radio label, #user #edit .check_boxes label, #user #edit .radio label, #user_session #new .check_boxes label, #user_session #new .radio label, #user_session #edit .check_boxes label, #user_session #edit .radio label, #reset_password #new .check_boxes label, #reset_password #new .radio label, #reset_password #edit .check_boxes label, #reset_password #edit .radio label {
   cursor: pointer;
 }
 /* line 175, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .hidden, #user #edit .hidden, #user_session #new .hidden, #user_session #edit .hidden {
+#user #new .hidden, #user #edit .hidden, #user_session #new .hidden, #user_session #edit .hidden, #reset_password #new .hidden, #reset_password #edit .hidden {
   display: none;
 }
 /* line 179, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .date li, #user #new .time li, #user #new .datetime li, #user #edit .date li, #user #edit .time li, #user #edit .datetime li, #user_session #new .date li, #user_session #new .time li, #user_session #new .datetime li, #user_session #edit .date li, #user_session #edit .time li, #user_session #edit .datetime li {
+#user #new .date li, #user #new .time li, #user #new .datetime li, #user #edit .date li, #user #edit .time li, #user #edit .datetime li, #user_session #new .date li, #user_session #new .time li, #user_session #new .datetime li, #user_session #edit .date li, #user_session #edit .time li, #user_session #edit .datetime li, #reset_password #new .date li, #reset_password #new .time li, #reset_password #new .datetime li, #reset_password #edit .date li, #reset_password #edit .time li, #reset_password #edit .datetime li {
   float: left;
   width: auto;
   clear: none;
 }
 /* line 183, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .date label, #user #new .time label, #user #new .datetime label, #user #edit .date label, #user #edit .time label, #user #edit .datetime label, #user_session #new .date label, #user_session #new .time label, #user_session #new .datetime label, #user_session #edit .date label, #user_session #edit .time label, #user_session #edit .datetime label {
+#user #new .date label, #user #new .time label, #user #new .datetime label, #user #edit .date label, #user #edit .time label, #user #edit .datetime label, #user_session #new .date label, #user_session #new .time label, #user_session #new .datetime label, #user_session #edit .date label, #user_session #edit .time label, #user_session #edit .datetime label, #reset_password #new .date label, #reset_password #new .time label, #reset_password #new .datetime label, #reset_password #edit .date label, #reset_password #edit .time label, #reset_password #edit .datetime label {
   display: none;
   width: auto;
 }
 /* line 186, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .date input, #user #new .time input, #user #new .datetime input, #user #edit .date input, #user #edit .time input, #user #edit .datetime input, #user_session #new .date input, #user_session #new .time input, #user_session #new .datetime input, #user_session #edit .date input, #user_session #edit .time input, #user_session #edit .datetime input {
+#user #new .date input, #user #new .time input, #user #new .datetime input, #user #edit .date input, #user #edit .time input, #user #edit .datetime input, #user_session #new .date input, #user_session #new .time input, #user_session #new .datetime input, #user_session #edit .date input, #user_session #edit .time input, #user_session #edit .datetime input, #reset_password #new .date input, #reset_password #new .time input, #reset_password #new .datetime input, #reset_password #edit .date input, #reset_password #edit .time input, #reset_password #edit .datetime input {
   display: inline;
   margin: 0;
   padding: 0;
 }
 /* line 191, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .errors, #user #edit .errors, #user_session #new .errors, #user_session #edit .errors {
+#user #new .errors, #user #edit .errors, #user_session #new .errors, #user_session #edit .errors, #reset_password #new .errors, #reset_password #edit .errors {
   list-style: square;
 }
 /* line 193, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .errors li, #user #edit .errors li, #user_session #new .errors li, #user_session #edit .errors li {
+#user #new .errors li, #user #edit .errors li, #user_session #new .errors li, #user_session #edit .errors li, #reset_password #new .errors li, #reset_password #edit .errors li {
   padding: 0;
   border: none;
   display: list-item;
@@ -213,20 +213,20 @@
   clear: both;
 }
 /* line 199, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .inputs, #user #edit .inputs, #user_session #new .inputs, #user_session #edit .inputs {
+#user #new .inputs, #user #edit .inputs, #user_session #new .inputs, #user_session #edit .inputs, #reset_password #new .inputs, #reset_password #edit .inputs {
   z-index: 99;
 }
 /* line 202, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .buttons li, #user #edit .buttons li, #user_session #new .buttons li, #user_session #edit .buttons li {
+#user #new .buttons li, #user #edit .buttons li, #user_session #new .buttons li, #user_session #edit .buttons li, #reset_password #new .buttons li, #reset_password #edit .buttons li {
   float: left;
 }
 /* line 205, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li, #user #edit li, #user_session #new li, #user_session #edit li {
+#user #new li, #user #edit li, #user_session #new li, #user_session #edit li, #reset_password #new li, #reset_password #edit li {
   *display: inline-block;
   display: block;
 }
 /* line 98, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li:after, #user #edit li:after, #user_session #new li:after, #user_session #edit li:after {
+#user #new li:after, #user #edit li:after, #user_session #new li:after, #user_session #edit li:after, #reset_password #new li:after, #reset_password #edit li:after {
   content: " ";
   display: block;
   height: 0;
@@ -234,283 +234,287 @@
   visibility: hidden;
 }
 /* line 208, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset, #user #edit li fieldset, #user_session #new li fieldset, #user_session #edit li fieldset {
+#user #new li fieldset, #user #edit li fieldset, #user_session #new li fieldset, #user_session #edit li fieldset, #reset_password #new li fieldset, #reset_password #edit li fieldset {
   border: none;
   position: relative;
   margin-top: 0px;
 }
 /* line 212, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li legend, #user #edit li legend, #user_session #new li legend, #user_session #edit li legend {
+#user #new li legend, #user #edit li legend, #user_session #new li legend, #user_session #edit li legend, #reset_password #new li legend, #reset_password #edit li legend {
   display: block;
   margin-bottom: 0;
 }
 /* line 215, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li .label, #user #edit li .label, #user_session #new li .label, #user_session #edit li .label {
+#user #new li .label, #user #edit li .label, #user_session #new li .label, #user_session #edit li .label, #reset_password #new li .label, #reset_password #edit li .label {
   display: block;
   clear: both;
   background: transparent;
 }
 /* line 220, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li ol, #user #edit li ol, #user_session #new li ol, #user_session #edit li ol {
+#user #new li ol, #user #edit li ol, #user_session #new li ol, #user_session #edit li ol, #reset_password #new li ol, #reset_password #edit li ol {
   float: left;
   margin: 0;
 }
 /* line 223, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li ol li, #user #edit li ol li, #user_session #new li ol li, #user_session #edit li ol li {
+#user #new li ol li, #user #edit li ol li, #user_session #new li ol li, #user_session #edit li ol li, #reset_password #new li ol li, #reset_password #edit li ol li {
   padding: 0;
   border: 0;
   display: inline;
 }
 /* line 234, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new fieldset, #user #edit fieldset, #user_session #new fieldset, #user_session #edit fieldset {
+#user #new fieldset, #user #edit fieldset, #user_session #new fieldset, #user_session #edit fieldset, #reset_password #new fieldset, #reset_password #edit fieldset {
   width: 100%;
 }
 /* line 236, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new ol, #user #edit ol, #user_session #new ol, #user_session #edit ol {
+#user #new ol, #user #edit ol, #user_session #new ol, #user_session #edit ol, #reset_password #new ol, #reset_password #edit ol {
   padding-left: 0;
 }
 /* line 238, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new input, #user #edit input, #user_session #new input, #user_session #edit input {
+#user #new input, #user #edit input, #user_session #new input, #user_session #edit input, #reset_password #new input, #reset_password #edit input {
   clear: both;
   float: none;
 }
 /* line 241, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li, #user #edit li, #user_session #new li, #user_session #edit li {
+#user #new li, #user #edit li, #user_session #new li, #user_session #edit li, #reset_password #new li, #reset_password #edit li {
   display: block;
   clear: both;
   float: none;
   width: 100%;
 }
 /* line 244, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li ol, #user #edit li ol, #user_session #new li ol, #user_session #edit li ol {
+#user #new li ol, #user #edit li ol, #user_session #new li ol, #user_session #edit li ol, #reset_password #new li ol, #reset_password #edit li ol {
   padding: 0;
 }
 /* line 246, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li li, #user #edit li li, #user_session #new li li, #user_session #edit li li {
+#user #new li li, #user #edit li li, #user_session #new li li, #user_session #edit li li, #reset_password #new li li, #reset_password #edit li li {
   clear: none;
   width: auto;
 }
 /* line 250, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset legend, #user #new li fieldset legend .label, #user #edit li fieldset legend, #user #edit li fieldset legend .label, #user_session #new li fieldset legend, #user_session #new li fieldset legend .label, #user_session #edit li fieldset legend, #user_session #edit li fieldset legend .label {
+#user #new li fieldset legend, #user #new li fieldset legend .label, #user #edit li fieldset legend, #user #edit li fieldset legend .label, #user_session #new li fieldset legend, #user_session #new li fieldset legend .label, #user_session #edit li fieldset legend, #user_session #edit li fieldset legend .label, #reset_password #new li fieldset legend, #reset_password #new li fieldset legend .label, #reset_password #edit li fieldset legend, #reset_password #edit li fieldset legend .label {
   display: block;
   clear: both;
 }
 /* line 253, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset .label, #user #edit li fieldset .label, #user_session #new li fieldset .label, #user_session #edit li fieldset .label {
+#user #new li fieldset .label, #user #edit li fieldset .label, #user_session #new li fieldset .label, #user_session #edit li fieldset .label, #reset_password #new li fieldset .label, #reset_password #edit li fieldset .label {
   position: relative;
 }
 /* line 255, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new li fieldset label, #user #new li fieldset input, #user #edit li fieldset label, #user #edit li fieldset input, #user_session #new li fieldset label, #user_session #new li fieldset input, #user_session #edit li fieldset label, #user_session #edit li fieldset input {
+#user #new li fieldset label, #user #new li fieldset input, #user #edit li fieldset label, #user #edit li fieldset input, #user_session #new li fieldset label, #user_session #new li fieldset input, #user_session #edit li fieldset label, #user_session #edit li fieldset input, #reset_password #new li fieldset label, #reset_password #new li fieldset input, #reset_password #edit li fieldset label, #reset_password #edit li fieldset input {
   width: auto;
 }
 /* line 258, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .date ol, #user #new .time ol, #user #new .datetime ol, #user #edit .date ol, #user #edit .time ol, #user #edit .datetime ol, #user_session #new .date ol, #user_session #new .time ol, #user_session #new .datetime ol, #user_session #edit .date ol, #user_session #edit .time ol, #user_session #edit .datetime ol {
+#user #new .date ol, #user #new .time ol, #user #new .datetime ol, #user #edit .date ol, #user #edit .time ol, #user #edit .datetime ol, #user_session #new .date ol, #user_session #new .time ol, #user_session #new .datetime ol, #user_session #edit .date ol, #user_session #edit .time ol, #user_session #edit .datetime ol, #reset_password #new .date ol, #reset_password #new .time ol, #reset_password #new .datetime ol, #reset_password #edit .date ol, #reset_password #edit .time ol, #reset_password #edit .datetime ol {
   width: 100%;
 }
 /* line 260, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .date li, #user #new .time li, #user #new .datetime li, #user #edit .date li, #user #edit .time li, #user #edit .datetime li, #user_session #new .date li, #user_session #new .time li, #user_session #new .datetime li, #user_session #edit .date li, #user_session #edit .time li, #user_session #edit .datetime li {
+#user #new .date li, #user #new .time li, #user #new .datetime li, #user #edit .date li, #user #edit .time li, #user #edit .datetime li, #user_session #new .date li, #user_session #new .time li, #user_session #new .datetime li, #user_session #edit .date li, #user_session #edit .time li, #user_session #edit .datetime li, #reset_password #new .date li, #reset_password #new .time li, #reset_password #new .datetime li, #reset_password #edit .date li, #reset_password #edit .time li, #reset_password #edit .datetime li {
   display: inline;
   clear: none;
   float: left;
   padding-right: 0;
 }
 /* line 266, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .checkbox li, #user #new .radio li, #user #edit .checkbox li, #user #edit .radio li, #user_session #new .checkbox li, #user_session #new .radio li, #user_session #edit .checkbox li, #user_session #edit .radio li {
+#user #new .checkbox li, #user #new .radio li, #user #edit .checkbox li, #user #edit .radio li, #user_session #new .checkbox li, #user_session #new .radio li, #user_session #edit .checkbox li, #user_session #edit .radio li, #reset_password #new .checkbox li, #reset_password #new .radio li, #reset_password #edit .checkbox li, #reset_password #edit .radio li {
   display: block;
 }
 /* line 268, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .checkbox input, #user #new .radio input, #user #edit .checkbox input, #user #edit .radio input, #user_session #new .checkbox input, #user_session #new .radio input, #user_session #edit .checkbox input, #user_session #edit .radio input {
+#user #new .checkbox input, #user #new .radio input, #user #edit .checkbox input, #user #edit .radio input, #user_session #new .checkbox input, #user_session #new .radio input, #user_session #edit .checkbox input, #user_session #edit .radio input, #reset_password #new .checkbox input, #reset_password #new .radio input, #reset_password #edit .checkbox input, #reset_password #edit .radio input {
   border: none;
 }
 /* line 270, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new label, #user #edit label, #user_session #new label, #user_session #edit label {
+#user #new label, #user #edit label, #user_session #new label, #user_session #edit label, #reset_password #new label, #reset_password #edit label {
   display: block;
   clear: both;
   float: none;
   width: auto;
 }
 /* line 273, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new input, #user #new textarea, #user #edit input, #user #edit textarea, #user_session #new input, #user_session #new textarea, #user_session #edit input, #user_session #edit textarea {
+#user #new input, #user #new textarea, #user #edit input, #user #edit textarea, #user_session #new input, #user_session #new textarea, #user_session #edit input, #user_session #edit textarea, #reset_password #new input, #reset_password #new textarea, #reset_password #edit input, #reset_password #edit textarea {
   width: auto;
 }
 /* line 278, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new select, #user #edit select, #user_session #new select, #user_session #edit select {
+#user #new select, #user #edit select, #user_session #new select, #user_session #edit select, #reset_password #new select, #reset_password #edit select {
   width: auto;
 }
 /* line 283, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .errors li, #user #edit .errors li, #user_session #new .errors li, #user_session #edit .errors li {
+#user #new .errors li, #user #edit .errors li, #user_session #new .errors li, #user_session #edit .errors li, #reset_password #new .errors li, #reset_password #edit .errors li {
   display: list-item;
 }
 /* line 286, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .buttons ol, #user #edit .buttons ol, #user_session #new .buttons ol, #user_session #edit .buttons ol {
+#user #new .buttons ol, #user #edit .buttons ol, #user_session #new .buttons ol, #user_session #edit .buttons ol, #reset_password #new .buttons ol, #reset_password #edit .buttons ol {
   padding-left: 0;
   padding-right: 0;
 }
 /* line 289, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .buttons li, #user #edit .buttons li, #user_session #new .buttons li, #user_session #edit .buttons li {
+#user #new .buttons li, #user #edit .buttons li, #user_session #new .buttons li, #user_session #edit .buttons li, #reset_password #new .buttons li, #reset_password #edit .buttons li {
   float: left;
   width: auto;
   clear: none;
   display: inline;
 }
 /* line 297, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .buttons input, #user #edit .buttons input, #user_session #new .buttons input, #user_session #edit .buttons input {
+#user #new .buttons input, #user #edit .buttons input, #user_session #new .buttons input, #user_session #edit .buttons input, #reset_password #new .buttons input, #reset_password #edit .buttons input {
   width: auto;
 }
 /* line 302, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new #errorExplanation, #user #edit #errorExplanation, #user_session #new #errorExplanation, #user_session #edit #errorExplanation {
+#user #new #errorExplanation, #user #edit #errorExplanation, #user_session #new #errorExplanation, #user_session #edit #errorExplanation, #reset_password #new #errorExplanation, #reset_password #edit #errorExplanation {
   width: 100%;
 }
 /* line 304, ../../../app/stylesheets/partials/_formtastic_base.sass */
-#user #new .label, #user #edit .label, #user_session #new .label, #user_session #edit .label {
+#user #new .label, #user #edit .label, #user_session #new .label, #user_session #edit .label, #reset_password #new .label, #reset_password #edit .label {
   #left: -0.5em;
   #position: relative;
 }
 /* line 13, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form, #user #edit form, #user_session #new form, #user_session #edit form {
+#user #new form, #user #edit form, #user_session #new form, #user_session #edit form, #reset_password #new form, #reset_password #edit form {
   margin: .1em;
   background: #eee;
-  padding: .50em .1em;
+  padding: .50em .50em;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   margin: .25em;
 }
 /* line 20, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form li, #user #edit form li, #user_session #new form li, #user_session #edit form li {
+#user #new form li, #user #edit form li, #user_session #new form li, #user_session #edit form li, #reset_password #new form li, #reset_password #edit form li {
   padding: 10px 0px;
 }
 /* line 23, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form li li, #user #edit form li li, #user_session #new form li li, #user_session #edit form li li {
+#user #new form li li, #user #edit form li li, #user_session #new form li li, #user_session #edit form li li, #reset_password #new form li li, #reset_password #edit form li li {
   padding: 0;
 }
 /* line 28, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form fieldset, #user #edit form fieldset, #user_session #new form fieldset, #user_session #edit form fieldset {
-  margin-top: 20px;
+#user #new form fieldset, #user #edit form fieldset, #user_session #new form fieldset, #user_session #edit form fieldset, #reset_password #new form fieldset, #reset_password #edit form fieldset {
   border: none;
 }
-/* line 33, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form li fieldset, #user #edit form li fieldset, #user_session #new form li fieldset, #user_session #edit form li fieldset {
+/* line 32, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form li fieldset, #user #edit form li fieldset, #user_session #new form li fieldset, #user_session #edit form li fieldset, #reset_password #new form li fieldset, #reset_password #edit form li fieldset {
   padding: 0;
 }
-/* line 38, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form legend, #user #new form label, #user #edit form legend, #user #edit form label, #user_session #new form legend, #user_session #new form label, #user_session #edit form legend, #user_session #edit form label {
+/* line 37, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form legend, #user #new form label, #user #edit form legend, #user #edit form label, #user_session #new form legend, #user_session #new form label, #user_session #edit form legend, #user_session #edit form label, #reset_password #new form legend, #reset_password #new form label, #reset_password #edit form legend, #reset_password #edit form label {
   color: #333;
 }
-/* line 41, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form label, #user #new form .label, #user #edit form label, #user #edit form .label, #user_session #new form label, #user_session #new form .label, #user_session #edit form label, #user_session #edit form .label {
+/* line 40, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form label, #user #new form .label, #user #edit form label, #user #edit form .label, #user_session #new form label, #user_session #new form .label, #user_session #edit form label, #user_session #edit form .label, #reset_password #new form label, #reset_password #new form .label, #reset_password #edit form label, #reset_password #edit form .label {
   padding-bottom: 5px;
 }
-/* line 44, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form label abbr, #user #new form .label abbr, #user #edit form label abbr, #user #edit form .label abbr, #user_session #new form label abbr, #user_session #new form .label abbr, #user_session #edit form label abbr, #user_session #edit form .label abbr {
+/* line 43, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form label abbr, #user #new form .label abbr, #user #edit form label abbr, #user #edit form .label abbr, #user_session #new form label abbr, #user_session #new form .label abbr, #user_session #edit form label abbr, #user_session #edit form .label abbr, #reset_password #new form label abbr, #reset_password #new form .label abbr, #reset_password #edit form label abbr, #reset_password #edit form .label abbr {
   color: #f00;
 }
-/* line 46, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form label, #user #edit form label, #user_session #new form label, #user_session #edit form label {
+/* line 45, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form label, #user #edit form label, #user_session #new form label, #user_session #edit form label, #reset_password #new form label, #reset_password #edit form label {
   line-height: 1.4em;
   font-size: 13px;
 }
-/* line 50, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form legend span, #user #edit form legend span, #user_session #new form legend span, #user_session #edit form legend span {
+/* line 48, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form legend, #user #edit form legend, #user_session #new form legend, #user_session #edit form legend, #reset_password #new form legend, #reset_password #edit form legend {
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+/* line 51, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form legend span, #user #edit form legend span, #user_session #new form legend span, #user_session #edit form legend span, #reset_password #new form legend span, #reset_password #edit form legend span {
   font-size: 1.4em;
   line-height: 1em;
 }
-/* line 54, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form legend span.label, #user #edit form legend span.label, #user_session #new form legend span.label, #user_session #edit form legend span.label {
+/* line 55, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form legend span.label, #user #edit form legend span.label, #user_session #new form legend span.label, #user_session #edit form legend span.label, #reset_password #new form legend span.label, #reset_password #edit form legend span.label {
   font-size: 1em;
 }
-/* line 59, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form select, #user #edit form select, #user_session #new form select, #user_session #edit form select {
+/* line 60, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form select, #user #edit form select, #user_session #new form select, #user_session #edit form select, #reset_password #new form select, #reset_password #edit form select {
   padding: 3px;
 }
-/* line 62, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form textarea, #user #edit form textarea, #user_session #new form textarea, #user_session #edit form textarea {
+/* line 63, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form textarea, #user #edit form textarea, #user_session #new form textarea, #user_session #edit form textarea, #reset_password #new form textarea, #reset_password #edit form textarea {
   border: 1px solid #999;
   padding: 6px 8px;
   line-height: 100%;
 }
-/* line 67, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input, #user #edit form input, #user_session #new form input, #user_session #edit form input {
+/* line 68, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form input, #user #edit form input, #user_session #new form input, #user_session #edit form input, #reset_password #new form input, #reset_password #edit form input {
   font-family: inherit;
   font-size: 14px;
 }
-/* line 71, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input.text, #user #new form input.title, #user #new form input[type=text], #user #new form input[type=password], #user #edit form input.text, #user #edit form input.title, #user #edit form input[type=text], #user #edit form input[type=password], #user_session #new form input.text, #user_session #new form input.title, #user_session #new form input[type=text], #user_session #new form input[type=password], #user_session #edit form input.text, #user_session #edit form input.title, #user_session #edit form input[type=text], #user_session #edit form input[type=password] {
+/* line 72, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form input.text, #user #new form input.title, #user #new form input[type=text], #user #new form input[type=password], #user #edit form input.text, #user #edit form input.title, #user #edit form input[type=text], #user #edit form input[type=password], #user_session #new form input.text, #user_session #new form input.title, #user_session #new form input[type=text], #user_session #new form input[type=password], #user_session #edit form input.text, #user_session #edit form input.title, #user_session #edit form input[type=text], #user_session #edit form input[type=password], #reset_password #new form input.text, #reset_password #new form input.title, #reset_password #new form input[type=text], #reset_password #new form input[type=password], #reset_password #edit form input.text, #reset_password #edit form input.title, #reset_password #edit form input[type=text], #reset_password #edit form input[type=password] {
   border: 1px solid #999;
   padding: 6px 8px;
   line-height: 100%;
 }
-/* line 76, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input.title, #user #edit form input.title, #user_session #new form input.title, #user_session #edit form input.title {
+/* line 77, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form input.title, #user #edit form input.title, #user_session #new form input.title, #user_session #edit form input.title, #reset_password #new form input.title, #reset_password #edit form input.title {
   font-size: 1.5em;
 }
-/* line 78, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input[type=checkbox], #user #new form input.checkbox, #user #edit form input[type=checkbox], #user #edit form input.checkbox, #user_session #new form input[type=checkbox], #user_session #new form input.checkbox, #user_session #edit form input[type=checkbox], #user_session #edit form input.checkbox,
-#user #new form input[type=radio], #user #new form input.radio, #user #edit form input[type=radio], #user #edit form input.radio, #user_session #new form input[type=radio], #user_session #new form input.radio, #user_session #edit form input[type=radio], #user_session #edit form input.radio {
+/* line 79, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form input[type=checkbox], #user #new form input.checkbox, #user #edit form input[type=checkbox], #user #edit form input.checkbox, #user_session #new form input[type=checkbox], #user_session #new form input.checkbox, #user_session #edit form input[type=checkbox], #user_session #edit form input.checkbox, #reset_password #new form input[type=checkbox], #reset_password #new form input.checkbox, #reset_password #edit form input[type=checkbox], #reset_password #edit form input.checkbox,
+#user #new form input[type=radio], #user #new form input.radio, #user #edit form input[type=radio], #user #edit form input.radio, #user_session #new form input[type=radio], #user_session #new form input.radio, #user_session #edit form input[type=radio], #user_session #edit form input.radio, #reset_password #new form input[type=radio], #reset_password #new form input.radio, #reset_password #edit form input[type=radio], #reset_password #edit form input.radio {
   position: relative;
   top: 0em;
 }
-/* line 82, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input[type=submit], #user #edit form input[type=submit], #user_session #new form input[type=submit], #user_session #edit form input[type=submit] {
+/* line 83, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form input[type=submit], #user #edit form input[type=submit], #user_session #new form input[type=submit], #user_session #edit form input[type=submit], #reset_password #new form input[type=submit], #reset_password #edit form input[type=submit] {
   text-align: right;
 }
-/* line 85, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input.text:focus, #user #new form input.title:focus, #user #new form input[type=text]:focus, #user #new form input[type=password]:focus, #user #edit form input.text:focus, #user #edit form input.title:focus, #user #edit form input[type=text]:focus, #user #edit form input[type=password]:focus, #user_session #new form input.text:focus, #user_session #new form input.title:focus, #user_session #new form input[type=text]:focus, #user_session #new form input[type=password]:focus, #user_session #edit form input.text:focus, #user_session #edit form input.title:focus, #user_session #edit form input[type=text]:focus, #user_session #edit form input[type=password]:focus {
+/* line 86, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form input.text:focus, #user #new form input.title:focus, #user #new form input[type=text]:focus, #user #new form input[type=password]:focus, #user #edit form input.text:focus, #user #edit form input.title:focus, #user #edit form input[type=text]:focus, #user #edit form input[type=password]:focus, #user_session #new form input.text:focus, #user_session #new form input.title:focus, #user_session #new form input[type=text]:focus, #user_session #new form input[type=password]:focus, #user_session #edit form input.text:focus, #user_session #edit form input.title:focus, #user_session #edit form input[type=text]:focus, #user_session #edit form input[type=password]:focus, #reset_password #new form input.text:focus, #reset_password #new form input.title:focus, #reset_password #new form input[type=text]:focus, #reset_password #new form input[type=password]:focus, #reset_password #edit form input.text:focus, #reset_password #edit form input.title:focus, #reset_password #edit form input[type=text]:focus, #reset_password #edit form input[type=password]:focus {
   background: #FFFFCC;
 }
-/* line 91, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .date li, #user #new form .time li, #user #new form .datetime li, #user #edit form .date li, #user #edit form .time li, #user #edit form .datetime li, #user_session #new form .date li, #user_session #new form .time li, #user_session #new form .datetime li, #user_session #edit form .date li, #user_session #edit form .time li, #user_session #edit form .datetime li {
+/* line 92, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .date li, #user #new form .time li, #user #new form .datetime li, #user #edit form .date li, #user #edit form .time li, #user #edit form .datetime li, #user_session #new form .date li, #user_session #new form .time li, #user_session #new form .datetime li, #user_session #edit form .date li, #user_session #edit form .time li, #user_session #edit form .datetime li, #reset_password #new form .date li, #reset_password #new form .time li, #reset_password #new form .datetime li, #reset_password #edit form .date li, #reset_password #edit form .time li, #reset_password #edit form .datetime li {
   margin: 0 0.3em 0 0;
 }
-/* line 99, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form #errorExplanation li, #user #edit form #errorExplanation li, #user_session #new form #errorExplanation li, #user_session #edit form #errorExplanation li {
+/* line 100, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form #errorExplanation li, #user #edit form #errorExplanation li, #user_session #new form #errorExplanation li, #user_session #edit form #errorExplanation li, #reset_password #new form #errorExplanation li, #reset_password #edit form #errorExplanation li {
   margin-left: 15px;
 }
-/* line 101, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form form p, #user #new form .errors, #user #edit form form p, #user #edit form .errors, #user_session #new form form p, #user_session #new form .errors, #user_session #edit form form p, #user_session #edit form .errors {
+/* line 102, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form form p, #user #new form .errors, #user #edit form form p, #user #edit form .errors, #user_session #new form form p, #user_session #new form .errors, #user_session #edit form form p, #user_session #edit form .errors, #reset_password #new form form p, #reset_password #new form .errors, #reset_password #edit form form p, #reset_password #edit form .errors {
   padding: 3px 0px;
 }
-/* line 104, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .required input, #user #new form .required textarea, #user #new form .required select, #user #edit form .required input, #user #edit form .required textarea, #user #edit form .required select, #user_session #new form .required input, #user_session #new form .required textarea, #user_session #new form .required select, #user_session #edit form .required input, #user_session #edit form .required textarea, #user_session #edit form .required select {
+/* line 105, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .required input, #user #new form .required textarea, #user #new form .required select, #user #edit form .required input, #user #edit form .required textarea, #user #edit form .required select, #user_session #new form .required input, #user_session #new form .required textarea, #user_session #new form .required select, #user_session #edit form .required input, #user_session #edit form .required textarea, #user_session #edit form .required select, #reset_password #new form .required input, #reset_password #new form .required textarea, #reset_password #new form .required select, #reset_password #edit form .required input, #reset_password #edit form .required textarea, #reset_password #edit form .required select {
   background-color: #fff;
 }
-/* line 107, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .error input, #user #new form .error textarea, #user #new form .error select, #user #edit form .error input, #user #edit form .error textarea, #user #edit form .error select, #user_session #new form .error input, #user_session #new form .error textarea, #user_session #new form .error select, #user_session #edit form .error input, #user_session #edit form .error textarea, #user_session #edit form .error select {
+/* line 108, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .error input, #user #new form .error textarea, #user #new form .error select, #user #edit form .error input, #user #edit form .error textarea, #user #edit form .error select, #user_session #new form .error input, #user_session #new form .error textarea, #user_session #new form .error select, #user_session #edit form .error input, #user_session #edit form .error textarea, #user_session #edit form .error select, #reset_password #new form .error input, #reset_password #new form .error textarea, #reset_password #new form .error select, #reset_password #edit form .error input, #reset_password #edit form .error textarea, #reset_password #edit form .error select {
   background-color: #fcc;
   border: 1px solid #f66;
 }
-/* line 111, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .optional input, #user #new form .optional textarea, #user #new form .optional select, #user #edit form .optional input, #user #edit form .optional textarea, #user #edit form .optional select, #user_session #new form .optional input, #user_session #new form .optional textarea, #user_session #new form .optional select, #user_session #edit form .optional input, #user_session #edit form .optional textarea, #user_session #edit form .optional select {
+/* line 112, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .optional input, #user #new form .optional textarea, #user #new form .optional select, #user #edit form .optional input, #user #edit form .optional textarea, #user #edit form .optional select, #user_session #new form .optional input, #user_session #new form .optional textarea, #user_session #new form .optional select, #user_session #edit form .optional input, #user_session #edit form .optional textarea, #user_session #edit form .optional select, #reset_password #new form .optional input, #reset_password #new form .optional textarea, #reset_password #new form .optional select, #reset_password #edit form .optional input, #reset_password #edit form .optional textarea, #reset_password #edit form .optional select {
   background-color: #fff;
 }
-/* line 113, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .errors, #user #edit form .errors, #user_session #new form .errors, #user_session #edit form .errors {
+/* line 114, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .errors, #user #edit form .errors, #user_session #new form .errors, #user_session #edit form .errors, #reset_password #new form .errors, #reset_password #edit form .errors {
   color: #a00;
 }
-/* line 115, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .errors li, #user #edit form .errors li, #user_session #new form .errors li, #user_session #edit form .errors li {
+/* line 116, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .errors li, #user #edit form .errors li, #user_session #new form .errors li, #user_session #edit form .errors li, #reset_password #new form .errors li, #reset_password #edit form .errors li {
   margin-left: 1.2em;
 }
-/* line 117, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form p.inline-errors, #user #edit form p.inline-errors, #user_session #new form p.inline-errors, #user_session #edit form p.inline-errors {
+/* line 118, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form p.inline-errors, #user #edit form p.inline-errors, #user_session #new form p.inline-errors, #user_session #edit form p.inline-errors, #reset_password #new form p.inline-errors, #reset_password #edit form p.inline-errors {
   color: #f00;
 }
-/* line 119, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form p.inline-hints, #user #edit form p.inline-hints, #user_session #new form p.inline-hints, #user_session #edit form p.inline-hints {
+/* line 120, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form p.inline-hints, #user #edit form p.inline-hints, #user_session #new form p.inline-hints, #user_session #edit form p.inline-hints, #reset_password #new form p.inline-hints, #reset_password #edit form p.inline-hints {
   color: #777;
 }
-/* line 122, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .fieldWithErrors, #user #edit form .fieldWithErrors, #user_session #new form .fieldWithErrors, #user_session #edit form .fieldWithErrors {
+/* line 123, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .fieldWithErrors, #user #edit form .fieldWithErrors, #user_session #new form .fieldWithErrors, #user_session #edit form .fieldWithErrors, #reset_password #new form .fieldWithErrors, #reset_password #edit form .fieldWithErrors {
   background: #CC6666;
   padding: .75em .2em;
   background: #CCCCCC;
 }
-/* line 127, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form .fieldWithErrors input, #user #edit form .fieldWithErrors input, #user_session #new form .fieldWithErrors input, #user_session #edit form .fieldWithErrors input {
+/* line 128, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form .fieldWithErrors input, #user #edit form .fieldWithErrors input, #user_session #new form .fieldWithErrors input, #user_session #edit form .fieldWithErrors input, #reset_password #new form .fieldWithErrors input, #reset_password #edit form .fieldWithErrors input {
   border: 1px solid red;
 }
-/* line 130, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form #errorExplanation, #user #edit form #errorExplanation, #user_session #new form #errorExplanation, #user_session #edit form #errorExplanation {
+/* line 131, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form #errorExplanation, #user #edit form #errorExplanation, #user_session #new form #errorExplanation, #user_session #edit form #errorExplanation, #reset_password #new form #errorExplanation, #reset_password #edit form #errorExplanation {
   width: 90%;
   border: 2px solid #CF0000;
   padding: 0;
@@ -518,8 +522,8 @@
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 137, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form #errorExplanation h2, #user #edit form #errorExplanation h2, #user_session #new form #errorExplanation h2, #user_session #edit form #errorExplanation h2 {
+/* line 138, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form #errorExplanation h2, #user #edit form #errorExplanation h2, #user_session #new form #errorExplanation h2, #user_session #edit form #errorExplanation h2, #reset_password #new form #errorExplanation h2, #reset_password #edit form #errorExplanation h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
   margin: 0;
@@ -528,33 +532,28 @@
   background-color: #c00;
   color: #fff;
 }
-/* line 146, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form #errorExplanation p, #user #edit form #errorExplanation p, #user_session #new form #errorExplanation p, #user_session #edit form #errorExplanation p {
+/* line 147, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form #errorExplanation p, #user #edit form #errorExplanation p, #user_session #new form #errorExplanation p, #user_session #edit form #errorExplanation p, #reset_password #new form #errorExplanation p, #reset_password #edit form #errorExplanation p {
   color: #333;
   margin-bottom: 0;
   padding: 8px;
 }
-/* line 150, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form #errorExplanation ul, #user #edit form #errorExplanation ul, #user_session #new form #errorExplanation ul, #user_session #edit form #errorExplanation ul {
+/* line 151, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form #errorExplanation ul, #user #edit form #errorExplanation ul, #user_session #new form #errorExplanation ul, #user_session #edit form #errorExplanation ul, #reset_password #new form #errorExplanation ul, #reset_password #edit form #errorExplanation ul {
   margin: 2px 24px;
 }
-/* line 152, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form #errorExplanation ul li, #user #edit form #errorExplanation ul li, #user_session #new form #errorExplanation ul li, #user_session #edit form #errorExplanation ul li {
+/* line 153, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form #errorExplanation ul li, #user #edit form #errorExplanation ul li, #user_session #new form #errorExplanation ul li, #user_session #edit form #errorExplanation ul li, #reset_password #new form #errorExplanation ul li, #reset_password #edit form #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
 }
-/* line 159, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form fieldset.buttons, #user #edit form fieldset.buttons, #user_session #new form fieldset.buttons, #user_session #edit form fieldset.buttons {
+/* line 160, ../../../app/stylesheets/partials/_skintastic.sass */
+#user #new form fieldset.buttons, #user #edit form fieldset.buttons, #user_session #new form fieldset.buttons, #user_session #edit form fieldset.buttons, #reset_password #new form fieldset.buttons, #reset_password #edit form fieldset.buttons {
   max-width: 150px;
   overflow: hidden;
 }
-/* line 163, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form fieldset.buttons .commit, #user #edit form fieldset.buttons .commit, #user_session #new form fieldset.buttons .commit, #user_session #edit form fieldset.buttons .commit {
-  display: inline;
-  float: right;
-}
 /* line 165, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form fieldset.buttons .commit input, #user #edit form fieldset.buttons .commit input, #user_session #new form fieldset.buttons .commit input, #user_session #edit form fieldset.buttons .commit input {
+#user #new form fieldset.buttons .commit input, #user #edit form fieldset.buttons .commit input, #user_session #new form fieldset.buttons .commit input, #user_session #edit form fieldset.buttons .commit input, #reset_password #new form fieldset.buttons .commit input, #reset_password #edit form fieldset.buttons .commit input {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1177,44 +1176,46 @@
   padding-right: .20em;
 }
 
-/* line 19, ../../../app/stylesheets/public.sass */
+/* line 3, ../../../app/stylesheets/partials/_user_session.sass */
+#user_session #new .forgot_password {
+  padding: 5px 15px;
+  font-size: .90em;
+}
+
+/* line 20, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px .20em;
 }
 
-/* line 23, ../../../app/stylesheets/public.sass */
+/* line 24, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   width: 99%;
 }
-
-/* line 30, ../../../app/stylesheets/public.sass */
-a {
+/* line 31, ../../../app/stylesheets/public.sass */
+body a {
   color: #0000FF;
 }
-/* line 32, ../../../app/stylesheets/public.sass */
-a img {
+/* line 33, ../../../app/stylesheets/public.sass */
+body a img {
   border: none;
 }
-
-/* line 36, ../../../app/stylesheets/public.sass */
-.clear {
+/* line 37, ../../../app/stylesheets/public.sass */
+body .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
-
-/* line 41, ../../../app/stylesheets/public.sass */
-.labelHighlight {
+/* line 42, ../../../app/stylesheets/public.sass */
+body .labelHighlight {
   color: #999999;
   text-align: right;
 }
-
-/* line 45, ../../../app/stylesheets/public.sass */
-.toolbar {
+/* line 46, ../../../app/stylesheets/public.sass */
+body .toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1223,22 +1224,22 @@ a img {
   padding: .50em .25em;
   min-width: 400px;
 }
-/* line 51, ../../../app/stylesheets/public.sass */
-.toolbar table {
+/* line 52, ../../../app/stylesheets/public.sass */
+body .toolbar table {
   width: 100%;
 }
-/* line 54, ../../../app/stylesheets/public.sass */
-.toolbar table td.left {
+/* line 55, ../../../app/stylesheets/public.sass */
+body .toolbar table td.left {
   text-align: left;
   width: 33%;
   min-width: 140px;
 }
-/* line 59, ../../../app/stylesheets/public.sass */
-.toolbar table td.center {
+/* line 60, ../../../app/stylesheets/public.sass */
+body .toolbar table td.center {
   min-width: 150px;
 }
-/* line 61, ../../../app/stylesheets/public.sass */
-.toolbar table td.center img {
+/* line 62, ../../../app/stylesheets/public.sass */
+body .toolbar table td.center img {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1248,8 +1249,8 @@ a img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 68, ../../../app/stylesheets/public.sass */
-.toolbar table td.center h1 {
+/* line 69, ../../../app/stylesheets/public.sass */
+body .toolbar table td.center h1 {
   color: #FFFFFF;
   font-size: 14pt;
   font-weight: bold;
@@ -1257,47 +1258,45 @@ a img {
   margin: 0;
   padding: 0;
 }
-/* line 76, ../../../app/stylesheets/public.sass */
-.toolbar table td.center h1.screen_only {
+/* line 77, ../../../app/stylesheets/public.sass */
+body .toolbar table td.center h1.screen_only {
   display: inline;
 }
-/* line 79, ../../../app/stylesheets/public.sass */
-.toolbar table td.right {
+/* line 80, ../../../app/stylesheets/public.sass */
+body .toolbar table td.right {
   width: 33%;
   min-width: 100px;
 }
-
-/* line 83, ../../../app/stylesheets/public.sass */
-#container {
+/* line 84, ../../../app/stylesheets/public.sass */
+body #container {
   background: #fff;
   margin: 0px;
 }
-
-/* line 87, ../../../app/stylesheets/public.sass */
-#flash_messages {
+/* line 89, ../../../app/stylesheets/public.sass */
+body #flash #flash_messages {
   margin: 1em .50em;
 }
-/* line 90, ../../../app/stylesheets/public.sass */
-#flash_messages .notice, #flash_messages .error {
-  padding: 5px 8px;
-  margin: 10px 0;
+/* line 92, ../../../app/stylesheets/public.sass */
+body #flash #flash_messages .notice, body #flash #flash_messages .error {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   margin: .25em;
+  margin: 10px 0;
+  font-size: .90em;
+  padding: 1em;
 }
-/* line 95, ../../../app/stylesheets/public.sass */
-#flash_messages .notice {
+/* line 98, ../../../app/stylesheets/public.sass */
+body #flash #flash_messages .notice {
   background-color: #CFC;
   border: solid 1px #6C6;
 }
-/* line 99, ../../../app/stylesheets/public.sass */
-#flash_messages .error {
+/* line 102, ../../../app/stylesheets/public.sass */
+body #flash #flash_messages .error {
   background-color: #FCC;
   border: solid 1px #C66;
 }
-
-/* line 103, ../../../app/stylesheets/public.sass */
-.print_only {
+/* line 106, ../../../app/stylesheets/public.sass */
+body .print_only {
   display: none;
 }

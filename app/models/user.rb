@@ -29,6 +29,7 @@
 class User < ActiveRecord::Base
   acts_as_authentic do |c|
     c.login_field = "login"
+    disable_perishable_token_maintenance(true)
   end
   has_friendly_id :login
 
@@ -37,10 +38,18 @@ class User < ActiveRecord::Base
     def unfiled; first.user.tag_groups.empty? ? not_complete : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :exclude => true); end
     def filed; first.user.tag_groups.empty? ? nil : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :any => true); end
   end
-  
+
   named_scope :wanting_daily_emails, :conditions => ['(email_daily_summary = ? OR email_summary_only_when_todos_due = ?) AND (daily_summary_sent_at < ? OR daily_summary_sent_at IS ? )', true, true, 1.day.ago.to_datetime, nil]
-  
+
+  before_create :reset_perishable_token
+
   validate :not_reserved_word
+  validates_presence_of :password, :on => :create 
+  
+  def deliver_password_reset_instructions!
+    reset_perishable_token!
+    Postoffice.deliver_password_reset_instructions(self)
+  end
 
   private
 
@@ -62,4 +71,6 @@ class User < ActiveRecord::Base
     end
     @controller_actions.flatten.flatten.uniq
   end
+
+
 end

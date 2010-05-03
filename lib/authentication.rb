@@ -42,6 +42,16 @@ module Authentication
     end
   end
   
+  def require_no_user
+    if current_user
+      store_target_location
+      current_user_session.destroy if current_user_session
+      current_user = nil
+      redirect_to_target_or_default root_url
+      return false
+    end
+  end
+  
   def redirect_to_target_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil

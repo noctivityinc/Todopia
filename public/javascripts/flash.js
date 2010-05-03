@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
     jQuery.fn.showFlash = function() {
-        $(this.selector).show('normal').delay(3000).fadeOut(2000);
+        $(this.selector).show('normal').delay(3000).fadeOut(5000);
     }
 
     $('#flash_messages').showFlash();

@@ -1,0 +1,30 @@
+- title "Todopia - Change My Password"
+
+- content_for :toolbar do
+  = render :partial => "layouts/toolbar_public"
+
+#reset_password
+  #edit
+    #flash= render :partial => "layouts/flash"
+  
+    - form_for @user, :url => reset_password_path, :method => :put do |f|
+      = f.error_messages
+      %fieldset{:class => 'inputs'}
+        %legend
+          Please enter and confirm a 
+          %b new password
+          below:
+
+        %ol
+          %li
+            = f.label :password, 'Password', :class => 'string required'
+            = f.password_field :password 
+          %li
+            = f.label :password_confirmation, 'Confirm', :class => 'string required'
+            = f.password_field :password_confirmation 
+
+      %fieldset{:class => 'buttons'}
+        %ol
+          %li{:class => 'commit'}
+            = submit_tag "Update"
+    
