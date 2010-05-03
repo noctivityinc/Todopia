@@ -28,6 +28,9 @@
       margin-top: 1em
       font-size: 12px
       
+      .scheduled
+        display: none
+      
       h2
         font-size: 1.15em
         margin: 1em 0em .25em 0em
@@ -97,9 +100,14 @@
           overflow: hidden          
 
           .col_due
-            width: 80px
+            width: 100px
+            text-align: right
 
-          .due_date
+          .col_scheduled
+            width: 120px
+            text-align: right
+
+          .due_date, .scheduled_date
             font-size: .90em
             color: #666
 

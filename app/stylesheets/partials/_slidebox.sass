@@ -31,7 +31,24 @@
         height: 72px
 
 .slide-button
-  display: none
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  width: 150px
+  z-index: 20
+  cursor: pointer
+  height: 30px
+  padding-top: 10px
+  text-align: center
+  background-color: #343434
+  color: white
+  top: 2px
+  border-top-right-radius: 5px
+  border-top-left-radius: 5px
+  -moz-border-radius-topleft: 5px
+  -webkit-border-radius-top-left: 5px
+  -moz-border-radius-topright: 5px
+  -webkit-border-radius-top-right: 5px
 
 .slide-bottom
   bottom: 0
@@ -43,15 +60,3 @@
 .slide-top
   top: 0
 
-#slideBox_overlay
-  position: fixed
-  top: 0px
-  left: 0px
-  height: 100%
-  width: 100%
-
-.slideBox_hide
-  z-index: -100
-
-.slideBox_overlayBG
-  z-index: 99

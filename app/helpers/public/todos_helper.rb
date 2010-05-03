@@ -29,7 +29,12 @@ module Public::TodosHelper
 
   def show_due_date(todo)
     return "&nbsp;" unless todo.due_date
-    "<div class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{todo.due_date.strftime('%m/%d/%Y')}</div>"
+    "<div class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{" - due " if todo.not_active} #{todo.due_date.strftime('%m/%d/%Y')}</div>"
+  end  
+  
+  def show_scheduled(todo)
+    return "&nbsp;" if todo.active
+    "<div class='scheduled_date'>starting #{todo.starts_at.strftime('%m/%d/%Y')}</div>"
   end
 
   def show_notes(todo)
@@ -42,7 +47,7 @@ module Public::TodosHelper
 
   def show_waiting(todo)
     if todo.waiting_since
-      link_to  image_tag("icons/waiting.png", :title => "since #{todo.waiting_since.strftime('%m/%d/%Y')}.  click or (w) to resume", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
+      link_to image_tag("icons/waiting.png", :title => "since #{todo.waiting_since.strftime('%m/%d/%Y')}.  click or (w) to resume", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
     else
       link_to image_tag("icons/clock.png", :title => "in process...", :class => "icon"), '#', :class => 'wait_todo', :rel => wait_todo_path(todo)
     end
@@ -53,19 +58,19 @@ module Public::TodosHelper
     if user.tag_groups.empty?
       return true
     else
-      return @todos.tagged_with(user.tag_groups.map {|x| x.tag}, :any => true).empty?
+      return @todos.active.tagged_with(user.tag_groups.map {|x| x.tag}, :any => true).empty?
     end
   end
 
   def unfiled_todos(scope=nil, user=nil)
     user ||= current_user
     if user.tag_groups.empty?
-      scope ? @todos.send(scope.intern) : @todos
+      scope ? @todos.active.send(scope.intern) : @todos.active
     else
       if scope
-        @todos.send(scope.intern).tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+        @todos.active.send(scope.intern).tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
       else
-        @todos.tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
+        @todos.active.tagged_with(user.tag_groups.map {|x| x.tag}.join(','), :exclude => true)
       end
     end
   end

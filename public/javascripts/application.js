@@ -161,7 +161,7 @@ function select_current_checkbox(){
 }
 
 function checklist_sortable() {
-  $(".tag_group").sortable({handle: '.handle', 
+  $(".tag_group:not('.scheduled')").sortable({handle: '.handle', 
     connectWith: '.tag_group', 
     placeholder: 'ui-state-highlight',
     stop: function(event, ui) { 
@@ -183,7 +183,6 @@ function checklist_sortable() {
          reorder_url = $('#urls').attr('url:reorder_todos')
          $.post(reorder_url, $(this).sortable('serialize'), function(todoResponse) { 
            $(document).bind('checklist.reloaded', function(){
-               ui_item.find('.todo_checkbox').focus();
                $(document).unbind('checklist.reloaded') 
              })
            reload_checklist(todoResponse); 

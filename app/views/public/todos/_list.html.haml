@@ -1,20 +1,25 @@
 #not_complete
   - current_user.tag_groups.ordered.each do |tg|
-    - unless @todos.tagged_with(tg.tag).blank?
+    - unless @todos.active.tagged_with(tg.tag).blank?
       %h2
         = link_to "#{tg.tag} (#{@todos.tagged_with(tg.tag).count})", '#', :class => 'select_tag_group tag_group_menu_trigger', :rel => tg.id, 'url:filter' => filter_user_todos_path(current_user, :tag => tg.tag), 'tg:tag' => tg.tag
       .tag_group{'tg:tag' => tg.tag}
-        = render @todos.due.not_in_process.tagged_with(tg.tag)
-        = render @todos.not_due.not_in_process.tagged_with(tg.tag)
-        .in_process= render @todos.in_process.tagged_with(tg.tag)
+        = render @todos.active.due.not_in_process.tagged_with(tg.tag)
+        = render @todos.active.not_due.not_in_process.tagged_with(tg.tag)
+        .in_process= render @todos.active.in_process.tagged_with(tg.tag)
 
   - unless unfiled_todos.empty?
     - unless tag_groups_empty?
       %h2= link_to "and ze rest... (#{unfiled_todos.count})", '#', :class => 'select_tag_group unfiled_group', :rel => current_user.id, 'url:filter' => filter_user_todos_path(current_user, :unfiled => true) 
     .tag_group{'tg:tag' => '-99'}
-      .due= render unfiled_todos('due').not_in_process
-      .not_due= render unfiled_todos('not_due').not_in_process
+      = render unfiled_todos('due').not_in_process
+      = render unfiled_todos('not_due').not_in_process
       .in_process= render unfiled_todos.in_process
+      
+  - unless @todos.scheduled.empty?
+    %h2= link_to "Scheduled (#{@todos.scheduled.count})", '#', :class => 'select_tag_group'
+    .tag_group.scheduled
+      = render @todos.scheduled
 
 - unless @completed.blank?
   #completed
