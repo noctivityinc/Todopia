@@ -14,9 +14,10 @@ class Public::TagGroupsController < PublicController
 
   def rename
     unless params[:name].blank?
-      @user.tag_groups.find_by_tag(params[:name]).delete rescue nil
-      @user.todos.not_complete.each {|x| x.rename_tag(@tag_group.tag, params[:name])}
-      @tag_group.update_attributes(:tag => params[:name])
+      new_name = params[:name].downcase
+      # @user.tag_groups.find_by_tag(tag).delete rescue nil
+      @user.todos.not_complete.each {|x| x.rename_tag(@tag_group.tag, new_name)}
+      @tag_group.update_attributes(:tag => new_name)
     end
     render :text => nil, :status => 200
   end

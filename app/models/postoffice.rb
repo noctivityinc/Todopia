@@ -36,7 +36,6 @@ class Postoffice < ActionMailer::Base
     recipients user.email
     from       APP_CONFIG[:emails]["todo"]
     sent_on    sent_at
-    content_type    "multipart/alternative"
 
     body       :user => user, :todos => (user.email_summary_only_when_todos_due && !force_all) ? user.todos.not_complete.due : user.todos.not_complete
   end
