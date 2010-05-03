@@ -54,11 +54,14 @@ class Todo < ActiveRecord::Base
     self.tags.find_by_name(tag).destroy rescue nil
   end
 
-  def rename_tag(tag, new_name)
-    tag = self.tags.find_by_name(tag)
-    tag.update_attribute(:name, new_name) if tag
+  def rename_tag(tag_name, new_name)
+    if self.tags.find_by_name(tag_name)
+      self.tag_list = self.tag_list - [tag_name]
+      self.tag_list.push(new_name)
+      self.save
+    end
   end
-  
+
   def active
     starts_at.blank? || starts_at < Time.now
   end
@@ -114,7 +117,7 @@ class Todo < ActiveRecord::Base
       end
       self.priority = tag[1..-1] if tag.starts_with? '#'
     }
-    
+
     self.starts_at = self.due_date if self.starts_at && self.due_date && self.due_date < self.starts_at # => prevents setting a due date before the event starts
   end
 

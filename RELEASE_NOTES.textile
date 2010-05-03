@@ -1,5 +1,11 @@
 h1. Todopia Release Notes
 
+h3. 0.2.12 (hotfix)
+* Shut off plain text email copy due to odd BBG mail server issues
+* Enabled caching for javascript
+* Hopefully fixed odd reloading issue in js
+* Shut off multiple reminder blinks
+
 h3. 0.2.9
 * Added daily summary report
 * Added option to only send when items are due or overdue

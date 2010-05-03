@@ -17,7 +17,14 @@ class TagGroup < ActiveRecord::Base
   
   named_scope :ordered, :order => 'tag ASC'
   
-  
   validates_presence_of :tag, :user
   validates_uniqueness_of :tag, :scope => :user_id
+  
+  before_save :downcase_tag
+  
+  private
+  
+  def downcase_tag
+    self.tag = self.tag.downcase
+  end
 end

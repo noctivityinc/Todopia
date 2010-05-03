@@ -8,17 +8,6 @@ $(function(){
   $('#flash').click(function(){$(this).hide();})
   $("#bottom_panel").slideBox({width: "100%", height: 100, position: "bottom"});
   
-  complete_todo_form_options = { 
-         clearForm: true,
-         beforeSubmit: function(formData, jqForm, options){
-          jqForm.find('.col').css('font-weight','bold').css('background', '#FFFF66').fadeOut('slow');
-         },
-         success: function(responseText){
-           reload_checklist(responseText);
-           $('.edit_todo:eq('+ndx+')').find('.todo_checkbox').focus()
-         }
-     }
-  
   $(document).bind('reveal.facebox', function() { 
     setup_ajax();
 
@@ -72,6 +61,7 @@ function setup_ajax(){
       'beforeSend': function(xhr) {
           xhr.setRequestHeader("Accept", "text/javascript")
           $('.spinner').fadeIn(200);
+          // $('#todo').find('#index').fadeOut(2000);
       },
       dataType: 'html',
       complete: function(XMLHttpRequest, textStatus) {
@@ -84,6 +74,7 @@ function setup_ajax(){
 }
 
 function get_checklist() {
+  clog('get_checklist')
   $.ajax({url: $('#urls').attr('url:todo_reload'), 
       success: function(todoResponse) { reload_checklist(todoResponse); }
     })
@@ -91,8 +82,8 @@ function get_checklist() {
 
 function reload_checklist(responseText) {
   $('#todo').find('#index').html(responseText).fadeIn(200, function(){
+    clog('reload cl')
     setup_ajax();
-    setup_complete_todo_form();
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
