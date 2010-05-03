@@ -13,7 +13,7 @@
         .col_select.col
           &nbsp;
         .col_move.col
-          = image_tag "icons/move.jpg", :title => "move", :class => "handle icon"
+          = image_tag "icons/move.jpg", :title => "move", :class => "handle icon" if todo.active
         .col_cb.col
           - if todo.waiting_since
             = show_waiting(todo)
@@ -27,6 +27,7 @@
                 = tag
 
       #right_pane
+        .col_scheduled.col= show_scheduled(todo)
         .col_due.col= show_due_date(todo)
         .col_wait.col
           = show_waiting(todo)

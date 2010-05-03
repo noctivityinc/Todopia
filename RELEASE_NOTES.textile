@@ -1,5 +1,11 @@
 h1. Todopia Release Notes
 
+h3. 0.2.8
+* Added ability to schedule todos in the future.  Just start tag with "starts DATE PHRASE"
+* Fixed reordering todo within group bug
+* Fixed width of tag groups in textboxlist
+* Fixed click to close bug in options by adding close button
+
 h3. 0.2.7 (hotfix)
 * Slide options panel width fixed
 * Clicking anywhere outside of slide options panel closes panel
