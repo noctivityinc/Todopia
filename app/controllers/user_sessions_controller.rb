@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     if @user_session.save
       flash[:notice] = "Logged in successfully."
       cookies[:tags] = nil
-      redirect_to (user_todos_path(current_user))
+      redirect_to_target_or_default (user_todos_path(current_user))
     else
       render :action => 'new'
     end
