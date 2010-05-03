@@ -1,6 +1,8 @@
 %table
   %tr
     %td
+      = link_to image_tag("icons/drawn-account-blue.png", :title => "My Account", :border => 0), edit_user_path(current_user), :id => 'account_button' 
+    %td
       = link_to image_tag("icons/drawn-printer-blue.png", :title => "Print", :border => 0), '#', :id => 'print_button' 
     %td
       = link_to image_tag("icons/drawn-email-blue.png", :title => "Email", :border => 0), '#', :id => 'email_button', :rel => email_user_path(current_user)

@@ -1,7 +1,10 @@
+- title "Todopia - Sign up"
+
+- content_for :toolbar do
+  = render :partial => "layouts/toolbar_public"
+
 #user
   #new
-    - title "Sign up"
-
     - semantic_form_for @user do |f|
       - f.inputs do
         = f.input :login, :label => 'Username'

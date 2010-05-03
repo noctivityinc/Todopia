@@ -1,0 +1,24 @@
+- title "Todopia - Login Assistance"
+
+- content_for :toolbar do
+  = render :partial => "layouts/toolbar_public"
+
+
+#reset_password
+  #new
+    #flash= render :partial => "layouts/flash"
+    - form_tag reset_password_index_path do
+      %fieldset{:class => 'inputs'}
+        %legend
+          Fill out the form below and your username and password reset information will be emailed to you:
+      
+        %ol
+          %li
+            %label{:class => 'string required'}
+              Email:
+            = text_field_tag "email", nil, :size => "30" 
+
+      %fieldset{:class => 'buttons'}
+        %ol
+          %li{:class => 'commit'}
+            = submit_tag "Submit"

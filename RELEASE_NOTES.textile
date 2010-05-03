@@ -1,5 +1,11 @@
 h1. Todopia Release Notes
 
+h3. 0.2.9
+* Added daily summary report
+* Added option to only send when items are due or overdue
+* Added ability to reset password and retrieve user id
+* Added whenever gem
+
 h3. 0.2.8
 * Added ability to schedule todos in the future.  Just start tag with "starts DATE PHRASE"
 * Fixed reordering todo within group bug
@@ -31,7 +37,7 @@ h3. 0.2.2
 * Ability to delete with "d" key
 * Ability to rename groups
 * Ability to change due date tags
-* Ability to reprioritize via drag/drop (though due date still takes precendence, using #1, #2, tags recommended)
+* Ability to reprioritize via drag/drop (though due date still takes precedence, using #1, #2, tags recommended)
 
 h3. 0.2.1
 * New layout.  Cleaner.

@@ -1,0 +1,24 @@
+%div{:style => 'font-family: Verdana, Helvetica, Arial'}
+  %h1= "#{'Overdue ' if @user.email_summary_only_when_todos_due}Todopia todos for #{@user.login} (#{Date.today.to_s(:long)})"
+
+  - if @todos.active
+    - @user.tag_groups.ordered.each do |tg|
+      - unless @todos.active.tagged_with(tg.tag).blank?
+        %p{:style => 'margin-bottom: 2em'}
+          %h2{:style => 'margin-bottom: .25em'}= "#{tg.tag.upcase} (#{@todos.active.tagged_with(tg.tag).count})"
+          %table{:width => '100%'}
+            = render :partial => 'postoffice/todos/todo', :collection => @todos.active.due.not_in_process.tagged_with(tg.tag)
+            = render :partial => 'postoffice/todos/todo', :collection => @todos.active.not_due.not_in_process.tagged_with(tg.tag)
+            = render :partial => 'postoffice/todos/todo', :collection => @todos.active.in_process.tagged_with(tg.tag)
+
+    - unless unfiled_todos(nil,@user).empty?
+      - unless tag_groups_empty?(@user)
+        %p{:style => 'margin-bottom: 2em'}
+          %h2{:style => 'margin-bottom: .25em'}= "AND ZE REST... (#{unfiled_todos(nil,@user).count})"
+          %table{:width => '100%'}
+            = render :partial => 'postoffice/todos/todo', :collection => unfiled_todos(nil,@user)
+
+  %div{:style => 'margin-top: 2em; border-top:1px solid gray; padding-top: 1em; font-size: .85em'}
+    Sent from 
+    = link_to "http://www.todopia.com", "http://www.todopia.com"
+

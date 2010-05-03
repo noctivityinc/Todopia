@@ -1,0 +1,21 @@
+- title "#{@user.login}'s Account"
+
+- content_for :toolbar do
+  = render :partial => "layouts/toolbar_non_todo"
+
+#user
+  #edit
+    #flash= render :partial => "layouts/flash"
+    - semantic_form_for @user do |f|
+      = error_messages_for 'user'
+      - f.inputs do
+        = "Username: <b>#{@user.login}"
+        = f.input :email, :label => 'Email'
+        = f.input :email_daily_summary, :label => 'Email daily summary' 
+        = f.input :email_summary_only_when_todos_due, :label => 'Only email daily summary if items are due or past due' 
+        
+      - f.buttons do
+        = f.commit_button 'Update'
+        
+      .reset_password
+        = link_to "Reset Password", send_reset_password_email_user_path(current_user)

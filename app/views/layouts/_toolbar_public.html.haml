@@ -1,0 +1,17 @@
+%table
+  %tr
+    %td.left
+      - if params[:controller] == 'public/users'
+        = link_to "Log In", login_path, :class => 'yellow-button'
+      - elsif params[:controller] == 'user_sessions'
+        = link_to "Sign Up", signup_path, :class => 'yellow-button'
+      - else
+        = link_to "Log In", login_path, :class => 'button'
+        = link_to "Sign Up", signup_path, :class => 'button'
+    %td.center
+      - if show_title?
+        %h1.screen_only
+          = yield(:title)
+        %h1.print_only
+          =h yield(:print_title) 
+    %td.right

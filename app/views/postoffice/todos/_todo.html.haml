@@ -1,0 +1,9 @@
+%tr
+  %td{:width => '20'}
+    = todo.waiting_since ? image_tag("icons/waiting.png", :title => "waiting", :style => 'width:16px') : image_tag("icons/checkbox_unchecked.png", :title => "checkbox", :style => 'width:16px')
+  %td
+    = todo.label
+  %td{:align => 'right', :style => 'font-size: .85em; color: gray'}
+    = "waiting since: #{todo.waiting_since.strftime('%m/%d/%Y')}" if todo.waiting_since
+  %td{:align => 'right', :style => "font-size: .85em; color: #{todo.due_date && todo.due_date >= Date.today ? 'red' : 'gray'}"}
+    = "due #{todo.due_date.strftime('%m/%d/%Y')}" if todo.due_date
