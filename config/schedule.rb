@@ -23,5 +23,5 @@ set :environment, Rails.env
 set :output, {:error => '~/cron_error.log', :standard => '~/cron.log'}
 
 every 6.hours do
-  runner "SendDailyEmails.process"
+  command 'bash -l -c "cd /home/todopia/current ; ./script/runner -e production \'SendDailyEmails.process\'"'
 end
