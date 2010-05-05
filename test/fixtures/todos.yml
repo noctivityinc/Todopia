@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100502203721
+# Schema version: 20100505003817
 #
 # Table name: todos
 #
@@ -15,6 +15,7 @@
 #  waiting_since    :datetime
 #  starts_at        :datetime
 #  reminder_sent_at :datetime
+#  highlight        :boolean
 #
 
 one:

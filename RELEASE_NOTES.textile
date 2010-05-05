@@ -1,5 +1,9 @@
 h1. Todopia Release Notes
 
+h3. 0.2.14
+* #! tag now highlights the todo
+* shift-enter saves a new/edited todo
+
 h3. 0.2.13 (hotfix)
 * Reenabled plain text email.  Appears to be an odd Gmail spam issue
 * Added link in daily summary to shutting off daily summary :)

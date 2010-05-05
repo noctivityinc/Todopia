@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100502203721
+# Schema version: 20100505003817
 #
 # Table name: todos
 #
@@ -15,6 +15,7 @@
 #  waiting_since    :datetime
 #  starts_at        :datetime
 #  reminder_sent_at :datetime
+#  highlight        :boolean
 #
 
 class Todo < ActiveRecord::Base
@@ -97,25 +98,31 @@ class Todo < ActiveRecord::Base
 
   def filter_plugins
     new_list = self.tag_string.split(',').map do |tag|
-      if %w{!}.include? tag[0]
+      tag.strip!
+      if %w{!}.include?(tag[0])
         tag[1..-1]
       else
         tag if !Chronic.parse(tag)
       end
-    end.join(',')
+    end.compact
+    new_list = new_list - ['#!'] # => filter out keywords that cause action which should not be tags
+    new_list.join(',')
   end
 
   def pre_tag_plugins
     return unless self.tag_string
 
-    self.starts_at = self.due_date = nil
+    self.starts_at = self.due_date = self.highlight = nil
+
     self.tag_string.split(',').each { |tag|
+      tag.strip!
       if !tag.scan(/^(start|begin)s?(\s[at|on])?\s(.*)\b/).empty?
         self.starts_at = Chronic.parse(tag)
       elsif Chronic.parse(tag)
         self.due_date = Chronic.parse(tag)
+      elsif tag.starts_with? '#'
+        tag[1] == '!' ? (self.highlight = true) : (self.priority = tag[1..-1])
       end
-      self.priority = tag[1..-1] if tag.starts_with? '#'
     }
 
     self.starts_at = self.due_date if self.starts_at && self.due_date && self.due_date < self.starts_at # => prevents setting a due date before the event starts
@@ -123,7 +130,7 @@ class Todo < ActiveRecord::Base
 
   def post_tag_plugins
     return unless self.tag_string
-    self.tag_string.downcase.split(',').each {|tag| self.user.tag_groups.create(:tag => tag[1..-1]) if tag.starts_with? '!' }
+    self.tag_string.downcase.split(',').each {|tag| tag.strip!; self.user.tag_groups.create(:tag => tag[1..-1]) if tag.starts_with? '!' }
   end
 
 
