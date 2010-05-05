@@ -1,5 +1,12 @@
 h1. Todopia Release Notes
 
+h3. 0.2.15 (hotfix)
+* Fixed order bug to ensure things are ordered by due date, then priority then position
+* Fixed blink bug to keep highlight if specified
+* Added the ability to mark an item as complete from HTML email (as well as link to todos)
+* Added highlight style to email todos
+* Hopefully fixed cronjob via whenever gem
+
 h3. 0.2.14
 * #! tag now highlights the todo
 * shift-enter saves a new/edited todo

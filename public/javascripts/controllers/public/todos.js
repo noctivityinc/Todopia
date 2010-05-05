@@ -87,12 +87,12 @@ $(function(){
     return false;
   })
   
-  $('.blink').livequery(function(){
+  $('.blink:not(".highlight")').livequery(function(){
     clog($('body').data('blinked_overdue'))
-    if ($('body').data('blinked_overdue')!=true) {
+    // if ($('body').data('blinked_overdue')!=true) {
       $(this).animate( { backgroundColor: '#FFFF99' }, 1000).animate( { backgroundColor: 'white' }, 1000);
       $('body').data('blinked_overdue',true)
-    }
+    // }
   })
   
   if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }

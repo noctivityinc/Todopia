@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :users, :controller => 'public/users', :shallow => true, :member => {:email => :get, :send_reset_password_email => :get} do |user|
-    user.resources :todos, :controller => 'public/todos', :member => { :delete => :get, :uncheck => :get, :wait => :get}, :collection => {:reload  => :get, :filter => :get, :move => :post, :reorder => :post}  do |todo|
+    user.resources :todos, :controller => 'public/todos', :member => { :delete => :get, :check => :get, :uncheck => :get, :wait => :get}, :collection => {:reload  => :get, :filter => :get, :move => :post, :reorder => :post}  do |todo|
       todo.resources :histories, :controller => 'public/histories'
       todo.resources :notes, :controller => 'public/notes', :member => { :delete => :get }, :collection => {:list  => :get}
     end

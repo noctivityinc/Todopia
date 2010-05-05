@@ -1,5 +1,9 @@
 %div{:style => 'font-family: Verdana, Helvetica, Arial'}
-  %h1= "#{'Overdue ' if @user.email_summary_only_when_todos_due}Todopia todos for #{@user.login} (#{Date.today.to_s(:long)})"
+  %h1
+    = 'Overdue' if @user.email_summary_only_when_todos_due
+    Todopia todos for 
+    = link_to @user.login, user_todos_url(@user)
+    = "(#{Date.today.to_s(:long)})"
 
   - if @todos.active
     - @user.tag_groups.ordered.each do |tg|

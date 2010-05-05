@@ -1,6 +1,6 @@
-%tr
+%tr{:style => "#{'background: yellow' if todo.highlight}"}
   %td{:width => '20'}
-    = todo.waiting_since ? image_tag("icons/waiting.png", :title => "waiting", :style => 'width:16px') : image_tag("icons/checkbox_unchecked.png", :title => "checkbox", :style => 'width:16px')
+    = link_to (todo.waiting_since ? image_tag("icons/waiting.png", :title => "waiting", :style => 'width:16px', :border => '0') : image_tag("icons/checkbox_unchecked.png", :title => "checkbox", :style => 'width:16px', :border => '0')), check_todo_url(todo), :title => 'mark as complete' 
   %td
     = todo.label
   %td{:align => 'right', :style => 'font-size: .85em; color: gray'}
