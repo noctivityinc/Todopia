@@ -5,6 +5,7 @@ class Public::TodosController < PublicController
 
   def index
     load_todos
+    render :index
   end
 
   def show
@@ -38,6 +39,15 @@ class Public::TodosController < PublicController
   def update
     @todo.completed_by = current_user
     @todo.update_attributes(params[:todo]) ? render_list : render_list(500)
+  end
+
+  def check
+    if @todo.update_attributes(:completed_at => Time.now, :completed_by  => current_user)
+      flash.notice = "Todo marked as complete."
+    else
+      flash.error = "There was an error marking this todo as complete.  Please try again."
+    end
+    redirect_to user_todos_path(current_user)
   end
 
   def uncheck
@@ -87,8 +97,9 @@ class Public::TodosController < PublicController
   end
 
   def get_todo
-    @todo = Todo.find(params[:id])
-    @user = @todo.user
+    @todo = Todo.find_by_id(params[:id]) 
+    @user = @todo.user if @todo
+    redirect_to user_todos_path(current_user) unless @todo # => in case a todo was deleted and tries to be accessed
   end
 
   def load_todos
@@ -96,7 +107,7 @@ class Public::TodosController < PublicController
     @todos = @user.todos.not_complete
     @completed = @user.todos.complete
   end
-  
+
   def setup_tags
     @todo.tag_list.push(@todo.due_date.strftime('%m/%d/%Y')) if @todo.due_date
     @todo.tag_list.push("starts #{@todo.starts_at.strftime('%m/%d/%Y')}") if @todo.starts_at

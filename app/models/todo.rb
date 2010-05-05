@@ -38,7 +38,9 @@ class Todo < ActiveRecord::Base
   named_scope :complete, :conditions => ['completed_at IS NOT ?', nil], :order => 'completed_at DESC'
   named_scope :scheduled, :conditions => ['starts_at IS NOT ?', nil]
   named_scope :active, :conditions => ['starts_at IS ? OR starts_at <= ?', nil, Date.today]
-
+  named_scope :ordered, :order => 'due_date ASC, priority ASC, position ASC'
+  named_scope :ordered_by, lambda {|what| {:order => what}}
+  
 
   before_create :set_priority
   before_save :set_completed_by_id, :tag_string_to_tag_list, :pre_tag_plugins
