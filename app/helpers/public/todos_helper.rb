@@ -20,6 +20,7 @@ module Public::TodosHelper
   def todo_css(todo)
     (css ||= []) << 'waiting' if todo.waiting_since
     (css ||= []) << 'blink' if todo.due_date && todo.due_date <= Date.today && !todo.waiting_since
+    (css ||= []) << 'highlight' if todo.highlight 
     css.join(' ') if css
   end
 

@@ -24,9 +24,7 @@ class Public::TodosController < PublicController
   end
 
   def edit
-    @todo.tag_list.push(@todo.due_date.strftime('%m/%d/%Y')) if @todo.due_date
-    @todo.tag_list.push("starts #{@todo.starts_at.strftime('%m/%d/%Y')}") if @todo.starts_at
-    @todo.tag_string = @todo.tag_list
+    setup_tags
     respond_to do |format|
       format.js { render :partial => 'form' }
       format.html { render :action => 'edit' }
@@ -97,6 +95,13 @@ class Public::TodosController < PublicController
     @todo = @user.todos.new
     @todos = @user.todos.not_complete
     @completed = @user.todos.complete
+  end
+  
+  def setup_tags
+    @todo.tag_list.push(@todo.due_date.strftime('%m/%d/%Y')) if @todo.due_date
+    @todo.tag_list.push("starts #{@todo.starts_at.strftime('%m/%d/%Y')}") if @todo.starts_at
+    @todo.tag_list.push('#!') if @todo.highlight
+    @todo.tag_string = @todo.tag_list
   end
 
   def render_list(status=200)

@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100503113238
+# Schema version: 20100505003817
 #
 # Table name: users
 #
@@ -21,7 +21,7 @@
 #  created_at                        :datetime
 #  updated_at                        :datetime
 #  invite_id                         :integer
-#  email_daily_summary               :boolean
+#  email_daily_summary               :boolean         default(TRUE)
 #  daily_summary_sent_at             :datetime
 #  email_summary_only_when_todos_due :boolean
 #

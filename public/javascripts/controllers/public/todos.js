@@ -217,6 +217,7 @@ function bind_keyboard() {
   $(document).bind('keydown', 'f', function(){ $('body').data('position',0); $('.todo_checkbox:first').focus(); return false; });
   $(document).bind('keydown', 'ctrl+n', function(){ new_todo(); return false; });
   $(document).bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit(); return false; });
+  $(document).bind('keydown', 'shift+return', function(){ $('#new').find('form').submit(); return false; });
   $('body:not(#new)').bind('keydown', 'c', function(){ new_todo(); return false; });
 }
 
@@ -225,6 +226,7 @@ function bind_add_edit_keyboard() {
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+n', function(){ new_todo();     return false; });
   $('input:not(.todo_checkbox)').bind('keydown', 'ctrl+s', function(){ $('#new_todo').submit();     return false; });
   $('input').bind('keydown','esc', function(){ toggle_todo_form(); return false; })
+  $('input').bind('keydown', 'shift+return', function(){ $('#new').find('form').submit(); return false; });
 }
 
 function setup_tooltips(){
