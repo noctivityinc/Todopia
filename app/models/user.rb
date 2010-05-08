@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
     def filed; first.user.tag_groups.empty? ? nil : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :any => true); end
   end
 
-  named_scope :wanting_daily_emails, :conditions => ['(email_daily_summary = ? OR email_summary_only_when_todos_due = ?) AND (daily_summary_sent_at < ? OR daily_summary_sent_at IS ? )', true, true, 1.day.ago.to_datetime, nil]
+  named_scope :wanting_daily_emails, :conditions => ['(email_daily_summary = ? OR email_summary_only_when_todos_due = ?) AND (daily_summary_sent_at < ? OR daily_summary_sent_at IS ? )', true, true, 12.hours.ago.to_datetime, nil] # => changed to 12 hours instead of 24 as I will only call once a day.
 
   before_create :reset_perishable_token
 
