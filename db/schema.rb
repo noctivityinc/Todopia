@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100505003817) do
+ActiveRecord::Schema.define(:version => 20100505212803) do
 
   create_table "histories", :force => true do |t|
     t.integer  "todo_id"

@@ -22,6 +22,6 @@ env :MAILTO, 'jlippiner@gmail.com'
 set :environment, Rails.env
 set :output, {:error => '~/cron_error.log', :standard => '~/cron.log'}
 
-every 6.hours do
+every 1.day, :at => '6:00 am' do
   command 'bash -l -c "cd /home/todopia/current ; ./script/runner -e production \'SendDailyEmails.process\'"'
 end
