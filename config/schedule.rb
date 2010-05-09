@@ -22,6 +22,7 @@ env :MAILTO, 'jlippiner@gmail.com'
 set :environment, Rails.env
 set :output, {:error => '~/cron_error.log', :standard => '~/cron.log'}
 
-every 1.day, :at => '6:00 am' do
-  command 'bash -l -c "cd /home/todopia/current ; ./script/runner -e production \'SendDailyEmails.process\'"'
+# run at 6am EST (3am PST).  Servers are in PST
+every 1.day, :at => '3:00 am' do
+  command 'bash -l -c "cd /home/todopia/current ; ./script/runner -e production \'a = SendDailyEmails.new; a.process\'"'
 end
