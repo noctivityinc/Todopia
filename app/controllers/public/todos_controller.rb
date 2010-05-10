@@ -109,7 +109,7 @@ class Public::TodosController < PublicController
   end
 
   def setup_tags
-    @todo.tag_list.push(@todo.due_date.strftime('%m/%d/%Y')) if @todo.due_date
+    @todo.tag_list.push("due #{@todo.due_date.strftime('%m/%d/%Y')}") if @todo.due_date
     @todo.tag_list.push("starts #{@todo.starts_at.strftime('%m/%d/%Y')}") if @todo.starts_at
     @todo.tag_list.push('#!') if @todo.highlight
     @todo.tag_string = @todo.tag_list

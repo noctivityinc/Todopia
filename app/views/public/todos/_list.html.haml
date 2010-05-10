@@ -24,4 +24,4 @@
 - unless @completed.blank?
   #completed
     %h2= link_to "Completed", '#', :id => 'complete_toggle' 
-    .list= render @completed
+    .list{:style => "display: #{cookies[:complete_div_visible] == 'false' ? 'none' : 'block'}"}= render @completed

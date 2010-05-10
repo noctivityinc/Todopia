@@ -1,5 +1,8 @@
 h1. Todopia Release Notes
 
+h3. 0.2.18 (change)
+* Now need to specify the word 'due' before tagging something with a due date.  thanks Chronic
+
 h3. 0.2.15 (hotfix)
 * Fixed order bug to ensure things are ordered by due date, then priority then position
 * Fixed blink bug to keep highlight if specified

@@ -103,8 +103,8 @@ class Todo < ActiveRecord::Base
       tag.strip!
       if %w{!}.include?(tag[0])
         tag[1..-1]
-      else
-        tag if !Chronic.parse(tag)
+      elsif !(tag =~ /^(due|by)\s(.*)/i)
+        tag
       end
     end.compact
     new_list = new_list - ['#!'] # => filter out keywords that cause action which should not be tags
@@ -120,6 +120,8 @@ class Todo < ActiveRecord::Base
       tag.strip!
       if !tag.scan(/^(start|begin)s?(\s[at|on])?\s(.*)\b/).empty?
         self.starts_at = Chronic.parse(tag)
+      elsif tag =~ /^(due|by)\s(.*)/i
+        self.due_date = Chronic.parse(tag.match(/^(due|by)\s(.*)/i)[2])
       elsif Chronic.parse(tag)
         self.due_date = Chronic.parse(tag)
       elsif tag.starts_with? '#'
