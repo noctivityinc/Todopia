@@ -1043,65 +1043,70 @@
   height: 1.5em;
   line-height: 1.2em;
 }
-/* line 126, ../../../app/stylesheets/partials/_todos.sass */
+/* line 125, ../../../app/stylesheets/partials/_todos.sass */
+#todo #index #completed {
+  margin-top: 2em;
+  border-top: 2px ridge #CCCCCC;
+}
+/* line 128, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 {
   font-size: 1em;
   margin: 1em 0em .25em 0em;
 }
-/* line 130, ../../../app/stylesheets/partials/_todos.sass */
+/* line 132, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 a {
-  color: black;
+  color: #666;
 }
-/* line 133, ../../../app/stylesheets/partials/_todos.sass */
+/* line 135, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed {
   font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
 }
-/* line 135, ../../../app/stylesheets/partials/_todos.sass */
+/* line 137, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .completed_at, #todo #index #completed .completed .completed_by {
   color: gray;
 }
-/* line 139, ../../../app/stylesheets/partials/_todos.sass */
+/* line 141, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed .label a {
   text-decoration: none;
   color: black;
 }
-/* line 143, ../../../app/stylesheets/partials/_todos.sass */
+/* line 145, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs {
   font-size: .90em;
   color: #666;
   text-align: center;
   margin-top: 6em;
 }
-/* line 148, ../../../app/stylesheets/partials/_todos.sass */
+/* line 150, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs .sc {
   display: inline;
   padding-right: 1em;
 }
-/* line 152, ../../../app/stylesheets/partials/_todos.sass */
+/* line 154, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs .sc a {
   color: #333;
 }
-/* line 155, ../../../app/stylesheets/partials/_todos.sass */
+/* line 157, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs .sc a[rel=toggle] {
   color: blue;
 }
-/* line 158, ../../../app/stylesheets/partials/_todos.sass */
+/* line 160, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs #more_keyboard {
   margin-top: .5em;
 }
-/* line 161, ../../../app/stylesheets/partials/_todos.sass */
+/* line 163, ../../../app/stylesheets/partials/_todos.sass */
 #todo .contextMenu {
   margin: 1em;
   float: left;
 }
-/* line 164, ../../../app/stylesheets/partials/_todos.sass */
+/* line 166, ../../../app/stylesheets/partials/_todos.sass */
 #todo .contextMenu ul {
   padding: 0px;
   margin: 1em 1em;
 }
-/* line 167, ../../../app/stylesheets/partials/_todos.sass */
+/* line 169, ../../../app/stylesheets/partials/_todos.sass */
 #todo .contextMenu li {
   font-size: 11px;
   width: 99%;
