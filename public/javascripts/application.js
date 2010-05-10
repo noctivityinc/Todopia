@@ -61,7 +61,6 @@ function setup_ajax(){
       'beforeSend': function(xhr) {
           xhr.setRequestHeader("Accept", "text/javascript")
           $('.spinner').fadeIn(200);
-          // $('#todo').find('#index').fadeOut(2000);
       },
       dataType: 'html',
       complete: function(XMLHttpRequest, textStatus) {
@@ -74,7 +73,6 @@ function setup_ajax(){
 }
 
 function get_checklist() {
-  clog('get_checklist')
   $.ajax({url: $('#urls').attr('url:todo_reload'), 
       success: function(todoResponse) { reload_checklist(todoResponse); }
     })
@@ -82,7 +80,6 @@ function get_checklist() {
 
 function reload_checklist(responseText) {
   $('#todo').find('#index').html(responseText).fadeIn(200, function(){
-    clog('reload cl')
     setup_ajax();
     bind_tag_group();
     bind_checklist_keyboard();
@@ -119,7 +116,7 @@ function bind_checklist_keyboard(){
   
   $('.todo').bind('keydown', 'w', function(){
     url = $(this).find('.wait_todo').attr('rel');
-    toggle_waiting(url)
+    toggle_waiting(this, url)
   });
 
   $('.todo_checkbox').bind('keydown', '#', function(){ 

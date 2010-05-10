@@ -1,13 +1,11 @@
 $(function(){
-  complete_todo_form_options = { 
+  submit_todo_form_options = { 
           clearForm: true,
           beforeSubmit: function(formData, jqForm, options){
-           clog('submitting')
            jqForm.find('.col').css('font-weight','bold').css('background', '#FFFF66').fadeOut('slow');
           },
           success: function(responseText){
             reload_checklist(responseText);
-            // $('.edit_todo:eq('+ndx+')').find('.todo_checkbox').focus()
           }
       }
   
@@ -34,7 +32,7 @@ $(function(){
     
   $('.wait_todo').livequery('click',function(){
     url = $(this).attr('rel');
-    toggle_waiting(url)
+    toggle_waiting(this, url)
   })
   
   $('.delete_todo').livequery('click',function(){
@@ -88,23 +86,20 @@ $(function(){
   })
   
   $('.blink:not(".highlight")').livequery(function(){
-    clog($('body').data('blinked_overdue'))
-    // if ($('body').data('blinked_overdue')!=true) {
+    if ($('body').data('blinked_overdue')!=true) {
       $(this).animate( { backgroundColor: '#FFFF99' }, 1000).animate( { backgroundColor: 'white' }, 1000);
       $('body').data('blinked_overdue',true)
-    // }
+    }
   })
   
   if ($.cookie('complete_div_visible')=='false') { $('#completed .list').hide() } else { $('#completed .list').show() }
   
   $('.todo_checkbox').live('click',function(){
-    clog('click submit')
-    $(this).closest('form').ajaxSubmit(complete_todo_form_options); 
+    $(this).closest('form').ajaxSubmit(submit_todo_form_options); 
   })
   
   $('.complete_todo_form').livequery('submit', function(){
-    clog('submit submit')
-   $(this).ajaxSubmit(complete_todo_form_options); 
+   $(this).ajaxSubmit(submit_todo_form_options); 
    return false;
   })
   
@@ -146,7 +141,8 @@ function edit_todo(el){
   }})
 }
 
-function toggle_waiting(url){
+function toggle_waiting(el, url){
+  $(el).closest('.todo').fadeOut('fast');
   $.ajax({url: url, success: function(responseText){
      reload_checklist(responseText);
      return false
