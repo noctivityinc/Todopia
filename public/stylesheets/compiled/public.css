@@ -1,3 +1,86 @@
+/* line 4, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 6, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 16, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+/* line 45, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
 /* line 14, ../../../app/stylesheets/partials/_base.sass */
 .right {
   text-align: right;
@@ -27,7 +110,7 @@
 .icon {
   width: 10px;
   height: 10px;
-  margin: .05em;
+  margin: 0.05em;
 }
 
 /* line 16, ../../../app/stylesheets/partials/_boxes.sass */
@@ -35,7 +118,7 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: #c4aa5d;
 }
 
@@ -44,9 +127,9 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: #f0f0f0;
-  padding: .25em;
+  padding: 0.25em;
 }
 
 /* line 25, ../../../app/stylesheets/partials/_boxes.sass */
@@ -54,13 +137,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: gray;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 28, ../../../app/stylesheets/partials/_boxes.sass */
@@ -68,13 +151,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: yellow;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: black;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 31, ../../../app/stylesheets/partials/_boxes.sass */
@@ -82,13 +165,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: green;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 34, ../../../app/stylesheets/partials/_boxes.sass */
@@ -96,13 +179,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: red;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 37, ../../../app/stylesheets/partials/_boxes.sass */
@@ -110,13 +193,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: yellow;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: black;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 141, ../../../app/stylesheets/partials/_formtastic_base.sass */
@@ -368,13 +451,13 @@
 }
 /* line 13, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form, #user #edit form, #user_session #new form, #user_session #edit form, #reset_password #new form, #reset_password #edit form {
-  margin: .1em;
-  background: #eee;
-  padding: .50em .50em;
+  margin: 0.1em;
+  background: #eeeeee;
+  padding: 0.5em 0.5em;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
 }
 /* line 20, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form li, #user #edit form li, #user_session #new form li, #user_session #edit form li, #reset_password #new form li, #reset_password #edit form li {
@@ -394,7 +477,7 @@
 }
 /* line 37, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form legend, #user #new form label, #user #edit form legend, #user #edit form label, #user_session #new form legend, #user_session #new form label, #user_session #edit form legend, #user_session #edit form label, #reset_password #new form legend, #reset_password #new form label, #reset_password #edit form legend, #reset_password #edit form label {
-  color: #333;
+  color: #333333;
 }
 /* line 40, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form label, #user #new form .label, #user #edit form label, #user #edit form .label, #user_session #new form label, #user_session #new form .label, #user_session #edit form label, #user_session #edit form .label, #reset_password #new form label, #reset_password #new form .label, #reset_password #edit form label, #reset_password #edit form .label {
@@ -402,7 +485,7 @@
 }
 /* line 43, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form label abbr, #user #new form .label abbr, #user #edit form label abbr, #user #edit form .label abbr, #user_session #new form label abbr, #user_session #new form .label abbr, #user_session #edit form label abbr, #user_session #edit form .label abbr, #reset_password #new form label abbr, #reset_password #new form .label abbr, #reset_password #edit form label abbr, #reset_password #edit form .label abbr {
-  color: #f00;
+  color: red;
 }
 /* line 45, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form label, #user #edit form label, #user_session #new form label, #user_session #edit form label, #reset_password #new form label, #reset_password #edit form label {
@@ -429,7 +512,7 @@
 }
 /* line 63, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form textarea, #user #edit form textarea, #user_session #new form textarea, #user_session #edit form textarea, #reset_password #new form textarea, #reset_password #edit form textarea {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   padding: 6px 8px;
   line-height: 100%;
 }
@@ -440,7 +523,7 @@
 }
 /* line 72, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input.text, #user #new form input.title, #user #new form input[type=text], #user #new form input[type=password], #user #edit form input.text, #user #edit form input.title, #user #edit form input[type=text], #user #edit form input[type=password], #user_session #new form input.text, #user_session #new form input.title, #user_session #new form input[type=text], #user_session #new form input[type=password], #user_session #edit form input.text, #user_session #edit form input.title, #user_session #edit form input[type=text], #user_session #edit form input[type=password], #reset_password #new form input.text, #reset_password #new form input.title, #reset_password #new form input[type=text], #reset_password #new form input[type=password], #reset_password #edit form input.text, #reset_password #edit form input.title, #reset_password #edit form input[type=text], #reset_password #edit form input[type=password] {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   padding: 6px 8px;
   line-height: 100%;
 }
@@ -449,8 +532,7 @@
   font-size: 1.5em;
 }
 /* line 79, ../../../app/stylesheets/partials/_skintastic.sass */
-#user #new form input[type=checkbox], #user #new form input.checkbox, #user #edit form input[type=checkbox], #user #edit form input.checkbox, #user_session #new form input[type=checkbox], #user_session #new form input.checkbox, #user_session #edit form input[type=checkbox], #user_session #edit form input.checkbox, #reset_password #new form input[type=checkbox], #reset_password #new form input.checkbox, #reset_password #edit form input[type=checkbox], #reset_password #edit form input.checkbox,
-#user #new form input[type=radio], #user #new form input.radio, #user #edit form input[type=radio], #user #edit form input.radio, #user_session #new form input[type=radio], #user_session #new form input.radio, #user_session #edit form input[type=radio], #user_session #edit form input.radio, #reset_password #new form input[type=radio], #reset_password #new form input.radio, #reset_password #edit form input[type=radio], #reset_password #edit form input.radio {
+#user #new form input[type=checkbox], #user #new form input.checkbox, #user #new form input[type=radio], #user #new form input.radio, #user #edit form input[type=checkbox], #user #edit form input.checkbox, #user #edit form input[type=radio], #user #edit form input.radio, #user_session #new form input[type=checkbox], #user_session #new form input.checkbox, #user_session #new form input[type=radio], #user_session #new form input.radio, #user_session #edit form input[type=checkbox], #user_session #edit form input.checkbox, #user_session #edit form input[type=radio], #user_session #edit form input.radio, #reset_password #new form input[type=checkbox], #reset_password #new form input.checkbox, #reset_password #new form input[type=radio], #reset_password #new form input.radio, #reset_password #edit form input[type=checkbox], #reset_password #edit form input.checkbox, #reset_password #edit form input[type=radio], #reset_password #edit form input.radio {
   position: relative;
   top: 0em;
 }
@@ -460,7 +542,7 @@
 }
 /* line 86, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form input.text:focus, #user #new form input.title:focus, #user #new form input[type=text]:focus, #user #new form input[type=password]:focus, #user #edit form input.text:focus, #user #edit form input.title:focus, #user #edit form input[type=text]:focus, #user #edit form input[type=password]:focus, #user_session #new form input.text:focus, #user_session #new form input.title:focus, #user_session #new form input[type=text]:focus, #user_session #new form input[type=password]:focus, #user_session #edit form input.text:focus, #user_session #edit form input.title:focus, #user_session #edit form input[type=text]:focus, #user_session #edit form input[type=password]:focus, #reset_password #new form input.text:focus, #reset_password #new form input.title:focus, #reset_password #new form input[type=text]:focus, #reset_password #new form input[type=password]:focus, #reset_password #edit form input.text:focus, #reset_password #edit form input.title:focus, #reset_password #edit form input[type=text]:focus, #reset_password #edit form input[type=password]:focus {
-  background: #FFFFCC;
+  background: #ffffcc;
 }
 /* line 92, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .date li, #user #new form .time li, #user #new form .datetime li, #user #edit form .date li, #user #edit form .time li, #user #edit form .datetime li, #user_session #new form .date li, #user_session #new form .time li, #user_session #new form .datetime li, #user_session #edit form .date li, #user_session #edit form .time li, #user_session #edit form .datetime li, #reset_password #new form .date li, #reset_password #new form .time li, #reset_password #new form .datetime li, #reset_password #edit form .date li, #reset_password #edit form .time li, #reset_password #edit form .datetime li {
@@ -476,20 +558,20 @@
 }
 /* line 105, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .required input, #user #new form .required textarea, #user #new form .required select, #user #edit form .required input, #user #edit form .required textarea, #user #edit form .required select, #user_session #new form .required input, #user_session #new form .required textarea, #user_session #new form .required select, #user_session #edit form .required input, #user_session #edit form .required textarea, #user_session #edit form .required select, #reset_password #new form .required input, #reset_password #new form .required textarea, #reset_password #new form .required select, #reset_password #edit form .required input, #reset_password #edit form .required textarea, #reset_password #edit form .required select {
-  background-color: #fff;
+  background-color: white;
 }
 /* line 108, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .error input, #user #new form .error textarea, #user #new form .error select, #user #edit form .error input, #user #edit form .error textarea, #user #edit form .error select, #user_session #new form .error input, #user_session #new form .error textarea, #user_session #new form .error select, #user_session #edit form .error input, #user_session #edit form .error textarea, #user_session #edit form .error select, #reset_password #new form .error input, #reset_password #new form .error textarea, #reset_password #new form .error select, #reset_password #edit form .error input, #reset_password #edit form .error textarea, #reset_password #edit form .error select {
-  background-color: #fcc;
-  border: 1px solid #f66;
+  background-color: #ffcccc;
+  border: 1px solid #ff6666;
 }
 /* line 112, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .optional input, #user #new form .optional textarea, #user #new form .optional select, #user #edit form .optional input, #user #edit form .optional textarea, #user #edit form .optional select, #user_session #new form .optional input, #user_session #new form .optional textarea, #user_session #new form .optional select, #user_session #edit form .optional input, #user_session #edit form .optional textarea, #user_session #edit form .optional select, #reset_password #new form .optional input, #reset_password #new form .optional textarea, #reset_password #new form .optional select, #reset_password #edit form .optional input, #reset_password #edit form .optional textarea, #reset_password #edit form .optional select {
-  background-color: #fff;
+  background-color: white;
 }
 /* line 114, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .errors, #user #edit form .errors, #user_session #new form .errors, #user_session #edit form .errors, #reset_password #new form .errors, #reset_password #edit form .errors {
-  color: #a00;
+  color: #aa0000;
 }
 /* line 116, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .errors li, #user #edit form .errors li, #user_session #new form .errors li, #user_session #edit form .errors li, #reset_password #new form .errors li, #reset_password #edit form .errors li {
@@ -497,17 +579,17 @@
 }
 /* line 118, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form p.inline-errors, #user #edit form p.inline-errors, #user_session #new form p.inline-errors, #user_session #edit form p.inline-errors, #reset_password #new form p.inline-errors, #reset_password #edit form p.inline-errors {
-  color: #f00;
+  color: red;
 }
 /* line 120, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form p.inline-hints, #user #edit form p.inline-hints, #user_session #new form p.inline-hints, #user_session #edit form p.inline-hints, #reset_password #new form p.inline-hints, #reset_password #edit form p.inline-hints {
-  color: #777;
+  color: #777777;
 }
 /* line 123, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .fieldWithErrors, #user #edit form .fieldWithErrors, #user_session #new form .fieldWithErrors, #user_session #edit form .fieldWithErrors, #reset_password #new form .fieldWithErrors, #reset_password #edit form .fieldWithErrors {
-  background: #CC6666;
-  padding: .75em .2em;
-  background: #CCCCCC;
+  background: #cc6666;
+  padding: 0.75em 0.2em;
+  background: #cccccc;
 }
 /* line 128, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form .fieldWithErrors input, #user #edit form .fieldWithErrors input, #user_session #new form .fieldWithErrors input, #user_session #edit form .fieldWithErrors input, #reset_password #new form .fieldWithErrors input, #reset_password #edit form .fieldWithErrors input {
@@ -516,7 +598,7 @@
 /* line 131, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation, #user #edit form #errorExplanation, #user_session #new form #errorExplanation, #user_session #edit form #errorExplanation, #reset_password #new form #errorExplanation, #reset_password #edit form #errorExplanation {
   width: 90%;
-  border: 2px solid #CF0000;
+  border: 2px solid #cf0000;
   padding: 0;
   padding-bottom: 12px;
   margin-bottom: 20px;
@@ -529,12 +611,12 @@
   margin: 0;
   font-weight: bold;
   font-size: 12px;
-  background-color: #c00;
-  color: #fff;
+  background-color: #cc0000;
+  color: white;
 }
 /* line 147, ../../../app/stylesheets/partials/_skintastic.sass */
 #user #new form #errorExplanation p, #user #edit form #errorExplanation p, #user_session #new form #errorExplanation p, #user_session #edit form #errorExplanation p, #reset_password #new form #errorExplanation p, #reset_password #edit form #errorExplanation p {
-  color: #333;
+  color: #333333;
   margin-bottom: 0;
   padding: 8px;
 }
@@ -557,13 +639,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: green;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
   text-align: right;
 }
 
@@ -633,7 +715,7 @@
   width: 7px;
   height: 7px;
   font-size: 1px;
-  background: url('/images/close.gif');
+  background: url("/images/close.gif");
 }
 /* line 53, ../../../app/stylesheets/partials/_textbox.sass */
 .textboxlist-bit-box-deletebutton:hover {
@@ -667,7 +749,7 @@
 /* line 4, ../../../app/stylesheets/partials/_textbox.autocomplete.sass */
 .textboxlist-autocomplete-placeholder, .textboxlist-autocomplete-results {
   opacity: 0.9;
-  filter: alpha(opacity = 90);
+  filter: alpha(opacity=90);
   background: #eeeeee;
   -webkit-box-shadow: 0 3px 3px #cccccc;
   -moz-box-shadow: 0 3px 3px #cccccc;
@@ -831,7 +913,7 @@
 }
 /* line 22, ../../../app/stylesheets/partials/_slidebox.sass */
 .slide-panel-content table {
-  margin: .5em auto;
+  margin: 0.5em auto;
   width: 95%;
 }
 /* line 26, ../../../app/stylesheets/partials/_slidebox.sass */
@@ -889,26 +971,26 @@
 }
 /* line 6, ../../../app/stylesheets/partials/_todos.sass */
 #todo #new p {
-  margin: .15em;
-  padding: .15em;
+  margin: 0.15em;
+  padding: 0.15em;
 }
 /* line 12, ../../../app/stylesheets/partials/_todos.sass */
 #todo #new form input.text, #todo #new form input.title, #todo #new form input[type=text], #todo #new form input[type=password] {
   width: 90%;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   padding: 6px 8px;
   line-height: 100%;
 }
 /* line 18, ../../../app/stylesheets/partials/_todos.sass */
 #todo #new form .fieldWithErrors {
-  padding: .8em;
+  padding: 0.8em;
   margin-bottom: 1em;
   border: 2px solid #dddddd;
   background: #fbe3e4;
   color: #8a1f11;
   border-color: #fbc2c4;
 }
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.0.rc1/frameworks/blueprint/stylesheets/blueprint/_interaction.sass */
+/* line 29, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 #todo #new form .fieldWithErrors a {
   color: #8a1f11;
 }
@@ -930,7 +1012,7 @@
 /* line 34, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete h2 {
   font-size: 1.15em;
-  margin: 1em 0em .25em 0em;
+  margin: 1em 0em 0.25em 0em;
 }
 /* line 38, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete h2 a {
@@ -942,17 +1024,17 @@
 }
 /* line 44, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo.waiting {
-  color: #666;
+  color: #666666;
 }
 /* line 47, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo.waiting .wait_todo {
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
 }
 /* line 50, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo.waiting a {
-  color: #666;
+  color: #666666;
 }
 /* line 53, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo.highlight {
@@ -1003,10 +1085,10 @@
 #todo #index #not_complete .todo #left_pane .col_tags .tags .tag {
   display: inline;
   float: left;
-  font-size: .90em;
+  font-size: 0.9em;
   color: #660066;
   text-decoration: none;
-  padding: .25em 1em 0em .50em;
+  padding: 0.25em 1em 0em 0.5em;
   margin: 0em;
   cursor: pointer;
 }
@@ -1031,8 +1113,8 @@
 }
 /* line 113, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo #right_pane .due_date, #todo #index #not_complete .todo #right_pane .scheduled_date {
-  font-size: .90em;
-  color: #666;
+  font-size: 0.9em;
+  color: #666666;
 }
 /* line 117, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #not_complete .todo #right_pane .due_date.past_due, #todo #index #not_complete .todo #right_pane .scheduled_date.past_due {
@@ -1046,20 +1128,20 @@
 /* line 125, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed {
   margin-top: 2em;
-  border-top: 2px ridge #CCCCCC;
+  border-top: 2px ridge #cccccc;
 }
 /* line 128, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 {
   font-size: 1em;
-  margin: 1em 0em .25em 0em;
+  margin: 1em 0em 0.25em 0em;
 }
 /* line 132, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed h2 a {
-  color: #666;
+  color: #666666;
 }
 /* line 135, ../../../app/stylesheets/partials/_todos.sass */
 #todo #index #completed .completed {
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
 }
@@ -1074,39 +1156,44 @@
 }
 /* line 145, ../../../app/stylesheets/partials/_todos.sass */
 #todo #docs {
-  font-size: .90em;
-  color: #666;
+  font-size: 0.9em;
+  color: #666666;
   text-align: center;
   margin-top: 6em;
 }
-/* line 150, ../../../app/stylesheets/partials/_todos.sass */
-#todo #docs .sc {
-  display: inline;
-  padding-right: 1em;
+/* line 151, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .section {
+  margin: 1.5em 0em;
 }
 /* line 154, ../../../app/stylesheets/partials/_todos.sass */
-#todo #docs .sc a {
-  color: #333;
+#todo #docs .section .sc {
+  display: inline;
+  padding-right: 1em;
+  padding-top: 0.5em;
 }
-/* line 157, ../../../app/stylesheets/partials/_todos.sass */
-#todo #docs .sc a[rel=toggle] {
+/* line 159, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .section .sc a {
+  color: #333333;
+}
+/* line 162, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .section .sc a[rel=toggle] {
   color: blue;
 }
-/* line 160, ../../../app/stylesheets/partials/_todos.sass */
-#todo #docs #more_keyboard {
-  margin-top: .5em;
+/* line 165, ../../../app/stylesheets/partials/_todos.sass */
+#todo #docs .section #more_keyboard {
+  margin-top: 0.5em;
 }
-/* line 163, ../../../app/stylesheets/partials/_todos.sass */
+/* line 168, ../../../app/stylesheets/partials/_todos.sass */
 #todo .contextMenu {
   margin: 1em;
   float: left;
 }
-/* line 166, ../../../app/stylesheets/partials/_todos.sass */
+/* line 171, ../../../app/stylesheets/partials/_todos.sass */
 #todo .contextMenu ul {
   padding: 0px;
   margin: 1em 1em;
 }
-/* line 169, ../../../app/stylesheets/partials/_todos.sass */
+/* line 174, ../../../app/stylesheets/partials/_todos.sass */
 #todo .contextMenu li {
   font-size: 11px;
   width: 99%;
@@ -1127,11 +1214,11 @@
 }
 /* line 11, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .row .created_at, #notes #index .note .row .user, #notes #list .note .row .created_at, #notes #list .note .row .user {
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
   color: gray;
-  font-size: .90em;
+  font-size: 0.9em;
   display: inline;
   float: left;
 }
@@ -1148,7 +1235,7 @@
 }
 /* line 25, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .body, #notes #list .note .body {
-  padding: .5em;
+  padding: 0.5em;
 }
 /* line 29, ../../../app/stylesheets/partials/_notes.sass */
 #notes #list .note {
@@ -1161,10 +1248,10 @@
 #history {
   overflow: auto;
   height: 8em;
-  font-size: .90em;
+  font-size: 0.9em;
   margin-top: 1em;
   border-top: 1px solid gray;
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 /* line 9, ../../../app/stylesheets/partials/_histories.sass */
 #history p {
@@ -1176,25 +1263,25 @@
 }
 /* line 16, ../../../app/stylesheets/partials/_histories.sass */
 #history .history .row .created_at, #history .history .row .user, #history .history .row .event {
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
   color: gray;
   display: inline;
   float: left;
-  padding-right: .20em;
+  padding-right: 0.2em;
 }
 
 /* line 3, ../../../app/stylesheets/partials/_user_session.sass */
 #user_session #new .forgot_password {
   padding: 5px 15px;
-  font-size: .90em;
+  font-size: 0.9em;
 }
 
 /* line 20, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
-  padding: 0px .20em;
+  padding: 0px 0.2em;
 }
 
 /* line 24, ../../../app/stylesheets/public.sass */
@@ -1206,7 +1293,7 @@ body {
 }
 /* line 31, ../../../app/stylesheets/public.sass */
 body a {
-  color: #0000FF;
+  color: blue;
 }
 /* line 33, ../../../app/stylesheets/public.sass */
 body a img {
@@ -1228,9 +1315,9 @@ body .toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: #205bab;
-  padding: .50em .25em;
+  padding: 0.5em 0.25em;
   min-width: 400px;
 }
 /* line 52, ../../../app/stylesheets/public.sass */
@@ -1252,7 +1339,7 @@ body .toolbar table td.center img {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   margin: 0;
   padding: 0;
   width: 1.5em;
@@ -1260,7 +1347,7 @@ body .toolbar table td.center img {
 }
 /* line 69, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1 {
-  color: #FFFFFF;
+  color: white;
   font-size: 14pt;
   font-weight: bold;
   text-align: center;
@@ -1278,34 +1365,39 @@ body .toolbar table td.right {
 }
 /* line 84, ../../../app/stylesheets/public.sass */
 body #container {
-  background: #fff;
+  background: white;
   margin: 0px;
 }
 /* line 89, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages {
-  margin: 1em .50em;
+  margin: 1em 0.5em;
 }
 /* line 92, ../../../app/stylesheets/public.sass */
-body #flash #flash_messages .notice, body #flash #flash_messages .error {
+body #flash #flash_messages.notice, body #flash #flash_messages.error, body #flash #flash_messages.warning, body #flash #flash_messages .notice, body #flash #flash_messages .error, body #flash #flash_messages .warning {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   margin: 10px 0;
-  font-size: .90em;
+  font-size: 0.9em;
   padding: 1em;
 }
 /* line 98, ../../../app/stylesheets/public.sass */
-body #flash #flash_messages .notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+body #flash #flash_messages.notice, body #flash #flash_messages .notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66;
 }
 /* line 102, ../../../app/stylesheets/public.sass */
-body #flash #flash_messages .error {
-  background-color: #FCC;
-  border: solid 1px #C66;
+body #flash #flash_messages.error, body #flash #flash_messages .error {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666;
 }
 /* line 106, ../../../app/stylesheets/public.sass */
+body #flash #flash_messages.warning, body #flash #flash_messages .warning {
+  background-color: #ffde00;
+  border: solid 1px #cccc33;
+}
+/* line 110, ../../../app/stylesheets/public.sass */
 body .print_only {
   display: none;
 }

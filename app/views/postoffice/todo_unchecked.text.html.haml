@@ -1,0 +1,15 @@
+%div{:style => 'font-size:12px;font-family:Verdana'}
+  %p
+    = "#{@user.login},"
+
+  %p= "Guess what? @#{@current_user.login} just UNCHECKED the following completed mutual todo:"
+
+  %div(style='border-top:1px dotted gray;border-bottom:1px dotted gray;padding:.25em;margin:1em .25em 2em .25em;font-weight:bold')
+    = @todo.label 
+
+
+  %p
+    Weird or no?
+
+  %p
+    Todopia

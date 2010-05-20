@@ -26,7 +26,7 @@ $(function(){
     url = $(this).attr('rel')
     $.ajax({url: url, success: function(responseText){
        reload_checklist(responseText);
-    }})
+    },complete: function(request, status){ ajax_complete(request, status)}})
     return false;
   })
     
@@ -40,7 +40,7 @@ $(function(){
       url = $(this).attr('rel')
       $.ajax({url: url, success: function(responseText){
          reload_checklist(responseText);
-      }})
+      }, complete: function(request, status){ ajax_complete(request, status)}})
     }
     return false;
   })
@@ -65,7 +65,7 @@ $(function(){
     $('#index').hide();
       $.ajax({url: url, success: function(responseText){
          reload_checklist(responseText);
-      }})      
+      }, complete: function(request, status){ ajax_complete(request, status)}})      
 
     return false;
   })
@@ -79,7 +79,6 @@ $(function(){
   $('#email_button').live('click', function(){
    url = $(this).attr('rel')
     $.ajax({url: url, success: function(){
-       $.flash.show()
        $(".slide-options").trigger('click')
     }})      
     return false;
@@ -135,10 +134,12 @@ function toggle_todo_form(addedit){
 function edit_todo(el){
   url = el.attr('rel')
   $.ajax({url: url, success: function(responseText){
+      clog('success')
       $('#new').html(responseText)
       $('#todo #new').hide();
       toggle_todo_form('edit');
-  }})
+  }, complete: function(request, status){ ajax_complete(request, status) }
+  })
 }
 
 function toggle_waiting(el, url){
@@ -146,7 +147,8 @@ function toggle_waiting(el, url){
   $.ajax({url: url, success: function(responseText){
      reload_checklist(responseText);
      return false
-  }})
+  }, complete: function(request, status){ ajax_complete(request, status) }
+  })
 }
 
 function showRequest() {
@@ -167,7 +169,8 @@ function setup_add_form() {
         setup_autocomplete();
         $('#todo_label').addClass('fieldWithErrors');
         $.flash.show();
-       }
+       },
+       complete: function(request, status){ ajax_complete(request, status)}
    });
 }
 
@@ -183,7 +186,8 @@ function setup_edit_form() {
        error: function(responseText, statusText, xhr, form){
         setup_autocomplete();
         $('#todo_label').addClass('fieldWithErrors');
-       }
+       },
+       complete: function(request, status){ ajax_complete(request, status)}
    });
 }
 

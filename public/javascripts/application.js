@@ -5,10 +5,10 @@ $(function(){
   $('.spinner').hide();
   $('body').data('position',0)
   $('a[rel*=facebox]').facebox() 
-  $('#flash').click(function(){$(this).hide();})
   $("#bottom_panel").slideBox({width: "100%", height: 100, position: "bottom"});
   
   $(document).bind('reveal.facebox', function() { 
+    $('.spinner').hide();    
     setup_ajax();
 
     $('#note_body').focus(); 
@@ -18,7 +18,8 @@ $(function(){
         success: function(rText) {
           $('#facebox').find('#index').fadeOut(200).html(rText).fadeIn(200);
           $('#facebox').find('#note_body').focus();
-         }
+         },
+         complete: function(request, status){ ajax_complete(request, status)}
      });
      
     $('.delete_note').live('click',function(){
@@ -27,7 +28,8 @@ $(function(){
         url: url,
         success: function(responseText) {
           $('#facebox').find('#index').fadeOut(200).html(responseText).fadeIn(200);
-        }
+        },
+        complete: function(request, status){ ajax_complete(request, status)}
       })
       return false;
     })
@@ -49,7 +51,16 @@ $(function(){
 })
 
 function setup_ajax(){
-  $(document).ajaxSend(function(event, request, settings) {
+  
+  $.ajaxSetup({
+      'beforeSend': function(xhr) {
+          xhr.setRequestHeader("Accept", "text/javascript")
+          $('.spinner').fadeIn(200);
+      },
+      dataType: 'html'
+  })
+  
+  $('body').ajaxSend(function(event, request, settings) {
       if ( settings.type == 'post' ) {
           settings.data = (settings.data ? settings.data + "&" : "")
                   + "authenticity_token=" + encodeURIComponent( AUTH_TOKEN );
@@ -57,24 +68,22 @@ function setup_ajax(){
       }
   });
   
-  $.ajaxSetup({
-      'beforeSend': function(xhr) {
-          xhr.setRequestHeader("Accept", "text/javascript")
-          $('.spinner').fadeIn(200);
-      },
-      dataType: 'html',
-      complete: function(XMLHttpRequest, textStatus) {
-          $('.spinner').hide();
-          }
-  })
-  
   // When I say html I really mean script for rails
   $.ajaxSettings.accepts.html = $.ajaxSettings.accepts.script;
 }
 
+function ajax_complete(request, status) {
+  $('.spinner').hide();    
+  
+  var msg = jQuery.parseJSON(request.getResponseHeader('X-Message')) 
+  if (msg) { flash(msg) } else { $.flash.clear(); }
+}
+
 function get_checklist() {
-  $.ajax({url: $('#urls').attr('url:todo_reload'), 
-      success: function(todoResponse) { reload_checklist(todoResponse); }
+  $.ajax({
+      url: $('#urls').attr('url:todo_reload'), 
+      success: function(todoResponse) { reload_checklist(todoResponse); },
+      complete: function(request, status){ ajax_complete(request, status)}
     })
 }   
 
@@ -112,7 +121,6 @@ function bind_checklist_keyboard(){
     $(this).closest('.todo').find('.note_trigger').click()
     return false;    
   });
-  
   
   $('.todo').bind('keydown', 'w', function(){
     url = $(this).find('.wait_todo').attr('rel');
@@ -157,16 +165,19 @@ function checklist_sortable() {
       new_tag_group = ui.item.closest('.tag_group').attr('tg:tag')
       
       if(old_tag_group!=new_tag_group) {
-        var ui_item = $(ui.item.children()[0])
+        var ui_item = $(ui.item)
+        if (ui_item.attr('todo:id') == undefined) { ui_item = $(ui.item).find('div.todo')}
         todo_id = ui_item.attr('todo:id')
         move_url = $('#urls').attr('url:move_todo')
+        if (todo_id >= 0) {
         $.post(move_url, {move_from: old_tag_group, move_to: new_tag_group, id: todo_id}, function(todoResponse) { 
           $(document).bind('checklist.reloaded', function(){
               ui_item.find('.todo_checkbox').focus();
               $(document).unbind('checklist.reloaded') 
             })
           reload_checklist(todoResponse); 
-          })
+          $('.spinner').hide();    
+          }) } 
        } else {
          reorder_url = $('#urls').attr('url:reorder_todos')
          $.post(reorder_url, $(this).sortable('serialize'), function(todoResponse) { 
@@ -174,6 +185,7 @@ function checklist_sortable() {
                $(document).unbind('checklist.reloaded') 
              })
            reload_checklist(todoResponse); 
+           $('.spinner').hide();    
            })
       }
       }

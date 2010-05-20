@@ -1,62 +1,76 @@
 - unless request.env["HTTP_USER_AGENT"][/Mobile/]
+  .section
+    %p 
+      %u Keyboard Shortcuts
+      .sc 
+        %b c 
+        create new todo
+      .sc 
+        %b j
+        next todo
+      .sc 
+        %b k 
+        previous todo
+      .sc
+        %b space/enter
+        marks as complete
+      .sc
+        = link_to "more...", '#more_keyboard', :rel => 'toggle' 
+      #more_keyboard
+        .sc
+          %b e
+          edit todo
+        .sc
+          %b n
+          create/view notes & history
+        .sc 
+          %b f 
+          jump to first todo
+        .sc
+          %b w
+          waiting on externality
+        .sc
+          %b d/#
+          delete todo
+        .sc
+          %b esc
+          cancels new todo
+
+.section          
   %p 
-    %u Keyboard Shortcuts
-  .sc 
-    %b c 
-    create new todo
-  .sc 
-    %b j
-    next todo
-  .sc 
-    %b k 
-    previous todo
-  .sc
-    %b space/enter
-    marks as complete
-  .sc
-    = link_to "more...", '#more_keyboard', :rel => 'toggle' 
-  #more_keyboard
+    %u Tag Actions
     .sc
-      %b e
-      edit todo
+      %b !tag
+      create a group for all tags labeled "tag"
     .sc
-      %b n
-      create/view notes & history
-    .sc 
-      %b f 
-      jump to first todo
-    .sc
-      %b w
-      waiting on externality
-    .sc
-      %b d/#
-      delete todo
-    .sc
-      %b esc
-      cancels new todo
-          
-%p 
-  %u Tag Actions
-  .sc
-    %b !tag
-    create a group for all tags labeled "tag"
-  .sc
-    %b 
-      any date or 
-      = link_to 'date expression', '#', :title => 'e.g 4/15/10 or "2 weeks from now" or "tomorrow"' 
-    creates a due date for the item 
+      %b 
+        any date or 
+        = link_to 'date expression', '#', :title => 'e.g 4/15/10 or "2 weeks from now" or "tomorrow"' 
+      creates a due date for the item 
+    %p
+      .sc
+        %b #1, #2, #3, etc
+        sets a priority, 1 being highest
+      .sc
+        %b #!
+        highlights the todo
+      .sc
+        %b "starts DATE EXPRESSION"
+        schedules the todo for later
+        
+.section
   %p
+    %u Sharing
     .sc
-      %b #1, #2, #3, etc
-      sets a priority, 1 being highest
+      %b tagged with an email address
+      shares/invites the todo with that person
     .sc
-      %b #!
-      highlights the todo
-    .sc
-      %b "starts DATE EXPRESSION"
-      schedules the todo for later
-%p 
-  %u Also...
-.sc Click tag(s) to filter
-.sc Right click a tag group to ungroup, delete or check all
-.sc Drag/drop todos into groups    
+      %b tagged with @username
+      shares the todo with that Todopia user        
+        
+.section        
+  %p 
+    %u Also...
+  .sc Click tag(s) to filter
+  .sc Right click a tag group to ungroup, delete or check all
+  .sc Drag/drop todos into groups    

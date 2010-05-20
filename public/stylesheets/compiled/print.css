@@ -1,3 +1,86 @@
+/* line 4, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 6, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 16, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+/* line 45, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
 /* line 14, ../../../app/stylesheets/partials/_base.sass */
 .right {
   text-align: right;
@@ -27,7 +110,7 @@
 .icon {
   width: 10px;
   height: 10px;
-  margin: .05em;
+  margin: 0.05em;
 }
 
 /* line 16, ../../../app/stylesheets/partials/_boxes.sass */
@@ -35,7 +118,7 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: #c4aa5d;
 }
 
@@ -44,9 +127,9 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: #f0f0f0;
-  padding: .25em;
+  padding: 0.25em;
 }
 
 /* line 25, ../../../app/stylesheets/partials/_boxes.sass */
@@ -54,13 +137,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: gray;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 28, ../../../app/stylesheets/partials/_boxes.sass */
@@ -68,13 +151,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: yellow;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: black;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 31, ../../../app/stylesheets/partials/_boxes.sass */
@@ -82,13 +165,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: green;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 34, ../../../app/stylesheets/partials/_boxes.sass */
@@ -96,13 +179,13 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: red;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: white;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 37, ../../../app/stylesheets/partials/_boxes.sass */
@@ -110,19 +193,19 @@
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: yellow;
-  margin: .10em;
+  margin: 0.1em;
   text-decoration: none;
-  padding: .5em .75em;
+  padding: 0.5em 0.75em;
   color: black;
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 /* line 8, ../../../app/stylesheets/print.sass */
 html, body {
   margin: 0px;
-  padding: 0px .20em;
+  padding: 0px 0.2em;
 }
 
 /* line 12, ../../../app/stylesheets/print.sass */
@@ -148,7 +231,7 @@ body {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  margin: .25em;
+  margin: 0.25em;
   background: #205bab;
 }
 /* line 28, ../../../app/stylesheets/print.sass */
@@ -157,7 +240,7 @@ body {
 }
 /* line 31, ../../../app/stylesheets/print.sass */
 #toolbar h1 {
-  color: #FFFFFF;
+  color: white;
   font-size: 14pt;
   font-weight: bold;
   text-align: center;
@@ -171,8 +254,8 @@ body {
 }
 /* line 45, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete h2 {
-  font-size: 1.10em;
-  margin: 1em 0em .25em 0em;
+  font-size: 1.1em;
+  margin: 1em 0em 0.25em 0em;
 }
 /* line 49, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete h2 a {
@@ -182,7 +265,7 @@ body {
 /* line 53, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete .todo {
   overflow: hidden;
-  margin-top: .25em;
+  margin-top: 0.25em;
 }
 /* line 57, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete .todo .col {
@@ -204,15 +287,15 @@ body {
 }
 /* line 69, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete .todo .due_date {
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
-  font-size: .95em;
-  color: #666;
+  font-size: 0.95em;
+  color: #666666;
 }
 /* line 74, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete .todo .due_date_past_due {
-  font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
   font-size: 1.15em;
   color: red;
@@ -221,7 +304,7 @@ body {
 /* line 81, ../../../app/stylesheets/print.sass */
 #todo #index #not_complete .todo .col_tags .tags .tag {
   font-size: 10px;
-  color: #666;
+  color: #666666;
   display: block;
   float: left;
   padding-left: 10px;

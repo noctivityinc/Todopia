@@ -1,0 +1,15 @@
+%div{:style => 'font-size:12px;font-family:Verdana'}
+  %p
+    = "#{@user.login},"
+
+  %p= "Just wanted to let you know that @#{@todo.completed_by.login} has completed the following mutual todo:"
+
+  %div(style='border-top:1px dotted gray;border-bottom:1px dotted gray;padding:.25em;margin:1em .25em 2em .25em;font-weight:bold')
+    = @todo.label 
+
+
+  %p
+    Have a glorious day,
+
+  %p
+    Todopia

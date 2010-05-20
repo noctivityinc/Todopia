@@ -89,19 +89,23 @@ body
     #flash_messages
       margin: 1em .50em
   
-      .notice, .error
+      &.notice, &.error, &.warning, .notice, .error, .warning
         +rounded
         :margin 10px 0
         font-size: .90em
         padding: 1em
 
-      .notice
+      &.notice, .notice
         :background-color #CFC
         :border solid 1px #6C6
 
-      .error
+      &.error, .error
         :background-color #FCC
         :border solid 1px #C66
+        
+      &.warning, .warning
+        :background-color #FFDE00
+        :border solid 1px #CCCC33        
 
   .print_only
     display: none
