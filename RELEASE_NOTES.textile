@@ -1,5 +1,11 @@
 h1. Todopia Release Notes
 
+h3. 0.3.0
+* Ability to SHARE a todo via email or username!
+* Tag group state is recorded via cookies for persistent minimize
+* Fixed drag / drop bug with moving todos between groups
+* Added ability to invite others via sharing todos
+
 h3. 0.2.18 (change)
 * Now need to specify the word 'due' before tagging something with a due date.  thanks Chronic
 

@@ -90,6 +90,7 @@ function get_checklist() {
 function reload_checklist(responseText) {
   $('#todo').find('#index').html(responseText).fadeIn(200, function(){
     setup_ajax();
+    setup_tag_groups_state();
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
