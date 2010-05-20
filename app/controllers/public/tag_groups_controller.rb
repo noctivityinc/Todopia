@@ -8,22 +8,22 @@ class Public::TagGroupsController < PublicController
 
   def delete
     @tag_group.destroy
-    @user.todos.not_complete.tagged_with(@tag_group.tag).each {|x| x.destroy}
+    current_user.todos.not_complete.tagged_with(@tag_group.tag).each {|x| x.destroy}
     render :text => nil
   end
 
   def rename
     unless params[:name].blank?
       new_name = params[:name].downcase
-      # @user.tag_groups.find_by_tag(tag).delete rescue nil
-      @user.todos.not_complete.each {|x| x.rename_tag(@tag_group.tag, new_name)}
+      # current_user.tag_groups.find_by_tag(tag).delete rescue nil
+      current_user.todos.not_complete.each {|x| x.rename_tag(@tag_group.tag, new_name)}
       @tag_group.update_attributes(:tag => new_name)
     end
     render :text => nil, :status => 200
   end
 
   def check_all
-    @user.todos.not_complete.tagged_with(@tag_group.tag).each do |todo|
+    current_user.todos.not_complete.tagged_with(@tag_group.tag).each do |todo|
       todo.completed_by = current_user
       todo.completed_at = Time.now
       todo.save
@@ -49,7 +49,6 @@ class Public::TagGroupsController < PublicController
 
   def get_tag_group
     @tag_group = TagGroup.find(params[:id])
-    @user = @tag_group.user
   end
 
 

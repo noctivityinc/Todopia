@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100505212803) do
+ActiveRecord::Schema.define(:version => 20100519220057) do
 
   create_table "histories", :force => true do |t|
     t.integer  "todo_id"
@@ -19,8 +19,15 @@ ActiveRecord::Schema.define(:version => 20100505212803) do
     t.datetime "updated_at"
   end
 
+  create_table "invite_todos", :force => true do |t|
+    t.integer  "invite_id"
+    t.integer  "todo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "invites", :force => true do |t|
-    t.integer  "inviter_id"
+    t.integer  "user_id"
     t.string   "email"
     t.string   "name"
     t.string   "token"
@@ -39,10 +46,7 @@ ActiveRecord::Schema.define(:version => 20100505212803) do
 
   create_table "shares", :force => true do |t|
     t.integer  "user_id"
-    t.string   "tag"
-    t.integer  "sharee_id"
-    t.boolean  "can_complete"
-    t.integer  "invite_id"
+    t.integer  "todo_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

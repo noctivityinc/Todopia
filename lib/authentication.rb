@@ -57,15 +57,6 @@ module Authentication
     session[:return_to] = nil
   end
   
-  def verify_user()
-    if @user != current_user
-      @user_session = UserSession.find
-      @user_session.destroy
-      flash.error = 'Unauthorized Access'
-      redirect_to root_url
-    end
-  end
-  
   private
   
   def store_target_location

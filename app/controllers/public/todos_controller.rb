@@ -1,7 +1,6 @@
 class Public::TodosController < PublicController
-  before_filter :get_user, :only => [:index, :new, :create, :reload, :filter, :reorder]
   before_filter :get_todo, :except => [:index, :new, :create, :reload, :filter, :reorder]
-  before_filter :verify_user
+  after_filter :check_for_model_notice
 
   def index
     load_todos
@@ -12,7 +11,7 @@ class Public::TodosController < PublicController
   end
 
   def new
-    @todo = @user.todos.new
+    @todo = current_user.todos.new
     respond_to do |format|
       format.js { render :partial => 'form' }
       format.html { render :action => 'edit' }
@@ -20,7 +19,7 @@ class Public::TodosController < PublicController
   end
 
   def create
-    @todo = @user.todos.new(params[:todo])
+    @todo = current_user.todos.new(params[:todo])
     @todo.save ? render_list : render_list(500)
   end
 
@@ -38,7 +37,12 @@ class Public::TodosController < PublicController
 
   def update
     @todo.completed_by = current_user
-    @todo.update_attributes(params[:todo]) ? render_list : render_list(500)
+    if @todo.update_attributes(params[:todo])
+      render_list
+    else
+      render_list(500)
+    end
+    # ? render_list : render_list(500)
   end
 
   def check
@@ -51,8 +55,7 @@ class Public::TodosController < PublicController
   end
 
   def uncheck
-    @todo.completed_by = @todo.completed_at = nil
-    @todo.save
+    @todo.uncheck(current_user)
     render_list
   end
 
@@ -69,11 +72,11 @@ class Public::TodosController < PublicController
     move_from = params[:move_from]
     move_to = params[:move_to]
 
-    return unless move_from && move_to
+    return unless @todo && move_from && move_to
 
     unless move_from == move_to
       @todo.tag_list = @todo.tag_list.to_a.reject {|x| x==move_from} unless move_from == '-99'
-      @todo.tag_list.push(move_to) unless move_to == '-99'
+      @todo.tag_list.push(move_to) unless move_to =~ /^-(.*)/
       @todo.save
     end
     render_list
@@ -92,20 +95,25 @@ class Public::TodosController < PublicController
 
   private
 
-  def get_user
-    @user = User.find(params[:user_id])
+  def get_todo
+    # => in case a todo was deleted and tries to be accessed
+    @todo = Todo.find_by_id(params[:id])
+    redirect_to user_todos_path(current_user) unless @todo
   end
 
-  def get_todo
-    @todo = Todo.find_by_id(params[:id]) 
-    @user = @todo.user if @todo
-    redirect_to user_todos_path(current_user) unless @todo # => in case a todo was deleted and tries to be accessed
+  def verify_user()
+    if (@todo.user != current_user) || !@todo.shared_with?(current_user)
+      @user_session = UserSession.find
+      @user_session.destroy
+      flash.error = 'Unauthorized Access'
+      redirect_to root_url
+    end
   end
 
   def load_todos
-    @todo = @user.todos.new
-    @todos = @user.todos.not_complete
-    @completed = @user.todos.complete
+    @todo = current_user.todos.new
+    @todos = current_user.todos.not_complete
+    @completed = (current_user.todos.complete + current_user.shared_todos.complete).sort {|a,b| a.completed_at <=> b.completed_at}.reverse
   end
 
   def setup_tags
@@ -117,6 +125,7 @@ class Public::TodosController < PublicController
 
   def render_list(status=200)
     puts "XHR: #{request.xhr?}"
+    check_for_model_notice
     respond_to do |format|
       format.js {
         load_todos
@@ -145,14 +154,21 @@ class Public::TodosController < PublicController
     cookies[:tags] = @tags.join(',')
 
     unless @tags.empty?
-      @todo = @user.todos.new
-      @todos = @user.todos.tagged_with(@tags, :any => false).not_complete
-      @completed = @user.todos.tagged_with(@tags, :any => false).complete
+      @todo = current_user.todos.new
+      @todos = current_user.todos.tagged_with(@tags, :any => false).not_complete
+      @completed = current_user.todos.tagged_with(@tags, :any => false).complete
       render :partial => 'list'
     else
       render_list
     end
   end
+
+  def check_for_model_notice
+    flash.notice = @todo.notice if @todo && @todo.notice
+    flash.warning = @todo.warning if @todo && @todo.warning
+    flash.error = @todo.error if @todo && @todo.error
+  end
+
 
 
 end

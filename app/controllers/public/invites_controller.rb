@@ -1,44 +1,15 @@
-class InvitesController < ApplicationController
-  def index
-    @invites = Invite.all
-  end
-  
+class Public::InvitesController < PublicController
+  skip_before_filter :login_required
+
   def show
-    @invite = Invite.find(params[:id])
-  end
-  
-  def new
-    @invite = Invite.new
-  end
-  
-  def create
-    @invite = Invite.new(params[:invite])
-    if @invite.save
-      flash[:notice] = "Successfully created invite."
-      redirect_to @invite
+    invite = Invite.find_by_token(params[:id])
+    if invite
+      session[:invite_id] = invite.id
+      flash.notice = "You need to create an account to access this todo."
     else
-      render :action => 'new'
+      flash.error = "That invite is no longer valid, but you can still signup for an account."
     end
+    redirect_to signup_path
   end
-  
-  def edit
-    @invite = Invite.find(params[:id])
-  end
-  
-  def update
-    @invite = Invite.find(params[:id])
-    if @invite.update_attributes(params[:invite])
-      flash[:notice] = "Successfully updated invite."
-      redirect_to @invite
-    else
-      render :action => 'edit'
-    end
-  end
-  
-  def destroy
-    @invite = Invite.find(params[:id])
-    @invite.destroy
-    flash[:notice] = "Successfully destroyed invite."
-    redirect_to invites_url
-  end
+
 end

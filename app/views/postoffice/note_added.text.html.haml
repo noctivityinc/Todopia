@@ -1,0 +1,22 @@
+%div{:style => 'font-size:12px;font-family:Verdana'}
+  %p
+    = "#{@user.login},"
+
+  %p= "@#{@note.user.login} has just added the following note to a mutual todo:"
+
+  %div(style='border-top:1px dotted gray;border-bottom:1px dotted gray;padding:.25em;margin:1em .25em 2em .25em;')
+    %div{:style => 'font-weight:bold;margin-bottom: .5em;font-size:1.15em'}= "\"#{@note.todo.label}\"" 
+    %p= @note.body
+
+  %p
+    To access all this todo, simply log into your account by clicking/copy/pasting the link below:
+
+  %p= link_to user_todos_url(@user), user_todos_url(@user)
+  
+
+
+  %p
+    Ok doke?
+
+  %p
+    Todopia

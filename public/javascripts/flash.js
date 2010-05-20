@@ -3,13 +3,13 @@
 $(document).ready(function() {
 
     jQuery.fn.showFlash = function() {
-        $(this.selector).show('normal').delay(3000).fadeOut(5000);
+        $(this.selector).show('fast')
     }
 
     $('#flash_messages').showFlash();
 
     $('#flash').click(function() {
-        $('#flash_messages').fadeOut(500);
+      $('#flash_messages').fadeOut(500);
     })
 
     jQuery.flash = {
@@ -31,10 +31,10 @@ $(document).ready(function() {
         },
         clear: function(parent) {
             parent = parent == null ? '': parent + ' ';
-            $(parent + '#flash_messages').hide();
+            $(parent + '#flash_messages').hide('fast');
         },
         show: function() {
-          $(' #flash').load('/flash');
+          $('#flash').load('/flash');
           $('html, body').animate({
               scrollTop: 0
           });

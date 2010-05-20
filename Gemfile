@@ -11,7 +11,7 @@ gem 'pg', '0.8.0'
 
 gem "authlogic"
 gem 'haml'
-gem 'compass', '0.10.0.rc1'
+gem 'compass'
 gem 'acts-as-taggable-on'
 gem "friendly_id", "~> 2.3"
 gem 'formtastic'

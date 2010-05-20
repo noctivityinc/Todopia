@@ -1,4 +1,4 @@
-- title "Todopia"
+- title "Todopia - #{current_user.login}"
 - print_title "Todopia (#{current_user.login} @ #{Date.today})"
 
 
@@ -13,7 +13,7 @@
   #bottom_panel= render :partial => 'bottom_panel'
   = render :partial => 'context_menus'
   
-  #urls{'url:move_todo' => move_user_todos_path(current_user), 'url:reorder_todos' => reorder_user_todos_path(current_user), 'url:tag_search' => user_tags_path(@user), 'url:todo_reload' => reload_user_todos_path(@user)}
+  #urls{'url:move_todo' => move_user_todos_path(current_user), 'url:reorder_todos' => reorder_user_todos_path(current_user), 'url:tag_search' => user_tags_path(current_user), 'url:todo_reload' => reload_user_todos_path(current_user)}
 
 :javascript
   $(function(){

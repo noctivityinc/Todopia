@@ -1,0 +1,24 @@
+%div{:style => 'font-size:12px;font-family:Verdana'}
+  %p
+    Hey,
+
+  %p
+    I just shared the following todo with you on 
+    = link_to 'Todopia.com', @invite_url 
+
+  %div(style='border-top:1px dotted gray;border-bottom:1px dotted gray;padding:.25em;margin:1em')
+    = @todo.label 
+
+  %p
+    This means either one of us can complete it, add notes, etc.
+
+  %p
+    To access this todo as well as manage your own, click (or copy/paste) the link below and sign-up.  Don't worry, it's free and takes 10 seconds:
+
+  %p= link_to @invite_url, @invite_url
+
+  %p
+    Best,
+
+  %p
+    <%= @user.login %>

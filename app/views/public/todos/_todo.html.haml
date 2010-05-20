@@ -13,7 +13,7 @@
         .col_select.col
           &nbsp;
         .col_move.col
-          = image_tag "icons/move.jpg", :title => "move", :class => "handle icon" if todo.active
+          = image_tag "icons/move.jpg", :title => "move", :class => "handle icon" if todo.active && !todo.shared_with?(current_user)
         .col_cb.col
           - if todo.waiting_since
             = show_waiting(todo)
@@ -24,7 +24,7 @@
           .tags
             - todo.tag_list.each do |tag|
               .tag{:class => "tag_filter #{tag_css(tag)}" , :rel => "#{tag_rel_url(todo, tag)}"}
-                = tag
+                = (tag.downcase == current_user.email.downcase || tag.downcase =~ /^@#{current_user.login}/i) ? "shared by @#{todo.user.login}" : tag
 
       #right_pane
         .col_scheduled.col= show_scheduled(todo)

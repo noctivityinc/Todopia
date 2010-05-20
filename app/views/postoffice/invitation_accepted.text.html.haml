@@ -1,0 +1,20 @@
+%div{:style => 'font-size:12px;font-family:Verdana'}
+  %p
+    = "Hey #{@invite.user.login},"
+
+  %p
+    Just wanted to let you know that 
+    = @user.email
+    has accepted your invitation to share todos. 
+    
+  %p
+    For your reference, their username is 
+    = @user.login
+    so you can easily share todos by tagging them with 
+    = "@#{@user.login}."
+    
+  %p{:style => 'margin-top: 2em'}
+    Toodles,
+  
+  %p
+    Todopia

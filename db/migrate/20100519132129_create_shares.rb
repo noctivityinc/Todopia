@@ -1,11 +1,8 @@
 class CreateShares < ActiveRecord::Migration
   def self.up
-    create_table :shares do |t|
+    create_table :shares, :force => true do |t|
       t.integer :user_id
-      t.string :tag
-      t.integer :sharee_id
-      t.boolean :can_complete
-      t.integer :invite_id
+      t.integer :todo_id
 
       t.timestamps
     end

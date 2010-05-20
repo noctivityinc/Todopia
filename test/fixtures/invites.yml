@@ -1,10 +1,10 @@
 # == Schema Information
-# Schema version: 20100416215105
+# Schema version: 20100519214243
 #
 # Table name: invites
 #
 #  id          :integer         not null, primary key
-#  inviter_id  :integer
+#  user_id     :integer
 #  email       :string(255)
 #  name        :string(255)
 #  token       :string(255)

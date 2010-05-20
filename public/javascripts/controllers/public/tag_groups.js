@@ -2,10 +2,28 @@ $(function(){
   bind_tag_group();
   
   $('.select_tag_group').livequery('click',function(){
-    $(this).closest('h2').next('.tag_group').toggle();
+    $(this).closest('h2').next('.tag_group').toggle(function(){
+      cookie_name = 'tg_state_'+$(this).attr('tg:tag');
+      $.cookie(cookie_name, $(this).is(':visible') ? 'maximized' : 'minimized', {expires: 7});
+    });
     return false;
   });
+  
+  setup_tag_groups_state();
 })  
+
+
+function setup_tag_groups_state(){
+  $('div.tag_group').each(function(){
+    cookie_name = 'tg_state_'+$(this).attr('tg:tag');
+    if ($.cookie(cookie_name)=='minimized') {
+      $(this).hide();
+    } else {
+      $(this).show();
+    }
+  })
+}
+
 
 function bind_tag_group(){
   $(".tag_group_menu_trigger").contextMenu({

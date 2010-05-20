@@ -1,0 +1,19 @@
+<%= "#{@sharee.login}," %>
+
+<%= "#{@user.login} has shared the following todo with you:" %>
+
+------------------------------------------------------------------------------
+** <%= @todo.label %>
+------------------------------------------------------------------------------
+
+This means either one of us can complete it, add notes, etc.
+
+To access all your todos, simply log into your account by clicking/copy/pasting the link below:
+
+<%= user_todos_url(@sharee) %>
+
+
+
+Have fun,
+
+- Todopia

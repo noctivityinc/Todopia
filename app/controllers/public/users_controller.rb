@@ -3,6 +3,8 @@ class Public::UsersController < PublicController
   before_filter :get_user, :except => [:new, :create]
 
   def new
+    @user_session = UserSession.find
+    @user_session.destroy if @user_session
     @user = User.new
   end
 
@@ -12,6 +14,7 @@ class Public::UsersController < PublicController
   def create
     @user = User.new(params[:user])
     if @user.save
+      handle_invite
       flash[:notice] = "Thank you for signing up! You are now logged in."
       redirect_to user_todos_path(@user)
     else
@@ -48,6 +51,20 @@ class Public::UsersController < PublicController
     unless @user
       flash.error = "Unauthorized access!"
       redirect_to root_url
+    end
+  end
+  
+  def handle_invite
+    if session[:invite_id]
+      invite = Invite.find_by_id(session[:invite_id])
+      if invite
+        invite.todos.each do |todo|
+          todo.shares.create(:user => @user)
+        end
+        invite.update_attribute(:accepted_at, Time.now)
+        Postoffice.deliver_invitation_accepted(invite, @user)
+        session[:invite_id] = nil
+      end
     end
   end
 end

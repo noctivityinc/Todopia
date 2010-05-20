@@ -16,6 +16,11 @@
       = render unfiled_todos('not_due').not_in_process.ordered
       .in_process= render unfiled_todos.in_process.ordered
       
+  - unless current_user.shared_todos.not_complete.empty?
+    %h2= link_to "shared todos (#{current_user.shared_todos.not_complete.count})", '#', :class => 'select_tag_group shared_group', :rel => current_user.id, 'url:filter' => filter_user_todos_path(current_user, :unfiled => true) 
+    .tag_group{'tg:tag' => '-shared'}
+      = render current_user.shared_todos.not_complete.ordered  
+      
   - unless @todos.scheduled.empty?
     %h2= link_to "Scheduled (#{@todos.scheduled.count})", '#', :class => 'select_tag_group'
     .tag_group.scheduled

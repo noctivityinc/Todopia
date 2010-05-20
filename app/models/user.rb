@@ -38,6 +38,10 @@ class User < ActiveRecord::Base
     def unfiled; first.user.tag_groups.empty? ? not_complete : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :exclude => true); end
     def filed; first.user.tag_groups.empty? ? nil : not_complete.tagged_with(first.user.tag_groups.map {|x| x.tag}.join(','), :any => true); end
   end
+  has_many :todos_they_share, :through => :todos, :source => :shares 
+  has_many :shares, :dependent => :destroy 
+  has_many :shared_todos, :through => :shares, :source => :todo 
+  has_many :invites
 
   named_scope :wanting_daily_emails, :conditions => ['(email_daily_summary = ? OR email_summary_only_when_todos_due = ?) AND (daily_summary_sent_at < ? OR daily_summary_sent_at IS ? )', true, true, 12.hours.ago.to_datetime, nil] # => changed to 12 hours instead of 24 as I will only call once a day.
 

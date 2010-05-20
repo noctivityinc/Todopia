@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
     end
     user.resource :tags,  :controller => 'public/tags', :only => [:show]
     user.resources :tag_groups, :controller => 'public/tag_groups', :only => :destroy, :member => { :delete => :get, :remove => :get, :check_all => :get, :rename => :get}, :collection => {:delete_unfiled  => :get, :check_unfiled  => :get}
-    user.resources :invites
+    user.resources :invites, :controller => 'public/invites'
   end
 
   map.resources :reset_password, :controller => 'public/reset_password', :only => [:new, :create, :edit, :update]

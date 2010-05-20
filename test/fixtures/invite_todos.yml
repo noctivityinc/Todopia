@@ -1,10 +1,10 @@
 # == Schema Information
-# Schema version: 20100519214243
+# Schema version: 20100519220057
 #
-# Table name: shares
+# Table name: invite_todos
 #
 #  id         :integer         not null, primary key
-#  user_id    :integer
+#  invite_id  :integer
 #  todo_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
@@ -13,9 +13,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  user_id: 1
+  invite_id: 1
   todo_id: 1
 
 two:
-  user_id: 1
+  invite_id: 1
   todo_id: 1

@@ -1,10 +1,10 @@
 # == Schema Information
-# Schema version: 20100416215105
+# Schema version: 20100519214243
 #
 # Table name: invites
 #
 #  id          :integer         not null, primary key
-#  inviter_id  :integer
+#  user_id     :integer
 #  email       :string(255)
 #  name        :string(255)
 #  token       :string(255)
@@ -14,5 +14,20 @@
 #
 
 class Invite < ActiveRecord::Base
-  attr_accessible :inviter_id, :email, :name, :token, :accepted_at
+  belongs_to :user
+  has_many :invite_todos, :dependent => :destroy 
+  has_many :todos, :through => :invite_todos
+
+  validates_presence_of :email, :user
+
+  named_scope :pending, :conditions => ['accepted_at IS ?', nil]
+
+  before_create :generate_token
+
+  private
+
+  def generate_token
+    self.token = Authlogic::Random.friendly_token
+  end
+
 end
