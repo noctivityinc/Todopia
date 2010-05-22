@@ -9,6 +9,11 @@
         = "* #{todo.label} #{todo.due_date ? '(due: '+ todo.due_date.strftime('%m/%d/%Y')+')' : ''} #{todo.waiting_since ? '(waiting since: '+ todo.waiting_since.strftime('%m/%d/%Y')+')' : ''}"
       \--------------------------------------------------
       = ""
+      
+  - unless @shared.empty?
+    = "shared todos... (#{@shared.count})"
+    - @shared.each do |todo|
+      = "* #{todo.label} #{todo.due_date ? '(due: '+ todo.due_date.strftime('%m/%d/%Y')+')' : ''} #{todo.waiting_since ? '(waiting since: '+ todo.waiting_since.strftime('%m/%d/%Y')+')' : ''}"
 
   - unless unfiled_todos(nil,@user).empty?
     - unless tag_groups_empty?(@user)

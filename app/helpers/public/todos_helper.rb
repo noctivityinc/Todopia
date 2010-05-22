@@ -30,7 +30,7 @@ module Public::TodosHelper
 
   def show_due_date(todo)
     return "&nbsp;" unless todo.due_date
-    "<div class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{" - due " if todo.not_active} #{todo.due_date.strftime('%m/%d/%Y')}</div>"
+    "<div todo:url='#{url_for(todo)}' class='due_date #{todo.due_date > Date.today ? '' : 'past_due'}'>#{" - due " if todo.not_active} #{todo.due_date.strftime('%m/%d/%Y')}</div>"
   end  
   
   def show_scheduled(todo)

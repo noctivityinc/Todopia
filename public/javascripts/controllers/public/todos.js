@@ -101,6 +101,18 @@ $(function(){
    $(this).ajaxSubmit(submit_todo_form_options); 
    return false;
   })
+    
+  $('.due_date').livequery(function(){
+    $(this).date_input()
+  });
+  $(document).bind('date_input.dateSelected',function(objEvent, object, param){
+    url = $(object).attr('todo:url')
+    clog(param)
+    $.put(url, {todo: {due_date: param}}, function(responseText) { 
+        reload_checklist(responseText);
+      })
+  })
+  
   
   setup_tooltips();
   bind_keyboard();

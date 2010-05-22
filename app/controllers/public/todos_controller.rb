@@ -36,7 +36,7 @@ class Public::TodosController < PublicController
   end
 
   def update
-    @todo.completed_by = current_user
+    @todo.completed_by = current_user if (params[:todo][:completed] == '1')
     if @todo.update_attributes(params[:todo])
       render_list
     else

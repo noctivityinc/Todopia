@@ -91,7 +91,7 @@ class Postoffice < ActionMailer::Base
     from       APP_CONFIG[:emails]["todo"]
     sent_on    sent_at
 
-    body       :user => user, :todos => (user.email_summary_only_when_todos_due && !force_all) ? user.todos.not_complete.due : user.todos.not_complete
+    body       :user => user, :todos => (user.email_summary_only_when_todos_due && !force_all) ? user.todos.not_complete.due : user.todos.not_complete, :shared => current_user.shared_todos.not_complete 
   end
 
 end
