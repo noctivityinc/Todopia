@@ -15,6 +15,12 @@
             = render :partial => 'postoffice/todos/todo', :collection => @todos.active.not_due.not_in_process.tagged_with(tg.tag)
             = render :partial => 'postoffice/todos/todo', :collection => @todos.active.in_process.tagged_with(tg.tag)
 
+    - unless @shared.empty?
+      %p{:style => 'margin-bottom: 2em'}
+        %h2{:style => 'margin-bottom: .25em'}= "shared todos... (#{@shared.count})"
+        %table{:width => '100%'}
+          = render :partial => 'postoffice/todos/todo', :collection => @shared
+
     - unless unfiled_todos(nil,@user).empty?
       - unless tag_groups_empty?(@user)
         %p{:style => 'margin-bottom: 2em'}

@@ -1,5 +1,9 @@
 h1. Todopia Release Notes
 
+h3. 0.3.1
+* Ability to change due date by clicking on the date in list
+* Shared emails now sent in daily email
+
 h3. 0.3.0
 * Ability to SHARE a todo via email or username!
 * Tag group state is recorded via cookies for persistent minimize

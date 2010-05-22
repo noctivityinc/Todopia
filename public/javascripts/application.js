@@ -48,6 +48,8 @@ $(function(){
   }).each(function(el){
     $($(this).attr('href')).hide();
   })
+  
+  
 })
 
 function setup_ajax(){
@@ -94,7 +96,8 @@ function reload_checklist(responseText) {
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
-    $(document).trigger('checklist.reloaded')
+    $('.spinner').hide();    
+    $(document).trigger('checklist.reloaded')  
   });
 }
 
@@ -202,3 +205,28 @@ function clog(message, type) {
   catch(err)
     {}
 }
+
+function _ajax_request(url, data, callback, type, method) {
+    if (jQuery.isFunction(data)) {
+        callback = data;
+        data = {};
+    }
+    
+    clog(data);
+    return jQuery.ajax({
+        type: method,
+        url: url,
+        data: data,
+        success: callback,
+        dataType: type
+        });
+}
+
+jQuery.extend({
+    put: function(url, data, callback, type) {
+        return _ajax_request(url, data, callback, type, 'PUT');
+    },
+    delete_: function(url, data, callback, type) {
+        return _ajax_request(url, data, callback, type, 'DELETE');
+    }
+});
