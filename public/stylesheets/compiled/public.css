@@ -964,6 +964,171 @@ a img {
   top: 0;
 }
 
+/* line 1, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector {
+  width: auto;
+  height: auto;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  background: #f2f2f2;
+  border: 1px solid #bbbbbb;
+  padding: 5px;
+  margin: -1px 0 0 0;
+  position: absolute;
+  z-index: 100000;
+  display: none;
+}
+/* line 10, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector * {
+  width: auto;
+  height: auto;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* line 27, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector_ieframe {
+  position: absolute;
+  z-index: 99999;
+  display: none;
+}
+
+/* line 33, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .nav {
+  width: 17.5em;
+}
+/* line 35, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .month_nav, .date_selector .year_nav {
+  margin: 0 0 3px 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+/* line 41, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .month_nav {
+  float: left;
+  width: 55%;
+}
+/* line 44, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .year_nav {
+  float: right;
+  width: 35%;
+  margin-right: -8px;
+  /* Compensates for cell borders */
+}
+/* line 50, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .month_name, .date_selector .year_name {
+  font-weight: bold;
+  line-height: 20px;
+}
+/* line 53, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .date_button {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 17px;
+  font-weight: bold;
+  color: #003c78;
+  text-align: center;
+  font-size: 120%;
+  overflow: hidden;
+  border: 1px solid #f2f2f2;
+}
+/* line 66, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .date_button:hover, .date_selector .date_button.hover {
+  background: none;
+  color: #003c78;
+  cursor: pointer;
+  border-color: #cccccc;
+}
+/* line 71, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .prev {
+  left: 0;
+}
+/* line 73, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector .next {
+  right: 0;
+}
+/* line 75, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  clear: both;
+}
+/* line 79, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector th {
+  width: 2.5em;
+  height: 2em;
+  padding: 0;
+  text-align: center;
+  color: black;
+}
+/* line 85, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector td {
+  width: 2.5em;
+  height: 2em;
+  padding: 0;
+  text-align: center;
+  color: black;
+  border: 1px solid #cccccc;
+  line-height: 2em;
+  text-align: center;
+  white-space: nowrap;
+  color: #003c78;
+  background: white;
+}
+/* line 97, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector td.today {
+  background: #fffeb3;
+}
+/* line 99, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector td.unselected_month {
+  color: #cccccc;
+}
+/* line 101, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector td.selectable_day {
+  cursor: pointer;
+}
+/* line 103, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector td.selected {
+  background: #d8dfe5;
+  font-weight: bold;
+}
+/* line 107, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover {
+  background: #003c78;
+  color: white;
+}
+
+/* line 111, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.remove_due_date {
+  display: block;
+  position: relative;
+  bottom: 0;
+  color: #003c78;
+  text-align: center;
+  font-size: 0.9em;
+  border: 1px solid #f2f2f2;
+}
+/* line 119, ../../../app/stylesheets/partials/_jquery.date_input.sass */
+.remove_due_date:hover, .remove_due_date.hover {
+  background: none;
+  color: #003c78;
+  cursor: pointer;
+  border-color: #cccccc;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_todos.sass */
 #todo #new {
   display: none;
@@ -1291,39 +1456,39 @@ a img {
   padding-top: 0.15em;
 }
 
-/* line 20, ../../../app/stylesheets/public.sass */
+/* line 21, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px 0.2em;
 }
 
-/* line 24, ../../../app/stylesheets/public.sass */
+/* line 25, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   width: 99%;
 }
-/* line 31, ../../../app/stylesheets/public.sass */
+/* line 32, ../../../app/stylesheets/public.sass */
 body a {
   color: blue;
 }
-/* line 33, ../../../app/stylesheets/public.sass */
+/* line 34, ../../../app/stylesheets/public.sass */
 body a img {
   border: none;
 }
-/* line 37, ../../../app/stylesheets/public.sass */
+/* line 38, ../../../app/stylesheets/public.sass */
 body .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
-/* line 42, ../../../app/stylesheets/public.sass */
+/* line 43, ../../../app/stylesheets/public.sass */
 body .labelHighlight {
   color: #999999;
   text-align: right;
 }
-/* line 46, ../../../app/stylesheets/public.sass */
+/* line 47, ../../../app/stylesheets/public.sass */
 body .toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1333,21 +1498,21 @@ body .toolbar {
   padding: 0.5em 0.25em;
   min-width: 400px;
 }
-/* line 52, ../../../app/stylesheets/public.sass */
+/* line 53, ../../../app/stylesheets/public.sass */
 body .toolbar table {
   width: 100%;
 }
-/* line 55, ../../../app/stylesheets/public.sass */
+/* line 56, ../../../app/stylesheets/public.sass */
 body .toolbar table td.left {
   text-align: left;
   width: 33%;
   min-width: 140px;
 }
-/* line 60, ../../../app/stylesheets/public.sass */
+/* line 61, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center {
   min-width: 150px;
 }
-/* line 62, ../../../app/stylesheets/public.sass */
+/* line 63, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center img {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1358,7 +1523,7 @@ body .toolbar table td.center img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 69, ../../../app/stylesheets/public.sass */
+/* line 70, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1 {
   color: white;
   font-size: 14pt;
@@ -1367,25 +1532,25 @@ body .toolbar table td.center h1 {
   margin: 0;
   padding: 0;
 }
-/* line 77, ../../../app/stylesheets/public.sass */
+/* line 78, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1.screen_only {
   display: inline;
 }
-/* line 80, ../../../app/stylesheets/public.sass */
+/* line 81, ../../../app/stylesheets/public.sass */
 body .toolbar table td.right {
   width: 33%;
   min-width: 100px;
 }
-/* line 84, ../../../app/stylesheets/public.sass */
+/* line 85, ../../../app/stylesheets/public.sass */
 body #container {
   background: white;
   margin: 0px;
 }
-/* line 89, ../../../app/stylesheets/public.sass */
+/* line 90, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages {
   margin: 1em 0.5em;
 }
-/* line 92, ../../../app/stylesheets/public.sass */
+/* line 93, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.notice, body #flash #flash_messages.error, body #flash #flash_messages.warning, body #flash #flash_messages .notice, body #flash #flash_messages .error, body #flash #flash_messages .warning {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1395,26 +1560,26 @@ body #flash #flash_messages.notice, body #flash #flash_messages.error, body #fla
   font-size: 0.9em;
   padding: 1em;
 }
-/* line 98, ../../../app/stylesheets/public.sass */
+/* line 99, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.notice, body #flash #flash_messages .notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
-/* line 102, ../../../app/stylesheets/public.sass */
+/* line 103, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.error, body #flash #flash_messages .error {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
-/* line 106, ../../../app/stylesheets/public.sass */
+/* line 107, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.warning, body #flash #flash_messages .warning {
   background-color: #ffde00;
   border: solid 1px #cccc33;
 }
-/* line 110, ../../../app/stylesheets/public.sass */
+/* line 111, ../../../app/stylesheets/public.sass */
 body .print_only {
   display: none;
 }
-/* line 113, ../../../app/stylesheets/public.sass */
+/* line 114, ../../../app/stylesheets/public.sass */
 body .ui-datepicker {
   font-size: 12px;
   width: 200px;
