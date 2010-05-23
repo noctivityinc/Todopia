@@ -73,7 +73,11 @@ DateInput.prototype = {
     });
     tableShell += "</tr></thead><tbody></tbody></table>";
     
-    this.dateSelector = this.rootLayers = $('<div class="date_selector"></div>').append(nav, tableShell).insertAfter(this.input);
+    var removeDueDate = $('<p class="rdd">Remove Due Date</p>')
+    var removeDueDateSpan = $('<span class="remove_due_date"></span>').append(removeDueDate);
+    $('.rdd', removeDueDateSpan).click(this.bindToObj(function() { this.changeInput(''); }))
+    
+    this.dateSelector = this.rootLayers = $('<div class="date_selector"></div>').append(nav, tableShell, removeDueDateSpan).insertAfter(this.input);
     
     if ($.browser.msie && $.browser.version < 7) {
       
