@@ -1,5 +1,9 @@
 h1. Todopia Release Notes
 
+h3. 0.3.2 (hotfix)
+* Added removal of due date option
+* Fixed bug with sending daily emails
+
 h3. 0.3.1
 * Ability to change due date by clicking on the date in list
 * Shared emails now sent in daily email
