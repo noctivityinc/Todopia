@@ -1456,39 +1456,53 @@ a img {
   padding-top: 0.15em;
 }
 
-/* line 21, ../../../app/stylesheets/public.sass */
+/* line 3, ../../../app/stylesheets/partials/_users.sass */
+#user #new form {
+  width: 400px;
+}
+/* line 6, ../../../app/stylesheets/partials/_users.sass */
+#user #new #video {
+  border: 5px solid gray;
+  background: gray;
+  width: 480px;
+  padding: 1px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* line 22, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px 0.2em;
 }
 
-/* line 25, ../../../app/stylesheets/public.sass */
+/* line 26, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   width: 99%;
 }
-/* line 32, ../../../app/stylesheets/public.sass */
+/* line 33, ../../../app/stylesheets/public.sass */
 body a {
   color: blue;
 }
-/* line 34, ../../../app/stylesheets/public.sass */
+/* line 35, ../../../app/stylesheets/public.sass */
 body a img {
   border: none;
 }
-/* line 38, ../../../app/stylesheets/public.sass */
+/* line 39, ../../../app/stylesheets/public.sass */
 body .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
-/* line 43, ../../../app/stylesheets/public.sass */
+/* line 44, ../../../app/stylesheets/public.sass */
 body .labelHighlight {
   color: #999999;
   text-align: right;
 }
-/* line 47, ../../../app/stylesheets/public.sass */
+/* line 48, ../../../app/stylesheets/public.sass */
 body .toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1498,21 +1512,21 @@ body .toolbar {
   padding: 0.5em 0.25em;
   min-width: 400px;
 }
-/* line 53, ../../../app/stylesheets/public.sass */
+/* line 54, ../../../app/stylesheets/public.sass */
 body .toolbar table {
   width: 100%;
 }
-/* line 56, ../../../app/stylesheets/public.sass */
+/* line 57, ../../../app/stylesheets/public.sass */
 body .toolbar table td.left {
   text-align: left;
   width: 33%;
   min-width: 140px;
 }
-/* line 61, ../../../app/stylesheets/public.sass */
+/* line 62, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center {
   min-width: 150px;
 }
-/* line 63, ../../../app/stylesheets/public.sass */
+/* line 64, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center img {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1523,7 +1537,7 @@ body .toolbar table td.center img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 70, ../../../app/stylesheets/public.sass */
+/* line 71, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1 {
   color: white;
   font-size: 14pt;
@@ -1532,25 +1546,25 @@ body .toolbar table td.center h1 {
   margin: 0;
   padding: 0;
 }
-/* line 78, ../../../app/stylesheets/public.sass */
+/* line 79, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1.screen_only {
   display: inline;
 }
-/* line 81, ../../../app/stylesheets/public.sass */
+/* line 82, ../../../app/stylesheets/public.sass */
 body .toolbar table td.right {
   width: 33%;
   min-width: 100px;
 }
-/* line 85, ../../../app/stylesheets/public.sass */
+/* line 86, ../../../app/stylesheets/public.sass */
 body #container {
   background: white;
   margin: 0px;
 }
-/* line 90, ../../../app/stylesheets/public.sass */
+/* line 91, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages {
   margin: 1em 0.5em;
 }
-/* line 93, ../../../app/stylesheets/public.sass */
+/* line 94, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.notice, body #flash #flash_messages.error, body #flash #flash_messages.warning, body #flash #flash_messages .notice, body #flash #flash_messages .error, body #flash #flash_messages .warning {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1560,26 +1574,26 @@ body #flash #flash_messages.notice, body #flash #flash_messages.error, body #fla
   font-size: 0.9em;
   padding: 1em;
 }
-/* line 99, ../../../app/stylesheets/public.sass */
+/* line 100, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.notice, body #flash #flash_messages .notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
-/* line 103, ../../../app/stylesheets/public.sass */
+/* line 104, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.error, body #flash #flash_messages .error {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
-/* line 107, ../../../app/stylesheets/public.sass */
+/* line 108, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.warning, body #flash #flash_messages .warning {
   background-color: #ffde00;
   border: solid 1px #cccc33;
 }
-/* line 111, ../../../app/stylesheets/public.sass */
+/* line 112, ../../../app/stylesheets/public.sass */
 body .print_only {
   display: none;
 }
-/* line 114, ../../../app/stylesheets/public.sass */
+/* line 115, ../../../app/stylesheets/public.sass */
 body .ui-datepicker {
   font-size: 12px;
   width: 200px;
