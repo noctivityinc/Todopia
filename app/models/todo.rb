@@ -192,7 +192,7 @@ class Todo < ActiveRecord::Base
     else
       self.notice = "An invitation has been sent to #{email} to share this todo."
       invite = self.user.invites.find_or_create_by_email(email)
-      invite.invite_todos.create(:todo => self)
+      invite.invite_todos.build(:todo => self)
       Postoffice.deliver_invite_and_share(invite, self)
       return true
     end

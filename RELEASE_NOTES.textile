@@ -1,5 +1,9 @@
 h1. Todopia Release Notes
 
+h3. 0.3.4 (hotfix)
+* Fixed bug with inviting new users on todo creation
+* upgraded to 2.3.6
+
 h3. 0.3.2 (hotfix)
 * Added removal of due date option
 * Fixed bug with sending daily emails
