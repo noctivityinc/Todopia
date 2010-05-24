@@ -5,12 +5,23 @@
 
 #user
   #new
-    - semantic_form_for @user do |f|
-      - f.inputs do
-        = f.input :login, :label => 'Username'
-        = f.input :email, :label => 'Email'
-        = f.input :password, :label => 'Password', :as => :password 
-        = f.input :password_confirmation, :label => 'Confirm', :as => :password 
+    %table{:width => '100%'}
+      %tr
+        %td.form
+          - semantic_form_for @user do |f|
+            - f.inputs do
+              = f.input :login, :label => 'Username'
+              = f.input :email, :label => 'Email'
+              = f.input :password, :label => 'Password', :as => :password 
+              = f.input :password_confirmation, :label => 'Confirm', :as => :password 
     
-      - f.buttons do
-        = f.commit_button 'Sign Up!'
+            - f.buttons do
+              = f.commit_button 'Sign Up!'
+              
+        %td{:align => 'center'}
+          #video
+            %object{:height => "360", :width => "480"}
+              %param{:name => "allowfullscreen", :value => "true"}/
+              %param{:name => "allowscriptaccess", :value => "always"}/
+              %param{:name => "movie", :value => "http://vimeo.com/moogaloop.swf?clip_id=11990645&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1"}/
+              %embed{:allowfullscreen => "true", :allowscriptaccess => "always", :height => "360", :src => "http://vimeo.com/moogaloop.swf?clip_id=11990645&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=ffffff&amp;fullscreen=1", :type => "application/x-shockwave-flash", :width => "480"}

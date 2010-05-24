@@ -11,16 +11,18 @@
         = f.input :login, :label => 'Username'
         = f.input :password, :label => 'Password', :as => :password 
         = f.input :remember_me, :label => 'Remember Me?', :as => :boolean, :required => false
-  
+
       - f.buttons do
         = f.commit_button 'Login'
-        
+
       .forgot_password
         = link_to "Forgot username or password?", new_reset_password_path
         
   #fun_stuff
     %h3 New Fun Stuff
     %ul
+      %li
+        = link_to "Tutorial Video w/ Fun Music!", "http://vimeo.com/11990645", :target => '_blank' 
       %li Share a todo by entering their email address
       %li Schedule a todo in the future by tagging "starts DATE..."
       %li Create a group by prefacing a tag with !
