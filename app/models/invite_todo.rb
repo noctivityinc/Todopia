@@ -15,5 +15,5 @@ class InviteTodo < ActiveRecord::Base
   belongs_to :todo
   
   validates_presence_of :todo, :invite
-  validates_uniqueness_of :todo_id, :scope => :invite_id 
+  validates_uniqueness_of :todo_id, :scope => :invite_id, :message => 'has already been used to invite this person' 
 end

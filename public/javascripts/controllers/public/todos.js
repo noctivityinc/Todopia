@@ -180,7 +180,6 @@ function setup_add_form() {
        error: function(responseText, statusText, xhr, form){
         setup_autocomplete();
         $('#todo_label').addClass('fieldWithErrors');
-        $.flash.show();
        },
        complete: function(request, status){ ajax_complete(request, status)}
    });
