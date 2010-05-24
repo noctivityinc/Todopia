@@ -5,7 +5,7 @@ source :gemcutter
 gem 'bundler', :require => nil
 gem 'rubygems-update', :require => nil
 
-gem 'rails', '~> 2.3.5', :require => nil
+gem 'rails', '~> 2.3.6', :require => nil
 
 gem 'pg', '0.8.0'
 
@@ -27,7 +27,7 @@ gem 'nifty-generators'
 gem 'unicorn'
 
 # Bundle the extra gems:
-gem 'nokogiri', '1.4.1'
+gem 'nokogiri'
 gem 'hpricot'
 gem 'hirb'
 
