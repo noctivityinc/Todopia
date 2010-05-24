@@ -15,5 +15,5 @@ class Share < ActiveRecord::Base
   belongs_to :todo
 
   validates_presence_of :user, :todo
-  validates_uniqueness_of :todo_id, :scope => [:user_id]
+  validates_uniqueness_of :todo_id, :scope => [:user_id], :message => 'has already been shared with this user' 
 end
