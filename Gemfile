@@ -5,7 +5,7 @@ source :gemcutter
 gem 'bundler', :require => nil
 gem 'rubygems-update', :require => nil
 
-gem 'rails', '~> 2.3.6', :require => nil
+gem 'rails', '2.3.7', :require => nil
 
 gem 'pg', '0.8.0'
 
