@@ -217,7 +217,6 @@ function setup_autocomplete() {
 	}});
 	
 	$('#todo_submit').show();
-  $('.spinner').hide();
 	
   $(":text").labelify({ labelledClass: "labelHighlight" });
   $(".textboxlist-bit-editable-input").labelify({ labelledClass: "labelHighlight", text: function(input) { return "+ tag"; } });
