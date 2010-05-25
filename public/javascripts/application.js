@@ -8,7 +8,6 @@ $(function(){
   $("#bottom_panel").slideBox({width: "100%", height: 100, position: "bottom"});
   
   $(document).bind('reveal.facebox', function() { 
-    $('.spinner').hide();    
     setup_ajax();
 
     $('#note_body').focus(); 
@@ -59,7 +58,10 @@ function setup_ajax(){
           xhr.setRequestHeader("Accept", "text/javascript")
           $('.spinner').fadeIn(200);
       },
-      dataType: 'html'
+      dataType: 'html',
+      complete: function(){
+          $('.spinner').hide();    
+      }
   })
   
   $('body').ajaxSend(function(event, request, settings) {
@@ -96,7 +98,6 @@ function reload_checklist(responseText) {
     bind_tag_group();
     bind_checklist_keyboard();
     $('a[rel*=facebox]').facebox() 
-    $('.spinner').hide();    
     $(document).trigger('checklist.reloaded')  
   });
 }
@@ -180,7 +181,6 @@ function checklist_sortable() {
               $(document).unbind('checklist.reloaded') 
             })
           reload_checklist(todoResponse); 
-          $('.spinner').hide();    
           }) } 
        } else {
          reorder_url = $('#urls').attr('url:reorder_todos')
@@ -189,7 +189,6 @@ function checklist_sortable() {
                $(document).unbind('checklist.reloaded') 
              })
            reload_checklist(todoResponse); 
-           $('.spinner').hide();    
            })
       }
       }

@@ -1,5 +1,10 @@
 h1. Todopia Release Notes
 
+h3. 0.3.8 (hotfix)
+* upgraded to 2.3.8 (ugh)
+* fixed bug which sends empty daily todos (sorry)
+* fixed spinner from sometimes showing
+
 h3. 0.3.4 (hotfix)
 * Fixed bug with inviting new users on todo creation
 * upgraded to 2.3.6
