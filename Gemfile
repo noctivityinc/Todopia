@@ -19,6 +19,7 @@ gem 'annotate-models'
 gem 'hoptoad_notifier'
 gem 'chronic'
 gem 'whenever'
+gem 'RedCloth'
 
 # github pulls
 gem 'nifty-generators'
