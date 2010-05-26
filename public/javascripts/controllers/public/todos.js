@@ -245,7 +245,13 @@ function setup_tooltips(){
         $(this).qtip({ 
            content: { url: urlString, method: 'get'}, 
            adjust: { screen: true },
-           style: { color: '#ffffff', width: 350, padding: 5, color: 'black', name: 'dark', tip: 'leftTop',border: { 'width': 7, 'radius': 5, 'color': '#000' }}
+           position: {
+                 corner: {
+                    target: 'leftMiddle',
+                    tooltip: 'rightTop'
+                 }
+              },
+           style: { color: '#ffffff', width: 350, padding: 5, color: 'black', name: 'dark', tip: 'rightTop',border: { 'width': 7, 'radius': 5, 'color': '#000' }}
         });
   });
 }

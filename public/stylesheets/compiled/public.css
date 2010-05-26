@@ -1368,16 +1368,24 @@ a img {
 }
 
 /* line 3, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .title, #notes #list .title {
+  color: white;
+}
+/* line 6, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note, #notes #list .note {
   border-top: 1px dotted gray;
-  padding: 1em 0em;
+  padding: 1em 0.5em;
   margin: 1em 0em;
 }
-/* line 8, ../../../app/stylesheets/partials/_notes.sass */
+/* line 11, ../../../app/stylesheets/partials/_notes.sass */
+#notes #index .note p, #notes #list .note p {
+  margin-bottom: 2em;
+}
+/* line 14, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .row, #notes #list .note .row {
   overflow: hidden;
 }
-/* line 11, ../../../app/stylesheets/partials/_notes.sass */
+/* line 17, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .row .created_at, #notes #index .note .row .user, #notes #list .note .row .created_at, #notes #list .note .row .user {
   font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
   font-style: italic;
@@ -1387,22 +1395,22 @@ a img {
   display: inline;
   float: left;
 }
-/* line 17, ../../../app/stylesheets/partials/_notes.sass */
+/* line 23, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .row .user, #notes #list .note .row .user {
   display: inline;
   float: right;
 }
-/* line 20, ../../../app/stylesheets/partials/_notes.sass */
+/* line 26, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .row .trash, #notes #list .note .row .trash {
   display: inline;
   float: right;
   padding-left: 5px;
 }
-/* line 25, ../../../app/stylesheets/partials/_notes.sass */
+/* line 31, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .body, #notes #list .note .body {
   padding: 0.5em;
 }
-/* line 29, ../../../app/stylesheets/partials/_notes.sass */
+/* line 35, ../../../app/stylesheets/partials/_notes.sass */
 #notes #list .note {
   color: white;
   border-top: 1px dotted gray;

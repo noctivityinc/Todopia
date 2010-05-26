@@ -1,5 +1,9 @@
 h1. Todopia Release Notes
 
+h3. 0.3.9
+* Added textile formatting to notes
+* Fixed positioning of note popup
+
 h3. 0.3.8 (hotfix)
 * upgraded to 2.3.8 (ugh)
 * fixed bug which sends empty daily todos (sorry)
