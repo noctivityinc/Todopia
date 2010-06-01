@@ -1,5 +1,10 @@
 h1. Todopia Release Notes
 
+h3. 0.3.10 (hotfix)
+* Fixed bug with unfiled todos not showing in daily email
+* Fixed width issue in Safari
+* Moved contextMenu css to sass include
+
 h3. 0.3.9
 * Added textile formatting to notes
 * Fixed positioning of note popup
