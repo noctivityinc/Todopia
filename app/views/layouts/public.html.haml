@@ -6,9 +6,8 @@
       = h(yield(:title) || "Todopia")
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
     %link{ :href => "/favicon.png", :rel => "icon", :type => "image/png" }
-    = stylesheet_link_tag 'compiled/public.css', :media => 'screen'
+    = stylesheet_link_tag 'compiled/public.css', 'ui-lightness/jquery-ui-1.8.custom', :media => 'screen'
     = stylesheet_link_tag 'compiled/print.css', :media => 'print' 
-    = stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.custom', 'jquery.contextMenu', 'jquery.date_input', :cache => true
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js', 'jquery.livequery', 'jquery.contextMenu'
     = javascript_include_tag 'jquery.form', 'jquery.cookie', 'facebox', 'jquery.labelify', 'flash', 'GrowingInput', 'TextboxList', 'TextboxList.Autocomplete', 'jquery.qtip-1.0.0-rc3.min', 'jquery.hotkeys', 'slidebox', 'jquery.date_input', :cache => 'cached/all'
     = javascript_include_tag 'controllers/public/tag_groups', 'application', "controllers/#{params[:controller]}"

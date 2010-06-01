@@ -1129,6 +1129,78 @@ a img {
   border-color: #cccccc;
 }
 
+/* Generic context menu styles */
+/* line 5, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu {
+  position: absolute;
+  width: 120px;
+  z-index: 99999;
+  border: solid 1px #cccccc;
+  background: #eeeeee;
+  padding: 0px;
+  margin: 0px;
+  display: none;
+}
+/* line 23, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 31, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
+  line-height: 1.5em;
+  height: 1.5em;
+  background-position: 6px center;
+  background-repeat: no-repeat;
+  outline: none;
+  padding: 1px 5px;
+  padding-left: 8px;
+}
+/* line 57, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu LI.hover A {
+  color: white;
+  background-color: #3399ff;
+}
+/* line 63, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu LI.disabled A {
+  color: #aaaaaa;
+  cursor: default;
+}
+/* line 69, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu LI.hover.disabled A {
+  background-color: transparent;
+}
+/* line 73, ../../../app/stylesheets/partials/_jquery.contextMenu.sass */
+.contextMenu LI.separator {
+  border-top: solid 1px #cccccc;
+}
+
+/*
+ * *	Adding Icons
+ *
+ * *	
+ *
+ * *	You can add icons to the context menu by adding
+ *
+ * *	classes to the respective LI element(s)
+ *
+ * *
+ *
+ * *.contextMenu li.edit A { background-image: url(images/page_white_edit.png); }
+ *
+ * *.contextMenu li.cut A { background-image: url(images/cut.png); }
+ *
+ * *.contextMenu li.copy A { background-image: url(images/page_white_copy.png); }
+ *
+ * *.contextMenu li.paste A { background-image: url(/images/page_white_paste.png); }
+ *
+ * *.contextMenu li.delete A { background-image: url(/images/icons/page_white_delete.png); }
+ *
+ * *.contextMenu LI.quit A { background-image: url(/images/door.png); } */
 /* line 2, ../../../app/stylesheets/partials/_todos.sass */
 #todo #new {
   display: none;
@@ -1379,7 +1451,7 @@ a img {
 }
 /* line 11, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note p, #notes #list .note p {
-  margin-bottom: 2em;
+  margin-bottom: 1.75em;
 }
 /* line 14, ../../../app/stylesheets/partials/_notes.sass */
 #notes #index .note .row, #notes #list .note .row {
@@ -1466,7 +1538,7 @@ a img {
 
 /* line 3, ../../../app/stylesheets/partials/_users.sass */
 #user #new form {
-  width: 400px;
+  width: 500px;
 }
 /* line 6, ../../../app/stylesheets/partials/_users.sass */
 #user #new #video {
@@ -1478,39 +1550,39 @@ a img {
   -webkit-border-radius: 5px;
 }
 
-/* line 22, ../../../app/stylesheets/public.sass */
+/* line 23, ../../../app/stylesheets/public.sass */
 html, body {
   margin: 0px;
   padding: 0px 0.2em;
 }
 
-/* line 26, ../../../app/stylesheets/public.sass */
+/* line 27, ../../../app/stylesheets/public.sass */
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   width: 99%;
 }
-/* line 33, ../../../app/stylesheets/public.sass */
+/* line 34, ../../../app/stylesheets/public.sass */
 body a {
   color: blue;
 }
-/* line 35, ../../../app/stylesheets/public.sass */
+/* line 36, ../../../app/stylesheets/public.sass */
 body a img {
   border: none;
 }
-/* line 39, ../../../app/stylesheets/public.sass */
+/* line 40, ../../../app/stylesheets/public.sass */
 body .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
-/* line 44, ../../../app/stylesheets/public.sass */
+/* line 45, ../../../app/stylesheets/public.sass */
 body .labelHighlight {
   color: #999999;
   text-align: right;
 }
-/* line 48, ../../../app/stylesheets/public.sass */
+/* line 49, ../../../app/stylesheets/public.sass */
 body .toolbar {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1520,21 +1592,21 @@ body .toolbar {
   padding: 0.5em 0.25em;
   min-width: 400px;
 }
-/* line 54, ../../../app/stylesheets/public.sass */
+/* line 55, ../../../app/stylesheets/public.sass */
 body .toolbar table {
   width: 100%;
 }
-/* line 57, ../../../app/stylesheets/public.sass */
+/* line 58, ../../../app/stylesheets/public.sass */
 body .toolbar table td.left {
   text-align: left;
   width: 33%;
   min-width: 140px;
 }
-/* line 62, ../../../app/stylesheets/public.sass */
+/* line 63, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center {
   min-width: 150px;
 }
-/* line 64, ../../../app/stylesheets/public.sass */
+/* line 65, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center img {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1545,7 +1617,7 @@ body .toolbar table td.center img {
   width: 1.5em;
   height: 1.5em;
 }
-/* line 71, ../../../app/stylesheets/public.sass */
+/* line 72, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1 {
   color: white;
   font-size: 14pt;
@@ -1554,25 +1626,25 @@ body .toolbar table td.center h1 {
   margin: 0;
   padding: 0;
 }
-/* line 79, ../../../app/stylesheets/public.sass */
+/* line 80, ../../../app/stylesheets/public.sass */
 body .toolbar table td.center h1.screen_only {
   display: inline;
 }
-/* line 82, ../../../app/stylesheets/public.sass */
+/* line 83, ../../../app/stylesheets/public.sass */
 body .toolbar table td.right {
   width: 33%;
   min-width: 100px;
 }
-/* line 86, ../../../app/stylesheets/public.sass */
+/* line 87, ../../../app/stylesheets/public.sass */
 body #container {
   background: white;
   margin: 0px;
 }
-/* line 91, ../../../app/stylesheets/public.sass */
+/* line 92, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages {
   margin: 1em 0.5em;
 }
-/* line 94, ../../../app/stylesheets/public.sass */
+/* line 95, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.notice, body #flash #flash_messages.error, body #flash #flash_messages.warning, body #flash #flash_messages .notice, body #flash #flash_messages .error, body #flash #flash_messages .warning {
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1582,26 +1654,26 @@ body #flash #flash_messages.notice, body #flash #flash_messages.error, body #fla
   font-size: 0.9em;
   padding: 1em;
 }
-/* line 100, ../../../app/stylesheets/public.sass */
+/* line 101, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.notice, body #flash #flash_messages .notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
-/* line 104, ../../../app/stylesheets/public.sass */
+/* line 105, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.error, body #flash #flash_messages .error {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
-/* line 108, ../../../app/stylesheets/public.sass */
+/* line 109, ../../../app/stylesheets/public.sass */
 body #flash #flash_messages.warning, body #flash #flash_messages .warning {
   background-color: #ffde00;
   border: solid 1px #cccc33;
 }
-/* line 112, ../../../app/stylesheets/public.sass */
+/* line 113, ../../../app/stylesheets/public.sass */
 body .print_only {
   display: none;
 }
-/* line 115, ../../../app/stylesheets/public.sass */
+/* line 116, ../../../app/stylesheets/public.sass */
 body .ui-datepicker {
   font-size: 12px;
   width: 200px;
