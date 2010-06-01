@@ -1,0 +1,51 @@
+/* Generic context menu styles */
+
+.contextMenu
+  position: absolute
+  width: 120px
+  z-index: 99999
+  border: solid 1px #CCC
+  background: #EEE
+  padding: 0px
+  margin: 0px
+  display: none
+  li
+    list-style: none
+    padding: 0px
+    margin: 0px
+  a
+    color: #333
+    text-decoration: none
+    display: block
+    line-height: 1.5em
+    height: 1.5em
+    background-position: 6px center
+    background-repeat: no-repeat
+    outline: none
+    padding: 1px 5px
+    padding-left: 8px
+    
+  LI
+    &.hover A
+      color: #FFF
+      background-color: #3399FF
+    &.disabled A
+      color: #AAA
+      cursor: default
+    &.hover.disabled A
+      background-color: transparent
+    &.separator
+      border-top: solid 1px #CCC
+
+/*
+ *	Adding Icons
+ *	
+ *	You can add icons to the context menu by adding
+ *	classes to the respective LI element(s)
+ *
+ *.contextMenu li.edit A { background-image: url(images/page_white_edit.png); }
+ *.contextMenu li.cut A { background-image: url(images/cut.png); }
+ *.contextMenu li.copy A { background-image: url(images/page_white_copy.png); }
+ *.contextMenu li.paste A { background-image: url(/images/page_white_paste.png); }
+ *.contextMenu li.delete A { background-image: url(/images/icons/page_white_delete.png); }
+ *.contextMenu LI.quit A { background-image: url(/images/door.png); }

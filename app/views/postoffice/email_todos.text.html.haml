@@ -22,11 +22,11 @@
           = render :partial => 'postoffice/todos/todo', :collection => @shared
 
     - unless unfiled_todos(nil,@user).empty?
-      - unless tag_groups_empty?(@user)
-        %p{:style => 'margin-bottom: 2em'}
+      %p{:style => 'margin-bottom: 2em'}
+        - unless tag_groups_empty?(@user)
           %h2{:style => 'margin-bottom: .25em'}= "AND ZE REST... (#{unfiled_todos(nil,@user).count})"
-          %table{:width => '100%'}
-            = render :partial => 'postoffice/todos/todo', :collection => unfiled_todos(nil,@user)
+        %table{:width => '100%'}
+          = render :partial => 'postoffice/todos/todo', :collection => unfiled_todos(nil,@user)
 
   %div{:style => 'margin-top: 2em; border-top:1px solid gray; padding-top: 1em; font-size: .85em'}
     Sent from 
