@@ -2,7 +2,6 @@ class UserSessionsController < ApplicationController
   layout 'public'
 
   def new
-    debugger
     @user_session = UserSession.new
   end
 

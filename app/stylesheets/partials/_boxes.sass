@@ -1,25 +1,25 @@
-=rounded(!radius = 4px)
-  :border-radius = !radius
-  :-moz-border-radius = !radius
-  :-webkit-border-radius = !radius
+=rounded($radius : 4px)
+  border-radius : $radius
+  -moz-border-radius : $radius
+  -webkit-border-radius : $radius
   margin: .25em
   
-=button(!bg_color = gray, !color = white)
+=button($bg_color : gray, $color : white)
   +rounded
-  background= !bg_color
+  background: $bg_color
   margin: .10em
   text-decoration: none
   padding: .5em .75em
-  color= !color
+  color: $color
   font-size: .85em
   
 .dialog
   +rounded
-  background= !dialog_color
+  background: $dialog_color
   
 .list
   +rounded
-  background= !list_color
+  background: $list_color
   padding: .25em
   
 .button

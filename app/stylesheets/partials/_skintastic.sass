@@ -1,12 +1,12 @@
 #user, #user_session, #reset_password
   #new, #edit
-    !floated_total_width = 300px
+    $floated_total_width : 300px
     // Total Width of form
     //
-    !floated_input_width = 300px
+    $floated_input_width : 300px
     // Width of inputs
     //
-    !floated_label_width = 300px
+    $floated_label_width : 300px
     
     +stack-form
     
@@ -94,7 +94,7 @@
       //--------------------------------------------------------
       // Feedback (Requirements, Errors and Hints)
       // Add horizontal margin/padding with care as it can
-      // break the layout on floats!
+      // break the layout on floats$
       //--------------------------------------------------------
       #errorExplanation
         li

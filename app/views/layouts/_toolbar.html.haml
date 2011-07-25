@@ -1,0 +1,21 @@
+%table
+  %tr
+    %td.left
+      - if current_user
+        = link_to "Log Out", logout_path, :class => 'button'
+      - else
+        - if params[:controller] == 'public/users'
+          = link_to "Log In", login_path, :class => 'yellow-button'
+        - elsif params[:controller] == 'user_sessions'
+          = link_to "Sign Up", signup_path, :class => 'yellow-button'
+      = link_to "Options", '#', :class => 'slide-options button' 
+    %td.center
+      = image_tag "big_spinner.gif", :title => "please wait...", :class => 'spinner'
+      - if show_title?
+        %h1.screen_only
+          =h yield(:title)
+        %h1.print_only
+          =h yield(:print_title) 
+    %td.right
+      - if current_user
+        = link_to "+ New", '#', :id => 'todo_toggle', :class => 'button', :rel => new_user_todo_path(current_user)
