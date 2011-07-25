@@ -13,9 +13,9 @@ info "Running migrations..."
 rake db:migrate --trace >> ~/shared/log/migrate.log 2>&1
 
 info "Updating cron via whenever..."
-whenever -w
+whenever --set environment=production -w 
 
-mkdir -p $current_path/tmp/pids
+mkdir -p tmp/pids
 
 info "Restarting unicorns..."
 bdsm unicorn restart
