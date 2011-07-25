@@ -1,35 +1,34 @@
-// This import applies a global reset to any page that imports this stylesheet.
-@import blueprint/reset.sass
-@import blueprint/interaction.sass
-@import partials/base.sass
-@import compass/css3/gradient.sass
-@import compass/utilities.sass
-@import partials/boxes.sass
-@import partials/formtastic_base.sass
-@import partials/skintastic.sass
-@import partials/textbox.sass
-@import partials/textbox.autocomplete.sass
-@import partials/facebox.sass
-@import partials/slidebox.sass
-@import partials/jquery.date_input.sass
-@import partials/jquery.contextMenu.sass
+@import "blueprint/reset"
+@import blueprint/interaction
+@import partials/base
+@import compass/css3/gradient
+@import compass/utilities
+@import partials/boxes
+@import partials/formtastic_base
+@import partials/skintastic
+@import partials/textbox
+@import partials/textbox.autocomplete
+@import partials/facebox
+@import partials/slidebox
+@import partials/jquery.date_input
+@import partials/jquery.contextMenu
 
-@import partials/todos.sass
-@import partials/notes.sass
-@import partials/histories.sass
-@import partials/user_session.sass
-@import partials/users.sass
+@import partials/todos
+@import partials/notes
+@import partials/histories
+@import partials/user_session
+@import partials/users
 
 html, body
   margin: 0px
   padding: 0px .20em
 
 body
-  :background-color = !primary_color
+  background-color: $primary_color
   :font
     :family Verdana, Helvetica, Arial
     :size 14px
-  :width = !screen_width
+  width: $screen_width
 
   a
     :color #0000FF
@@ -43,12 +42,12 @@ body
     :overflow hidden
 
   .labelHighlight
-    :color = !labelHighlight_color
+    color : $labelHighlight_color
     :text-align right
 
   .toolbar
     +rounded
-    background= !toolbar_color
+    background: $toolbar_color
     padding: .50em .25em
     min-width: 400px
   

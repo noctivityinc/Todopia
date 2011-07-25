@@ -1,315 +1,81 @@
-/* line 4, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
+/*
+Syntax error: Invalid CSS after "": expected expression (e.g. 1px, bold), was "= !primary_color"
+        on line 13 of /Users/jlippiner/Projects/todopia/app/stylesheets/print.sass
 
-/* line 6, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html {
-  font-size: 100.01%;
-}
+8: html, body
+9:   margin: 0px
+10:   padding: 0px .20em
+11: 
+12: body
+13:   :background-color = !primary_color
+14:   :font
+15:     :family Verdana, Helvetica, Arial
+16:     :size 14px
+17:   :width = !screen_width
+18:   
 
-/* line 16, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-pre, a, abbr, acronym, address, code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-
-/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote, q {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  quotes: "" "";
-}
-/* line 45, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-}
-
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-th, td, caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-table {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 14, ../../../app/stylesheets/partials/_base.sass */
-.right {
-  text-align: right;
-}
-
-/* line 17, ../../../app/stylesheets/partials/_base.sass */
-.left {
-  text-align: left;
-}
-
-/* line 20, ../../../app/stylesheets/partials/_base.sass */
-.center {
-  text-align: center;
-}
-
-/* line 23, ../../../app/stylesheets/partials/_base.sass */
-.float-right {
-  float: right;
-}
-
-/* line 26, ../../../app/stylesheets/partials/_base.sass */
-.float-left {
-  float: left;
-}
-
-/* line 29, ../../../app/stylesheets/partials/_base.sass */
-.icon {
-  width: 10px;
-  height: 10px;
-  margin: 0.05em;
-}
-
-/* line 16, ../../../app/stylesheets/partials/_boxes.sass */
-.dialog {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: #c4aa5d;
-}
-
-/* line 20, ../../../app/stylesheets/partials/_boxes.sass */
-.list {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: #f0f0f0;
-  padding: 0.25em;
-}
-
-/* line 25, ../../../app/stylesheets/partials/_boxes.sass */
-.button {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: gray;
-  margin: 0.1em;
-  text-decoration: none;
-  padding: 0.5em 0.75em;
-  color: white;
-  font-size: 0.85em;
-}
-
-/* line 28, ../../../app/stylesheets/partials/_boxes.sass */
-.button:hover {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: yellow;
-  margin: 0.1em;
-  text-decoration: none;
-  padding: 0.5em 0.75em;
-  color: black;
-  font-size: 0.85em;
-}
-
-/* line 31, ../../../app/stylesheets/partials/_boxes.sass */
-.green-button {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: green;
-  margin: 0.1em;
-  text-decoration: none;
-  padding: 0.5em 0.75em;
-  color: white;
-  font-size: 0.85em;
-}
-
-/* line 34, ../../../app/stylesheets/partials/_boxes.sass */
-.red-button {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: red;
-  margin: 0.1em;
-  text-decoration: none;
-  padding: 0.5em 0.75em;
-  color: white;
-  font-size: 0.85em;
-}
-
-/* line 37, ../../../app/stylesheets/partials/_boxes.sass */
-.yellow-button {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: yellow;
-  margin: 0.1em;
-  text-decoration: none;
-  padding: 0.5em 0.75em;
-  color: black;
-  font-size: 0.85em;
-}
-
-/* line 8, ../../../app/stylesheets/print.sass */
-html, body {
-  margin: 0px;
-  padding: 0px 0.2em;
-}
-
-/* line 12, ../../../app/stylesheets/print.sass */
-body {
-  background-color: white;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
-  width: 99%;
-}
-
-/* line 19, ../../../app/stylesheets/print.sass */
-.screen_only {
-  display: none;
-}
-
-/* line 22, ../../../app/stylesheets/print.sass */
-#uservoice-feedback {
-  display: none;
-}
-
-/* line 25, ../../../app/stylesheets/print.sass */
-#toolbar {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0.25em;
-  background: #205bab;
-}
-/* line 28, ../../../app/stylesheets/print.sass */
-#toolbar .left, #toolbar .right {
-  display: none;
-}
-/* line 31, ../../../app/stylesheets/print.sass */
-#toolbar h1 {
-  color: white;
-  font-size: 14pt;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 40, ../../../app/stylesheets/print.sass */
-#todo #new, #todo #flash, #todo #docs, #todo #urls, #todo #facebox, #todo #footer, #todo .icon, #todo #completed, #todo .contextMenu {
-  display: none;
-}
-/* line 45, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete h2 {
-  font-size: 1.1em;
-  margin: 1em 0em 0.25em 0em;
-}
-/* line 49, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete h2 a {
-  color: black;
-  text-decoration: none;
-}
-/* line 53, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo {
-  overflow: hidden;
-  margin-top: 0.25em;
-}
-/* line 57, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .col {
-  padding-right: 5px;
-  display: inline;
-  float: left;
-}
-/* line 61, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .col_cb {
-  width: 20px;
-}
-/* line 63, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .col_cb input {
-  border: 1px solid black;
-}
-/* line 66, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .col_label {
-  padding-right: 15px;
-}
-/* line 69, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .due_date {
-  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
-  font-style: italic;
-  font-size: 1.15em;
-  font-size: 0.95em;
-  color: #666666;
-}
-/* line 74, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .due_date_past_due {
-  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
-  font-style: italic;
-  font-size: 1.15em;
-  color: red;
-  padding-right: 15px;
-}
-/* line 81, ../../../app/stylesheets/print.sass */
-#todo #index #not_complete .todo .col_tags .tags .tag {
-  font-size: 10px;
-  color: #666666;
-  display: block;
-  float: left;
-  padding-left: 10px;
-  padding-top: 2px;
-  margin-top: 0px;
-  text-decoration: none;
-  height: 16px;
-}
+Backtrace:
+/Users/jlippiner/Projects/todopia/app/stylesheets/print.sass:13
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/scss/parser.rb:898:in `expected'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/lexer.rb:193:in `expected!'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/parser.rb:443:in `assert_expr'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/parser.rb:49:in `parse'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/parser.rb:140:in `parse'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script.rb:32:in `parse'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:808:in `parse_script'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:584:in `parse_property'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:535:in `parse_line'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:447:in `build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:466:in `block in append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:456:in `block in build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:449:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:449:in `build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:466:in `block in append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:322:in `_to_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:291:in `_render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:239:in `block in render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/util.rb:297:in `silence_sass_warnings'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:239:in `render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/rack.rb:51:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/rack.rb:27:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/user_informer.rb:12:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `block in call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/debugger.rb:19:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"\": expected expression (e.g. 1px, bold), was \"= !primary_color\"\A         on line 13 of /Users/jlippiner/Projects/todopia/app/stylesheets/print.sass\A \A 8: html, body\A 9:   margin: 0px\A 10:   padding: 0px .20em\A 11: \A 12: body\A 13:   :background-color = !primary_color\A 14:   :font\A 15:     :family Verdana, Helvetica, Arial\A 16:     :size 14px\A 17:   :width = !screen_width\A 18:   "; }

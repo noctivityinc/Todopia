@@ -25,7 +25,7 @@ else
   # If the environment file has not yet been created, use the RVM CLI to select.
   if ! rvm --create  "$environment_id"
   then
-    echo "Failed to create RVM environment 'ruby-1.9.2-p180@instaback'."
+    echo "Failed to create RVM environment ''."
   fi
 fi
 

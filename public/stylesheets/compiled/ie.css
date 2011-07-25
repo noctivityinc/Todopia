@@ -1,89 +1,81 @@
-/* line 7, ../../../app/stylesheets/ie.sass */
-body.bp {
-  text-align: center;
-}
-/* line 48, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-* html body.bp legend {
-  margin: 0px -8px 16px 0;
-  padding: 0;
-}
-/* line 52, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-html > body.bp p code {
-  *white-space: normal;
-}
-/* line 67, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp .container {
-  text-align: left;
-}
-/* line 69, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp sup {
-  vertical-align: text-top;
-}
-/* line 71, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp sub {
-  vertical-align: text-bottom;
-}
-/* line 73, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp hr {
-  margin: -8px auto 11px;
-}
-/* line 75, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp img {
-  -ms-interpolation-mode: bicubic;
-}
-/* line 77, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp fieldset {
-  padding-top: 0;
-}
-/* line 79, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp textarea {
-  overflow: auto;
-}
-/* line 82, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.text {
-  margin: 0.5em 0;
-  background-color: white;
-  border: 1px solid #bbbbbb;
-}
-/* line 86, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.text:focus {
-  border: 1px solid #666666;
-}
-/* line 88, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.title {
-  margin: 0.5em 0;
-  background-color: white;
-  border: 1px solid #bbbbbb;
-}
-/* line 92, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.title:focus {
-  border: 1px solid #666666;
-}
-/* line 94, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.checkbox {
-  position: relative;
-  top: 0.25em;
-}
-/* line 97, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.radio {
-  position: relative;
-  top: 0.25em;
-}
-/* line 100, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp input.button {
-  position: relative;
-  top: 0.25em;
-}
-/* line 103, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp textarea {
-  margin: 0.5em 0;
-}
-/* line 105, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp select {
-  margin: 0.5em 0;
-}
-/* line 107, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
-body.bp button {
-  position: relative;
-  top: 0.25em;
-}
+/*
+Syntax error: File to import not found or unreadable: blueprint.sass.
+              Load paths:
+                Compass::SpriteImporter
+                /Users/jlippiner/Projects/todopia/public/stylesheets/sass
+                /Users/jlippiner/Projects/todopia/app/stylesheets
+                /Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/compass-0.11.5/frameworks/blueprint/stylesheets
+                /Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/compass-0.11.5/frameworks/compass/stylesheets
+        on line 1 of /Users/jlippiner/Projects/todopia/app/stylesheets/ie.sass
+
+1: @import blueprint.sass
+2: 
+3: // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+4: // +blueprint-ie
+5: 
+6: //Recommended Blueprint configuration with scoping and semantic layout:
+
+Backtrace:
+/Users/jlippiner/Projects/todopia/app/stylesheets/ie.sass:1
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/import_node.rb:64:in `rescue in import'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/import_node.rb:42:in `import'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/import_node.rb:25:in `imported_file'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:148:in `rescue in visit_import'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:153:in `visit_import'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/tree/root_node.rb:20:in `render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:291:in `_render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:239:in `block in render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/util.rb:297:in `silence_sass_warnings'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:239:in `render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/rack.rb:51:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/rack.rb:27:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/user_informer.rb:12:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `block in call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/debugger.rb:19:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: blueprint.sass.\A               Load paths:\A                 Compass::SpriteImporter\A                 /Users/jlippiner/Projects/todopia/public/stylesheets/sass\A                 /Users/jlippiner/Projects/todopia/app/stylesheets\A                 /Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/compass-0.11.5/frameworks/blueprint/stylesheets\A                 /Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/compass-0.11.5/frameworks/compass/stylesheets\A         on line 1 of /Users/jlippiner/Projects/todopia/app/stylesheets/ie.sass\A \A 1: @import blueprint.sass\A 2: \A 3: // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:\A 4: // +blueprint-ie\A 5: \A 6: //Recommended Blueprint configuration with scoping and semantic layout:"; }

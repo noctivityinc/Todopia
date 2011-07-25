@@ -1,585 +1,84 @@
-/* line 4, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
+/*
+Syntax error: Invalid CSS after "(": expected ")", was "!blueprint_grid..."
+        on line 30 of /Users/jlippiner/Projects/todopia/app/stylesheets/screen.sass
 
-/* line 6, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-html {
-  font-size: 100.01%;
-}
+25: // Page layout can be done using mixins applied to your semantic classes and IDs:
+26: body.three-col
+27:   #container
+28:     +container
+29:   #header, #footer
+30:     +column(!blueprint_grid_columns)
+31:   #sidebar
+32:     // One third of the grid columns, rounding down. With 24 cols, this is 8.
+33:     !sidebar_columns = floor(!blueprint_grid_columns / 3)
+34:     +column(!sidebar_columns)
+35:   #content
 
-/* line 16, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-pre, a, abbr, acronym, address, code, del, dfn, em, img,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-}
-
-/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote, q {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  quotes: "" "";
-}
-/* line 45, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-}
-
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-th, td, caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-table {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 14, ../../../app/stylesheets/partials/_base.sass */
-.right {
-  text-align: right;
-}
-
-/* line 17, ../../../app/stylesheets/partials/_base.sass */
-.left {
-  text-align: left;
-}
-
-/* line 20, ../../../app/stylesheets/partials/_base.sass */
-.center {
-  text-align: center;
-}
-
-/* line 23, ../../../app/stylesheets/partials/_base.sass */
-.float-right {
-  float: right;
-}
-
-/* line 26, ../../../app/stylesheets/partials/_base.sass */
-.float-left {
-  float: left;
-}
-
-/* line 29, ../../../app/stylesheets/partials/_base.sass */
-.icon {
-  width: 10px;
-  height: 10px;
-  margin: 0.05em;
-}
-
-/* line 40, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp .box {
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: #e5ecf9;
-}
-/* line 43, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp div.border {
-  padding-right: 4px;
-  margin-right: 5px;
-  border-right: 1px solid #eeeeee;
-}
-/* line 46, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp div.colborder {
-  padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #eeeeee;
-}
-/* line 48, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp hr {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-}
-/* line 50, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp hr.space {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-  background: white;
-  color: white;
-  visibility: hidden;
-}
-/* line 52, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp form.inline {
-  line-height: 3;
-}
-/* line 6, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-body.bp form.inline p {
-  margin-bottom: 0;
-}
-
-/* line 15, ../../../app/stylesheets/screen.sass */
-body.bp {
-  line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  color: #333333;
-  font-size: 75%;
-}
-/* line 65, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
-  font-weight: normal;
-  color: #222222;
-}
-/* line 66, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1 img, body.bp h2 img, body.bp h3 img, body.bp h4 img, body.bp h5 img, body.bp h6 img {
-  margin: 0;
-}
-/* line 67, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.50em;
-}
-/* line 68, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em;
-}
-/* line 69, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1.00em;
-}
-/* line 70, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em;
-}
-/* line 71, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h5 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.50em;
-}
-/* line 72, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h6 {
-  font-size: 1em;
-  font-weight: bold;
-}
-/* line 73, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p {
-  margin: 0 0 1.5em;
-}
-/* line 74, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p img.left {
-  display: inline;
-  float: left;
-  margin: 1.5em 1.5em 1.5em 0;
-  padding: 0;
-}
-/* line 75, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p img.right {
-  display: inline;
-  float: right;
-  margin: 1.5em 0 1.5em 1.5em;
-  padding: 0;
-}
-/* line 77, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp a {
-  text-decoration: underline;
-  color: #000099;
-}
-/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:visited {
-  color: #000066;
-}
-/* line 21, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:focus {
-  color: black;
-}
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:hover {
-  color: black;
-}
-/* line 27, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:active {
-  color: #cc0099;
-}
-/* line 78, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp blockquote {
-  margin: 1.5em;
-  color: #666666;
-  font-style: italic;
-}
-/* line 79, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp strong {
-  font-weight: bold;
-}
-/* line 80, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp em {
-  font-style: italic;
-}
-/* line 81, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dfn {
-  font-style: italic;
-  font-weight: bold;
-}
-/* line 82, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp sup, body.bp sub {
-  line-height: 0;
-}
-/* line 83, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp abbr, body.bp acronym {
-  border-bottom: 1px dotted #666666;
-}
-/* line 84, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp address {
-  margin: 0 0 1.5em;
-  font-style: italic;
-}
-/* line 85, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp del {
-  color: #666666;
-}
-/* line 86, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp pre {
-  margin: 1.5em 0;
+Backtrace:
+/Users/jlippiner/Projects/todopia/app/stylesheets/screen.sass:30
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/scss/parser.rb:898:in `expected'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/lexer.rb:193:in `expected!'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/parser.rb:448:in `assert_tok'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/script/parser.rb:85:in `parse_mixin_include_arglist'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:787:in `parse_mixin_include'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:551:in `parse_line'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:447:in `build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:466:in `block in append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:456:in `block in build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:449:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:449:in `build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:466:in `block in append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:456:in `block in build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:449:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:449:in `build_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:466:in `block in append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:465:in `append_children'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:322:in `_to_tree'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:291:in `_render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:239:in `block in render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/util.rb:297:in `silence_sass_warnings'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/engine.rb:239:in `render'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/sass-3.1.4/lib/sass/plugin/rack.rb:51:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/rack.rb:27:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/hoptoad_notifier-2.4.11/lib/hoptoad_notifier/user_informer.rb:12:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `block in call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/debugger.rb:19:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+/Users/jlippiner/.rvm/gems/ruby-1.9.2-p180@todopia/gems/rack-1.1.2/lib/rack/handler/webrick.rb:48:in `service'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/jlippiner/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+*/
+body:before {
   white-space: pre;
-}
-/* line 87, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp pre, body.bp code, body.bp tt {
-  font: 1em "andale mono", "lucida console", monospace;
-  line-height: 1.5;
-}
-/* line 88, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp li ul, body.bp li ol {
-  margin: 0;
-}
-/* line 89, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ul, body.bp ol {
-  margin: 0 1.5em 1.5em 0;
-  padding-left: 3.333em;
-}
-/* line 90, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ul {
-  list-style-type: disc;
-}
-/* line 91, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ol {
-  list-style-type: decimal;
-}
-/* line 92, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dl {
-  margin: 0 0 1.5em 0;
-}
-/* line 93, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dl dt {
-  font-weight: bold;
-}
-/* line 94, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dd {
-  margin-left: 1.5em;
-}
-/* line 95, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp table {
-  margin-bottom: 1.4em;
-  width: 100%;
-}
-/* line 96, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp th {
-  font-weight: bold;
-}
-/* line 97, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp thead th {
-  background: #c3d9ff;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp th, body.bp td, body.bp caption {
-  padding: 4px 10px 4px 5px;
-}
-/* line 99, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp tr.even td {
-  background: #e5ecf9;
-}
-/* line 100, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp tfoot {
-  font-style: italic;
-}
-/* line 101, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp caption {
-  background: #eeeeee;
-}
-/* line 102, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp .quiet {
-  color: #666666;
-}
-/* line 103, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp .loud {
-  color: #111111;
-}
-/* line 9, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .clear {
-  clear: both;
-}
-/* line 12, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .nowrap {
-  white-space: nowrap;
-}
-/* line 16, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .clearfix {
-  overflow: hidden;
-  display: inline-block;
-}
-/* line 8, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-body.bp .clearfix {
-  display: block;
-}
-/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .small {
-  font-size: 0.8em;
-  margin-bottom: 1.875em;
-  line-height: 1.875em;
-}
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .large {
-  font-size: 1.2em;
-  line-height: 2.5em;
-  margin-bottom: 1.25em;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .first {
-  margin-left: 0;
-  padding-left: 0;
-}
-/* line 29, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .last {
-  margin-right: 0;
-  padding-right: 0;
-}
-/* line 32, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .top {
-  margin-top: 0;
-  padding-top: 0;
-}
-/* line 35, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-/* line 8, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
-body.bp .showgrid {
-  background: url('/images/grid.png?1271438658');
-}
-/* line 4, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .error {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #fbe3e4;
-  color: #8a1f11;
-  border-color: #fbc2c4;
-}
-/* line 29, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .error a {
-  color: #8a1f11;
-}
-/* line 6, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .notice {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #fff6bf;
-  color: #514721;
-  border-color: #ffd324;
-}
-/* line 37, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .notice a {
-  color: #514721;
-}
-/* line 8, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .success {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #e6efc2;
-  color: #264409;
-  border-color: #c6d880;
-}
-/* line 45, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .success a {
-  color: #264409;
-}
-/* line 10, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .hide {
-  display: none;
-}
-/* line 12, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .highlight {
-  background: yellow;
-}
-/* line 14, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .added {
-  background: #006600;
-  color: white;
-}
-/* line 16, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .removed {
-  background: #990000;
-  color: white;
-}
-
-/* line 18, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp label {
-  font-weight: bold;
-}
-/* line 19, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0;
-}
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp legend {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-/* line 25, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=text], form.bp input[type=password] {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.title {
-  font-size: 1.5em;
-}
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input[type=checkbox], form.bp input.checkbox, form.bp input[type=radio], form.bp input.radio {
-  position: relative;
-  top: 0.25em;
-}
-/* line 32, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp textarea {
-  margin: 0.5em 0;
-  padding: 5px;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp select {
-  margin: 0.5em 0;
-}
-/* line 57, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp fieldset {
-  border: 1px solid #cccccc;
-}
-/* line 60, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=text], form.bp input[type=password],
-form.bp textarea, form.bp select {
-  border: 1px solid #bbbbbb;
-}
-/* line 62, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
-form.bp textarea:focus, form.bp select:focus {
-  border: 1px solid #666666;
-}
-/* line 46, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=text], form.bp input[type=password] {
-  width: 300px;
-}
-/* line 48, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp textarea {
-  width: 390px;
-  height: 250px;
-}
-
-/* line 27, ../../../app/stylesheets/screen.sass */
-body.three-col #container {
-  width: 950px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: inline-block;
-}
-/* line 8, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-body.three-col #container {
-  display: block;
-}
-/* line 29, ../../../app/stylesheets/screen.sass */
-body.three-col #header, body.three-col #footer {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-}
-/* line 138, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.three-col #header, * html body.three-col #footer {
-  overflow-x: hidden;
-}
-/* line 31, ../../../app/stylesheets/screen.sass */
-body.three-col #sidebar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
-}
-/* line 138, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.three-col #sidebar {
-  overflow-x: hidden;
-}
-/* line 35, ../../../app/stylesheets/screen.sass */
-body.three-col #content {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 630px;
-}
-/* line 138, ../../../../../.rvm/gems/ruby-1.9.1-p378@todo/gems/compass-0.10.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.three-col #content {
-  overflow-x: hidden;
-}
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"(\": expected \")\", was \"!blueprint_grid...\"\A         on line 30 of /Users/jlippiner/Projects/todopia/app/stylesheets/screen.sass\A \A 25: // Page layout can be done using mixins applied to your semantic classes and IDs:\A 26: body.three-col\A 27:   #container\A 28:     +container\A 29:   #header, #footer\A 30:     +column(!blueprint_grid_columns)\A 31:   #sidebar\A 32:     // One third of the grid columns, rounding down. With 24 cols, this is 8.\A 33:     !sidebar_columns = floor(!blueprint_grid_columns / 3)\A 34:     +column(!sidebar_columns)\A 35:   #content"; }

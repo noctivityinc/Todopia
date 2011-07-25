@@ -1,0 +1,12 @@
+- form_for @tag_group do |f|
+  = f.error_messages
+  %p
+    = f.label :tag
+    %br
+    = f.text_field :tag
+  %p
+    = f.label :user_id
+    %br
+    = f.text_field :user_id
+  %p
+    = f.submit "Submit"
